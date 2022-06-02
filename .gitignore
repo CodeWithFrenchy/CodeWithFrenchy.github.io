@@ -15,3 +15,6 @@ vendor
 # npm dependencies
 node_modules
 package-lock.json
+
+# Fichiers que j'ai supprimmé https://chirpy.cotes.page/posts/getting-started/
+Gemfile.lock
