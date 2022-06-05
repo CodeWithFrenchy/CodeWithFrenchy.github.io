@@ -23,10 +23,10 @@ timezone: America/Montreal
 
 title: CodeWithFrenchy
 
-tagline: A text-focused Jekyll theme   # it will display as the sub-title
+tagline: Audacieux, informaticien, fermier et oncle
 
-description: >-                        # used by seo meta and the atom feed
-  A minimal, responsive, and powerful Jekyll theme for presenting professional writing.
+description: >-
+  Mon blog touchant divers sujets de l'informatique.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://codewithfrenchy.github.io/'
