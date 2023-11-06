@@ -53,3 +53,5 @@ pour  CRLF will be replaced by LF the next time Git touches it -> git config --g
 voir si la ligne doit être dans le fichier de devcontainer pour git?
 
 jekyll serve
+
+todo documenter le .devcontainer
