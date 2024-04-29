@@ -16,10 +16,10 @@ J'ai également occupé le rôle d'enseignant au Cégep de Matane pendant un an.
 
 J'adore apprendre et partager mes connaissances! Pour ces raisons, depuis 2020, je partage mes trouvailles de ma veille technologique sur un canal Discord où nous sommes un peu plus de 70 membres.
 
-## En dehors du travail
-
-En dehors de l'informatique, je suis tout d'abord un frère, un oncle et un fermier! Et oui! Fermier! Depuis mon plus jeune âge, je me suis impliqué activement à la ferme familiale où nous avons quelques vaches.
-
 ## Le but derrière mon site web
 
 La mise en ligne de mon site web se veut d'être un "défi" de longue date. J'ai toujours rêvé de mettre en place un endroit où je pourrais m'exprimer et partager mes connaissances.
+
+## En dehors du travail
+
+Je suis tout d'abord un frère, un oncle et un fermier sur mon temps personnel! Et oui! Fermier! Depuis mon plus jeune âge, j'apprécie m'impliquer à la ferme familiale où nous avons quelques vaches.
