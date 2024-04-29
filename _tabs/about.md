@@ -6,11 +6,11 @@ order: 4
 
 ## Qui suis-je?
 
-Je suis Alexis Garon-Michaud alias "CodeWithFrenchy" et j'occupe le titre d'architecte logiciel, responsable de l’axe « Pratiques de développement et d’architecture logicielle » pour [Cofomo Québec](https://www.cofomo.com/fr).
+Je suis Alexis Garon-Michaud alias "CodeWithFrenchy" et j'occupe le titre d'Architecte logiciel, Responsable de l'axe « Pratiques logicielles et modernisation » pour le Centre d'Excellence Azure chez [Cofomo Québec](https://www.cofomo.com/fr).
 
-Avec presque 10 ans dans le domaine, j'ai eu la chance de relever de nombreux défis dès mon début de carrière. J'ai participé à plusieurs projets tels que le [Guichet d'accès à un médecin de famille](https://www4.prod.ramq.gouv.qc.ca/GRL/LM_GuichAccesMdFamCitoy/fr), le [Carnet santé](https://carnetsante.gouv.qc.ca/portail) et plus récemment le projet [Lexius](https://www.quebec.ca/nouvelles/actualites/details/lancement-du-programme-lexius-une-avancee-pour-lacces-a-la-justice).
+Avec plus de 10 ans dans le domaine, j'ai eu la chance de relever de nombreux défis dès mon début de carrière. J'ai participé à plusieurs projets d'envergures tels que le [Guichet d'accès à un médecin de famille](https://www4.prod.ramq.gouv.qc.ca/GRL/LM_GuichAccesMdFamCitoy/fr), le [Carnet santé](https://carnetsante.gouv.qc.ca/portail) et plus récemment le projet [Lexius](https://www.quebec.ca/nouvelles/actualites/details/lancement-du-programme-lexius-une-avancee-pour-lacces-a-la-justice).
 
-J'ai également occupé le rôle d'enseignant au Cégep de Matane pendant un an. Durant cette courte période, j'ai surmonté le défi de monter 5 cours de "zéro"! Malgré ça, j'ai adoré l'expérience et ça m'a permis d'agrandir mon champ d'expertise.
+J'ai également occupé le rôle d'enseignant au Cégep de Matane pendant un an. Durant cette courte période, j'ai surmonté le défi de monter 5 cours de "zéro"! Malgré cet ardu défi, j'ai adoré l'expérience et ça m'a permis d'agrandir mon champ d'expertise.
 
 ## Veille technologique
 

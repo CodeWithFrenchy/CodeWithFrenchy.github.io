@@ -45,14 +45,17 @@ This work is published under [MIT][mit] License.
 [CD]: https://en.wikipedia.org/wiki/Continuous_deployment
 [mit]: https://github.com/cotes2020/chirpy-starter/blob/master/LICENSE
 
-## Lancer le site
+## Notes
 
-- <https://jekyllrb.com/docs/usage/>
+Lien qui explique comment utiliser la plateforme <https://jekyllrb.com/docs/usage/>.
 
+### Exécuter le site
 
-pour  CRLF will be replaced by LF the next time Git touches it -> git config --global core.autocrlf true
-voir si la ligne doit être dans le fichier de devcontainer pour git?
-
+``` bash
 jekyll serve
+jekyll serve --drafts # avec les drafts
+```
 
-todo documenter le .devcontainer
+### TODO
+
+- todo documenter le .devcontainer
