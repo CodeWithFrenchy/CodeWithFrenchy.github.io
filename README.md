@@ -58,6 +58,8 @@ jekyll serve --drafts # avec les drafts
 
 ### TODO
 
-- Mettre à jour le theme.. https://github.com/cotes2020/jekyll-theme-chirpy
+- Mettre à jour le theme
+  - <https://github.com/cotes2020/jekyll-theme-chirpy>
+  - <https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes>
 - Ajouter mon domaine! MyLittleLink, twitter et tout
 - todo documenter le .devcontainer
