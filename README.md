@@ -58,4 +58,5 @@ jekyll serve --drafts # avec les drafts
 
 ### TODO
 
+- Ajouter mon domaine! MyLittleLink, twitter et tout
 - todo documenter le .devcontainer
