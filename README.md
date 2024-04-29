@@ -49,6 +49,7 @@ This work is published under [MIT][mit] License.
 
 - <https://jekyllrb.com/docs/usage/>
 
+
 pour  CRLF will be replaced by LF the next time Git touches it -> git config --global core.autocrlf true
 voir si la ligne doit être dans le fichier de devcontainer pour git?
 
