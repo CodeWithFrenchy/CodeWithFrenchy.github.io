@@ -62,4 +62,7 @@ jekyll serve --drafts # avec les drafts
   - <https://github.com/cotes2020/jekyll-theme-chirpy>
   - <https://jekyllrb.com/docs/themes/#converting-gem-based-themes-to-regular-themes>
 - Ajouter mon domaine! MyLittleLink, twitter et tout
+  - <https://youtu.be/EXfFBEuCAr0?si=J5-Scx0BlsjCINmJ&t=508>
+  - <https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site>
+- forcer https <https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https>
 - todo documenter le .devcontainer
