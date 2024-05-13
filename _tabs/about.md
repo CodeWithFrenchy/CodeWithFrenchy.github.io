@@ -8,7 +8,7 @@ order: 4
 
 Je suis Alexis Garon-Michaud alias "CodeWithFrenchy" et je suis Architecte logiciel, Responsable de l'axe « Pratiques logicielles et modernisation » pour le Centre d'Excellence Azure chez [Cofomo Québec](https://www.cofomo.com/fr).
 
-Avec plus de 10 ans d'expérience dans le domaine, j'ai relevé de nombreux défis dès mes débuts. J'ai contribué à plusieurs projets d'envergure tels que le [Guichet d'accès à un médecin de famille](https://www4.prod.ramq.gouv.qc.ca/GRL/LM_GuichAccesMdFamCitoy/fr), le [Carnet santé](https://carnetsante.gouv.qc.ca/portail) et plus récemment le projet [Lexius](https://www.quebec.ca/nouvelles/actualites/details/lancement-du-programme-lexius-une-avancee-pour-lacces-a-la-justice).
+Avec plus de 11 ans d'expérience dans le domaine, j'ai relevé de nombreux défis dès mes débuts. J'ai contribué à plusieurs projets d'envergure tels que le [Guichet d'accès à un médecin de famille](https://www4.prod.ramq.gouv.qc.ca/GRL/LM_GuichAccesMdFamCitoy/fr), le [Carnet santé](https://carnetsante.gouv.qc.ca/portail) et plus récemment le projet [Lexius](https://www.quebec.ca/nouvelles/actualites/details/lancement-du-programme-lexius-une-avancee-pour-lacces-a-la-justice).
 
 J'ai également été enseignant au Cégep de Matane pendant un an. Durant cette période, j'ai créé 5 cours à partir de zéro. Malgré ce défi, j'ai apprécié cette expérience qui m'a permis d'élargir mes compétences.
 
