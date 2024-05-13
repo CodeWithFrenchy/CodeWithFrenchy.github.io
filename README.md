@@ -66,3 +66,6 @@ jekyll serve --drafts # avec les drafts
   - <https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site>
 - forcer https <https://docs.github.com/en/pages/getting-started-with-github-pages/securing-your-github-pages-site-with-https>
 - todo documenter le .devcontainer
+- LF will be replaced by CRLF the next time Git touches it
+  - <https://stackoverflow.com/a/75731053>
+  - git config --global core.autocrlf true
