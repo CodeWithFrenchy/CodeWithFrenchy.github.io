@@ -9,6 +9,6 @@ Oyez, Oyez! Je voulais vous informer que je suis actuellement très engagé dans
 
 Il me reste encore quelques ajustements à faire pour bien maîtriser la plateforme que j'utilise, mais cela avance plus rapidement que prévu.
 
-En attendant sa mise en ligne, je vous encourage vivement à me faire parvenir vos suggestions !
+En attendant sa mise en ligne, je vous encourage vivement à me faire parvenir vos suggestions!
 
-Restez informés en vous abonnant à notre flux RSS
+Restez informés en vous abonnant au flux RSS!
