@@ -1,8 +1,8 @@
 ---
 title: Découvrez la nouvelle version de MSTest
 date: 2024-06-26 19:00:00 -0400
-categories: []
-tags: []
+categories: [outil-developpement]
+tags: [dotnet, test]
 ---
 
 Microsoft vient tout juste de sortir une nouvelle version de MSTest!
