@@ -69,3 +69,14 @@ jekyll serve --drafts # avec les drafts
 - LF will be replaced by CRLF the next time Git touches it
   - <https://stackoverflow.com/a/75731053>
   - git config --global core.autocrlf true
+- Définir ce qu'on fait avec le besoin de mise à jour des nugets pour les projets
+- Analyser l'utilisation du nouveau mstest SDK
+- .NET Aspire dashboard
+- Analyser l'utilisation du nouveau SLNX
+- Analyser l'utilisation de Playwright
+- Voir ce qu'on fait avec Specflow
+- Utiliser les Testcontainers pour les essais BD -> demo à faire
+- Analyser et statuer l'utilisation des minimal API
+- Statuer sur l'utilisation d'essais automatisés d'architecture
+- Analyser l'utilisation du AOT
+- Utiliser les loggers templates
