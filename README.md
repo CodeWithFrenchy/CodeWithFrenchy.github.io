@@ -80,3 +80,5 @@ jekyll serve --drafts # avec les drafts
 - Statuer sur l'utilisation d'essais automatisés d'architecture
 - Analyser l'utilisation du AOT
 - Utiliser les loggers templates
+
+Faire un clone avec https://codewithfrenchy:{TOKEN}@github.com/CodeWithFrenchy/CodeWithFrenchy.github.io.git
