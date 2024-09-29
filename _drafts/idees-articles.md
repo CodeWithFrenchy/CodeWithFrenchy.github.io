@@ -19,3 +19,4 @@ tags: [tag1]
 - Statuer sur l'utilisation d'essais automatisés d'architecture
 - Analyser l'utilisation du AOT
 - Utiliser les loggers templates
+- Outil source generator
