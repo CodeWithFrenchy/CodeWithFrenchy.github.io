@@ -1,17 +1,17 @@
 ---
 title: La performance de Mapperly
-date: 2024-10-01 18:00:00 -0400
+date: 2024-11-01 18:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---
 
 Dans un [article précédent](https://codewithfrenchy.com/posts/source-generator-dotnet/), j'ai mentionné les avantages de l'utilisation des Source Generators. J'avais également présenté un exemple avec **Mapperly**, un outil qui utilise les Source Generators pour effectuer le mapping entre deux entités, évitant ainsi la réflexion. 
 
-Curieux de comparer les performances entre **Automapper**, un outil fréquemment utilisé dans mes mandats, et **Mapperly**, j'ai décidé de réaliser quelques benchmarks !
+Curieux de comparer les performances entre [AutoMapper](https://docs.automapper.org/en/stable/), un outil fréquemment utilisé dans mes mandats, et **Mapperly**, j'ai décidé de réaliser quelques benchmarks !
 
 ## Mise en place de l'environnement
 
-J'ai commencé par créer un projet .NET 8 (je prévois une mise à jour de cet article après la sortie de .NET 9) et j'ai ajouté la structure de base pour utiliser **Benchmark.NET**. 
+J'ai commencé par créer un projet .NET 8 (je prévois une mise à jour de cet article après la sortie de .NET 9) et j'ai ajouté la structure de base pour utiliser **BenchmarkDotNet**. 
 
 J'ai défini une classe `Personne` et un DTO `PersonneDto` :
 
@@ -103,22 +103,22 @@ public class BenchmarkMapperlyAutomapper
 Voici les résultats obtenus :
 
 ```txt
-| Méthode         | Itérations | Moyenne       | Ratio | Rang | Gen0   | Gen1   | Alloué   | Ratio Alloc |
-|------------------|-----------|--------------:|------:|-----:|-------:|-------:|----------:|------------:|
-| AvecMapperly     | 1         |     26.93 ns  |  0.30 |    1 | 0.0172 |      - |     144 B |        1.00 |
-| AvecAutomapper   | 1         |     89.49 ns  |  1.01 |    2 | 0.0172 |      - |     144 B |        1.00 |
-|                  |           |               |       |      |        |        |           |             |
-| AvecMapperly     | 100       |  1,228.53 ns  |  0.17 |    1 | 0.9308 | 0.0229 |    7792 B |        1.00 |
-| AvecAutomapper   | 100       |  7,453.55 ns  |  1.01 |    2 | 0.9308 | 0.0153 |    7792 B |        1.00 |
-|                  |           |               |       |      |        |        |           |             |
-| AvecMapperly     | 1000      | 14,071.97 ns  |  0.20 |    1 | 8.6670 | 1.7242 |   72600 B |        1.00 |
-| AvecAutomapper   | 1000      | 68,662.83 ns  |  1.00 |    2 | 8.6670 | 1.7090 |   72600 B |        1.00 |
+| Method         | Iteration | Mean         | Ratio | Rank | Gen0   | Gen1   | Allocated | Alloc Ratio |
+|--------------- |---------- |-------------:|------:|-----:|-------:|-------:|----------:|------------:|
+| AvecMapperly   | 1         |     23.28 ns |  0.31 |    1 | 0.0172 |      - |     144 B |        1.00 |
+| AvecAutomapper | 1         |     74.70 ns |  1.00 |    2 | 0.0172 |      - |     144 B |        1.00 |
+|                |           |              |       |      |        |        |           |             |
+| AvecMapperly   | 100       |  1,216.67 ns |  0.18 |    1 | 0.9308 | 0.0229 |    7792 B |        1.00 |
+| AvecAutomapper | 100       |  6,817.23 ns |  1.00 |    2 | 0.9308 | 0.0229 |    7792 B |        1.00 |
+|                |           |              |       |      |        |        |           |             |
+| AvecMapperly   | 1000      | 11,661.27 ns |  0.18 |    1 | 8.6670 | 1.7242 |   72600 B |        1.00 |
+| AvecAutomapper | 1000      | 63,182.80 ns |  1.00 |    2 | 8.6670 | 1.7090 |   72600 B |        1.00 |
 ```
 
 ## Conclusion
 
-Les résultats montrent clairement que **Mapperly** est beaucoup plus performant que **Automapper**. L'utilisation des Source Generators plutôt que de la réflexion porte ses fruits ! 
+Les résultats montrent clairement que **Mapperly** est beaucoup plus performant que **AutoMapper**. L'utilisation des Source Generators plutôt que de la réflexion porte ses fruits ! 
 
-La grande question reste : comment l'outil se comporte-t-il avec des structures plus complexes ? Restez à l'écoute pour un prochain article !
+La grande question reste : comment l'outil se comporte-t-il avec des structures plus complexes ? Restez à l'affut pour un prochain article !
 
 Pour en savoir plus sur Mapperly, consultez la [documentation officielle](https://mapperly.riok.app/docs/intro/).
