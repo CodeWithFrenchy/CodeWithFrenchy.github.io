@@ -7,7 +7,6 @@ tags: [tag1]
 
 # Idées articles
 
-- article cofomo
 - demo feature flag
 - Définir ce qu'on fait avec le besoin de mise à jour des nugets pour les projets
 - Analyser l'utilisation du nouveau mstest SDK
@@ -15,11 +14,8 @@ tags: [tag1]
 - Analyser l'utilisation du nouveau SLNX
 - Analyser l'utilisation de Playwright
 - Voir ce qu'on fait avec Specflow
-- Utiliser les Testcontainers pour les essais BD -> demo à faire
-- Analyser et statuer l'utilisation des minimal API
 - Statuer sur l'utilisation d'essais automatisés d'architecture
 - Analyser l'utilisation du AOT
 - Utiliser les loggers templates
-- Exemple sur la performance de Mapperly
 - idées pour le blog, utilisaions des fichiers .props pour configurer les projets!
 - FastEndpoints 
