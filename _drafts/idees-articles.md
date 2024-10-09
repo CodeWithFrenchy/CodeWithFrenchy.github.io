@@ -23,6 +23,7 @@ tags: [tag1]
 - Voir ce qu'on fait avec Specflow
 - Statuer sur l'utilisation d'essais automatisés d'architecture
 - Analyser l'utilisation du AOT
+  - <https://www.youtube.com/watch?v=N-MrQeZ1enY>
 - Utiliser les loggers templates
   - <https://www.linkedin.com/posts/djokic-stefan_there-is-a-better-way-for-your-logging-activity-7237066439591907328-nF1J/?utm_source=pocket_saves>
 - idées pour le blog, utilisaions des fichiers .props pour configurer les projets!
