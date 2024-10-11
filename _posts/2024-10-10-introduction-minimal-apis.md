@@ -1,6 +1,6 @@
 ---
 title: Introduction aux Minimal APIs
-date: 2024-11-01 20:00:00 -0400
+date: 2024-10-10 20:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet, aspnet-core]
 ---
@@ -63,6 +63,10 @@ Les Minimal APIs et les Web APIs classiques ont toutes deux leur utilité, en fo
 ## Conclusion 
 
 L'utilisation des API minimales dans ASP.NET Core offre une manière moderne et efficace de créer des services web légers et performants. Grâce à leur simplicité, elles permettent aux développeurs de se concentrer sur l'essentiel, en réduisant la complexité du code et en accélérant le développement. Bien qu’elles soient idéales pour des scénarios simples et des microservices, elles offrent également la flexibilité nécessaire pour évoluer vers des architectures plus complexes si besoin. En adoptant cette approche, vous bénéficiez d'une solution élégante, facile à maintenir, tout en profitant des puissantes fonctionnalités d'ASP.NET Core.
+
+💡 Pour approfondir le débat entre Minimal APIs et Web APIs classiques, je vous recommande vivement de visionner la vidéo de Nick Chapsas, où il partage son avis éclairé sur le sujet. 
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/bpVN_plQm5E?si=yVabG1jG36FkAPML" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Références 
 
