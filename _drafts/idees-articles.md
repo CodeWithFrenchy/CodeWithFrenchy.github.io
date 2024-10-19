@@ -50,3 +50,4 @@ tags: [tag1]
   - <https://devblogs.microsoft.com/azure-sql/azure-sql-dev-containers/>
   - <https://dev.to/dotnet/different-containerising-options-for-net-developers-cne?utm_source=pocket_shared>
 - Configuration VsCode et Visual studio
+- Remplacer Swagger avec Scallar
