@@ -52,4 +52,4 @@ Los de l'installation, assurez-vous d'[installer la charge de travail](https://l
 - [Productivity Power Tools 2022](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.ProductivityPowerPack2022)
 - [Open in Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.OpeninVisualStudioCode)
 - [File Icons](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.FileIcons)
-- [Add New File (64-bit)](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile#:~:text=For%20Visual%20Studio%202022%20support%2C%20install%20Add%20New,file.%20See%20the%20changelog%20for%20updates%20and%20roadmap.)
+- [Add New File (64-bit)](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.AddNewFile64)
