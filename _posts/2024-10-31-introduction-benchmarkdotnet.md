@@ -1,6 +1,6 @@
 ---
 title: Introduction à BenchmarkDotNet
-date: 2024-10-15 19:58:00 -0400
+date: 2024-10-31 19:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---
@@ -15,7 +15,7 @@ Voici comment commencer :
    dotnet add package BenchmarkDotNet
    ```
 
-2. **Création d'un Benchmark** : Créez une classe pour votre benchmark et ajoutez-y une méthode marquée avec l'attribut `[Benchmark]`.
+2. **Création d'un benchmark** : Créez une classe pour votre benchmark et ajoutez-y une méthode marquée avec l'attribut `[Benchmark]`.
 
 3. **Configuration** : Vous pouvez configurer votre benchmark en utilisant des attributs comme `[Params]` pour spécifier différents paramètres de test.
 
@@ -80,29 +80,29 @@ using TestBenchmarkDotnet.TestEnumToString;
 BenchmarkRunner.Run<BenchmarkEnumToString>();
 ```
 
-## Exécution en ligne de commande en mode release
+## Démarrer l'exécution d'un benchmark
 
-Pour obtenir des résultats de benchmark précis et représentatifs, il est essentiel d'exécuter vos benchmarks en mode `Release`.
+Pour exécuter un benchmark, il est essentiel d'exécuter vos benchmarks en mode `Release`.
 
 Voici comment procéder :
 
-1. **Exécution des Benchmarks** : Vous pouvez exécuter vos benchmarks en ligne de commande à l'aide de BenchmarkDotNet.
+1. **Exécution des benchmarks** : Vous pouvez exécuter vos benchmarks en ligne de commande.
 
    ```bash
    dotnet run -c Release
    ```
 
-   Assurez-vous d'exécuter la commande où se trouve votre fichier `.csproj`.
+   > 💡 Assurez-vous d'exécuter la commande où se trouve votre fichier `.csproj`.
 
-2. **Analyse des Résultats** : Après l'exécution, BenchmarkDotNet générera un rapport détaillé dans la console avec des métriques telles que le temps d'exécution moyen, l'écart-type et l'allocation mémoire.
+2. **Analyse des résultats** : Après l'exécution, BenchmarkDotNet générera un rapport détaillé dans la console avec des métriques telles que le temps d'exécution moyen, l'écart-type et l'allocation mémoire.
 
    Voici ce que ces métriques signifient :
 
-   - **Temps d'Exécution Moyen (`Mean`)** : C'est la moyenne des temps d'exécution mesurés pour chaque itération du benchmark. Mesuré en nanosecondes (`ns`), microsecondes (`us`), ou millisecondes (`ms`).
+   - **Temps d'exécution moyen (`Mean`)** : C'est la moyenne des temps d'exécution mesurés pour chaque itération du benchmark. Mesuré en nanosecondes (`ns`), microsecondes (`us`), ou millisecondes (`ms`).
 
    - **Écart-type (`StdDev`)** : Il mesure la variation ou la dispersion des temps d'exécution mesurés autour de la moyenne. Une valeur faible indique une grande stabilité dans les mesures.
 
-   - **Allocation Mémoire (`Allocated`)** : C'est la quantité totale de mémoire allouée pendant l'exécution du benchmark. Mesurée en octets (`B`), kilooctets (`KB`), ou mégaoctets (`MB`), selon l'ampleur de l'allocation.
+   - **Allocation mémoire (`Allocated`)** : C'est la quantité totale de mémoire allouée pendant l'exécution du benchmark. Mesurée en octets (`B`), kilooctets (`KB`), ou mégaoctets (`MB`), selon l'ampleur de l'allocation.
 
 ## Résultat de l'exécution
 
@@ -121,14 +121,11 @@ Voici comment procéder :
 
 On constate qu'il est plus rapide d'utiliser `nameof` et également moins coûteux en termes d'allocation mémoire.
 
-## Points à considérer dans les Benchmarks
+## Points à considérer dans les benchmarks
 
 Lorsque vous analysez les résultats de vos benchmarks avec BenchmarkDotNet, voici quelques points clés à garder à l'esprit :
 
 - **Métriques** : Les métriques comme le temps d'exécution moyen, l'écart-type et l'allocation mémoire sont cruciales pour évaluer les performances et l'efficacité de votre code.
-
-- **Réchauffement** : Assurez-vous que vos benchmarks sont suffisamment longs pour que le runtime JIT de .NET se stabilise (éviter l'impact du "warm-up").
-
 - **Comparaison** : Utilisez les résultats pour comparer différentes implémentations ou configurations de votre code.
 
 ## Conclusion
