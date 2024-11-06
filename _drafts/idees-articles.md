@@ -7,6 +7,12 @@ tags: [tag1]
 
 # Idées articles
 
+- Parler de mon mandat actuel et de la mise en place d'un registre de décision
+  - <https://www.youtube.com/shorts/zBI-Ys9oABU>
+- Utilisation d'automapper en lien avec l'article de Nick
+  - <https://www.youtube.com/watch?v=RsnEZdc3MrE>
+  - <https://www.jimmybogard.com/automapper-usage-guidelines/>
+- Central package management <https://www.youtube.com/watch?v=J4hMAETgK_8>
 - demo feature flag
 - Définir ce qu'on fait avec le besoin de mise à jour des nugets pour les projets
 - Analyser l'utilisation du nouveau mstest SDK
