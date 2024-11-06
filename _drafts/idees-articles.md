@@ -7,6 +7,7 @@ tags: [tag1]
 
 # Idées articles
 
+- Les outils que je recommande de regarder
 - Parler de mon mandat actuel et de la mise en place d'un registre de décision
   - <https://www.youtube.com/shorts/zBI-Ys9oABU>
 - Utilisation d'automapper en lien avec l'article de Nick
