@@ -59,3 +59,4 @@ tags: [tag1]
 - Configuration VsCode et Visual studio
 - Remplacer Swagger avec Scallar
 - Faire un artice sur le result type
+- article pour powertoy aussi
