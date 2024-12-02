@@ -2,7 +2,7 @@
 title: Les Générateurs de source
 date: 2024-09-29 18:00:00 -0400
 categories: []
-tags: [dotnet]
+tags: [dotnet, source-generator, source-generator]
 ---
 
 Les [Source Generators](https://learn.microsoft.com/en-us/dotnet/csharp/roslyn-sdk/source-generators-overview) (Générateurs de source) sont des outils intégrés au compilateur qui génèrent automatiquement du code source lors de la compilation, permettant aux développeurs d’automatiser la création de portions de code répétitives ou complexes tout en gardant le code généré visible et modifiable. [Introduits avec .NET 5](https://devblogs.microsoft.com/dotnet/introducing-c-source-generators/#:~:text=A%20Source%20Generator%20is%20a%20.NET%20Standard%202.0%20assembly%20that#:~:text=A%20Source%20Generator%20is%20a%20.NET%20Standard%202.0%20assembly%20that), ils sont rapidement devenus un élément clé de l’écosystème .NET. Contrairement à des techniques comme la réflexion, qui génèrent du code dynamiquement à l'exécution, les Source Generators produisent du code statique, optimisé et vérifié lors de la compilation.

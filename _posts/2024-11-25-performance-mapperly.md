@@ -2,7 +2,7 @@
 title: La performance de Mapperly
 date: 2024-11-25 17:00:00 -0400
 categories: [outil-developpement]
-tags: [dotnet]
+tags: [dotnet, source-generator, mapperly]
 ---
 
 La semaine dernière, j’ai eu la chance de participer à Microsoft Ignite à Chicago. Cet événement riche en annonces et en échanges m’a inspiré plusieurs sujets que je partagerai sur mon blog dans les jours à venir !
