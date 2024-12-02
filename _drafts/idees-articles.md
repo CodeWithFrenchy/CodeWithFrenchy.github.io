@@ -58,5 +58,6 @@ tags: [tag1]
   - <https://dev.to/dotnet/different-containerising-options-for-net-developers-cne?utm_source=pocket_shared>
 - Configuration VsCode et Visual studio
 - Remplacer Swagger avec Scallar
+  - Vidéo de patrick god
 - Faire un artice sur le result type
 - article pour powertoy aussi
