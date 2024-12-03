@@ -74,7 +74,8 @@ public partial class BenchmarkRegexFluentValidation
             RuleFor(x => x.Value).Matches(MyRegex());
         }
 
-        [GeneratedRegex(@"^[a-zA-Z0-9]*$", RegexOptions.Compiled)]
+        // L'option `RegexOptions.Compiled` est ignorée par le générateur et donc non nécessaire.
+        [GeneratedRegex(@"^[a-zA-Z0-9]*$")]
         private static partial Regex MyRegex();
     }
 }
