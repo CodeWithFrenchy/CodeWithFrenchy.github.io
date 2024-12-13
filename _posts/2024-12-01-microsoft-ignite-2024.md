@@ -10,18 +10,21 @@ L'événement phare de Microsoft a mis l'accent sur des thématiques majeures : 
 ## 1. Azure AI Foundry
 
 Une plateforme intégrée pour concevoir, entraîner et déployer des modèles d’IA personnalisés :
+
 - Permet aux entreprises de personnaliser des modèles comme GPT pour leurs propres données.
 - **Cas pratique** : Une banque européenne a augmenté ses ventes croisées de 25 % grâce à l’analyse de données client en temps réel.
 
 ## 2. Copilot Everywhere
 
 Une extension de l’IA dans les outils quotidiens comme Microsoft Teams, Power Platform et des plateformes tierces :
+
 - Résumés automatiques, génération d’applications low-code et intégration avec des solutions comme Salesforce.
 - **Impact mesurable** : Une entreprise a réduit de 30 % le temps consacré à des tâches administratives.
 
 ## 3. [Zero Day Quest](https://www.microsoft.com/en-us/msrc/microsoft-zero-day-quest)
 
 Un programme de détection proactive des vulnérabilités pour renforcer la cybersécurité mondiale :
+
 - Collaboration avec des chercheurs en sécurité, des universités et des gouvernements pour détecter les menaces.
 - **Résultat** : Réduction des incidents liés aux menaces internes de 40 % dans une société d’assurance.
 
@@ -35,6 +38,7 @@ Microsoft a réaffirmé sa mission : rendre l’IA accessible tout en assurant l
 ## SQL Server 2025
 
 [SQL Server 2025](https://www.microsoft.com/en-us/sql-server/blog/2024/11/19/announcing-microsoft-sql-server-2025-apply-for-the-preview-for-the-enterprise-ai-ready-database/) marque une avancée significative pour intégrer l’IA au cœur des données d’entreprise :
+
 - **Stockage vectoriel natif** et gestion des modèles IA directement dans le moteur SQL pour réduire les latences et simplifier l'orchestration.
 - **Sécurité renforcée** avec cryptage en temps réel et conformité stricte aux normes ([GDPR](https://gdpr-info.eu/), [HIPAA](https://fr.wikipedia.org/wiki/Health_Insurance_Portability_and_Accountability_Act)).
 - **[SQL Server Management Studio (SSMS) 21 Preview](https://learn.microsoft.com/en-us/sql/ssms/ssms-21/release-notes-21?view=sql-server-ver16)** :
@@ -51,7 +55,7 @@ Microsoft a clarifié sa vision sur l’avenir d’Azure DevOps et GitHub, en re
 - **Azure Boards et GitHub** : Intégration renforcée permettant une gestion fluide des éléments de travail.
 - **Azure Pipelines** : Des pipelines CI/CD adaptatifs pour les projets GitHub.
 
-Microsoft ne cherche pas à opposer Azure DevOps et GitHub, mais plutôt à renforcer leur complémentarité.  
+Microsoft ne cherche pas à opposer Azure DevOps et GitHub, mais plutôt à renforcer leur complémentarité.
 
 **Résumé** : GitHub et Azure DevOps ne sont pas des concurrents, mais des alliés, offrant une double offre stratégique pour simplifier les processus, sécuriser les applications et améliorer la performance.
 
