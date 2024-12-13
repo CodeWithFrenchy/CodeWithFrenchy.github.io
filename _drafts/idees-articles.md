@@ -61,3 +61,4 @@ tags: [tag1]
   - Vidéo de patrick god
 - Faire un artice sur le result type
 - article pour powertoy aussi
+- article copilot chat https://code.visualstudio.com/docs/copilot/copilot-customization

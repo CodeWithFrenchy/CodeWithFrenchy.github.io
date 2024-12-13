@@ -66,6 +66,6 @@ jekyll serve --drafts # avec les drafts
 - LF will be replaced by CRLF the next time Git touches it
   - <https://stackoverflow.com/a/75731053>
   - git config --global core.autocrlf true
-
+- Section réutilisable <https://carpentries-incubator.github.io/jekyll-pages-novice/includes/index.html#:~:text=The%20folder%20_includes%20has%20special%20meaning%20to%20Jekyll,In%20the%20%E2%80%9CName%20your%20file%E2%80%A6%E2%80%9D%20box%2C%20type%20_includes%2F.>
 
 Faire un clone avec https://codewithfrenchy:{TOKEN}@github.com/CodeWithFrenchy/CodeWithFrenchy.github.io.git
