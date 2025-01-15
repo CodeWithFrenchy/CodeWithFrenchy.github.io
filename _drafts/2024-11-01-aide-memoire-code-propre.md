@@ -1,6 +1,6 @@
 ---
 title: Aide-mémoire - Code propre
-date: 2024-11-01 20:00:00 -0400
+date: 2025-01-14 20:00:00 -0400
 categories: [bonne-pratique]
 tags: []
 ---
@@ -47,7 +47,7 @@ Le code est propre s'il peut être compris facilement par toutes les personnes q
 - Faire une distinction significative.
 - Utilisez des noms prononçables.
 - Utilisez des noms consultables.
-- Remplacez les [nombres magiques](https://refactoring.guru/fr/replace-magic-number-with-symbolic-constant) par des constantes nommées. 
+- Remplacez les [nombres magiques](https://refactoring.guru/fr/replace-magic-number-with-symbolic-constant) par des constantes nommées.
 - Évitez les encodages. N'ajoutez pas de préfixes ni d'informations de type.
 - Évitez de mettre les acronymes tels que "XML" en majuscule, favorisez le format "Xml".
 
@@ -108,13 +108,12 @@ Le code est propre s'il peut être compris facilement par toutes les personnes q
 
 - **Rigidité** - Le logiciel est difficile à changer. Un petit changement provoque une cascade de changements.
 - **Fragilité** - Le logiciel tombe en panne à de nombreux endroits en raison d'un seul changement.
-- **Immobilité** - Vous ne pouvez pas réutiliser des parties du code dans d'autres - projets en raison des risques impliqués et des efforts importants. 
+- **Immobilité** - Vous ne pouvez pas réutiliser des parties du code dans d'autres - projets en raison des risques impliqués et des efforts importants.
 - Complexité inutile.
 - Répétition inutile.
 - Opacité. Le code est difficile à comprendre.
 
-
-💡**Note** : Au besoin, référez-vous à cet [article complet](https://refactoring.guru/fr/refactoring/smells) pour plus de détails. 
+💡**Note** : Au besoin, référez-vous à cet [article complet](https://refactoring.guru/fr/refactoring/smells) pour plus de détails.
 
 ## Conclusion
 
