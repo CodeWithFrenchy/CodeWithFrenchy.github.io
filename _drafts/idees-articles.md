@@ -35,6 +35,7 @@ tags: [tag1]
   - <https://www.linkedin.com/posts/djokic-stefan_there-is-a-better-way-for-your-logging-activity-7237066439591907328-nF1J/?utm_source=pocket_saves>
 - idées pour le blog, utilisaions des fichiers .props pour configurer les projets!
   - <https://stackoverflow.com/questions/55213216/how-use-properties-from-directory-build-props-in-import-from-project-file-of-vis?utm_source=pocket_shared>
+  - <https://www.youtube.com/watch?v=QRgtcbxJlo0>
   - <https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?utm_source=pocket_reader&view=vs-2022>
   - <https://x.com/SimonCropp/status/1836887578106310885?utm_source=pocket_saves>
   - <https://x.com/mjovanovictech/status/1828041591681851555?utm_source=pocket_saves>
