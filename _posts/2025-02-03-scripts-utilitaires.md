@@ -1,6 +1,6 @@
 ---
 title: Scripts utilitaires
-date: 2024-11-01 20:00:00 -0400
+date: 2025-02-03 20:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---
@@ -91,7 +91,7 @@ En intégrant ces scripts utilitaires à votre processus de travail, vous pouvez
 
 Pour accéder à tous ces scripts, consultez le [référentiel complet sur GitHub](https://github.com/alexis35115/scripts-utilitaires).
 
-💡**Note** : Utilisez Windows Terminal pour éviter des problèmes d'encodage de caractères.
+💡**Note** : Utilisez Windows Terminal avec PowerShell Core pour éviter des problèmes d'encodage de caractères.
 
 N'hésitez pas à explorer et personnaliser ces outils en fonction de vos besoins spécifiques !
  
