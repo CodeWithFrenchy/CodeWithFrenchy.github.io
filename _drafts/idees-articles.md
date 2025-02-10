@@ -65,3 +65,4 @@ tags: [tag1]
 - article copilot chat https://code.visualstudio.com/docs/copilot/copilot-customization
 - <https://it-tools.tech/>
 - StringSyntaxAttribute <https://steven-giesel.com/blogPost/d2b2fc18-ca4c-4879-b87f-a1d36f435805>
+- Où je fais ma veille
