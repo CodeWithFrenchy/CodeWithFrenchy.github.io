@@ -1,8 +1,8 @@
 ---
 title: Mon parcours et conseils pour la relève
 date: 2025-02-13 19:58:00 -0400
-categories: [categorie1]
-tags: [tag1]
+categories: []
+tags: []
 ---
 
 Récemment, j’ai eu l’opportunité de participer à un webinaire destiné aux jeunes souhaitant découvrir les métiers des technologies de l’information. Cet échange a été l’occasion de répondre à plusieurs questions sur mon parcours, mon rôle en tant qu’architecte logiciel, et les opportunités dans le domaine des TI. Voici un résumé des échanges qui, je l’espère, pourront inspirer celles et ceux qui envisagent une carrière en informatique.

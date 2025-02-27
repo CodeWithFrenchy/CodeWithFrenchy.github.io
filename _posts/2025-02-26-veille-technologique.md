@@ -1,6 +1,6 @@
 ---
 title: Veille technologique - Pourquoi et comment rester à jour 
-date: 2025-02-10 19:58:00 -0400
+date: 2025-02-26 19:00:00 -0400
 categories: []
 tags: []
 ---
@@ -20,7 +20,7 @@ La __veille technologique__ est un processus continu de surveillance et d'analys
 ✅ __Suivre des sources fiables__ : Blogs spécialisés, sites d’éditeurs (Microsoft, AWS, Google Cloud), communautés GitHub, newsletters techniques, etc.  
 ✅ __Participer aux événements__ : Conférences (Microsoft Ignite, .NET Conf), meetups, webinaires.  
 ✅ __Tester les nouvelles technologies__ : Expérimenter avec des Proof of Concepts (PoC).  
-✅ __Échanger avec la communauté__ : Forums, LinkedIn, Twitter/X et Discord sont des mines d’informations.  
+✅ __Échanger avec la communauté__ : Forums, LinkedIn, X/Twitter et Discord sont des mines d’informations.  
 ✅ __Automatiser sa veille__ : Utiliser des outils comme Feedly, GitHub Trending et Twitter Lists.
 
 ## 📡 Où je fais ma veille technologique ?
