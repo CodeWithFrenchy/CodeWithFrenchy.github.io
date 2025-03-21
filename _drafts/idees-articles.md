@@ -8,11 +8,6 @@ tags: [tag1]
 # Idées articles
 
 - Les outils que je recommande de regarder
-- Parler de mon mandat actuel et de la mise en place d'un registre de décision
-  - <https://www.youtube.com/shorts/zBI-Ys9oABU>
-- Utilisation d'automapper en lien avec l'article de Nick
-  - <https://www.youtube.com/watch?v=RsnEZdc3MrE>
-  - <https://www.jimmybogard.com/automapper-usage-guidelines/>
 - Central package management <https://www.youtube.com/watch?v=J4hMAETgK_8>
 - demo feature flag
 - Définir ce qu'on fait avec le besoin de mise à jour des nugets pour les projets
@@ -24,8 +19,6 @@ tags: [tag1]
   - <https://www.jimmybogard.com/integrating-the-particular-service-platform-with-aspire/>
   - <https://www.youtube.com/watch?utm_source=pocket_shared&v=bPIu6PZW41Q>
   - <https://www.linkedin.com/posts/milan-jovanovic_net-aspire-ugcPost-7241391943790866432-QyYL/?utm_source=pocket_saves>
-- Analyser l'utilisation du nouveau SLNX
-  - <https://x.com/maartenballiauw/status/1840763793963471301?utm_source=pocket_saves>
 - Analyser l'utilisation de Playwright
 - Voir ce qu'on fait avec Specflow
 - Statuer sur l'utilisation d'essais automatisés d'architecture
@@ -39,7 +32,6 @@ tags: [tag1]
   - <https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?utm_source=pocket_reader&view=vs-2022>
   - <https://x.com/SimonCropp/status/1836887578106310885?utm_source=pocket_saves>
   - <https://x.com/mjovanovictech/status/1828041591681851555?utm_source=pocket_saves>
-- FastEndpoints
 - Liste d'auteurs à suivre et où
   - <https://www.linkedin.com/in/okyrylchuk/>
 - Générer PDF .net
@@ -60,9 +52,10 @@ tags: [tag1]
 - Configuration VsCode et Visual studio
 - Remplacer Swagger avec Scallar
   - Vidéo de patrick god
-- Faire un artice sur le result type
-- article pour powertoy aussi
 - article copilot chat https://code.visualstudio.com/docs/copilot/copilot-customization
 - <https://it-tools.tech/>
 - StringSyntaxAttribute <https://steven-giesel.com/blogPost/d2b2fc18-ca4c-4879-b87f-a1d36f435805>
-- Où je fais ma veille
+- problème de build <https://www.youtube.com/shorts/uJDrf5TwwAw>
+- copilot instruction
+- Article sur l'utilisation d'un editorconfig? Voir mon github pour la doc du mjq
+- SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
