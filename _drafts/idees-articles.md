@@ -59,3 +59,4 @@ tags: [tag1]
 - copilot instruction
 - Article sur l'utilisation d'un editorconfig? Voir mon github pour la doc du mjq
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
+- Xunit 3.0 <https://www.youtube.com/watch?v=qIMRFKHldvQ> et les implications
