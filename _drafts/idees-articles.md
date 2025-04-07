@@ -9,7 +9,6 @@ tags: [tag1]
 
 - Les outils que je recommande de regarder
 - Central package management <https://www.youtube.com/watch?v=J4hMAETgK_8>
-- demo feature flag
 - Définir ce qu'on fait avec le besoin de mise à jour des nugets pour les projets
 - Analyser l'utilisation du nouveau mstest SDK
 - .NET Aspire dashboard
