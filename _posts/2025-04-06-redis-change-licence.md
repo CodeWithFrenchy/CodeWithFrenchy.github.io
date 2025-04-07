@@ -1,6 +1,6 @@
 ---
 title: Redis change de licence ! Quelles répercussions pour les développeurs et les entreprises ?
-date: 2024-11-01 20:00:00 -0400
+date: 2025-04-06 20:00:00 -0400
 categories: [outil-developpement]
 tags: []
 ---
@@ -9,7 +9,7 @@ Depuis son lancement, Redis s'est imposé comme l'un des outils de base de donn�
 
 ## Changement de licence : Qu'est-ce qui a changé ?
 
-Redis, historiquement disponible sous licence [BSD](https://fr.wikipedia.org/wiki/Licence_BSD#:~:text=La%20licence%20BSD%20%28Berkeley%20Software%20Distribution%20License%29%20est%20une%20licence%23:~:text=La%20licence%20BSD%20%28Berkeley%20Software%20Distribution%20License%29%20est%20une%20licence), a récemment modifié les conditions d’utilisation de certains modules via la **Redis Source Available License (RSAL)**. Ce changement vise à limiter l’utilisation des modules spécifiques à Redis dans des solutions commerciales fournies en tant que service (*Software-as-a-Service*). L'objectif principal derrière ce changement est de protéger Redis des grands acteurs du cloud, tels qu'Amazon Web Services, qui bénéficiaient des modules Redis sans contribuer en retour au projet ou à son développement (Microsoft soutient l'utilisation de Redis à travers plusieurs initiatives). 
+Redis, historiquement disponible sous licence [BSD](https://fr.wikipedia.org/wiki/Licence_BSD#:~:text=La%20licence%20BSD%20%28Berkeley%20Software%20Distribution%20License%29%20est%20une%20licence%23:~:text=La%20licence%20BSD%20%28Berkeley%20Software%20Distribution%20License%29%20est%20une%20licence), a modifié les conditions d’utilisation de certains modules via la **Redis Source Available License (RSAL)**. Ce changement vise à limiter l’utilisation des modules spécifiques à Redis dans des solutions commerciales fournies en tant que service (*Software-as-a-Service*). L'objectif principal derrière ce changement est de protéger Redis des grands acteurs du cloud, tels qu'Amazon Web Services, qui bénéficiaient des modules Redis sans contribuer en retour au projet ou à son développement (Microsoft soutient l'utilisation de Redis à travers plusieurs initiatives). 
 
 Voici quelques points clés à retenir :
 
