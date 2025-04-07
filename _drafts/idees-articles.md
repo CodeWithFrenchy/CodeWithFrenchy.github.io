@@ -60,3 +60,6 @@ tags: [tag1]
 - Article sur l'utilisation d'un editorconfig? Voir mon github pour la doc du mjq
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
 - Xunit 3.0 <https://www.youtube.com/watch?v=qIMRFKHldvQ> et les implications
+- Article gestion des nullables?
+- https://visualstudio.microsoft.com/hub/?rwnlp=fr
+- https://www.freecodecamp.org/news/how-to-use-testcontainers-in-net/
