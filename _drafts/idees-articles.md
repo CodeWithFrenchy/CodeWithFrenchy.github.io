@@ -62,3 +62,5 @@ tags: [tag1]
 - Article gestion des nullables?
 - https://visualstudio.microsoft.com/hub/?rwnlp=fr
 - https://www.freecodecamp.org/news/how-to-use-testcontainers-in-net/
+- article sur l'utilisation des guid au lieu des numéros séquentiel incrémentale
+- https://code.visualstudio.com/blogs/2025/04/07/agentMode
