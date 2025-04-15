@@ -66,3 +66,4 @@ tags: [tag1]
 - https://code.visualstudio.com/blogs/2025/04/07/agentMode
 - Article pour la validation des courriels
 - Stratégie pour les versions des NuGets
+- https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
