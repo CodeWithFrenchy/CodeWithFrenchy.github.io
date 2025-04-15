@@ -1,6 +1,6 @@
 ---
 title: Introduction à K6
-date: 2025-05-01 20:00:00 -0400
+date: 2025-04-14 20:00:00 -0400
 categories: [outil-developpement]
 tags: [k6, essais]
 ---
@@ -18,7 +18,7 @@ Pourquoi utiliser k6 ?
 ## Types d’essais de charge
 
 - 🔼 **Test de montée en charge** (_Ramp-up test_) - Augmente progressivement le nombre d’utilisateurs pour voir à quel moment l’application commence à ralentir.
-- 💥 **Test de stress** (_Stress test_) - Envoie plus de requêtes que la capacité normale pour voir comment l’application réagit sous la surcharge. 
+- 💥 **Test de stress** (_Stress test_) - Envoie plus de requêtes que la capacité normale pour voir comment l’application réagit sous la surcharge.
 - ⏳ **Test d’endurance** (_Soak test_) - Vérifie si l’application reste stable après plusieurs heures/jours sous charge continue.
 - ⚡ **Test de pointe** (_Spike test_) - Simule une augmentation soudaine du trafic pour voir si le système peut absorber les pics de charge.
 
