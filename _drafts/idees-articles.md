@@ -67,3 +67,4 @@ tags: [tag1]
 - Article pour la validation des courriels
 - Stratégie pour les versions des NuGets
 - https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
+- décision en lien de l'utilisation des guillemets typographiques
