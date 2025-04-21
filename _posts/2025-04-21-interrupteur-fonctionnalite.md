@@ -1,6 +1,6 @@
 ---
 title: Interrupteurs de fonctionnalité
-date: 2025-04-06 20:00:00 -0400
+date: 2025-04-21 18:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---
@@ -143,7 +143,7 @@ public class ExempleController : ControllerBase
 
 ```csharp
 [Inject] 
-public IFeatureManager FeatureManager { get; set; } = default!
+public required IFeatureManager FeatureManager { get; set; }
 
 private bool estFonctionnaliteActive;
 
