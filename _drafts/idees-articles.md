@@ -39,7 +39,6 @@ tags: [tag1]
 - Microsoft DevBox, DevDrive, DevHome
   - <https://devblogs.microsoft.com/develop-from-the-cloud/roadmaps-for-microsoft-dev-box-and-azure-deployment-environments-are-now-live/>
   - <https://learn.microsoft.com/en-us/windows/dev-drive/?utm_source=pocket_shared>
-  - <https://learn.microsoft.com/fr-fr/windows/dev-home/?utm_source=pocket_shared>
 - Faire un url shortener pour le fun?
   - <https://www.linkedin.com/posts/milan-jovanovic_you-can-build-a-url-shortener-in-net-in-activity-7234809571406467072-8TJZ/?utm_source=pocket_saves>
 - Développement local
@@ -55,16 +54,19 @@ tags: [tag1]
 - <https://it-tools.tech/>
 - StringSyntaxAttribute <https://steven-giesel.com/blogPost/d2b2fc18-ca4c-4879-b87f-a1d36f435805>
 - problème de build <https://www.youtube.com/shorts/uJDrf5TwwAw>
-- copilot instruction
 - Article sur l'utilisation d'un editorconfig? Voir mon github pour la doc du mjq
-- SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
 - Xunit 3.0 <https://www.youtube.com/watch?v=qIMRFKHldvQ> et les implications
 - Article gestion des nullables?
 - https://visualstudio.microsoft.com/hub/?rwnlp=fr
 - https://www.freecodecamp.org/news/how-to-use-testcontainers-in-net/
-- article sur l'utilisation des guid au lieu des numéros séquentiel incrémentale
 - https://code.visualstudio.com/blogs/2025/04/07/agentMode
-- Article pour la validation des courriels
-- Stratégie pour les versions des NuGets
 - https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
 - décision en lien de l'utilisation des guillemets typographiques
+
+- Copilot migration tool
+- copilot instruction
+- SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
+- Article pour la validation des courriels (https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_regex-for-email-validation-think-again-activity-7313286835714088962-aVI5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ)
+- article sur l'utilisation des guid au lieu des numéros séquentiel incrémentale
+- Stratégie pour les versions des NuGets avec les branches
+- Gestion des NuGets avec dotnet outdated
