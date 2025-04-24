@@ -70,3 +70,5 @@ tags: [tag1]
 - article sur l'utilisation des guid au lieu des numéros séquentiel incrémentale
 - Stratégie pour les versions des NuGets avec les branches
 - Gestion des NuGets avec dotnet outdated
+- SonarCube
+- Vertical Slice architecture
