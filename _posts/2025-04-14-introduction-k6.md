@@ -26,7 +26,7 @@ La liste ne s'arrête pas là ! Il existe également d'autres types de tests com
  
 - 🧨 **Tests de chaos et de résilience** (_Chaos and Resilience Testing_) - Simulent des pannes ou des conditions extrêmes pour évaluer la capacité d’un système à résister aux défaillances et à se rétablir automatiquement.
 - 🖧 **Tests d’infrastructure** (_Infrastructure Testing_) - Vérifient la performance et la fiabilité des composants sous-jacents tels que les serveurs, les bases de données, les réseaux et le stockage cloud. Ils aident à identifier les goulets d’étranglement et à optimiser les ressources.  
-- 🌐 **Tests de performance du navigateur** (_Browser Performance Testing_) - Mesurent la vitesse d’affichage et le temps de chargement des pages web du point de vue de l’utilisateur final. Ces tests permettent d’optimiser les performances côté client et d'améliorer l'expérience utilisateur. Outils populaires : [Lighthouse] et [k6 Browser](https://grafana.com/docs/k6/latest/using-k6-browser/).  
+- 🌐 **Tests de performance du navigateur** (_Browser Performance Testing_) - Mesurent la vitesse d’affichage et le temps de chargement des pages web du point de vue de l’utilisateur final. Ces tests permettent d’optimiser les performances côté client et d'améliorer l'expérience utilisateur. Outils populaires : [Lighthouse](https://developer.chrome.com/docs/lighthouse) et [k6 Browser](https://grafana.com/docs/k6/latest/using-k6-browser/).  
 
 >💡 En combinant ces différents types de tests, on s’assure d’une application robuste, performante et résiliente, prête à affronter toutes les conditions ! 
 
