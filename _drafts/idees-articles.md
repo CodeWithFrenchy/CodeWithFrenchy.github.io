@@ -62,6 +62,8 @@ tags: [tag1]
 - https://code.visualstudio.com/blogs/2025/04/07/agentMode
 - https://andrewlock.net/netescapades-aspnetcore-securityheaders-1-0-0-released/
 - décision en lien de l'utilisation des guillemets typographiques
+- utiliser ou non un mapper <https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_dtos-mapping-the-good-the-bad-and-the-activity-7324909420814000129-1yWJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ>
+- sonarqube <https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_how-to-use-sonarqube-to-improve-your-code-activity-7324912978720419840-vxNt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ>
 
 - Copilot migration tool
 - copilot instruction
