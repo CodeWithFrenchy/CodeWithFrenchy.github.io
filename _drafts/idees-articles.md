@@ -64,6 +64,7 @@ tags: [tag1]
 - décision en lien de l'utilisation des guillemets typographiques
 - utiliser ou non un mapper <https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_dtos-mapping-the-good-the-bad-and-the-activity-7324909420814000129-1yWJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ>
 - sonarqube <https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_how-to-use-sonarqube-to-improve-your-code-activity-7324912978720419840-vxNt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ>
+- Exemple de code pour `EntetesSecuriteMiddleware`
 
 - Copilot migration tool
 - copilot instruction
