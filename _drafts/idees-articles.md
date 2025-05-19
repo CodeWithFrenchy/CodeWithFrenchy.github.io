@@ -73,5 +73,4 @@ tags: [tag1]
 - Stratégie pour les versions des NuGets avec les branches
 - Gestion des NuGets avec dotnet outdated
 - SonarCube
-- Vertical Slice architecture
 - ZAP <https://www.zaproxy.org/>
