@@ -70,8 +70,6 @@ tags: [tag1]
 - copilot instruction
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
   - https://www.youtube.com/watch?v=SPITo00xlic
-- Article pour la validation des courriels (https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_regex-for-email-validation-think-again-activity-7313286835714088962-aVI5?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ)
-- article sur l'utilisation des guid au lieu des numéros séquentiel incrémentale
 - Stratégie pour les versions des NuGets avec les branches
 - Gestion des NuGets avec dotnet outdated
 - SonarCube
