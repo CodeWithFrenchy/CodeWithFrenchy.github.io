@@ -1,6 +1,6 @@
 ---
 title: Changements de licences dans l’écosystème .NET – quelles implications ?
-date: 2025-06-16 19:58:00 -0400
+date: 2025-06-16 20:00:00 -0400
 categories: [outil-developpement]
 tags: []
 ---
