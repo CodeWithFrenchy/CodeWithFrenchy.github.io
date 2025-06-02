@@ -1,6 +1,6 @@
 ---
 title: Valider les courriels - pourquoi une regex ne suffit plus
-date: 2025-06-02 20:00:00 -0400
+date: 2025-06-02 19:00:00 -0400
 categories: [outil-developpement]
 tags: []
 ---
