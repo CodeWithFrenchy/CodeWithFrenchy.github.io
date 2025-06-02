@@ -1,6 +1,6 @@
 ---
 title: Faut-il vraiment adopter une architecture microservices
-date: 2025-05-08 20:00:00 -0400
+date: 2025-09-08 20:00:00 -0400
 categories: [architecture]
 tags: []
 ---
