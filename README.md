@@ -67,5 +67,8 @@ jekyll serve --drafts # avec les drafts
   - <https://stackoverflow.com/a/75731053>
   - git config --global core.autocrlf true
 - Section réutilisable <https://carpentries-incubator.github.io/jekyll-pages-novice/includes/index.html#:~:text=The%20folder%20_includes%20has%20special%20meaning%20to%20Jekyll,In%20the%20%E2%80%9CName%20your%20file%E2%80%A6%E2%80%9D%20box%2C%20type%20_includes%2F.>
+- Installation sur Windows <https://jekyllrb.com/docs/installation/windows/>
+- Écrire un nouvel article <https://chirpy.cotes.page/posts/write-a-new-post/>
+- Front matter <https://jekyllrb.com/docs/front-matter/>
 
 Faire un clone avec https://codewithfrenchy:{TOKEN}@github.com/CodeWithFrenchy/CodeWithFrenchy.github.io.git
