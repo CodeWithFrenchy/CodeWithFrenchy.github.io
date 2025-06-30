@@ -67,10 +67,18 @@ tags: [tag1]
 - Exemple de code pour `EntetesSecuriteMiddleware`
 
 - Copilot migration tool
-- copilot instruction
+- Fichier sur Gh Copilot instruction
+  - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
+  - <https://www.youtube.com/watch?v=QLaF0Ry45fo>
+  - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
+  - <https://github.com/SebastienDegodez/copilot-instructions/tree/main>
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
   - https://www.youtube.com/watch?v=SPITo00xlic
 - Stratégie pour les versions des NuGets avec les branches
 - Gestion des NuGets avec dotnet outdated
 - SonarCube
 - ZAP <https://www.zaproxy.org/>
+- Automatiser le remplacement de FluentAssertions avec de l'IA
+  - <https://www.linkedin.com/posts/benjaminabt_replace-fluentassertions-with-ai-activity-7338124027305074690-RGkZ/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
+  - https://github.com/AwesomeAssertions/AwesomeAssertions
+- idée article <https://github.com/SimonCropp/NaughtyStrings>
