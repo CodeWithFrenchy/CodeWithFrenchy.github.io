@@ -1,6 +1,6 @@
 ---
 title: Architecture Vertical Slice dans l’écosystème .NET
-date: 2025-06-30 20:00:00 -0400
+date: 2025-06-29 20:00:00 -0400
 categories: [architecture]
 tags: []
 ---
