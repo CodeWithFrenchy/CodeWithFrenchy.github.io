@@ -68,6 +68,7 @@ tags: [tag1]
 
 - Copilot migration tool
 - Fichier sur Gh Copilot instruction
+  - <https://www.youtube.com/watch?v=ZohAaUQBDbs>
   - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
   - <https://www.youtube.com/watch?v=QLaF0Ry45fo>
   - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
