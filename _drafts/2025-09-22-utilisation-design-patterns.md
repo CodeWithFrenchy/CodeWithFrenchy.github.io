@@ -481,7 +481,7 @@ En interne, .NET utilise aussi le Builder pattern pour la construction de gros o
 
 Côté IoC, un Builder est souvent créé via une factory ou fourni par un framework. On ne l’enregistre généralement pas dans le container (on crée le builder quand on en a besoin, puis on jette). Toutefois, rien n’empêche d’injecter un builder pré-configuré si cela a du sens dans votre design.
 
-En résumé, le Builder est un peu l’inverse du Factory : on l’utilise pour composer __petit à petit__ un objet complexe, là où la Factory crée d’emblée un objet souvent simple ou retourne une implémentation. Avec le Builder pattern, on prend le temps d’assembler — et grâce au *fluent interface*, le code appelant est clair et expressif.
+En résumé, le Builder est un peu l’inverse du Factory : on l’utilise pour composer __petit à petit__ un objet complexe, là où la Factory crée d’emblée un objet souvent simple ou retourne une implémentation. Avec le Builder pattern, on prend le temps d’assembler et grâce au *fluent interface*, le code appelant est clair et expressif.
 
 ## Conclusion : Choisir le bon pattern au bon moment
 
@@ -489,6 +489,6 @@ Nous avons fait un tour d’horizon de plusieurs design patterns clés en .NET C
 
 Un conseil : __entraînez-vous__ à reconnaître dans votre code ou dans les frameworks que vous utilisez quels patterns sont à l’œuvre. Vous verrez que ASP.NET Core, Entity Framework, etc., sont truffés de ces concepts (Singletons pour les services, Factory methods pour les DbContext, Decorators dans les pipeline, etc.). Comprendre les design patterns vous permettra non seulement de mieux utiliser les API .NET, mais aussi de concevoir vos propres composants de manière élégante et maintenable.
 
-Enfin, pour aller plus loin, je le redis, la [série](https://www.youtube.com/watch?v=v9ejT8FO-7I&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc) de __Christopher Okhravi__ sur YouTube est un excellent complément visuel et pédagogique – avec une touche d’humour qui, je l’espère, aura fait écho à la lecture de cet article. 😉
+Enfin, pour aller plus loin, je le redis, la [série](https://www.youtube.com/watch?v=v9ejT8FO-7I&list=PLrhzvIcii6GNjpARdnO4ueTUAVR9eMBpc) de __Christopher Okhravi__ sur YouTube est un excellent complément visuel et pédagogique, avec une touche d’humour qui, je l’espère, aura fait écho à la lecture de cet article. 😉
 
 En maîtrisant ces patterns, vous éviterez de réinventer la roue carrée et vous construirez des applications évolutives *brique par brique*. Alors à vos Legos, prêts, codez ! 🚀
