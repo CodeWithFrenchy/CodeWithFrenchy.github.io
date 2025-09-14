@@ -50,9 +50,10 @@ public class DataService
     [MethodImpl(MethodImplOptions.NoInlining)]
     public void TraiterDonnees(Data donnees)
     {
-        // ... logique de traitement des données ...
+        // Logique de traitement des données...
         Console.WriteLine("Traitement des données en cours...");
-        // Par exemple, on simule du travail :
+
+        // Par exemple, on simule du travail
         System.Threading.Thread.Sleep(100); 
     }
 }
@@ -63,7 +64,9 @@ public class Program
     {
         var service = new DataService();
         var chrono = Stopwatch.StartNew();
+
         service.TraiterDonnees(new Data());
+        
         chrono.Stop();
         Console.WriteLine($"Traitement terminé en {chrono.ElapsedMilliseconds} ms");
     }
