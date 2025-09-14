@@ -2,7 +2,7 @@
 title: Amélioration des performances en utilisant JsonSerializerOptions en singleton
 date: 2025-03-20 20:00:00 -0400
 categories: []
-tags: []
+tags: [dotnet]
 ---
 
 ## Introduction
