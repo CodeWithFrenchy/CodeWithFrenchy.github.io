@@ -5,8 +5,6 @@ categories: [architecture]
 tags: []
 ---
 
-> ⚠️ À FINIR DE RÉVISER!
-
 L'idée reçue veut que toute nouvelle API doive être _versionnée_ d'emblée, souvent en préfixant les URLs par un numéro de version (`/v1`, `/v2`, etc.). Cette pratique est censée faciliter les évolutions futures sans casser les clients existants. Pourtant, **dans de nombreux cas, il n’est pas nécessaire de mettre en place un versionnement par défaut**. En effet, si tous les consommateurs de l'API sont sous votre contrôle, la flexibilité apportée par le versionnement peut ne pas justifier la complexité de gestion supplémentaire introduite. Nous allons examiner pourquoi le versionnement systématique n’est pas toujours indispensable, quels en sont les coûts, et comment faire évoluer vos APIs internes de façon pragmatique et pédagogique.
 
 ## Qu'est-ce que le versionnement d'API et pourquoi est-il recommandé ?
