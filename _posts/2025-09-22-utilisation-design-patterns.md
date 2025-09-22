@@ -1,6 +1,6 @@
 ---
 title: Les design patterns - les bons Legos pour vos applications .NET
-date: 2025-09-22 20:00:00 -0400
+date: 2025-09-22 10:00:00 -0400
 categories: [architecture]
 tags: []
 ---
