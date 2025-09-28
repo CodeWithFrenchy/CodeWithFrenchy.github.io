@@ -1,6 +1,6 @@
 ---
 title: Concevoir et maintenir des applications microservices performantes en .NET
-date: 2025-12-29 20:00:00 -0400
+date: 2026-12-29 20:00:00 -0400
 categories: [architecture]
 tags: [dotnet]
 ---
