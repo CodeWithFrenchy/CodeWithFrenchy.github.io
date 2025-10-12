@@ -1,6 +1,6 @@
 ---
 title: NuGets recommandés pour le développement .NET
-date: 2025-10-06 20:00:00 -0400
+date: 2026-01-01 20:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---

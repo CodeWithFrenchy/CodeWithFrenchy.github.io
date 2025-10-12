@@ -1,6 +1,6 @@
 ---
 title: Gestion des dépendances NuGet avec dotnet-outdated
-date: 2025-12-15 20:00:00 -0400
+date: 2026-01-01 20:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---

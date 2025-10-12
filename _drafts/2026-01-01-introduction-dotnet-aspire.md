@@ -1,6 +1,6 @@
 ---
 title: Introduction à .NET Aspire
-date: 2025-10-20 19:58:00 -0400
+date: 2026-01-01 20:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet, aspire]
 ---

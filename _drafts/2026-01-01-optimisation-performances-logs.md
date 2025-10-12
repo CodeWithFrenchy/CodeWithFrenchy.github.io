@@ -1,6 +1,6 @@
 ---
 title: Optimiser la performance des logs dans un projet .NET
-date: 2025-11-03 20:00:00 -0400
+date: 2026-01-01 20:00:00 -0400
 categories: []
 tags: [dotnet]
 ---

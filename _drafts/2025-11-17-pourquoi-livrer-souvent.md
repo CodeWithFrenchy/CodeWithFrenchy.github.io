@@ -1,6 +1,6 @@
 ---
 title: Fréquenter les mises en production - pourquoi livrer souvent change la donne
-date: 2026-12-29 20:00:00 -0400
+date: 2025-11-17 20:00:00 -0400
 categories: []
 tags: []
 ---

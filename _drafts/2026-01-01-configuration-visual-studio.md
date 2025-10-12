@@ -1,6 +1,6 @@
 ---
 title: Ma configuration de Visual Studio
-date: 2024-11-01 20:00:00 -0400
+date: 2026-01-01 20:00:00 -0400
 categories: [outil-developpement]
 tags: [visual-studio]
 ---
