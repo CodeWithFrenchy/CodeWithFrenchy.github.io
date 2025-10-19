@@ -7,6 +7,7 @@ tags: [tag1]
 
 # Idées articles
 
+- verrou distribué exemple? article?
 - Faire le pagination UI ou backend les avantages et incovéniants
 - Quand dénormaliser ou non une BD
 - Central package management <https://www.youtube.com/watch?v=J4hMAETgK_8>
