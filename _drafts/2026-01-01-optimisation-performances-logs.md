@@ -1,15 +1,11 @@
 ---
 title: Optimiser la performance des logs dans un projet .NET
-date: 2026-01-01 20:00:00 -0400
+date: 2024-01-01 20:00:00 -0400
 categories: []
 tags: [dotnet]
 ---
 
-> ⚠️ À finir
-
-
-
-# Tirer le meilleur parti de la journalisation .NET avec les templates de loggers
+> À finir
 
 ## Introduction
 
