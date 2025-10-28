@@ -51,6 +51,7 @@ tags: [tag1]
   - <https://github.com/SebastienDegodez/copilot-instructions/tree/main>
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
   - https://www.youtube.com/watch?v=SPITo00xlic
+  - Rendu par défaut Vs2026!!!
 - Stratégie pour les versions des NuGets avec les branches
 - SonarCube
 - ZAP <https://www.zaproxy.org/>
@@ -58,3 +59,4 @@ tags: [tag1]
   - <https://www.linkedin.com/posts/benjaminabt_replace-fluentassertions-with-ai-activity-7338124027305074690-RGkZ/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
   - https://github.com/AwesomeAssertions/AwesomeAssertions
 - idée article <https://github.com/SimonCropp/NaughtyStrings>
+- Nugets à utiliser suite au changement de licence comme MediatR
