@@ -2,7 +2,7 @@
 title: Services d'arrière-plan en .NET - comparatif des approches
 date: 2026-12-29 20:00-:00 -0400
 categories: []
-tags: []
+tags: [dotnet]
 ---
 
 ## Introduction : un besoin courant, plusieurs approches possibles
