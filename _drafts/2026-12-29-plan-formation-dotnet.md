@@ -1,9 +1,20 @@
 ---
-title: Plan de formation - .NET Framework vers .NET 6–10
+title: Plan de formation - .NET Framework vers .NET moderne
 date: 2026-12-29 20:00:00 -0400
 categories: []
 tags: [dotnet]
 ---
+
+## Préambule
+
+Passer de **.NET Framework** à **.NET moderne** représente une étape importante pour tout développeur souhaitant rester à jour dans l’écosystème Microsoft. Ce **plan de formation** a été conçu pour accompagner cette transition de manière progressive et concrète.
+
+L’objectif est d’aider les développeurs et architectes à :
+
+- Comprendre les différences fondamentales entre **.NET Framework** et **.NET (Core)** ;
+- Explorer les **nouvelles versions** de .NET, leurs cycles de support (LTS / STS) et leurs améliorations ;
+- Découvrir les **nouveaux outils et pratiques** (configuration moderne, DI intégrée, hosting model, etc.) ;
+- Se familiariser avec les **technologies clés** de l’écosystème actuel : **ASP.NET Core**, **Entity Framework Core**, **TestContainers**, **Aspire**, **GitHub Copilot**, et plus encore.
 
 **Qu'est-ce que .NET ?** Microsoft .NET est une plateforme de développement offrant un écosystème riche pour créer des applications de tous types (web, bureau, mobiles, services, etc.). Historiquement, on distinguait **.NET Framework** (lancé en 2002) et **.NET Core** (lancé en 2016). Aujourd'hui, le terme **« .NET »** désigne principalement la version moderne issue de .NET Core, unifiée à partir de .NET 5 en 2020. À l'inverse, **.NET Framework 4.x** est l'ancienne version « legacy », désormais figée (la 4.8 étant la dernière). Quelles sont les grandes différences entre les deux ?
 
