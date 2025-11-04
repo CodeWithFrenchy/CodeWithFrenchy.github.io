@@ -163,7 +163,8 @@ GitHub Copilot, basé sur l'IA, peut assister les développeurs dans la **modern
 ### Faciliter les essais
 
 Dans les versions récentes de .NET, Microsoft a introduit plusieurs outils pour **faciliter les tests automatisés** sans avoir besoin de dépendances tierces.  
-<br/>Deux nouveautés très utiles sont :
+
+Deux nouveautés très utiles sont :
 
 - TimeProvider / FakeTimeProvider
 - ILogger<T> / FakeLogger<T>
