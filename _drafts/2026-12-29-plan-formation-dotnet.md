@@ -189,4 +189,4 @@ C'est une solution idéale pour remplacer :
 
 C'est une réponse directe aux défis rencontrés avec les microservices, les BFF, les APIs, les workers, etc.
 
-**Playlist :** [Migrating From Docker Compose to .NET Aspire (my experience) - YouTube](https://www.youtube.com/watch?v=-73fAqw8ckU&list=PLYpjLpq5ZDGtGCUub_LP7_a3PRqzWPNoK)
+**Playlist :** [Migrating From Docker Compose to Aspire (my experience) - YouTube](https://www.youtube.com/watch?v=-73fAqw8ckU&list=PLYpjLpq5ZDGtGCUub_LP7_a3PRqzWPNoK)
