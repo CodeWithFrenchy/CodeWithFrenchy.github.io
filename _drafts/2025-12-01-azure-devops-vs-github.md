@@ -1,6 +1,6 @@
 ---
 title: Azure DevOps vs GitHub - convergence en cours et perspectives
-date: 2026-12-29 20:0:00 -0400
+date: 2025-12-01 20:00:00 -0400
 categories: []
 tags: []
 ---
@@ -20,14 +20,39 @@ De son côté, **GitHub** s'est imposé comme la plateforme de référence pour 
 Si Azure DevOps et GitHub ont des positions différentes, Microsoft a clairement affiché son intention de **rapprocher** les deux plateformes plutôt que de les opposer. À court et moyen terme, on observe d'ailleurs une intégration croissante entre les deux produits. Plusieurs fonctionnalités autrefois exclusives à l'un sont désormais accessibles aux utilisateurs de l'autre, et des passerelles officielles simplifient la collaboration mixte.
 
 - **Intégration des outils de planification et de code** : Il est tout à fait possible aujourd'hui d'utiliser **Azure Boards** pour suivre des travaux liés à un dépôt GitHub, ou de déclencher des **Azure Pipelines** à [partir d'un code hébergé sur GitHub](https://codewithfrenchy.com/posts/microsoft-ignite-2024/#azure-devops-et-github). Microsoft a publié des connecteurs natifs pour lier commits, pull requests et issues GitHub avec les éléments de travail Azure DevOps. À l'inverse, GitHub propose des GitHub Actions qui peuvent déployer sur Azure, et son module **GitHub Projects** s'inspire partiellement des tableaux Azure Boards (même s'il reste moins avancé). Cette intégration permet aux équipes de combiner les points forts de chaque plateforme en fonction de leurs besoins.
+
 - **Fonctionnalités** DevSecOps **mutualisées** : Microsoft a commencé à rendre disponibles sur Azure DevOps certains outils initialement développés pour GitHub. Par exemple, **GitHub Advanced Security** (scans de code, détection de secrets, analyse de dépendances) est désormais [disponible dans Azure DevOps](https://codewithfrenchy.com/posts/microsoft-ignite-2024/#azure-devops-et-github) pour analyser les repositories Azure Repos. Concrètement, un projet Azure DevOps peut activer ces analyses de sécurité avancées dans ses dépôts Git, là où il fallait auparavant passer par GitHub. De même, l'assistant intelligent **GitHub Copilot** s'invite dans Azure DevOps (extensions IDE liées à Azure Repos, ou prochainement via le service Azure DevOps MCP permettant à [Copilot d'interroger les données Azure DevOps](https://devblogs.microsoft.com/devops/azure-devops-with-github-repositories-your-path-to-agentic-ai/#:~:text=One%20more%20thing%E2%80%A6)). Ces exemples illustrent la volonté d'offrir aux utilisateurs d'Azure DevOps les avancées technologiques de GitHub, sans qu'ils aient à changer de plateforme du jour au lendemain.
+
 - **Licences et offres convergentes** : Un pas important vers la convergence a été fait sur le plan des licences. Depuis février 2025, [les clients GitHub Enterprise disposent automatiquement des droits d'utilisation basiques d'Azure DevOps](https://devblogs.microsoft.com/devops/azure-devops-with-github-repositories-your-path-to-agentic-ai). Autrement dit, une entreprise abonnée à GitHub Enterprise peut utiliser Azure Boards et Azure Pipelines sans coût supplémentaire. Cela vise à éliminer les freins financiers à une approche hybride. Plus de [200 000 utilisateurs profitent déjà de cette intégration](https://devblogs.microsoft.com/devops/azure-devops-with-github-repositories-your-path-to-agentic-ai), accédant à Azure DevOps via leur licence GitHub. Inversement, Microsoft a annoncé que les possesseurs de licences Azure DevOps Server (on-premises) auront des tarifs préférentiels pour GitHub (offres à confirmer). Ce **cross-licensing** réduit la barrière entre les deux mondes et encourage les organisations à utiliser **"le meilleur des deux"** plutôt que de se limiter à l'un ou l'autre.
 
   _Exemple d'environnement hybride combinant un dépôt GitHub (avec ses fonctionnalités de code, CI et sécurité) et les services Azure DevOps pour la gestion de projet (Boards) et les pipelines de déploiement. Cette intégration permet aux équipes d'exploiter GitHub pour le code et la collaboration tout en conservant les outils éprouvés d'Azure DevOps pour la planification et la livraison. Les développeurs bénéficient ainsi de GitHub (Codespaces, Actions, Dependabot, etc.), tandis que les chefs de projet et opérationnels profitent d'Azure Boards et Pipelines au sein d'un écosystème unifié._
 
 - **Outils de migration** : Consciente que de nombreuses organisations envisagent un éventuel transfert de l'un vers l'autre, Microsoft a commencé à fournir des **outils de migration**. Le plus abouti est [GitHub Enterprise Importer](https://docs.github.com/en/migrations/using-github-enterprise-importer/migrating-from-azure-devops-to-github-enterprise-cloud), qui permet de migrer aisément les dépôts **Azure Repos** vers GitHub en conservant tout l'historique, les branches et métadonnées importantes. Des centaines de milliers de dépôts Azure DevOps ont déjà été migrés via cet outil. Pour la migration des éléments de travail (user stories, tâches, bugs) d'Azure Boards vers GitHub Issues, il existe pour le moment des scripts communautaires ou des solutions tierces, mais nul doute que Microsoft simplifiera cela si la demande augmente. En bref, Microsoft prépare le terrain pour que toute équipe puisse, le moment venu, **passer de l'une à l'autre plateforme sans douleur**.
 
+- **Le playbook officiel de migration** : Fin 2025, Microsoft a publié un [playbook officiel](https://devblogs.microsoft.com/all-things-azure/azure-devops-to-github-migration-playbook-unlocking-agentic-devops/) pour guider les organisations souhaitant migrer progressivement d’Azure DevOps vers GitHub.
+
+  Les messages principaux sont clairs :
+    
+    - **La migration doit être progressive**, en commençant par les dépôts (repos), puis éventuellement les pipelines.
+    - **GitHub Enterprise Importer** est l’outil recommandé pour migrer Azure Repos tout en conservant l’historique et les métadonnées
+    - Certaines briques (comme Azure Boards ou Test Plans) ne disposent pas encore d’un équivalent de migration « clé en main », et Microsoft recommande, lorsqu’elles sont critiques, de continuer à les utiliser **en parallèle de GitHub**.
+    - Le scénario **hybride** (GitHub pour le code et la sécurité + Azure Boards/Pipelines pour la planification et la livraison) est confirmé comme une approche pleinement supportée par Microsoft.
+
+  Ce playbook ne force pas la migration : il propose simplement un cadre pour évoluer à son propre rythme.
+
 Tous ces efforts d'intégration montrent bien que Microsoft ne cherche pas à forcer un choix exclusif entre Azure DevOps et GitHub, mais à **renforcer leur complémentarité**. Le [message lors de la conférence Ignite 2024](https://codewithfrenchy.com/posts/microsoft-ignite-2024/#:~:text=Microsoft%20ne%20cherche%20pas%20%C3%A0,plut%C3%B4t%20%C3%A0%20renforcer%20leur%20compl%C3%A9mentarit%C3%A9) était clair à ce sujet : _"GitHub et Azure DevOps ne sont pas des concurrents, mais des alliés"_ au service des développeurs et des entreprises. Il est désormais possible (et courant) d'avoir un projet dont le code source et les CI runs sont sur GitHub, tandis que la gestion de projet et le suivi des tâches restent sur Azure DevOps, le tout fonctionnant de pair de manière fluide. Microsoft parle d'ailleurs d'un **"écosystème connecté"** unique. Plutôt que de remplacer brutalement l'un par l'autre, [l'éditeur](https://devblogs.microsoft.com/devops/azure-devops-with-github-repositories-your-path-to-agentic-ai/) crée progressivement une **expérience unifiée** pour les deux produits.
+
+## Une nouvelle ère : l’Agentic DevOps
+
+Depuis 2025, Microsoft introduit de plus en plus la notion d’**Agentic DevOps**, une approche où l’IA joue un rôle actif dans les workflows de développement.
+
+Dans ce modèle, GitHub devient naturellement la plateforme privilégiée, car :
+
+- GitHub Actions s’intègre profondément avec Copilot,
+- les modèles IA (GitHub Models / Azure) peuvent être appelés directement dans les workflows,
+- la structure **repo-centric** de GitHub facilite les scénarios “contextualisés”.
+
+Azure DevOps n’est pas mis de côté, mais cette nouvelle orientation explique pourquoi Microsoft fait porter l’innovation d’abord sur GitHub pour tout ce qui concerne l’automatisation intelligente.
 
 ## À terme, vers une convergence autour de GitHub ?
 
@@ -48,3 +73,5 @@ Bien entendu, **Azure DevOps ne va pas disparaître brutalement**. Microsoft l'a
 En 2025, **Azure DevOps et GitHub ne s'opposent pas, ils se complètent**. Azure DevOps apporte la rigueur et la profondeur fonctionnelle recherchées par les grandes équipes agiles, tandis que GitHub offre l'innovation, l'ouverture et la convivialité plébiscitées par les développeurs. Microsoft l'a bien saisi et fait converger ces deux univers pour créer une expérience cohérente. Il n'y a donc **aucune urgence** à abandonner l'un pour l'autre à court terme : vous pouvez tout à fait continuer à exploiter Azure DevOps si c'est votre outillage principal, ou GitHub si vous y trouvez votre compte **ou même les deux ensemble**. Les passerelles mises en place (intégrations techniques, licences unifiées) vous assurent que votre choix aujourd'hui ne vous fermera pas de porte pour demain.
 
 Mon conseil serait de **choisir en fonction de vos besoins actuels**, tout en gardant un œil sur l'évolution de la convergence. Si votre équipe apprécie la gestion de projet d'Azure DevOps, rien ne vous empêche de l'utiliser tout en hébergeant votre code sur GitHub pour profiter de Copilot et de la communauté, le tout fonctionne désormais de manière intégrée. Si au contraire vous démarrez un projet avec GitHub pour sa simplicité, vous pourrez plus tard raccrocher un Azure Boards ou migrer certaines données si le besoin s'en fait sentir. Microsoft continue d'investir pour que, le moment venu, le passage de l'un à l'autre se fasse sans encombre. En fin de compte, **"Azure DevOps vs GitHub" n'est pas un combat avec un perdant et un gagnant, c'est une convergence annoncée** où l'utilisateur final sort vainqueur, avec une plateforme DevOps Microsoft unifiée plus puissante et flexible qu'auparavant.
+
+Enfin, avec le migration playbook publié par Microsoft, la coexistence Azure DevOps ↔ GitHub et les transitions progressives sont désormais des scénarios officiellement encouragés, ce qui confirme encore davantage l’idée d’une convergence maîtrisée plutôt que d’un remplacement brutal.
