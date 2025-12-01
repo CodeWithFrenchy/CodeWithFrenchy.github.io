@@ -1,6 +1,6 @@
 ---
 title: Azure DevOps vs GitHub - convergence en cours et perspectives
-date: 2025-12-01 20:00:00 -0400
+date: 2025-12-01 17:00:00 -0400
 categories: []
 tags: []
 ---
