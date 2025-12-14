@@ -7,6 +7,7 @@ tags: [tag1]
 
 # Idées articles
 
+- Faire un article pour définir la version de .NET à utiliser
 - verrou distribué exemple? article?
 - Faire le pagination UI ou backend les avantages et incovéniants
 - Quand dénormaliser ou non une BD
@@ -52,6 +53,7 @@ tags: [tag1]
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
   - https://www.youtube.com/watch?v=SPITo00xlic
   - Rendu par défaut Vs2026!!!
+  - <https://www.youtube.com/watch?v=ejA6HiIobb0>
 - Stratégie pour les versions des NuGets avec les branches
 - SonarCube
 - ZAP <https://www.zaproxy.org/>
