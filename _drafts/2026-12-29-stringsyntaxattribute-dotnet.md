@@ -1,6 +1,6 @@
 ---
 title: Comprendre et utiliser l'attribut StringSyntaxAttribute en .NET
-date: 2026-01-12 20:00:00 -0400
+date: 2026-12-29 20:00:00 -0400
 categories: []
 tags: [dotnet]
 ---

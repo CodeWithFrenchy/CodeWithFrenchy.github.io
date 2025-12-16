@@ -7,6 +7,8 @@ tags: [dotnet, aspire]
 
 > ⚠️ À finir
 
+RENOMMER!!!!
+
 - .NET Aspire dashboard
   - <https://devblogs.microsoft.com/dotnet/adding-dotnet-aspire-to-your-existing-dotnet-apps/>
   - <https://learn.microsoft.com/en-us/dotnet/aspire/get-started/add-aspire-existing-app?pivots=visual-studio&tabs=windows&utm_source=pocket_shared>

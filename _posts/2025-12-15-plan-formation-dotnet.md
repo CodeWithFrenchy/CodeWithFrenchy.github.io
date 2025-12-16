@@ -1,9 +1,11 @@
 ---
 title: Plan de formation - .NET Framework vers .NET moderne
-date: 2026-12-29 20:00:00 -0400
+date: 2025-12-15 18:00:00 -0400
 categories: []
 tags: [dotnet]
 ---
+
+> 💡 Cet article marque le dernier de l’année 2025 : je prends maintenant un congé bien mérité pour la période des fêtes et je vous invite à en faire autant. On se retrouve le 12 janvier prochain pour le prochain article.
 
 ## Préambule
 
@@ -26,33 +28,35 @@ L’objectif est d’aider les développeurs et architectes à :
 
 En résumé, **.NET « Core » unifié est l'avenir de l'écosystème .NET**, idéal pour tout nouveau projet, tandis que .NET Framework sert uniquement à maintenir d'anciennes applications sur Windows.
 
-**À écouter :** [.NET Versions Explained - .NET, .NET Core, .NET Standard, .NET Framework and more](https://www.youtube.com/watch?v=X75vbT-Yv-c)  
+**À écouter :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/X75vbT-Yv-c?si=zTln5vaEec8HLcts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Évolution des versions .NET 6 à .NET 10
 
-Pour chaque version majeure de .NET (de la version 6 à la version 10), vous trouverez ci-dessous une vidéo explicative des nouveautés ainsi que l'article détaillé de Stephen Toub sur les améliorations techniques (notamment de performance) de cette version.
+Pour chaque version majeure de .NET (de la version 6 à la version 10), vous trouverez ci-dessous au moins une vidéo explicative des nouveautés ainsi que l'article détaillé de [Stephen Toub](https://x.com/stephentoub) sur les améliorations techniques (notamment de performance) de cette version.
 
-**.NET 6 (2021)**
+**.NET 6 (2021 - 2024)**
 
-- **Vidéo :** _What's New in .NET 6 and C# 10?_ - [.NET 6 deep dive](https://www.youtube.com/watch?v=GJ_PaRNDe9E) et [What's new in C# 10](https://www.youtube.com/watch?v=dfzBMxXQUOc)
+- **Vidéos :** _What's New in .NET 6 and C# 10?_ - [.NET 6 deep dive](https://www.youtube.com/watch?v=GJ_PaRNDe9E) et [What's new in C# 10](https://www.youtube.com/watch?v=dfzBMxXQUOc)
 - **Article :** _Performance Improvements in .NET 6_ - [Performance Improvements in .NET 6 - .NET Blog](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-6/)
 
-**.NET 7 (2022)**
+**.NET 7 (2022 - 2024)**
 
-- **Vidéo :** _What's New in .NET 7 C# 11?_ - [.NET 7 Overview](https://www.youtube.com/watch?v=9NqthBLHBDg) et [What's New in C# 11](https://www.youtube.com/watch?v=H18CfoinPZg)
+- **Vidéos :** _What's New in .NET 7 C# 11?_ - [.NET 7 Overview](https://www.youtube.com/watch?v=9NqthBLHBDg) et [What's New in C# 11](https://www.youtube.com/watch?v=H18CfoinPZg)
 - **Article :** _Performance Improvements in .NET 7_ - [Performance Improvements in .NET 7 - .NET Blog](https://devblogs.microsoft.com/dotnet/performance_improvements_in_net_7/)
 
-**.NET 8 (2023)**
+**.NET 8 (2023 - 2026)**
 
-- **Vidéo :** _What's New in .NET 8 C# 12?_ - [What's new in .NET 8](https://www.youtube.com/watch?v=pJGDPEk45Jc) et [Every New Feature Added in C# 1](https://www.youtube.com/watch?v=Gv2uBJzBAms).
+- **Vidéos :** _What's New in .NET 8 C# 12?_ - [What's new in .NET 8](https://www.youtube.com/watch?v=pJGDPEk45Jc) et [Every New Feature Added in C# 1](https://www.youtube.com/watch?v=Gv2uBJzBAms).
 - **Article :** _Performance Improvements in .NET 8_ - [Performance Improvements in .NET 8 - .NET Blog](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-8/).
 
-**.NET 9 (2024)**
+**.NET 9 (2024 - 2026)**
 
-- **Vidéo :** _What's New in .NET 9 C# 13?_ - [What's new in .NET 9 & C# 13](https://www.youtube.com/watch?v=snPgTcxH8-s) et [What's New in .NET 9](https://www.youtube.com/watch?v=PvB5jtA-QfM).
+- **Vidéos :** _What's New in .NET 9 C# 13?_ - [What's new in .NET 9 & C# 13](https://www.youtube.com/watch?v=snPgTcxH8-s) et [What's New in .NET 9](https://www.youtube.com/watch?v=PvB5jtA-QfM).
 - **Article :** _Performance Improvements in .NET 9_ - [Performance Improvements in .NET 9](https://www.youtube.com/watch?v=aLQpnpSxosg) et [Performance Improvements in .NET 9 - .NET Blog](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-9/).
 
-**.NET 10 (2025)**
+**.NET 10 (2025 - 2028)**
 
 - **Vidéo :** _What's New in .NET 10 C# 14?_ - [csproj is GONE! 'dotnet run app.cs' is Here](https://www.youtube.com/watch?v=j4tLg4bMZK4&list=PLUOequmGnXxMQy-vu2O5VUFAdhu1fE5bY)
 - **Article :** _Performance Improvements in .NET 10_ - [Performance Improvements in .NET 10 - .NET Blog](https://devblogs.microsoft.com/dotnet/performance-improvements-in-net-10/)
@@ -73,9 +77,11 @@ Depuis .NET Core 3.1, Microsoft suit un cycle de publication fixe pour .NET avec
 - Support étendu à **24 mois** depuis .NET 9 (**contre 18 mois auparavant**)
 - Accès anticipé aux nouveautés du runtime et du langage
 - Adapté aux projets agiles pouvant adopter un rythme de mise à jour régulier
-- Exemples : .NET 7 (18 mois), .NET 9 (24 mois)
+- Exemples : .NET 7 (**18 mois**), .NET 9 (**24 mois**)
 
-**Vidéo explicative recommandée :** <https://www.youtube.com/watch?v=3i6YASbyuHw>
+**Vidéo explicative recommandée :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/3i6YASbyuHw?si=htCjY6ZrAvQvMLk5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Différences entre les outils de l'écosystème .Net Framework à .NET Core
 
@@ -90,7 +96,7 @@ Voici un aperçu des évolutions les plus notables :
 | **Autofac (DI)** | DI natif intégré à ASP.NET Core | Autofac est toujours compatible, mais plus nécessaire pour la plupart des cas |
 | **Web.config, app.config** | appsettings.json + configuration par injection | Plus flexible, hiérarchique, supporte IOptions |
 | **System.Web** | Supprimé, remplacé par ASP.NET Core Hosting & Middleware | Architecture légère, cross-platform |
-| **Global.asax** | Remplacé par Program.cs et Startup.cs ou minimal hosting | Démarrage centralisé simplifié |
+| **Global.asax** | Remplacé par `Program.cs` et Startup.cs ou minimal hosting | Démarrage centralisé simplifié |
 | **IIS exclusivement** | Cross-platform (Kestrel, Nginx, Apache, etc.) | Kestrel est souvent utilisé en production |
 | **csproj verbeux** | Nouveau format SDK-style (`<Project Sdk="...">`) | Plus simple, support multi-targeting |
 | **MSBuild-based NuGet restore** | dotnet restore intégré au build | Plus rapide, CLI unifiée |
@@ -101,7 +107,7 @@ Voici un aperçu des évolutions les plus notables :
 Même entre les versions de .NET Core, certains outils ou comportements évoluent :
 
 - **Swagger / Swashbuckle** : était activé par défaut dans certains templates .NET 5/.NET 6 (notamment dans les APIs), **ce n'est plus le cas en .NET 9/10**. Il faut l'ajouter et le configurer manuellement.
-- **Hosting Model** : depuis .NET 6, le modèle minimal de démarrage (Program.cs simplifié) est devenu la norme, remplaçant la combinaison Startup.cs + Program.cs.
+- **Hosting Model** : depuis .NET 6, le modèle minimal de démarrage (`Program.cs` simplifié) est devenu la norme, remplaçant la combinaison Startup.cs + `Program.cs`.
 - **HTTP Logging natif** : ajouté dans .NET 6, souvent oublié.
 - **Prise en charge des tests avec dotnet test** : meilleure intégration CLI, y compris pour les tests en parallèle.
 - **Nouvelle manière de gérer les secrets utilisateurs** : dotnet user-secrets introduit depuis .NET Core 2, mais plus encouragé avec les secrets Azure pour les apps cloud.
@@ -120,13 +126,17 @@ Un point important à connaître : Microsoft et d'autres éditeurs ont **modifi�
 
 ASP.NET Core est la plateforme web principale de .NET moderne. Elle permet de créer des applications performantes, testables, sécurisées et facilement déployables, grâce à une architecture modulaire, multiplateforme et cloud-ready.
 
-**Vidéo recommandée :** <https://www.youtube.com/watch?v=NbfhbDKiFpM>
+**Vidéo recommandée :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/NbfhbDKiFpM?si=pl1vqM9-F40sgi6X" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Accès aux données avec Entity Framework Core
 
 Entity Framework Core (EF Core) est l'ORM moderne de Microsoft pour .NET. Il remplace EF6 dans l'écosystème .NET Core et s'intègre naturellement à l'injection de dépendances, à la configuration moderne et aux API REST.
 
-**Vidéo recommandée :** <https://www.youtube.com/watch?v=2t88FOeQ898>
+**Vidéo recommandée :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/2t88FOeQ898?si=KPUxyjeQQAEvzrBC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Migration d'une application ASP.NET MVC (Framework) vers ASP.NET Core
 
@@ -138,7 +148,9 @@ Migrer une application .NET Framework à .NET Core est un projet structurant. Il
 
 Déployer une application ASP.NET Core en 2025 peut se faire très facilement, aussi bien localement qu'en environnement cloud. Comprendre les options disponibles et les outils recommandés est essentiel pour industrialiser son projet.
 
-**Vidéo recommandée :** <https://www.youtube.com/watch?v=dLuUJcxFcxU>
+**Vidéo recommandée :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/dLuUJcxFcxU?si=bwI73AASTf5t9RGP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## Bonus
 
@@ -146,19 +158,25 @@ Déployer une application ASP.NET Core en 2025 peut se faire très facilement, a
 
 Passer à .NET 6 jusqu'à .NET 10 implique d'adopter de nouvelles conventions de structure et d'organisation du code. Une architecture propre facilite la maintenabilité, les tests, la scalabilité et les bonnes pratiques DevOps.
 
-**Vidéo recommandée :** <https://www.youtube.com/watch?v=QRgtcbxJlo0>
+**Vidéo recommandée :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/QRgtcbxJlo0?si=kUiNNBljWQ6TxHWJ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Roadmap
 
 L'écosystème .NET évolue rapidement, notamment avec .NET 8/9/10, les microservices, le cloud et la montée en puissance de la performance et de la productivité. En 2025, un développeur .NET moderne devrait idéalement maîtriser plusieurs axes, à la fois techniques et méthodologiques.
 
-**Vidéo recommandée :** <https://www.youtube.com/watch?v=4I07X_EGwTY>
+**Vidéo recommandée :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/4I07X_EGwTY?si=PRQZdV4lo5mkTOi-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Moderniser une application .NET avec GitHub Copilot
 
 GitHub Copilot, basé sur l'IA, peut assister les développeurs dans la **modernisation d'une application existante** en l'accélérant.
 
-**Vidéo recommandée :** <https://www.youtube.com/watch?v=-YKguff5GY8>
+**Vidéo recommandée :**
+
+<iframe width="740" height="473" src="https://www.youtube.com/embed/-YKguff5GY8?si=JGVjziProb6MIYJ3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ### Faciliter les essais
 
@@ -166,8 +184,8 @@ Dans les versions récentes de .NET, Microsoft a introduit plusieurs outils pour
 
 Deux nouveautés très utiles sont :
 
-- TimeProvider / FakeTimeProvider
-- ILogger<T> / FakeLogger<T>
+- `TimeProvider` / `FakeTimeProvider`
+- `ILogger<T>` / `FakeLogger<T>`
 
 **Articles recommandés :** <https://grantwinney.com/how-to-use-timeprovider-and-faketimeprovider/> et <https://www.freecodecamp.org/news/how-to-use-fakelogger-to-make-testing-easier-in-net>
 

@@ -1,6 +1,6 @@
 ---
 title: Retour d’expérience post-livraison - bonnes pratiques et améliorations
-date: 2022-06-05 19:58:00 -0400
+date: 2026-01-01 20:00:00 -0400
 categories: []
 tags: []
 ---
