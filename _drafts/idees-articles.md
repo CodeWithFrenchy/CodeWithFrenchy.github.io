@@ -33,8 +33,9 @@ tags: [tag1]
 - Configuration VsCode et Visual studio
 - Remplacer Swagger avec Scallar
   - Vidéo de patrick god
-- article copilot chat https://code.visualstudio.com/docs/copilot/copilot-customization
-- <https://it-tools.tech/
+- article copilot chat <https://code.visualstudio.com/docs/copilot/copilot-customization>
+  - <https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/>
+- <https://it-tools.tech/>
 - Xunit 3.0 <https://www.youtube.com/watch?v=qIMRFKHldvQ> et les implications
 - Article gestion des nullables?
 - https://visualstudio.microsoft.com/hub/?rwnlp=fr
@@ -62,3 +63,6 @@ tags: [tag1]
   - https://github.com/AwesomeAssertions/AwesomeAssertions
 - idée article <https://github.com/SimonCropp/NaughtyStrings>
 - Nugets à utiliser suite au changement de licence comme MediatR
+- Ménage Docker disk - <https://medium.com/@piyushkashyap045/why-docker-keeps-eating-up-your-disk-space-and-how-to-fix-it-48d2ecf3dc65>
+- récupération des valeurs de secret depuis k8s
+- 
