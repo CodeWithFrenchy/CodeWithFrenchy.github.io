@@ -1,6 +1,6 @@
 ---
 title: Domaines de valeurs vs Données de référence - Comprendre la différence
-date: 2026-01-01 20:00:00 -0400
+date: 2026-12-29 20:00:00 -0400
 categories: [architecture]
 tags: []
 ---
