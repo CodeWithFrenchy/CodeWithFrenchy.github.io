@@ -1,6 +1,6 @@
 ---
 title: Retour d'expérience post-livraison - bonnes pratiques et améliorations
-date: 2026-12-29 20:00:00 -0400
+date: 2026-01-12 19:00:00 -0400
 categories: []
 tags: []
 ---
@@ -69,7 +69,7 @@ Enfin, dans un contexte multi-projets, la **gouvernance de la documentation** pe
 
 La période **post-livraison** est souvent perçue comme une transition rapide vers la prochaine échéance. Pourtant, c'est précisément à ce moment-là que se joue une grande partie de la **maturité technique et organisationnelle** d'une équipe. Prendre le temps d'analyser la livraison, de renforcer les pipelines DevOps, d'améliorer la qualité logicielle et de consolider l'observabilité permet de transformer une release en **apprentissage durable**, plutôt qu'une simple étape franchie.
 
-Au-delà des aspects techniques, l'après-livraison est aussi un **moment humain et collectif**. Clarifier la Definition of Done, ajuster les modes de collaboration, partager les retours d'expérience et renforcer la communication interne contribuent à créer un environnement plus sain, plus aligné et plus résilient. Ces ajustements, parfois modestes en apparence, ont un impact direct sur la capacité de l'équipe à livrer plus sereinement par la suite.
+Au-delà des aspects techniques, l'après-livraison est aussi un **moment humain et collectif**. Clarifier la *Definition of Done*, ajuster les modes de collaboration, partager les retours d'expérience et renforcer la communication interne contribuent à créer un environnement plus sain, plus aligné et plus résilient. Ces ajustements, parfois modestes en apparence, ont un impact direct sur la capacité de l'équipe à livrer plus sereinement par la suite.
 
 Enfin, dans un contexte **multi-produit**, la documentation joue un rôle clé pour capitaliser sur l'expérience acquise. Un wiki structuré, centralisant les normes communes tout en respectant les spécificités de chaque produit, devient un **actif stratégique** : il accélère l'onboarding, réduit les silos et garantit une cohérence à l'échelle de l'organisation. À condition, bien sûr, qu'il soit entretenu de manière collaborative et intégré aux pratiques quotidiennes.
 
