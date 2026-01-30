@@ -1,6 +1,6 @@
 ---
 title: GitHub Copilot en milieu organisationnel - un accélérateur de productivité… et un révélateur de maturité
-date: 2025-12-29 19:00:00 -0400
+date: 2026-02-09 19:00:00 -0400
 categories: [outil-developpement]
 tags: [ia]
 ---
