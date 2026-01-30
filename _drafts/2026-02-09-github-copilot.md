@@ -15,7 +15,7 @@ Mais très vite, après l’enthousiasme initial, une réalité plus nuancée s�
 
 Les études industrielles et académiques menées depuis 2023 convergent vers des constats similaires. Dans des contextes contrôlés, l’utilisation de Copilot permet aux développeurs de réaliser certaines tâches courantes, écriture de code applicatif standard, refactorisation, rédaction de tests, entre 20 % et 40 % plus rapidement. Certaines expériences vont même jusqu’à montrer des gains supérieurs, notamment lorsque les tâches sont bien définies et peu ambiguës.
 
-À l’échelle d’une équipe d’une dizaine de développeurs, ces gains représentent l’équivalent d’un ou deux équivalents temps plein « virtuels ». Dit autrement, sans embaucher, une équipe peut livrer davantage ou réduire ses délais. Pour une organisation publique, cet effet est loin d’être négligeable.
+À l’échelle d’une équipe d’une dizaine de développeurs, ces gains représentent l’équivalent d’un ou deux temps plein. Dit autrement, sans embaucher, une équipe peut livrer davantage ou réduire ses délais. Pour une organisation publique, cet effet est loin d’être négligeable.
 
 Cependant, il serait dangereux de prendre ces chiffres au pied de la lettre. Ces gains sont observés dans des environnements idéaux : spécifications claires, développeurs expérimentés, projets bien structurés, pratiques de développement matures. Dans un contexte réel, et encore plus dans une organisation à maturité technologique intermédiaire, ces chiffres doivent être interprétés comme des **ordres de grandeur**, pas comme des promesses contractuelles.
 
