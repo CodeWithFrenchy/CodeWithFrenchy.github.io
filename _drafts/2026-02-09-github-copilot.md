@@ -170,7 +170,7 @@ Il est essentiel de rappeler que la responsabilité finale du code produit demeu
 
 ## Un révélateur plus qu’un remède
 
-GitHub Copilot n’améliore pas une organisation immature. Il rend simplement ses failles visibles plus rapidement. Dans une équipe structurée, il accélère et renforce les bonnes pratiques. Dans une équipe désorganisée, il amplifie la dette et les imprécisions.
+GitHub Copilot n’améliore pas une organisation immature même si, sur le court terme, cela peut sembler être le cas. Il rend simplement ses failles visibles plus rapidement. Dans une équipe structurée, il accélère et renforce les bonnes pratiques. Dans une équipe désorganisée, il amplifie la dette et les imprécisions.
 
 C’est souvent inconfortable. Mais c’est aussi extrêmement instructif.
 
