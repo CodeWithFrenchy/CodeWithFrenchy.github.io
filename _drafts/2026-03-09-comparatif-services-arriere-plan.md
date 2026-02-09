@@ -1,6 +1,6 @@
 ---
 title: Services d'arrière-plan en .NET - comparatif des approches
-date: 2026-02-23 19:00-:00 -0400
+date: 2026-03-09 19:00-:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---
