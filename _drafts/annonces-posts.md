@@ -32,6 +32,76 @@ Version Twitter :
 
 ## Annonces
 
+### GitHub Copilot en milieu organisationnel - un accélérateur de productivité… et un révélateur de maturité
+
+Version Linkedin :
+
+---
+
+🚀 GitHub Copilot en milieu organisationnel
+(English version available below)
+
+GitHub Copilot promet des gains rapides.
+En réalité, il agit comme un amplificateur.
+
+Copilot accélère la productivité. Il révèle aussi, sans filtre, la maturité technique des équipes.
+
+Points à retenir :
+• Des gains mesurables, pas automatiques
+• Une qualité améliorée seulement si les conventions sont claires
+• Un impact direct sur les délais de livraison
+• Un risque réel de dette technique invisible
+• Un rôle central du DevEx et des Copilot instructions
+• Une revue de code encore plus indispensable qu’avant
+
+Copilot ne remplace ni l’architecture, ni l’analyse, ni le jugement.
+Il rend simplement vos forces et vos faiblesses plus visibles. Plus vite.
+
+📖 Article complet :
+https://codewithfrenchy.com/posts/github-copilot/
+
+---
+
+🚀 GitHub Copilot in organizations
+
+GitHub Copilot promises fast productivity gains.
+In practice, it works as an amplifier.
+
+Copilot speeds up delivery. It also exposes the technical maturity of teams.
+
+Key takeaways:
+• Measurable gains, not guaranteed
+• Code quality improves only with clear standards
+• Faster delivery cycles with the right discipline
+• Hidden technical debt is a real risk
+• Copilot instructions strengthen DevEx
+• Code reviews matter more than ever
+
+Copilot does not replace architecture or judgment.
+It reveals how ready your organization truly is.
+
+📖 Full article:
+https://codewithfrenchy.com/posts/github-copilot/
+
+#CodeWithFrenchy #GitHubCopilot #DevEx #AI #SoftwareEngineering #DotNet #EnterpriseIT
+
+"2026-02-09-GitHub Copilot en milieu organisationnel.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🚀 GitHub Copilot en entreprise
+
+Copilot n’est pas magique.
+Il accélère l’existant.
+Équipe mature : productivité ↑
+Équipe fragile : failles visibles👉
+
+---
+
 ### Optimiser la performance des logs dans un projet .NET
 
 Version Linkedin :
