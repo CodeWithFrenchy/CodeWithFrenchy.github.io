@@ -7,6 +7,7 @@ tags: [tag1]
 
 # Idées articles
 
+- Priorisation de la dette technique
 - Faire un article pour définir la version de .NET à utiliser
 - Faire le pagination UI ou backend les avantages et incovéniants
 - Central package management <https://www.youtube.com/watch?v=J4hMAETgK_8>
