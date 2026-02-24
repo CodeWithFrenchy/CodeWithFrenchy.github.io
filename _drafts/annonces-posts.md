@@ -94,7 +94,7 @@ Version Twitter :
 97 % des devs utilisent des assistants IA.
 Jusqu’à +55 % de gain sur certaines tâches.
 
-Adopter oui.Mais intelligemment.
+Adopter oui. Mais intelligemment.
 
 📖 https://codewithfrenchy.com/posts/surfer-vague-ia/
 
