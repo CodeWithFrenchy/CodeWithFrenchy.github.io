@@ -32,6 +32,76 @@ Version Twitter :
 
 ## Annonces
 
+### Surfer sur la vague de l'IA en développement logiciel - comment garder une longueur d'avance
+
+Version Linkedin :
+
+---
+
+🌊 Surfer sur la vague de l’IA en développement logiciel
+(English version available below)
+
+L’IA transforme déjà notre quotidien en développement logiciel. 97 % des développeurs disent utiliser des assistants IA. Les gains mesurés atteignent +55 % sur certaines tâches.
+
+Dans cet article, je partage une vision pragmatique pour garder une longueur d’avance.
+
+Ce que vous devez retenir :
+• Le développeur n’est pas remplacé, il devient orchestrateur et relecteur stratégique
+• Le prompt engineering devient une compétence clé
+• QA, analystes, architectes et DevOps voient aussi leur rôle évoluer
+• L’IA exige gouvernance, sécurité et mesure d’impact
+• L’adoption doit être progressive, pilotée par des cas d’usage concrets
+
+L’IA n’est pas un gadget. C’est un levier stratégique.
+
+À vous de choisir si vous la subissez… ou si vous surfez dessus.
+
+📖 Article complet : https://codewithfrenchy.com/posts/surfer-vague-ia/
+
+---
+
+🌊 Riding the AI Wave in Software Development
+
+AI is already reshaping our daily work in software engineering. 97% of developers report using AI assistants. Productivity gains can reach +55% on certain coding tasks.
+
+In this article, I share a practical perspective on how to stay ahead.
+
+Key takeaways:
+• Developers are not replaced, they become orchestrators and strategic reviewers
+• Prompt engineering is now a core skill
+• QA, analysts, architects, and DevOps roles are evolving
+• AI requires governance, security, and measurable impact
+• Adoption must be iterative and use-case driven
+
+AI is not a trend. It’s a strategic shift.
+
+The real question is simple: will you ride the wave or let it pass?
+
+📖 Full article: https://codewithfrenchy.com/posts/surfer-vague-ia/
+
+#AI #SoftwareEngineering #GenAI #DevOps #Architecture #TechLeadership #CodeWithFrenchy
+
+"2026-02-23-surfer-vague-ia.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🌊 L’IA change déjà notre façon de développer.
+
+97 % des devs utilisent des assistants IA.
+Jusqu’à +55 % de gain sur certaines tâches.
+
+Adopter oui.Mais intelligemment.
+
+📖 https://codewithfrenchy.com/posts/surfer-vague-ia/
+
+#AI #SoftwareEngineering #GenAI #DevOps #CodeWithFrenchy
+
+---
+
 ### GitHub Copilot en milieu organisationnel - un accélérateur de productivité… et un révélateur de maturité
 
 Version Linkedin :
