@@ -1,6 +1,6 @@
 ---
 title: Surfer sur la vague de l'IA en développement logiciel - comment garder une longueur d'avance
-date: 2025-02-23 19:00:00 -0400
+date: 2026-02-23 19:00:00 -0400
 categories: [outil-developpement]
 tags: [ia]
 ---
