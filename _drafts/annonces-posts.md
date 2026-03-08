@@ -32,6 +32,100 @@ Version Twitter :
 
 ## Annonces
 
+###  Services d'arrière-plan en .NET - comparatif des approches
+
+Version Linkedin :
+
+---
+
+🚀 Services d'arrière-plan en .NET : quelle approche choisir ?
+(English version available below)
+
+Dans beaucoup d'applications .NET, on finit par devoir exécuter des tâches en arrière-plan.
+Nettoyer une base de données. Envoyer des emails différés. Traiter une file d'attente.
+
+Mais une question revient toujours : quelle approche choisir ?
+
+Dans mon dernier article, je propose un comparatif concret entre les principales options de l'écosystème .NET :
+
+Points à retenir :
+
+• Worker Service
+Idéal pour un service indépendant qui tourne en continu.
+
+• BackgroundService (Hosted Service)
+Simple et intégré dans une API ASP.NET Core pour des tâches liées à l'application.
+
+• Quartz.NET
+Très puissant pour les planifications complexes avec CRON et triggers avancés.
+
+• Hangfire
+Solution clé en main avec persistance des jobs et dashboard de monitoring.
+
+Je partage aussi quelques réflexions importantes :
+• Quand rester 100 % natif .NET
+• Quand un outil tiers devient justifié
+• Comment éviter de sur-complexifier l'architecture
+
+📖 Article original :
+https://codewithfrenchy.com/posts/comparatif-services-arriere-plan
+
+---
+
+🚀 Background services in .NET: which approach should you choose?
+
+Many .NET applications eventually need background processing.
+
+Cleaning databases. Sending delayed emails. Processing queues.
+
+And the same question always comes up: what is the right tool?
+
+In my latest article, I walk through a practical comparison of the main options in the .NET ecosystem.
+
+Key takeaways:
+
+• Worker Service
+Best for standalone long-running background processes.
+
+• BackgroundService (Hosted Service)
+Simple approach integrated directly into an ASP.NET Core application.
+
+• Quartz.NET
+Powerful scheduling engine with CRON expressions and advanced triggers.
+
+• Hangfire
+Easy background jobs with persistence and built-in monitoring dashboard.
+
+The article also explores:
+• When staying native to .NET is enough
+• When third-party tools make sense
+• How to avoid over-engineering background processing
+
+📖 Original article :
+https://codewithfrenchy.com/posts/comparatif-services-arriere-plan
+
+#dotnet #softwarearchitecture #backend #cloudarchitecture #CodeWithFrenchy
+
+"2026-03-09-comparatif services arrière plan.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🚀 Tâches d'arrière-plan en .NET : quelle approche choisir ?
+
+Worker Service, BackgroundService, Quartz.NET ou Hangfire ?
+
+Je compare les approches et leurs cas d'usage.
+
+📖 https://codewithfrenchy.com/posts/comparatif-services-arriere-plan
+
+#dotnet #CodeWithFrenchy
+
+---
+
 ### Surfer sur la vague de l'IA en développement logiciel - comment garder une longueur d'avance
 
 Version Linkedin :
