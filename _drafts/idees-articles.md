@@ -40,4 +40,4 @@ tags: [tag1]
 - Automatiser le remplacement de FluentAssertions avec de l'IA
   - <https://www.linkedin.com/posts/benjaminabt_replace-fluentassertions-with-ai-activity-7338124027305074690-RGkZ/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
   - https://github.com/AwesomeAssertions/AwesomeAssertions
-- 
+- Utiliser ou non le profile de mapping dans les essais. voir oppinion de Jimmy beaugard
