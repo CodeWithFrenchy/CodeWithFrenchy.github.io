@@ -32,6 +32,102 @@ Version Twitter :
 
 ## Annonces
 
+### Comprendre et utiliser l'attribut StringSyntaxAttribute en .NET
+
+Version Linkedin :
+
+---
+
+💡 Donnez du sens à vos chaînes en C# avec StringSyntaxAttribute
+(English version below)
+
+On manipule tous des chaînes pour du JSON, des regex ou des URLs.
+
+Le problème, c'est que le compilateur ne comprend pas leur contenu.
+
+Résultat, erreurs détectées trop tard, souvent à l'exécution.
+
+Avec StringSyntaxAttribute, vous changez ça.
+
+Ce que vous gagnez :
+• Validation directe dans l'IDE
+• Coloration syntaxique dans les chaînes
+• IntelliSense adapté au format
+• Moins d'erreurs en production
+
+Exemples concrets :
+• Regex invalides détectées avant exécution
+• JSON mal formé signalé dans Visual Studio
+• Formats de date guidés automatiquement
+
+C'est simple à mettre en place :
+• Ajoutez l'attribut sur vos paramètres ou propriétés
+• Indiquez le type attendu, Regex, Json, Uri, etc.
+• L'IDE fait le reste
+
+Un petit ajout, mais un impact direct sur la qualité et la lisibilité de vos APIs.
+
+📖 Article complet : https://codewithfrenchy.com/posts/stringsyntaxattribute-dotnet/
+
+---
+
+💡 Give meaning to your strings in C# with StringSyntaxAttribute
+
+We all use strings for JSON, regex, or URLs.
+
+The issue is the compiler treats them as plain text.
+
+Errors often show up too late.
+
+StringSyntaxAttribute fixes that.
+
+What you get:
+• Validation directly in the IDE
+• Syntax highlighting inside strings
+• Context-aware IntelliSense
+• Fewer runtime errors
+
+Concrete examples:
+• Invalid regex caught early
+• Broken JSON flagged instantly
+• Date formats guided as you type
+
+Easy to adopt:
+• Add the attribute to parameters or properties
+• Specify the expected syntax, Regex, Json, Uri, etc.
+• Let the IDE assist you
+
+Small change, strong impact on code quality and API clarity.
+
+📖 Full article: https://codewithfrenchy.com/posts/stringsyntaxattribute-dotnet/
+
+#dotnet #csharp #developerexperience #visualstudio #softwareengineering #CodeWithFrenchy
+
+
+"2026-03-23-StringSyntaxAttribute.png"
+
+---
+
+Version Twitter : 
+
+---
+
+💡 Et si vos strings n’étaient plus “juste du texte” en C# ?
+
+Avec StringSyntaxAttribute :
+
+• Validation IDE
+• IntelliSense contextuel
+• Erreurs détectées plus tôt
+
+Regex, JSON, URI compris par vos outils.
+
+📖 https://codewithfrenchy.com/posts/stringsyntaxattribute-dotnet/
+
+#dotnet #csharp #devex #CodeWithFrenchy
+
+---
+
 ###  Services d'arrière-plan en .NET - comparatif des approches
 
 Version Linkedin :
@@ -754,7 +850,7 @@ Key takeaways :
 
 #DotNet #DotNet10 #CSharp #ASPNetCore #EFCore #Performance #LTS #DeveloperExperience #CodeWithFrenchy
 
-"2015-10-06-Dotnet10.png"
+"2025-10-06-Dotnet10.png"
 
 ---
 
