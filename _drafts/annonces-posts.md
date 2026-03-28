@@ -32,6 +32,73 @@ Version Twitter :
 
 ## Annonces
 
+### Pourquoi le versionnement d'API n'est pas toujours indispensable
+
+Version Linkedin :
+
+---
+
+🧩 Le versionnement d'API n'est pas toujours indispensable
+(English version below)
+
+Vous ajoutez /v1 par réflexe dans vos nouvelles APIs ?
+
+Dans bien des cas, ce n'est pas le bon point de départ.
+
+Quand vous contrôlez les consommateurs, versionner dès le départ ajoute souvent plus de gestion que de valeur.
+
+À retenir :
+• Le versionnement simplifie certains changements, mais ajoute du code, du support et de la coordination
+• Pour des APIs internes, il est souvent préférable de faire évoluer le contrat sans casser les consommateurs
+• Ajouter des champs optionnels, conserver temporairement les anciennes conventions et planifier les transitions reste souvent plus simple
+• Le versionnement devient surtout nécessaire pour les APIs publiques, les partenaires externes et les applications mobiles
+
+Avant d'introduire une v1, il vaut mieux se demander si le contexte l'exige vraiment.
+
+📖 Article original : https://codewithfrenchy.com/posts/2026-04-06-pourquoi-versionnement-api
+
+---
+
+🧩 API versioning is not always necessary
+
+Do you add /v1 by default to every new API?
+
+In many cases, that should not be the starting point.
+
+When you control the consumers, versioning from day one often adds more overhead than value.
+
+Key takeaways:
+• Versioning helps with some changes, but it also adds maintenance, support, and coordination costs
+• For internal APIs, evolving the contract without breaking consumers is often the better path
+• Adding optional fields, keeping old conventions temporarily, and planning transitions can be simpler
+• Versioning becomes much more important for public APIs, external partners, and mobile apps
+
+Before introducing v1, it is worth checking whether the context truly requires it.
+
+📖 Original article : https://codewithfrenchy.com/posts/2026-04-06-pourquoi-versionnement-api
+
+#API #Architecture #Microservices #DotNet #SoftwareEngineering #CodeWithFrenchy
+
+"2026-04-06-pourquoi-versionnement-api.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🧩 Versionner vos APIs par défaut ? Pas toujours utile.
+
+En interne, évoluez sans casser :
+• champs optionnels
+• compatibilité
+
+📖 https://codewithfrenchy.com/posts/2026-04-06-pourquoi-versionnement-api
+
+#API #DotNet #CodeWithFrenchy
+
+---
+
 ### Comprendre et utiliser l'attribut StringSyntaxAttribute en .NET
 
 Version Linkedin :
