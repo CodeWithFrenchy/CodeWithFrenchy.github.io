@@ -5,7 +5,7 @@ categories: [outil-developpement]
 tags: [github-copilot]
 ---
 
-> ⚠️  sortir un article pour expliquer le modèle de facturation pour les tokens etc..
+> ⚠️  mentionner que ça change vite !
 
 optimiser gh localement
   - https://awesome-copilot.github.com/ !!!!!!!!! -> https://developer.microsoft.com/blog/awesome-github-copilot-just-got-a-website-and-a-learning-hub-and-plugins
@@ -18,3 +18,15 @@ optimiser gh localement
   - https://devblogs.microsoft.com/all-things-azure/announcing-the-azure-skills-plugin/
   - https://developer.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course
   - https://www.youtube.com/watch?v=9zcg206kEoI
+  - https://x.com/jfversluis/status/2039326918403891280 (.net skill)
+  - Voir les azure skills ?
+
+  Voir à voir ici ?
+
+  - Fichier sur Gh Copilot instruction
+  - <https://www.youtube.com/watch?v=ZohAaUQBDbs>
+  - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
+  - <https://www.youtube.com/watch?v=QLaF0Ry45fo>
+  - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
+  - <https://github.com/SebastienDegodez/copilot-instructions/tree/main>
+  - https://github.com/AwesomeAssertions/AwesomeAssertions

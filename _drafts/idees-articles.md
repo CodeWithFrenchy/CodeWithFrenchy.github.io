@@ -22,13 +22,6 @@ tags: [tag1]
 - sonarqube <https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_how-to-use-sonarqube-to-improve-your-code-activity-7324912978720419840-vxNt?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ>
 
 - Copilot migration tool
-- Fichier sur Gh Copilot instruction
-  - <https://www.youtube.com/watch?v=ZohAaUQBDbs>
-  - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
-  - <https://www.youtube.com/watch?v=QLaF0Ry45fo>
-  - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
-  - <https://github.com/SebastienDegodez/copilot-instructions/tree/main>
-  - https://github.com/AwesomeAssertions/AwesomeAssertions
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
   - https://www.youtube.com/watch?v=SPITo00xlic
   - Rendu par défaut Vs2026!!!
