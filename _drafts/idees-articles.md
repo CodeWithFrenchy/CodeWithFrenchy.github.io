@@ -16,9 +16,6 @@ tags: [tag1]
   - <https://learn.microsoft.com/en-us/visualstudio/msbuild/customize-by-directory?utm_source=pocket_reader&view=vs-2022>
   - <https://x.com/SimonCropp/status/1836887578106310885?utm_source=pocket_saves>
   - <https://x.com/mjovanovictech/status/1828041591681851555?utm_source=pocket_saves>
-- Configuration VsCode et Visual studio
-- article copilot chat <https://code.visualstudio.com/docs/copilot/copilot-customization>
-  - <https://devblogs.microsoft.com/visualstudio/boost-your-copilot-collaboration-with-reusable-prompt-files/>
 - <https://it-tools.tech/>
 - Xunit 3.0 <https://www.youtube.com/watch?v=qIMRFKHldvQ> et les implications
 - Article gestion des nullables?
@@ -31,13 +28,10 @@ tags: [tag1]
   - <https://www.youtube.com/watch?v=QLaF0Ry45fo>
   - <https://www.linkedin.com/posts/davidcallan_asp-net-custom-instructions-file-for-github-activity-7330683442357010432-cWzM/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
   - <https://github.com/SebastienDegodez/copilot-instructions/tree/main>
+  - https://github.com/AwesomeAssertions/AwesomeAssertions
 - SLNX <https://www.youtube.com/watch?v=Iwc3jGCbt5A>
   - https://www.youtube.com/watch?v=SPITo00xlic
   - Rendu par défaut Vs2026!!!
   - <https://www.youtube.com/watch?v=ejA6HiIobb0>
 - Stratégie pour les versions des NuGets avec les branches
 - SonarCube
-- Automatiser le remplacement de FluentAssertions avec de l'IA
-  - <https://www.linkedin.com/posts/benjaminabt_replace-fluentassertions-with-ai-activity-7338124027305074690-RGkZ/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_source=pocket_saves>
-  - https://github.com/AwesomeAssertions/AwesomeAssertions
-- Utiliser ou non le profile de mapping dans les essais. voir oppinion de Jimmy beaugard
