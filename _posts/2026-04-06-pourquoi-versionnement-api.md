@@ -1,6 +1,6 @@
 ---
 title: Pourquoi le versionnement d'API n'est pas toujours indispensable
-date: 2026-04-06 18:00:00 -0400
+date: 2026-04-06 14:00:00 -0400
 categories: [architecture]
 tags: []
 ---
