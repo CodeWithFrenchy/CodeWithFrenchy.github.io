@@ -32,6 +32,65 @@ Version Twitter :
 
 ## Annonces
 
+### Empêcher l’inlining en .NET - l’attribut MethodImplOptions.NoInlining expliqué
+
+Version Linkedin :
+
+---
+
+🧩 Empêcher l'inlining en .NET, un détail qui change le diagnostic
+(English version below)
+
+L'attribut [MethodImpl(MethodImplOptions.NoInlining)] mérite d'être mieux connu.
+
+Ce qu'il faut retenir :
+• il force le JIT à conserver l'appel de méthode
+• il aide à garder une stack trace plus lisible en Release
+• il facilite le profilage et l'instrumentation
+• il est utile quand votre logique dépend de la pile d'appels
+
+Ce n'est pas un réflexe à appliquer partout.
+Il y a un coût potentiel sur les performances.
+Il faut le réserver aux cas où l'observabilité ou la justesse du comportement passent avant l'optimisation.
+
+📖 Article original : https://codewithfrenchy.com/posts/attribut-noinlining
+
+---
+
+🧩 Preventing inlining in .NET, a small detail that improves diagnostics
+
+[MethodImpl(MethodImplOptions.NoInlining)] is worth knowing.
+
+Key takeaways:
+• it forces the JIT to keep the method call
+• it helps preserve clearer stack traces in Release
+• it improves profiling and instrumentation visibility
+• it is useful when your logic depends on the call stack
+
+This is not something to apply everywhere.
+There is a potential performance cost.
+It should stay focused on cases where observability or correctness matters more than optimization.
+
+📖 Original article : https://codewithfrenchy.com/posts/attribut-noinlining
+
+#dotnet #csharp #performance #observability #profiling #JIT #CodeWithFrenchy
+
+---
+
+Version Twitter : 
+
+---
+
+🧩 Empêcher l’inlining en .NET
+
+NoInlining garde vos méthodes visibles en stack trace et en profiling.
+À réserver aux cas où diagnostic > performance.
+📖 : https://codewithfrenchy.com/posts/attribut-noinlining
+
+#dotnet #csharp #performance #observability #profiling #JIT #CodeWithFrenchy
+
+---
+
 ### Pourquoi le versionnement d'API n'est pas toujours indispensable
 
 Version Linkedin :
