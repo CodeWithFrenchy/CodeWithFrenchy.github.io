@@ -19,7 +19,7 @@ optimiser gh localement
   - https://developer.microsoft.com/blog/get-started-with-github-copilot-cli-a-free-hands-on-course
   - https://www.youtube.com/watch?v=9zcg206kEoI
   - https://x.com/jfversluis/status/2039326918403891280 (.net skill)
-  - Voir les azure skills ?
+  - Voir les azure skills ? https://github.com/managedcode/dotnet-skills
 
   Voir à voir ici ?
 
