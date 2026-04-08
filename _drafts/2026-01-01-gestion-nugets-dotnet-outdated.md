@@ -13,4 +13,4 @@ voir ma page que j'avais faite au MJQ pour me donner des idées.
 
 Exemple de code à mettre dans Azure DevOps ou github
 
-github agent?!
+github agent?! avec le MCP de NuGet? 
