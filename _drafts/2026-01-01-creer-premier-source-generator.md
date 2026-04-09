@@ -16,3 +16,4 @@ tags: [dotnet, source-generator]
 - <https://www.devleader.ca/2026/04/01/realworld-c-source-generator-examples-tostring-mapping-and-serialization>
 - <https://www.devleader.ca/2026/04/03/c-source-generator-performance-measuring-and-optimizing-buildtime-impact>
 - <https://www.devleader.ca/2026/04/06/c-source-generators-vs-reflection-which-should-you-use>
+- <https://www.devleader.ca/2026/04/08/testing-c-source-generators-a-practical-guide>
