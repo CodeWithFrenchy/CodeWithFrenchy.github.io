@@ -11,3 +11,4 @@ Parler que c'est dans la même ligné que <https://github.com/maandagdev/AutoDem
 surtout en lien avec la nouvelle vulnérabilité de automapper
 
 et ceci ? faire une simili abstraction pour remplacer mediatr?
+https://codewithmukesh.com/blog/cqrs-without-mediatr/
