@@ -24,7 +24,7 @@ Je suis convaincu qu’un bon design logiciel n’est pas seulement une question
 
 ## ⚙️ Ce que je fais au quotidien
 
-Je dirige l’axe **« Pratiques logicielles et modernisation »** au **Centre d’excellence Azure** de **Cofomo**, où je conçois des architectures cloud natives et accompagne des équipes de développement dans leur transformation technologique.
+Je dirige l’axe **« DevEx et pratiques logicielles »** au **Centre d’excellence Azure** de **Cofomo**, où je conçois des architectures cloud natives et accompagne des équipes de développement dans leur transformation technologique.
 
 Quelques-uns de mes domaines d’expertise :
 

@@ -9,7 +9,7 @@ Récemment, j’ai eu l’opportunité de participer à un webinaire destiné au
 
 ## Pourquoi est-il important pour moi de participer à JeunesExplo ?
 
-En tant qu’__architecte logiciel et responsable de l'axe « Pratiques logicielles et modernisation »__ au sein du __Centre d'Excellence Azure__ chez Cofomo Québec, je crois fermement à l'importance de transmettre mon expérience et d'inspirer la nouvelle génération. Participer à __JeunesExplo__, c'est une occasion unique d'échanger avec des jeunes curieux et ambitieux, de leur montrer la diversité des carrières en TI, et de les encourager à explorer ce secteur en pleine transformation.
+En tant qu’__architecte logiciel et responsable de l'axe « DevEx et pratiques logicielles »__ au sein du __Centre d'excellence Azure__ chez Cofomo Québec, je crois fermement à l'importance de transmettre mon expérience et d'inspirer la nouvelle génération. Participer à __JeunesExplo__, c'est une occasion unique d'échanger avec des jeunes curieux et ambitieux, de leur montrer la diversité des carrières en TI, et de les encourager à explorer ce secteur en pleine transformation.
 
 L’informatique est omniprésente dans nos vies et impacte tous les secteurs : santé, finance, jeux vidéo, éducation, administration publique… Il est donc essentiel de faire découvrir ces opportunités et de démontrer que chacun peut y trouver sa place.
 
