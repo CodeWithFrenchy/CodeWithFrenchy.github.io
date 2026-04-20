@@ -1,6 +1,6 @@
 ---
 title: Empêcher l’inlining en .NET - l’attribut MethodImplOptions.NoInlining expliqué
-date: 2026-04-20 19:00:00 -0400
+date: 2026-04-20 18:00:00 -0400
 categories: []
 tags: [dotnet]
 ---
