@@ -32,6 +32,64 @@ Version Twitter :
 
 ## Annonces
 
+### Domaines de valeurs vs Données de référence - Comprendre la différence
+
+Version Linkedin :
+
+---
+
+🧭 Domaine de valeurs ou données de référence ?
+(English version available below)
+
+Deux notions proches, mais pas interchangeables.
+
+À retenir :
+• Le domaine de valeurs définit les valeurs permises.
+• Les données de référence portent les valeurs concrètes.
+• En microservices, cette distinction aide à clarifier l'ownership.
+• Cache, réplication et événements aident à limiter les appels interservices.
+
+Bien faire la différence évite du couplage inutile et améliore la cohérence des données.
+
+📖 Article original : https://codewithfrenchy.com/posts/domaines-valeur-vs-donnees-references/
+
+---
+
+🧭 Value domains or reference data?
+
+Two related concepts, but not the same thing.
+
+Key takeaways:
+• A value domain defines allowed values.
+• Reference data carries the concrete values.
+• In microservices, this distinction clarifies ownership.
+• Cache, replication, and events help reduce inter-service calls.
+
+Getting this right helps reduce coupling and improves data consistency.
+
+📖 Original article : https://codewithfrenchy.com/posts/domaines-valeur-vs-donnees-references/
+
+#CodeWithFrenchy #DotNet #Architecture #Microservices #DataGovernance #ReferenceData #SoftwareArchitecture
+
+---
+
+Version Twitter : 
+
+---
+
+🧭 Domaine de valeurs vs données de 
+référence
+
+Souvent confondues 👇
+
+• Domaine de valeurs = valeurs permises
+• Données de référence = valeurs concrètes
+• Impact sur le couplageMieux les distinguer améliore la cohérence.📖 
+
+https://codewithfrenchy.com/posts/domaines-valeur-vs-donnees-references/#CodeWithFrenchy #DotNet #Architecture
+
+---
+
 ### Empêcher l’inlining en .NET - l’attribut MethodImplOptions.NoInlining expliqué
 
 Version Linkedin :
