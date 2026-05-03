@@ -77,8 +77,7 @@ Version Twitter :
 
 ---
 
-🧭 Domaine de valeurs vs données de 
-référence
+🧭 Domaine de valeurs vs données de référence
 
 Souvent confondues 👇
 
