@@ -83,9 +83,12 @@ Souvent confondues 👇
 
 • Domaine de valeurs = valeurs permises
 • Données de référence = valeurs concrètes
-• Impact sur le couplageMieux les distinguer améliore la cohérence.📖 
+• Impact sur le couplage
+• Mieux les distinguer améliore la cohérence.📖 
 
-https://codewithfrenchy.com/posts/domaines-valeur-vs-donnees-references/#CodeWithFrenchy #DotNet #Architecture
+https://codewithfrenchy.com/posts/domaines-valeur-vs-donnees-references/
+
+#CodeWithFrenchy
 
 ---
 
