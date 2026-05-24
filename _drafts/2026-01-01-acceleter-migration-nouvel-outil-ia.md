@@ -14,3 +14,4 @@ et ceci ? faire une simili abstraction pour remplacer mediatr?
 https://codewithmukesh.com/blog/cqrs-without-mediatr/
 https://www.linkedin.com/posts/djokic-stefan_you-dont-need-mediatr-to-get-a-clean-request-share-7450494562525061120-lcIU/?utm_source=social_share_send&utm_medium=android_app&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ&utm_campaign=copy_link
 https://www.devleader.ca/2026/04/19/feature-slicing-without-mediatr-in-c-plain-handlers-that-actually-work
+https://www.youtube.com/watch?v=2xiHO1tv4Cc
