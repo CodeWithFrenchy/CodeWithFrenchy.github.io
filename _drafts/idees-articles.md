@@ -28,3 +28,4 @@ tags: [tag1]
   - <https://www.youtube.com/watch?v=ejA6HiIobb0>
 - Stratégie pour les versions des NuGets avec les branches
 - SonarCube
+- dotnetup https://www.youtube.com/watch?v=eExkCpyUrrs
