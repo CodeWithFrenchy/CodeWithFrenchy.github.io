@@ -6,3 +6,6 @@ tags: [à mettre]
 ---
 
 revoir nom fichier
+
+
+https://startdebugging.net/2026/05/aspnetcore-11-http-query-method-openapi/
