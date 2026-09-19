@@ -1,11 +1,9 @@
 ---
 title: Prioriser la dette technique sous contrainte de budget et d’échéanciers
-date: 2026-01-01 19:00:00 -0400
+date: 2026-09-21 19:00:00 -0400
 categories: []
 tags: []
 ---
-
-> ⚠️ À METTRE AU PROPRE 
 
 La dette technique est une **métaphore financière** : on accélère la livraison aujourd’hui (le « prêt ») au prix d’un **surcoût futur** (les « intérêts ») qui se manifeste quand on doit modifier, stabiliser ou sécuriser le système. Cette façon de cadrer la discussion sert précisément à rendre visibles des coûts autrement diffus, maintenance, complexité, rework, ralentissement et à les mettre en balance avec les gains de vitesse à court terme.
 
@@ -35,7 +33,7 @@ La dette technique n’est pas toujours « un raccourci assumé ». Martin F
 
 Sous contrainte d’échéancier, deux mécanismes créent fréquemment de la dette sans « mauvaise intention » :
 - **Pression de livraison** : la qualité interne est repoussée (tests, hardening, refactor) pour respecter une date.
-- **Dette « de connaissance »** : manque de compréhension technique ou de collaboration; on choisit une solution « qui marche » avant d’avoir compris l’ensemble des contraintes. 
+- **Dette « de connaissance »** : manque de compréhension technique ou de collaboration, on choisit une solution « qui marche » avant d’avoir compris l’ensemble des contraintes. 
 
 Il existe aussi une dette **externe** (ou « liée aux dépendances ») : obsolescence technologique, changement d’environnement, arrivée de meilleures technologies, ou évolutions qui rendent « pas tout à fait correct » ce qui était acceptable auparavant.
 
@@ -66,7 +64,7 @@ En pratique, Cynefin est très utile pour la dette technique parce qu’il évit
   Approche : réduire le risque par **petites expériences** (spikes, prototypes, “strangler”, instrumentation), puis ré-estimer. Ici, la “confiance” (RICE) devient un signal central, et on priorise souvent un **plan de réduction d’incertitude** avant un gros remboursement.
 
 - **Chaotique (chaotic)** : instabilité, urgence, pas de cause/effet fiable sur le moment.  
-  Exemples : incident majeur prod, vulnérabilité exploitée, service en dégradation rapide.  
+  Exemples : incident majeur en production, vulnérabilité exploitée, service en dégradation rapide.  
   Approche : stabiliser d’abord (activer le mode incident / gel des changements non essentiels), puis revenir vers une analyse plus structurée.
 
 - **Désordre (disorder)** : on ne sait pas encore dans quel domaine on est.  
@@ -92,13 +90,13 @@ C’est votre « triage rapide ». Elle fonctionne très bien pour un portef
 Adaptation dette technique : remplacez « impact » par **intérêt évité** (risques/temps/incidents réduits) et « effort » par **principal**.
 
 **Eisenhower (urgent vs important)**  
-Un outil de priorisation basé sur l'urgence et 'importance : on divise en quatre quadrants (« faire maintenant », « planifier », « déléguer », « éliminer »).
+Un outil de priorisation basé sur l'urgence et l'importance : on divise en quatre quadrants (« faire maintenant », « planifier », « déléguer », « éliminer »).
 Adaptation dette : l’**urgence** devient « échéance/criticité temporelle » (fin de support, audit, faille exploitée), l’**importance** devient « impact risk/ops/business ».
 
 **RICE (Reach, Impact, Confidence, Effort)**  
 Proposé par [Intercom](https://www.intercom.com/), RICE force la discipline : on estime portée, impact, confiance et effort, puis on calcule un score.
 
-Adaptation dette :  
+Adaptation à la dette :  
 - Reach : nombre de services/équipes impactés, nombre de users, volume de transactions touchées.  
 - Impact : réduction de risque, baisse d’incidents, amélioration de performance.  
 - Confidence : qualité de données (logs, scans, incident history).  
@@ -112,7 +110,7 @@ Le « coût de retard » (cost of delay) est défini comme le coût d’un d
 
 ### Une procédure concrète pour prioriser la dette
 
-Ci-dessous, un processus léger mais rigoureux (adapté à un texte court et à un public Dev/Tech lead/PO/Gestion).
+Ci-dessous, un processus léger, mais rigoureux (adapté à un texte court et à un public Dev/Tech lead/PO/Gestion).
 
 ```mermaid
 flowchart TD
@@ -132,7 +130,7 @@ flowchart TD
 **Score d’intérêt recommandé (critères)** :  
 - **Sécurité** : maturité patching/vuln, délais de remédiation, exceptions, conformité. Les lignes directrices canadiennes proposent des métriques explicites de vulnérabilités (patch time, mean time to remediate, exceptions) et soulignent l’usage de rapports/dashboards pour le suivi et la conformité. 
 - **Fiabilité** : incidents et SLO miss. L’approche « error budget » formalise l’arbitrage : si le budget d’erreur est dépassé, on gèle les changements non critiques pour se concentrer sur fiabilité (et sécurité).
-- **Fréquence d’usage / hotspots** : plus une zone est touchée, plus l’intérêt se paie souvent; c’est aussi un facteur observé côté business (usage frequency).
+- **Fréquence d’usage / hotspots** : plus une zone est touchée, plus l’intérêt se paie souvent, c’est aussi un facteur observé côté business (usage frequency).
 - **Coût de retard** : coût du délai en valeur/perte/risque.
 - **Visibilité parties prenantes** : incidents visibles, risques réputationnels, audits (facteurs « risk perception » et « incidents » ressortent côté business).
 
@@ -141,7 +139,7 @@ Un service critique subit des incidents intermittents et une dépendance arrive 
 
 ## Gouvernance et hygiène de backlog
 
-La dette devient ingérable lorsqu’elle est « hors backlog » (tickets dispersés, notes d’architecture, backlog caché). Dans le Guide Scrum, le Product Backlog est défini comme une **liste ordonnée et émergente** de ce qui est nécessaire pour améliorer le produit, et comme **l’unique source** du travail entrepris par l’équipe; et le Product Owner est redevable de l’ordre et de la transparence/visibilité/compréhension du backlog.
+La dette devient ingérable lorsqu’elle est « hors backlog » (tickets dispersés, notes d’architecture, backlog caché). Dans le Guide Scrum, le Product Backlog est défini comme une **liste ordonnée et émergente** de ce qui est nécessaire pour améliorer le produit, et comme **l’unique source** du travail entrepris par l’équipe et le Product Owner est redevable de l’ordre et de la transparence/visibilité/compréhension du backlog.
 
 ### Recommandations de backlog adaptées à la dette
 
@@ -151,9 +149,10 @@ La dette devient ingérable lorsqu’elle est « hors backlog » (tickets di
 - effort (principal) + incertitude,  
 - dépendances,  
 - critères d’acceptation et mesure « avant/après ».  
+
 Cela s’aligne sur l’idée d’affinement continu du backlog : décomposer et ajouter des détails (description, ordre, taille) jusqu’à un niveau de transparence suffisant.
 
-**Tags recommandés** (exemples) : TD-SEC, TD-PERF, TD-REL (fiabilité), TD-ARCH, TD-TEST, TD-DEP (dépendances), TD-OBS (observabilité), TD-COMP (conformité), TD-LEGACY. Le but est d’obtenir des vues « risque vs roadmap » compréhensibles pour gestion/PO.
+**Tags recommandés** (exemples) : TD-SEC, TD-PERF, TD-REL (fiabilité), TD-ARCH, TD-TEST, TD-DEP (dépendances), TD-OBS (observabilité), TD-COMP (conformité), TD-LEGACY. Le but est d’obtenir des vues « risque vs roadmap » compréhensibles pour la gestion ou le PO.
 
 **SLAs (surtout sécurité)** :  
 La gestion des correctifs et des vulnérabilités fournit un modèle robuste de SLA parce qu’elle formalise un cycle « évaluer → prioriser → déployer → valider », et qu’elle est explicitement présentée comme un levier de réduction de risque et d’évitement de compromis évitables.
@@ -198,7 +197,7 @@ Selon le [National Institute of Standards and Technology](https://www.nist.gov/)
 
 Dans plusieurs organisations contraintes par des échéanciers serrés, une stratégie pragmatique consiste à réserver une **petite enveloppe stable** (par exemple ~5% de capacité) dédiée à la dette « non urgente », en plus d’un canal séparé pour la dette **time‑critical** (sécurité, conformité, fin de support). Cette idée s’aligne avec des pratiques de gouvernance qui reconnaissent qu’on doit investir en continu pour éviter l’accumulation (plutôt que « tout payer à la fin »).
 
-L’analogie la plus parlante pour gestion/PO est celle de l’entretien préventif : le patch management est présenté comme un processus répétable et standardisé qui génère des économies (réduction d’exposition, évitement de compromis). La dette technique se traite de façon semblable : une petite routine diminue les risques et protège la capacité future.
+L’analogie la plus parlante pour la gestion et le PO est celle de l’entretien préventif : le patch management est présenté comme un processus répétable et standardisé qui génère des économies (réduction d’exposition, évitement de compromis). La dette technique se traite de façon semblable : une petite routine diminue les risques et protège la capacité future.
 
 ### Bénéfices typiques
 
@@ -208,12 +207,12 @@ L’analogie la plus parlante pour gestion/PO est celle de l’entretien préven
 
 ### Limites (importantes à annoncer)
 
-5% peut être trop faible si la dette est déjà structurante (legacy lourd, obsolescence, incidents fréquents). La littérature insiste que la dette et sa priorisation dépendent fortement du contexte et qu’il n’existe pas de recette universelle; il faut donc calibrer la capacité (et possiblement monter temporairement) si les métriques de risque et de delivery se détériorent.
+5% peut être trop faible si la dette est déjà structurante (legacy lourd, obsolescence, incidents fréquents). La littérature insiste que la dette et sa priorisation dépendent fortement du contexte et qu’il n’existe pas de recette universelle, il faut donc calibrer la capacité (et possiblement monter temporairement) si les métriques de risque et de delivery se détériorent.
 
 ### Métriques pour mesurer l’efficacité
 
 - **Delivery** via [DORA](https://www.atlassian.com/devops/frameworks/dora-metrics) : lead time, deployment frequency, change fail rate, temps de restauration, etc.
-- **Sécurité** : MTTR vuln, patch time, exceptions; ces métriques sont explicitement proposées dans des lignes directrices canadiennes.
+- **Sécurité** : MTTR vuln, patch time, exceptions, ces métriques sont explicitement proposées dans des lignes directrices canadiennes.
 - **Fiabilité** : error budget et politiques de gel des changements non critiques quand le budget est consommé (mécanisme de gouvernance très « exécutable »).
 - **Backlog dette** : âge médian des items, % items « high risk » hors SLA, ratio dette créée vs remboursée (à suivre mensuellement).
 
@@ -222,13 +221,13 @@ L’analogie la plus parlante pour gestion/PO est celle de l’entretien préven
 Cette feuille de route vise un déploiement réaliste sur environ six à douze mois, compatible avec un contexte budget/délais.
 
 **Phase de mise en place (premiers mois)**  
-Définir la taxonomie, les critères de scoring, et un template unique; puis rendre la dette visible et ordonnée dans le backlog (pas un backlog parallèle).
+Définir la taxonomie, les critères de scoring, et un template unique, puis rendre la dette visible et ordonnée dans le backlog (pas un backlog parallèle).
 
 **Phase de stabilisation (milieu d’année)**  
 Appliquer la matrice effort–impact pour des « victoires rapides », et utiliser RICE/WSJF pour les dettes qui nécessitent une argumentation économique (coût de retard).
 
 **Phase d’industrialisation (fin d’année)**  
-Mettre en place des SLAs sécurité/conformité et un reporting mensuel; relier les décisions de dette à des métriques de delivery, vulnérabilités et fiabilité (error budget).
+Mettre en place des SLAs sécurité/conformité et un reporting mensuel, relier les décisions de dette à des métriques de delivery, vulnérabilités et fiabilité (error budget).
 
 ```mermaid
 gantt
@@ -263,7 +262,7 @@ gantt
 1. Quel outil de backlog utilisez-vous (par exemple, Azure DevOps ou Jira), et avez-vous déjà des champs/labels normalisés pour sécurité, conformité et incidents ?  
 2. Avez-vous des SLAs existants (internes ou contractuels) pour patching/vulnérabilités ou disponibilité, qui devraient automatiquement rendre certains items « urgents » ?  
 3. Quelles données sont déjà disponibles (APM, logs, scans sécu, incidents) pour alimenter la variable « confiance » (RICE) et le coût de retard (WSJF) ?  
-4. Votre principale douleur aujourd’hui est-elle la **lenteur de livraison**, les **incidents**, les **risques sécurité**, ou la **maintenabilité** (exemple : onboarding, changements risqués) — et laquelle est la plus visible côté gestion ?  
+4. Votre principale douleur aujourd’hui est-elle la **lenteur de livraison**, les **incidents**, les **risques sécurité**, ou la **maintenabilité** (exemple : onboarding, changements risqués) et laquelle est la plus visible côté gestion ?  
 5. Combien d’équipes/services sont couplés (dépendances), et existe-t-il un « goulot » récurrent (exemple : équipe plateforme, sécurité, DBA) qui transforme certaines dettes en bloquants systémiques ?
 
 ## Conclusion
