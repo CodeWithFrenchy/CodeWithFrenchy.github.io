@@ -109,3 +109,11 @@ Une priorisation utile conduit aussi à reporter certaines corrections. La capac
 Le report devrait laisser une trace simple : pourquoi la situation reste acceptable, quelle mesure temporaire est nécessaire et quand la décision sera réexaminée. Un changement de contexte peut justifier de revenir dessus plus tôt.
 
 Pour commencer, prenez les quelques dettes qui préoccupent le plus l’équipe. Décrivez leurs conséquences, comparez l’effort de correction et identifiez les inconnues qui empêchent de décider. Vous aurez déjà une base concrète pour choisir le prochain travail à financer et expliquer ce qui attendra.
+
+## Conclusion
+
+Avec un budget limité et des échéances serrées, chaque correction doit justifier la capacité qu’on lui consacre. Je privilégierais les travaux qui réduisent une difficulté récurrente, préparent une échéance importante ou permettent de prendre une décision mieux informée.
+
+Pour commencer, prenez les quelques dettes qui préoccupent le plus l’équipe. Décrivez leurs conséquences, comparez l’effort de correction et identifiez les inconnues qui empêchent de décider. Choisissez ensuite ce que vous pouvez réellement mener à terme et fixez une date pour revoir le reste.
+
+Une bonne décision doit pouvoir s’expliquer simplement : voici pourquoi nous traitons cette dette maintenant, ce que nous attendons de la correction et ce que nous acceptons en reportant les autres.
