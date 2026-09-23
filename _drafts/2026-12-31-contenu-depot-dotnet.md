@@ -1,11 +1,9 @@
 ---
 title: Que devrait contenir un dépôt .NET?
-date: 2024-12-31 19:00:00 -0400
+date: 2026-12-31 19:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet]
 ---
-
-> 💡 à valider une dernière fois
 
 ## Préambule
 
@@ -209,6 +207,7 @@ Ces pipelines supposent des packages accessibles sans authentification suppléme
 
 Le fichier `.github/workflows/ci.yml` s’appuie sur les actions officielles [checkout](https://github.com/actions/checkout), [setup-dotnet](https://github.com/actions/setup-dotnet) et [upload-artifact](https://github.com/actions/upload-artifact) :
 
+{% raw %}
 ```yaml
 name: CI
 
@@ -250,6 +249,7 @@ jobs:
           path: TestResults/
           if-no-files-found: warn
 ```
+{% endraw %}
 
 ### Azure DevOps
 

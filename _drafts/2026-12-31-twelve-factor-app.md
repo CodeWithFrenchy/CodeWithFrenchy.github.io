@@ -1,11 +1,9 @@
 ---
 title: Twelve-Factor App - principes, bénéfices et limites pour les applications .NET
-date: 2024-12-31 19:00:00 -0400
+date: 2026-12-31 19:00:00 -0400
 categories: [architecture]
 tags: [dotnet]
 ---
-
-> 💡 à valider une dernière fois
 
 ## Préambule
 

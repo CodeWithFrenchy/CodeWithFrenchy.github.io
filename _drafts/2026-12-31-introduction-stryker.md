@@ -1,11 +1,9 @@
 ---
 title: Stryker.NET - vos tests détectent-ils vraiment les erreurs?
-date: 2024-12-31 19:00:00 -0400
+date: 2026-12-31 19:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet, essais]
 ---
-
-> 💡 à valider une dernière fois
 
 ## Préambule
 
@@ -277,7 +275,8 @@ Avec Azure Repos Git, associez ce pipeline à une [politique de validation de bu
 
 Ajoutez ce workflow dans `.github/workflows/mutation-testing.yml`. Il utilise les actions officielles [checkout](https://github.com/actions/checkout), [setup-dotnet](https://github.com/actions/setup-dotnet) et [upload-artifact](https://github.com/actions/upload-artifact).
 
-```yaml
+{% raw %}
+```yml
 name: Mutation testing
 
 on:
@@ -319,6 +318,7 @@ jobs:
           path: tests/Livraison.Core.Tests/StrykerOutput/
           if-no-files-found: warn
 ```
+{% endraw %}
 
 Ces exemples conservent les rapports comme artefacts du pipeline. Ils ne nécessitent aucune clé de Stryker Dashboard. Si l’analyse échoue avant de générer un rapport, les journaux du job restent le point de départ du diagnostic.
 

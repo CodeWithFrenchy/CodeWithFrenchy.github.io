@@ -1,11 +1,9 @@
 ---
 title: Saga et Transactional Outbox - gérer la cohérence et les échecs dans une architecture distribuée
-date: 2024-12-31 19:00:00 -0400
+date: 2026-12-31 19:00:00 -0400
 categories: [outil-developpement, architecture]
 tags: [dotnet]
 ---
-
-> 💡 à valider une dernière fois
 
 ## Préambule
 

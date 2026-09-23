@@ -1,11 +1,9 @@
 ---
 title: Une dépendance change de licence - comment choisir une alternative et réussir la migration ?
-date: 2024-12-31 19:00:00 -0400
+date: 2026-12-31 19:00:00 -0400
 categories: [outil-developpement]
 tags: []
 ---
-
-> 💡 à valider une dernière fois
 
 ## Préambule
 
