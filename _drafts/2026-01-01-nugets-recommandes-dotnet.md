@@ -14,6 +14,7 @@ voir ma page "article-a-confirmer".
 parler un peu des différents outils
 
 Xunit
+
 TestContainers
 
 - utiliser ou non un mapper <https://www.linkedin.com/posts/alexis-garon-michaud-a59643219_dtos-mapping-the-good-the-bad-and-the-activity-7324909420814000129-1yWJ?utm_source=share&utm_medium=member_desktop&rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ>

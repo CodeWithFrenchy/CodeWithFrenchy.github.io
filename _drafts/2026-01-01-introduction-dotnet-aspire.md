@@ -7,6 +7,8 @@ tags: [dotnet, aspire]
 
 > ⚠️ À finir
 
+- faudrait que j'utilise mon pptx sur aspire pour faire l'article pour bien faire serait probablement pas trop long à mettre en place 
+
 RENOMMER!!!!
 
 - .NET Aspire dashboard
