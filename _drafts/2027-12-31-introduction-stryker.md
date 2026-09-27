@@ -1,6 +1,6 @@
 ---
 title: Stryker.NET - vos tests détectent-ils vraiment les erreurs?
-date: 2026-12-31 19:00:00 -0400
+date: 2027-12-31 19:00:00 -0400
 categories: [outil-developpement]
 tags: [dotnet, essais]
 ---

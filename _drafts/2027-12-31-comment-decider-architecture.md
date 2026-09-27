@@ -1,6 +1,6 @@
 ---
 title: Comment orienter les choix d’architecture - monolithe modulaire, microservices, événementiel et cloud-native
-date: 2026-12-31 19:00:00 -0400
+date: 2027-12-31 19:00:00 -0400
 categories: [architecture]
 tags: [dotnet]
 ---
