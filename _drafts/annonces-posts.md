@@ -32,6 +32,144 @@ Version Twitter :
 
 ## Annonces
 
+### Toute dette technique ne mérite pas d'être corrigée maintenant
+
+Version Linkedin :
+
+---
+
+🧭 Toute dette technique ne mérite pas d'être corrigée maintenant
+(English version available below)
+
+Je viens de publier un nouvel article sur un sujet qui revient souvent dans les équipes : comment prioriser la dette technique lorsque le budget, le temps et la capacité sont limités?
+
+Dire qu'un module est « mal conçu » aide rarement à obtenir du temps pour le corriger.
+
+Il faut plutôt rendre les conséquences visibles :
+• Quel problème la dette provoque-t-elle?
+• À quelle fréquence l'équipe le subit-elle?
+• Quel est l'effort nécessaire pour la corriger?
+• Une échéance impose-t-elle d'agir bientôt?
+• Quel niveau d'incertitude entoure l'estimation?
+• Quel risque accepte-t-on en reportant le travail?
+
+Dans l'article, je propose une approche simple basée sur l'impact, l'effort, les échéances et l'incertitude.
+
+J'aborde aussi la capacité réservée à la dette, les investigations courtes lorsque l'effort est flou, la place de la dette dans le backlog et l'importance de mesurer le résultat après la correction.
+
+Reporter une dette demeure parfois la bonne décision. L'important est de savoir pourquoi elle attend et quand la décision sera réévaluée.
+
+📖 Article original : https://codewithfrenchy.com/posts/priorisation-dette-technique/
+
+---
+
+🧭 Not every piece of technical debt needs to be fixed now
+
+I just published a new article about a recurring challenge for engineering teams: how do you prioritize technical debt when budget, time, and capacity are limited?
+
+Saying that a module is "poorly designed" rarely helps secure time to fix it.
+
+Instead, make the consequences visible:
+• What problem does the debt cause?
+• How often does the team experience it?
+• How much effort is required to address it?
+• Is there a deadline that requires action soon?
+• How much uncertainty surrounds the estimate?
+• What risk are we accepting by delaying the work?
+
+In the article, I propose a simple approach based on impact, effort, deadlines, and uncertainty.
+
+I also cover reserved capacity for technical debt, short investigations when effort is unclear, making debt visible in the backlog, and measuring whether the work actually reduced the original problem.
+
+Deferring technical debt is sometimes the right decision. What matters is knowing why it can wait and when that decision will be reviewed again.
+
+📖 Original article : https://codewithfrenchy.com/posts/priorisation-dette-technique/
+
+#CodeWithFrenchy #TechnicalDebt #SoftwareArchitecture #SoftwareEngineering #DevEx #TechLeadership
+
+---
+
+### Polly devient-il payant ? Comprendre l’OSMF et ses impacts pour les équipes .NET
+
+Version Linkedin :
+
+---
+
+💰 Polly devient-il payant ? La réponse est plus nuancée qu'un simple oui
+(English version available below)
+
+C'est mon premier article depuis mon retour de vacances, et je voulais revenir sur un changement qui mérite selon moi plus qu'un simple « Polly devient payant ».
+
+À compter du 16 novembre 2026, Polly adoptera l'Open Source Maintenance Fee, ou OSMF.
+Pour les organisations concernées, le montant annoncé est de 20 $ US par mois, une seule fois par organisation.
+
+Mais le code de Polly reste open source sous licence BSD.
+
+Dans cet article, j'analyse surtout ce que ce changement signifie concrètement pour les équipes .NET :
+• Quand le Maintenance Fee s'applique
+• La différence entre dépendance directe et transitive
+• Le cas de Microsoft.Extensions.Http.Resilience, qui repose lui-même sur Polly
+• Pourquoi migrer pour économiser 240 $ US par année est rarement une bonne décision
+• Les alternatives selon vos besoins de résilience
+• Les zones grises qui doivent encore être clarifiées
+• L'impact sur Dependabot, Renovate, les SBOM et la gouvernance des dépendances
+
+À mon avis, le sujet le plus important n'est pas le prix.
+
+Une dépendance sait conserver une licence open source tout en faisant évoluer son modèle économique et les conditions entourant ses releases maintenues.
+
+Nos décisions d'architecture doivent maintenant tenir compte de cette réalité.
+
+📖 Article original : https://codewithfrenchy.com/posts/polly-devient-payant/
+
+---
+
+💰 Is Polly becoming paid? The answer is more nuanced than a simple yes
+
+This is my first article since returning from vacation, and I wanted to cover a change that deserves more than a simple "Polly is becoming paid."
+
+Starting November 16, 2026, Polly will adopt the Open Source Maintenance Fee, or OSMF.
+For organizations that meet the criteria, the announced fee is $20 USD per month, once per organization.
+
+But Polly's source code remains open source under its BSD license.
+
+In this article, I focus on what this change actually means for .NET teams:
+• When the Maintenance Fee applies
+• The difference between direct and transitive dependencies
+• The case of Microsoft.Extensions.Http.Resilience, which itself relies on Polly
+• Why migrating to save $240 USD per year is rarely a good decision
+• Alternatives based on your resilience requirements
+• Grey areas that still need clarification
+• The impact on Dependabot, Renovate, SBOMs, and dependency governance
+
+In my view, the most important topic isn't the price.
+
+A dependency can keep an open source license while changing its economic model and the conditions surrounding its maintained releases.
+
+Our architecture decisions now need to account for that reality.
+
+📖 Original article : https://codewithfrenchy.com/posts/polly-devient-payant/
+
+#CodeWithFrenchy #DotNet #CSharp #Polly #OpenSource #OSMF #SoftwareArchitecture #DevEx
+
+---
+
+Version Twitter : 
+
+---
+
+💰 Polly devient-il payant?
+
+À partir du 16 novembre, Polly adoptera l’OSMF. Certaines organisations devront contribuer 20 $ US/mois.
+
+Mais Polly reste open source.
+
+Le vrai enjeu selon moi? La gouvernance de nos dépendances .NET.
+
+Mon analyse 👇
+
+---
+
 ### Domaines de valeurs vs Données de référence - Comprendre la différence
 
 Version Linkedin :
