@@ -5,10 +5,12 @@ categories: [outil-developpement]
 tags: [github-copilot]
 ---
 
+> PLAN À FAIRE !!!!!! Dans le contexte, je dois parler de mon environnement de travail avec github copilot etc
+
 > ⚠️ À faire : Automatiser le remplacement de FluentAssertions avec de l'IA <https://www.linkedin.com/posts/benjaminabt_replace-fluentassertions-with-ai-activity-7338124027305074690-RGkZ/?rcm=ACoAADcW9iUBeV3L19UkltmrPLHuir3wSexbkJQ>
 
 Parler que c'est dans la même ligné que <https://github.com/maandagdev/AutoDemapper>
-surtout en lien avec la nouvelle vulnérabilité de automapper
+surtout en lien avec la nouvelle vulnérabilité de automapper +  le changement de licence
 
 et ceci ? faire une simili abstraction pour remplacer mediatr?
 https://codewithmukesh.com/blog/cqrs-without-mediatr/
