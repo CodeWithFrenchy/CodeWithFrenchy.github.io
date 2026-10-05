@@ -1,6 +1,7 @@
 ---
 title: "Query et Command en .NET : séparer clairement la lecture et l’écriture"
 date: 2027-12-31 19:00:00 -0400
+categories: []
 tags: [dotnet, csharp, architecture, cqrs]
 ---
 

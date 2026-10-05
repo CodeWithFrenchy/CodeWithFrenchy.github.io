@@ -1,6 +1,6 @@
 ---
 title: "HTTP QUERY : une méthode pour les recherches complexes dans nos API"
-date: 2026-10-19 19:00:00 -0400
+date: 2026-09-19 19:00:00 -0400
 categories: [architecture]
 tags: [http, aspnet-core, dotnet, openapi]
 ---

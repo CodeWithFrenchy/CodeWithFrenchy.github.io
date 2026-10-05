@@ -1,6 +1,7 @@
 ---
 title: "Utiliser sealed quand l’héritage n’est pas prévu"
 date: 2027-12-31 19:00:00 -0400
+categories: []
 tags: [dotnet, tests, bonnes-pratiques]
 ---
 
