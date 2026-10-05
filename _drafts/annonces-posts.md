@@ -32,6 +32,233 @@ Version Twitter :
 
 ## Annonces
 
+### .NET 11 : nouveautés, performances et évolution du langage C#
+
+Version Linkedin :
+
+---
+
+🚀 .NET 11 arrive bientôt, voici les nouveautés qui retiennent mon attention !
+(English version available below)
+
+À quelques jours de la sortie prévue de .NET 11, j'ai préparé mon tour d'horizon des nouveautés pour le backend, les API, les données et Blazor.
+
+Et C# 15 occupe une bonne partie de l'article.
+
+Parmi les sujets abordés :
+
+• Les types union pour mieux représenter les résultats métier.
+• Les hiérarchies fermées pour encadrer les états et le pattern matching.
+• Runtime Async et l'évolution de l'exécution de async/await.
+• La validation asynchrone avec DataAnnotations et les Minimal APIs.
+• OpenAPI 3.2 et la méthode HTTP QUERY.
+• FullJoin et les nouveautés de System.Text.Json.
+• Les améliorations d'EF Core 11 et du SQL généré.
+• Les nouveautés Blazor autour des formulaires, de la virtualisation et des circuits.
+• Les performances du runtime, avec plusieurs travaux analysés par Stephen Toub.
+• Les points à vérifier avant de migrer une application vers .NET 11.
+
+Mon objectif n'était pas de dresser une simple liste. J'ai voulu regarder où ces nouveautés apportent une valeur concrète dans nos applications et où leur adoption mérite davantage de réflexion.
+
+📖 Article original : https://codewithfrenchy.com/posts/dotnet11
+
+------------------------------
+
+🚀 .NET 11 is coming soon, here are the features that caught my attention!
+
+With the .NET 11 release approaching, I've prepared my overview of what's new for backend development, APIs, data, and Blazor.
+
+And C# 15 gets a significant part of the article.
+
+Topics include:
+
+• Union types for expressing business results.
+• Closed hierarchies for states and pattern matching.
+• Runtime Async and the evolution of async/await execution.
+• Async validation with DataAnnotations and Minimal APIs.
+• OpenAPI 3.2 and the HTTP QUERY method.
+• FullJoin and System.Text.Json improvements.
+• EF Core 11 and generated SQL improvements.
+• Blazor updates for forms, virtualization, and circuits.
+• Runtime performance improvements, including work analyzed by Stephen Toub.
+• What to validate before migrating an application to .NET 11.
+
+My goal wasn't to provide another feature checklist. I wanted to look at where these changes bring concrete value to our applications and where adoption deserves more consideration.
+
+📖 Original article : https://codewithfrenchy.com/posts/dotnet11
+
+#CodeWithFrenchy #DotNet #DotNet11 #CSharp #CSharp15 #AspNetCore #EFCore #Blazor #OpenAPI #DevEx
+
+"2026-11-02-Nouveautés et performances de .NET 11.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🚀 .NET 11 arrive bientôt!
+
+C# 15, types union, hiérarchies fermées, Runtime Async, validation asynchrone, EF Core 11, Blazor, OpenAPI 3.2 et performances.
+
+J'ai regroupé les nouveautés qui m'intéressent le plus 👇
+
+https://codewithfrenchy.com/posts/dotnet11
+
+#CodeWithFrenchy #DotNet #DotNet11
+
+---
+
+### HTTP QUERY : avons-nous enfin une meilleure option que POST pour nos recherches complexes?
+
+Version Linkedin :
+
+---
+
+🔎 HTTP QUERY : avons-nous enfin une meilleure option que POST pour nos recherches complexes?
+(English version available below)
+
+Une recherche commence souvent avec quelques paramètres dans une URL. Puis les filtres s'accumulent, les critères se combinent et l'équipe finit avec un POST /search contenant un objet JSON.
+
+Le problème? POST ne communique pas clairement qu'il s'agit d'une opération de lecture.
+
+La méthode HTTP QUERY répond précisément à ce besoin : transmettre des critères structurés dans le corps tout en déclarant une opération sûre et idempotente.
+
+Dans mon nouvel article, je regarde :
+
+• La différence entre GET, POST et QUERY pour une recherche.
+• Ce que la RFC 10008 définit réellement.
+• La prise en charge de QUERY dans OpenAPI avec ASP.NET Core 11.
+• Un exemple avec une Minimal API.
+• Les implications pour le cache, notamment lorsque le corps fait partie de la requête.
+• Les validations nécessaires avec les passerelles, WAF, CORS, clients générés et outils d'observabilité.
+• Une stratégie pour introduire QUERY sans retirer immédiatement vos endpoints POST existants.
+
+Je ne remplacerais pas GET pour une recherche simple. Pour une recherche avancée avec des critères structurés, QUERY offre par contre un contrat HTTP beaucoup plus expressif.
+
+📖 Article original : https://codewithfrenchy.com/posts/verb-query
+
+------------------------------
+
+🔎 HTTP QUERY: do we finally have a better option than POST for complex searches?
+
+A search often starts with a few URL parameters. Then filters grow, criteria get combined, and the team eventually ends up with a POST /search endpoint carrying a JSON object.
+
+The problem? POST doesn't clearly communicate that the operation is read-only.
+
+The HTTP QUERY method addresses this exact need: sending structured criteria in the request body while declaring a safe and idempotent operation.
+
+In my new article, I cover:
+
+• The differences between GET, POST, and QUERY for searches.
+• What RFC 10008 actually defines.
+• QUERY support in OpenAPI with ASP.NET Core 11.
+• A Minimal API example.
+• Caching implications when the request body matters.
+• What to validate across gateways, WAFs, CORS, generated clients, and observability tools.
+• A migration approach that keeps existing POST endpoints available when needed.
+
+I wouldn't replace GET for simple searches. For advanced searches with structured criteria, QUERY offers a much more expressive HTTP contract.
+
+📖 Original article : https://codewithfrenchy.com/posts/verb-query
+
+#CodeWithFrenchy #HTTP #DotNet #AspNetCore #OpenAPI #API #REST #WebAPI
+
+"2026-10-19-HTTP QUERY recherches complexes.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🔎 HTTP QUERY : une alternative à POST pour nos recherches complexes?
+
+Une méthode sûre et idempotente avec un corps structuré, maintenant reconnue dans OpenAPI avec ASP.NET Core 11.
+
+Je fais le point 👇
+
+https://codewithfrenchy.com/posts/verb-query
+
+#CodeWithFrenchy #HTTP #DotNet
+
+---
+
+### WSLc : une alternative à Docker Desktop pour les entreprises?
+
+Version Linkedin :
+
+---
+
+🐧 WSLc : une alternative à Docker Desktop pour les entreprises?
+(English version available below)
+
+Depuis le 29 septembre, WSL containers est disponible généralement. Microsoft offre maintenant une voie intégrée à Windows pour construire et exécuter des conteneurs Linux avec WSL.
+
+Est-ce suffisant pour remplacer Docker Desktop en entreprise?
+
+Dans mon nouvel article, je regarde la question sous l'angle du quotidien des équipes :
+
+• Les scénarios déjà couverts par WSLc.
+• Les intégrations avec Aspire et VS Code Dev Containers.
+• Les contrôles Intune et Microsoft Defender for Endpoint.
+• Les impacts sur les licences et le coût total.
+• Les limites actuelles, notamment l'absence de Compose.
+• Les vérifications à faire avant de migrer une équipe.
+• L'API Microsoft.WSL.Containers pour piloter des conteneurs depuis une application Windows.
+
+Ma conclusion : WSLc mérite maintenant un pilote sérieux. Pour certains projets, surtout avec Aspire, il couvre déjà une partie intéressante des besoins. Pour une équipe fortement dépendante de Docker Compose ou de l'écosystème Docker Desktop, la comparaison demande encore du travail.
+
+Le bon critère n'est pas uniquement le prix de la licence. Il faut mesurer l'expérience développeur, la compatibilité et le coût réel du changement.
+
+📖 Article original : https://codewithfrenchy.com/posts/wslc
+
+------------------------------
+
+🐧 WSLc: an alternative to Docker Desktop for enterprises?
+
+WSL containers has been generally available since September 29. Microsoft now provides a Windows-integrated path to build and run Linux containers through WSL.
+
+Is that enough to replace Docker Desktop in an enterprise?
+
+In my new article, I look at the question from the team's day-to-day perspective:
+
+• Scenarios already covered by WSLc.
+• Integrations with Aspire and VS Code Dev Containers.
+• Intune and Microsoft Defender for Endpoint controls.
+• Licensing and total cost considerations.
+• Current limitations, including the lack of Compose support.
+• What teams should validate before migrating.
+• The Microsoft.WSL.Containers API for controlling containers from Windows applications.
+
+My conclusion: WSLc now deserves a serious pilot. For some projects, especially with Aspire, it already covers an interesting part of the workflow. For teams heavily dependent on Docker Compose or the Docker Desktop ecosystem, more validation is still required.
+
+License cost shouldn't be the only decision factor. Developer experience, compatibility, and the actual cost of migration matter too.
+
+📖 Original article : https://codewithfrenchy.com/posts/wslc
+
+#CodeWithFrenchy #WSL #WSLc #Containers #Docker #DockerDesktop #Aspire #DevEx #DotNet #Windows
+
+"2026-10-05-WSLc une alternative à Docker Desktop.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🐧 WSLc peut-il remplacer Docker Desktop en entreprise?
+
+Depuis sa disponibilité générale, la réponse devient plus intéressante.
+
+Aspire, Dev Containers, Intune, Defender, coûts, limites de Compose... je fais le point 👇
+
+https://codewithfrenchy.com/posts/wslc
+
+#CodeWithFrenchy #WSL #WSLc
+
+---
+
 ### Toute dette technique ne mérite pas d'être corrigée maintenant
 
 Version Linkedin :
