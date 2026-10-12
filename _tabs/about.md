@@ -1,80 +1,98 @@
 ---
-title: À propos de
+title: À propos
 icon: fas fa-info-circle
 order: 4
 ---
 
 ## 👋 Salut, moi c’est CodeWithFrenchy
 
-Derrière **CodeWithFrenchy**, il y a **Alexis Garon-Michaud**, un Architecte Logiciel passionné par la modernisation, le cloud et les bonnes pratiques de développement.
+Derrière **CodeWithFrenchy**, il y a **Alexis Garon-Michaud**, architecte logiciel passionné par la modernisation, l’écosystème .NET et le partage de connaissances.
 
-Je passe mes journées à aider des équipes à livrer des applications **plus performantes, plus simples à maintenir et plus agréables à faire évoluer**.
+Avec plus de **13 ans d’expérience**, j’aide des équipes à concevoir des applications **résilientes, performantes et adaptées à leurs besoins**, tout en améliorant les outils et les pratiques qui permettent de les faire évoluer.
 
-Avec plus de **13 ans d’expérience** dans le domaine, j’ai relevé de nombreux défis dès mes débuts.
+Chez **COFOMO**, je suis **architecte logiciel et responsable de l’axe « DevEx et pratiques logicielles »** pour le **Centre d’excellence Azure**. Mon travail combine architecture, accompagnement technique, veille et transmission du savoir.
 
-J’ai eu la chance de contribuer à plusieurs projets d’envergure du gouvernement du Québec, notamment :
+## Concevoir des architectures adaptées à la réalité
 
-- le [**Guichet d’accès à un médecin de famille**](https://www4.prod.ramq.gouv.qc.ca/GRL/LM_GuichAccesMdFamCitoy/fr)  
-- le [**Carnet santé Québec**](https://carnetsante.gouv.qc.ca/portail)  
-- et plus récemment le programme [**Lexius**](https://www.quebec.ca/nouvelles/actualites/details/lancement-du-programme-lexius-une-avancee-pour-lacces-a-la-justice), visant à moderniser les services judiciaires au sein du ministère de la Justice.
+Une architecture doit répondre aux besoins du métier, aux exigences d’exploitation et aux capacités de l’équipe qui en assurera la maintenance. Je m’intéresse autant à la performance et à la résilience qu’à la sécurité, à l’observabilité et aux coûts.
 
-Ces expériences m’ont permis de développer une vision à la fois technique et organisationnelle : comprendre comment livrer des solutions solides tout en naviguant dans des environnements complexes.
+J’accompagne notamment les équipes dans :
 
-Je suis convaincu qu’un bon design logiciel n’est pas seulement une question de code : c’est une question d’expérience, de rigueur et de transmission du savoir.
+- **La modernisation d’applications** vers .NET moderne et Azure, avec une démarche progressive qui tient compte de l’existant.
+- **La conception d’architectures logicielles** dont les responsabilités, les dépendances et les compromis sont explicites. DDD, Clean Architecture, Vertical Slice et CQRS font partie des approches que j’utilise selon le contexte.
+- **La performance et la fiabilité**, par la mesure, les essais de charge, l’observabilité et la prise en compte des défaillances.
+- **L’intégration et la livraison**, avec des API, une gestion rigoureuse des identités et des secrets, et des déploiements automatisés.
 
-## ⚙️ Ce que je fais au quotidien
+Mon objectif est de proposer des solutions que les équipes peuvent comprendre, exploiter et faire évoluer durablement.
 
-Je dirige l’axe **« DevEx et pratiques logicielles »** au **Centre d’excellence Azure** de **Cofomo**, où je conçois des architectures cloud natives et accompagne des équipes de développement dans leur transformation technologique.
+## Outiller les équipes et améliorer la DevEx
 
-Quelques-uns de mes domaines d’expertise :
+Une part importante de mon travail consiste à **aider les équipes à mieux s’outiller au quotidien**. J’aime transformer les irritants récurrents en améliorations durables dans les dépôts, les environnements de développement et les pipelines.
 
-- **Modernisation d’applications** : migration vers **.NET 8/10**, conteneurisation avec **AKS** ou **App Service**, intégration à **API Management**
-- **Architecture logicielle** : **Clean Architecture**, **DDD**, **Vertical Slice**, **CQRS**
-- **Performance et observabilité** : **BenchmarkDotNet**, **.NET Aspire**, **Application Insights**
-- **Sécurité et intégration** : **Keycloak**, **RBAC**, gestion des identités et des secrets
-- **DevOps & CI/CD** : **Azure DevOps**, **GitHub Actions**, **Infrastructure as Code**
-- **Mentorat technique** : accompagner, vulgariser, faire grandir les autres
+Cela passe notamment par :
 
-En résumé : j’aide les organisations à faire les bons choix techniques, tout en gardant un pied bien ancré dans la réalité du terrain.
+- **Des conventions cohérentes**, avec [EditorConfig](https://codewithfrenchy.com/posts/avantages-editorconfig/), les analyseurs et les vérifications de formatage.
+- **Une configuration de compilation partagée**, notamment avec `Directory.Build.props`, pour centraliser les paramètres communs aux projets.
+- **Des essais automatisés utiles**, des essais unitaires et d’intégration aux [essais d’architecture](https://codewithfrenchy.com/posts/essais-architecture-automatises-dotnet/), pour détecter les régressions et vérifier les règles de conception.
+- **Des environnements de développement plus faciles à démarrer et à observer**, notamment avec Aspire.
+- **Des pipelines CI/CD fiables**, avec GitHub Actions ou Azure DevOps, qui donnent une rétroaction rapide et appliquent les contrôles convenus.
 
-## 💬 Ma philosophie
+J’accompagne aussi les équipes dans l’appropriation de ces pratiques, par les revues de code, le mentorat et la formation. Le résultat recherché est une équipe plus autonome, avec moins de manipulations répétitives et davantage de confiance dans ses changements.
 
-> La technologie ne vaut rien si elle n’est pas comprise, adoptée et durable.
+## Accompagner l’adoption de l’intelligence artificielle
 
-Je crois profondément que les **bonnes pratiques** sont un levier d’efficacité et non une contrainte. Qu’il s’agisse de structurer une solution, de définir un pipeline, ou de repenser une architecture, mon approche est toujours la même : **simplifier sans appauvrir**.
+J’aide également les organisations à **introduire des outils d’IA comme GitHub Copilot** dans leurs pratiques de développement.
 
-C’est aussi pour ça que j’ai lancé _CodeWithFrenchy_ : un espace pour partager, inspirer et échanger autour du développement moderne, du .NET et de l’expérience développeur (DevEx).
+Cet accompagnement touche le choix des usages, l’expérimentation, la formation et l’intégration aux façons de travailler. J’accorde une attention particulière à la gouvernance, à la confidentialité, à la validation du code proposé et à la maîtrise des coûts.
 
-## ✍️ Sur mon blog
+Je m’intéresse aux effets observables sur le travail des équipes : qualité des livrables, compréhension du code, autonomie et temps consacré aux tâches. Pour moi, une adoption réussie repose sur des attentes claires, des pratiques adaptées et des ajustements fondés sur l’expérience.
 
-Sur ce blog, je partage :
+## Un parcours dans des projets d’envergure
 
-- des **articles techniques** sur .NET, C#, Azure et la performance logicielle
-- des **études de cas** inspirées de mes mandats réels dans le secteur public
-- des **outils à surveiller** (Mapperly, Aspire, TUnit, CoreWCF, Enum.Source.Generator…)
-- des **réflexions personnelles** sur le rôle de l’architecte, le leadership technique et l’équilibre entre rigueur et pragmatisme
+J’ai contribué à plusieurs projets du gouvernement du Québec, notamment :
 
-Mon objectif : te donner des ressources **pratiques et applicables** et non pas des concepts déconnectés du quotidien.
+- Le [**Guichet d’accès à un médecin de famille**](https://www4.prod.ramq.gouv.qc.ca/GRL/LM_GuichAccesMdFamCitoy/fr).
+- Le [**Carnet santé Québec**](https://carnetsante.gouv.qc.ca/portail).
+- Le programme [**Lexius**](https://www.quebec.ca/nouvelles/actualites/details/lancement-du-programme-lexius-une-avancee-pour-lacces-a-la-justice), consacré à la modernisation des services judiciaires du ministère de la Justice.
 
-## 👥 Mon engagement dans la communauté
+Après Lexius, j’ai travaillé sur des **systèmes informatiques liés au suivi de la procréation assistée au Québec**, dans le contexte du [Programme de procréation médicalement assistée](https://www.quebec.ca/famille-et-soutien-aux-personnes/grossesse-parentalite/procreation-assistee/programme-procreation-medicalement-assistee).
 
-Je crois fermement à la valeur du partage de connaissances.
+Je contribue maintenant à un projet de l’**Office québécois de la langue française (OQLF)** qui facilite le suivi des entreprises dans leurs [démarches de francisation](https://www.oqlf.gouv.qc.ca/francisation/entreprises/), dans le contexte des obligations renforcées par la loi 96.
 
-Je contribue surtout par :
+Ces expériences m’ont appris à concilier les besoins des utilisateurs, les contraintes organisationnelles et les exigences techniques, dans des environnements où la continuité des services et la maintenabilité comptent beaucoup.
 
-- des **articles** publiés régulièrement sur _CodeWithFrenchy_  
-- du **mentorat** et de l’accompagnement d’équipes au quotidien  
-- des **partages** et discussions techniques sur **LinkedIn** (hashtag [#CodeWithFrenchy](https://www.linkedin.com/feed/hashtag/codewithfrenchy))  
-- la **veille** et la **newsletter** internes du Centre d’excellence Azure
+## Une veille active, sur mon blog et sur LinkedIn
+
+Je suis de près **l’évolution de l’écosystème .NET** : nouvelles versions, projets émergents, changements incompatibles, évolution des licences et devenir des bibliothèques utilisées par les équipes.
+
+Cette veille nourrit mes choix techniques et mes échanges avec la communauté. Comprendre ce qui change permet de préparer les migrations, d’anticiper les impacts et de mieux évaluer les outils que l’on adopte.
+
+**LinkedIn occupe une place importante dans ce partage.** Mes nombreuses publications prolongent cette veille au fil des semaines : actualités commentées, découvertes d’outils, conseils techniques, retours d’expérience et réflexions sur notre métier.
+
+Tu peux retrouver [**mes publications et mes échanges sur LinkedIn**](https://www.linkedin.com/in/alexis-garon-michaud-a59643219/recent-activity/all/).
+
+Sur **CodeWithFrenchy**, je prends le temps d’approfondir ces sujets avec des articles sur .NET, C#, Azure, l’architecture, les essais automatisés, la DevEx et l’adoption de l’IA. Mon objectif est de proposer des explications et des exemples que tu peux réutiliser dans tes projets.
+
+## Transmettre et soutenir la relève
+
+Le partage de connaissances occupe une grande place dans mon parcours. J’ai notamment **enseigné l’informatique au Cégep de Matane** et je m’implique auprès des jeunes et des établissements d’enseignement pour faire découvrir les métiers des TI.
+
+À travers des conférences, des rencontres et des initiatives comme **JeunesExplo**, je partage mon expérience et j’échange avec celles et ceux qui envisagent une carrière dans le domaine. J’en parle aussi dans mon article [**Mon parcours et conseils pour la relève**](https://codewithfrenchy.com/posts/parcours-conseils-releve/).
+
+En **décembre 2024**, j’ai eu le plaisir de faire partie des **trois lauréats du concours Les Étoiles de Mon Avenir TI**, qui souligne l’engagement auprès de la relève et la promotion des carrières en technologies de l’information.
+
+Cet engagement se poursuit dans mon quotidien par le mentorat, la formation, l’accompagnement de collègues et la veille partagée au sein du Centre d’excellence Azure, notamment dans son infolettre.
+
+## Ma philosophie
+
+**Simplifier sans appauvrir.**
+
+Je crois aux pratiques qui facilitent réellement le travail : rendre les décisions compréhensibles, automatiser ce qui peut l’être et transmettre les connaissances pour que l’équipe puisse avancer avec confiance.
+
+La réussite d’une solution tient autant à sa conception qu’à la capacité des personnes à se l’approprier et à la faire vivre.
 
 ## 🧢 En dehors du code
 
-Parce qu’il n’y a pas que le cloud dans la vie 🌤️  
+En dehors de l’informatique, on me trouve souvent à la **ferme familiale**, à passer du temps avec les vaches, ou avec mes **neveux et nièces**.
 
-En dehors de l'informatique, on me trouve souvent :
-
-- à la **ferme familiale**, entouré de vaches et de neveux 👨‍🌾
-- sur un **terrain de baseball**, à arbitrer un match ou à encourager les jeunes ⚾
-- ou en train de **faire de la randonnée**, à profiter de la nature pour me ressourcer 🥾
-
-Ces moments m’aident simplement à garder le bon équilibre.
+Je suis aussi **arbitre de baseball** et amateur de **randonnée**. La ferme, le sport et la nature me permettent de décrocher et de garder un équilibre qui m’est important.
