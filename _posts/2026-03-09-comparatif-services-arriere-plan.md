@@ -1,8 +1,8 @@
 ---
 title: Services d'arrière-plan en .NET - comparatif des approches
 date: 2026-03-09 18:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet]
+categories: [outil-developpement, architecture]
+tags: [dotnet, aspnet-core, backgroundservice, worker-service, hosted-service, hangfire, quartz-net, taches-planifiees]
 ---
 
 ## Introduction : un besoin courant, plusieurs approches possibles

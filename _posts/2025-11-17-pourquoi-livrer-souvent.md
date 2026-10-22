@@ -1,8 +1,8 @@
 ---
 title: Fréquenter les mises en production - pourquoi livrer souvent change la donne
 date: 2025-11-17 19:00:00 -0400
-categories: []
-tags: []
+categories: [bonnes-pratiques, devops]
+tags: [ci-cd, livraison-continue, deploiement-continu, mises-en-production, automatisation, agilite, devex, qualite-logicielle]
 ---
 
 ## Introduction - le paradoxe de la livraison agile

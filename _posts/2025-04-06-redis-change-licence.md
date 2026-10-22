@@ -1,8 +1,8 @@
 ---
 title: Redis change de licence ! Quelles répercussions pour les développeurs et les entreprises ?
 date: 2025-04-06 20:00:00 -0400
-categories: [outil-developpement]
-tags: []
+categories: [outil-developpement, architecture]
+tags: [redis, garnet, cache, open-source, licence-commerciale, bases-de-donnees, cloud]
 ---
 
 Depuis son lancement, Redis s'est imposé comme l'un des outils de base de données en mémoire les plus populaires. Que ce soit pour le caching, la gestion de files d'attente ou même l’implémentation de structures de données complexes, Redis a été un choix de prédilection pour de nombreuses entreprises et développeurs. Cependant, un [changement de licence](https://redis.io/blog/redis-adopts-dual-source-available-licensing/#:~:text=Redis%20announced%20a%20transition%20from%20the%20BSD%203-Clause%20License%20to) soulève des questions : quelles seront les implications pour ceux qui utilisent Redis au quotidien ? Et comment les alternatives comme [Garnet de Microsoft](https://www.microsoft.com/en-us/research/blog/introducing-garnet-an-open-source-next-generation-faster-cache-store-for-accelerating-applications-and-services/?msockid=01a323d7c627619a2ad03099c71c6058) pourraient-elles s'intégrer dans cet écosystème en pleine mutation ?

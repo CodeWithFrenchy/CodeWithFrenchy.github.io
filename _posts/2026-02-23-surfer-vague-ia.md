@@ -1,8 +1,8 @@
 ---
 title: Surfer sur la vague de l'IA en développement logiciel - comment garder une longueur d'avance
 date: 2026-02-23 19:00:00 -0400
-categories: [outil-developpement]
-tags: [ia]
+categories: [intelligence-artificielle, carriere]
+tags: [ia, ia-generative, developpement-logiciel, github-copilot, productivite, prompt-engineering, apprentissage-continu, transformation-numerique]
 ---
 
 L'intelligence artificielle s'impose aujourd'hui comme une révolution incontournable, comparable à l'avènement d'Internet ou du mobile en leur temps. Les investissements explosent, le marché mondial de l'IA pourrait être multiplié par 6 ou 7 entre 2024 et 2030, signe d'un **potentiel énorme** de transformation. Dans le domaine du développement logiciel, la vague de l'IA déferle déjà : elle bouleverse nos outils et nos méthodes au quotidien. Ignorer cette vague n’est plus une option pour les acteurs du secteur des technologies. Ceux qui tardent à adopter l'IA risquent de **perdre en pertinence**, un peu comme les entreprises qui ont raté le virage Internet et se sont retrouvées obsolètes.

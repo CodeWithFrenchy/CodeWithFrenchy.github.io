@@ -1,8 +1,8 @@
 ---
 title: Le mois clé des innovations chez Microsoft
 date: 2024-12-01 20:00:00 -0400
-categories: []
-tags: [conference]
+categories: [dotnet, evenements]
+tags: [microsoft, dotnet-conf, microsoft-ignite, dotnet-9, azure, lts, sts, cycle-de-vie]
 ---
 
 Installez-vous confortablement, peut-être avec une bonne tasse de café, car ce résumé regorge d’informations passionnantes et détaillées pour explorer les dernières innovations.

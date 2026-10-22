@@ -1,8 +1,8 @@
 ---
 title: Plan de formation - .NET Framework vers .NET moderne
 date: 2025-12-15 18:00:00 -0400
-categories: []
-tags: [dotnet]
+categories: [dotnet, formation]
+tags: [dotnet-framework, dotnet-10, modernisation, migration-dotnet, aspnet-core, ef-core, formation, apprentissage-continu]
 ---
 
 > 💡 Cet article marque le dernier de l’année 2025 : je prends maintenant un congé bien mérité pour la période des fêtes et je vous invite à en faire autant. On se retrouve le 12 janvier prochain pour le prochain article.

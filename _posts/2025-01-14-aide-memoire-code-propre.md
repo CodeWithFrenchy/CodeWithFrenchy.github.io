@@ -1,8 +1,8 @@
 ---
 title: Aide-mémoire - Code propre
 date: 2025-01-14 20:00:00 -0400
-categories: [bonne-pratique]
-tags: []
+categories: [bonnes-pratiques, architecture]
+tags: [dotnet, csharp, clean-code, solid, qualite-code, maintenabilite, conventions-codage, refactoring]
 ---
 
 L'objectif de tout développeur est de produire du code qui soit non seulement fonctionnel, mais aussi **propre**, facile à lire et à maintenir. Un code propre permet non seulement d'améliorer la collaboration entre les membres de l'équipe, mais aussi d'assurer la pérennité du projet à long terme. Chaque choix de conception que vous faites peut avoir un impact significatif sur la maintenabilité de votre code, c'est pourquoi il est crucial de bien comprendre ces principes pour élever la qualité de vos projets.

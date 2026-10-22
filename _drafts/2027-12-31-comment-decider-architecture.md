@@ -1,8 +1,8 @@
 ---
 title: Comment orienter les choix d’architecture - monolithe modulaire, microservices, événementiel et cloud-native
 date: 2027-12-31 19:00:00 -0400
-categories: [architecture]
-tags: [dotnet]
+categories: [architecture, bonnes-pratiques]
+tags: [dotnet, azure, monolithe-modulaire, microservices, architecture-evenementielle, cloud-native, systemes-distribues, prise-de-decision]
 ---
 
 ## Préambule

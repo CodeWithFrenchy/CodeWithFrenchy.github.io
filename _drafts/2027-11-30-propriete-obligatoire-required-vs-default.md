@@ -1,8 +1,8 @@
 ---
 title: "Propriété obligatoire en C# : pourquoi je privilégie required à default!"
 date: 2022-11-30 19:00:00 -0400
-categories: [developpement, bonnes-pratiques]
-tags: [csharp, dotnet, required, nullable, tests-unitaires, autofixture]
+categories: [dotnet, bonnes-pratiques]
+tags: [csharp, required, nullable, default, tests-unitaires, autofixture, integrite-domaine, maintenabilite]
 ---
 
 ## Préambule

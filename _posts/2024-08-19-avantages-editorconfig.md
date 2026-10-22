@@ -1,8 +1,8 @@
 ---
 title: Les avantages d'utiliser un fichier .editorconfig en .NET
 date: 2024-08-19 19:58:00 -0400
-categories: [outil-developpement]
-tags: [dotnet]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, editorconfig, qualite-code, conventions-codage, visual-studio]
 ---
 
 ## Introduction

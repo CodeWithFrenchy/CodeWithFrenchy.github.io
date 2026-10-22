@@ -2,7 +2,7 @@
 title: Essais automatisés d’architecture dans un projet .NET
 date: 2025-11-03 19:00:00 -0400
 categories: [outil-developpement, architecture]
-tags: [dotnet, essais]
+tags: [dotnet, archunitnet, netarchtest, tests-architecture, tests-automatises, clean-architecture, ddd, qualite-code]
 ---
 
 ## Introduction

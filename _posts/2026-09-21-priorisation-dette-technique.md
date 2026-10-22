@@ -1,8 +1,8 @@
 ---
 title: Prioriser la dette technique quand le budget et les délais sont serrés
 date: 2026-09-21 19:00:00 -0400
-categories: []
-tags: []
+categories: [bonnes-pratiques, architecture]
+tags: [dette-technique, priorisation, maintenabilite, qualite-logicielle, gestion-risques, gouvernance, amelioration-continue]
 ---
 
 Une dépendance à mettre à jour. Des tests qui échouent sans raison claire. Un module que personne ne veut modifier. L’équipe connaît les problèmes, mais la prochaine livraison arrive vite et la capacité est déjà engagée.

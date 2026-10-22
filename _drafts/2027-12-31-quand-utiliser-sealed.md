@@ -1,8 +1,8 @@
 ---
 title: "Utiliser sealed quand l’héritage n’est pas prévu"
 date: 2027-12-31 19:00:00 -0400
-categories: []
-tags: [dotnet, tests, bonnes-pratiques]
+categories: [dotnet, bonnes-pratiques]
+tags: [csharp, sealed, heritage, conception-logicielle, tests-unitaires, idisposable, maintenabilite]
 ---
 
 ## Préambule

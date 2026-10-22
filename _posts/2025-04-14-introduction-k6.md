@@ -1,8 +1,8 @@
 ---
 title: Introduction à K6
 date: 2025-04-14 20:00:00 -0400
-categories: [outil-developpement]
-tags: [k6, essais]
+categories: [outil-developpement, performance]
+tags: [k6, grafana, tests-charge, tests-performance, stress-testing, api-rest, ci-cd, scalabilite]
 ---
 
 ## Qu'est-ce que k6 ?

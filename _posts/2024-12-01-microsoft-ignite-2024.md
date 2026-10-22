@@ -1,8 +1,8 @@
 ---
 title: Retour sur Microsoft Ignite 2024
 date: 2024-12-01 20:0:00 -0400
-categories: []
-tags: [dotnet, conference]
+categories: [evenements, cloud]
+tags: [microsoft-ignite, microsoft, azure, intelligence-artificielle, github-copilot, azure-devops, cybersecurite, sql-server, aks]
 ---
 
 L'événement phare de Microsoft a mis l'accent sur des thématiques majeures : l'intelligence artificielle (IA), la cybersécurité et la collaboration. L'édition de cette année a présenté des outils et solutions destinés à transformer les entreprises dans un monde numérique en rapide évolution.

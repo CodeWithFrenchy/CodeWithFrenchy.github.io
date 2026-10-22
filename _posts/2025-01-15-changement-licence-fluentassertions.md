@@ -1,8 +1,8 @@
 ---
 title: Transition de Fluent Assertions vers une licence commerciale
 date: 2025-01-15 12:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet, fluentassertions]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, fluentassertions, awesomeassertions, tests-unitaires, open-source, licence-commerciale]
 ---
 
 [Fluent Assertions](https://fluentassertions.com/), une des bibliothèques .NET les plus populaires pour écrire des assertions fluides et expressives dans les tests unitaires, a récemment franchi une étape importante en [changeant de modèle de licence](https://github.com/fluentassertions/fluentassertions/pull/2943). Depuis la version 8.0.0, la bibliothèque est soumise à une [licence commerciale](https://x.com/ddoomen/status/1879138055484809616), ce qui signifie que les utilisateurs commerciaux doivent désormais acheter une licence pour continuer à l'utiliser.

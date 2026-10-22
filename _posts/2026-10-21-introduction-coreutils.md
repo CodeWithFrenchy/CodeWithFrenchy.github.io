@@ -2,7 +2,7 @@
 title: "Coreutils pour Windows : retrouver ses outils Unix dans son terminal"
 date: 2026-10-21 19:00:00 -0400
 categories: [outil-developpement, windows]
-tags: [coreutils, powershell, rust, devex]
+tags: [coreutils, powershell, rust, devex, terminal, linux, automatisation]
 ---
 
 ## Préambule

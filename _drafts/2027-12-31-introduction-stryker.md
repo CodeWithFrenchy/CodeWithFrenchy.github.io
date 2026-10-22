@@ -1,8 +1,8 @@
 ---
 title: Stryker.NET - vos tests détectent-ils vraiment les erreurs?
 date: 2027-12-31 19:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet, essais]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, stryker-net, tests-mutation, tests-unitaires, xunit, couverture-code, qualite-code, ci-cd]
 ---
 
 ## Préambule

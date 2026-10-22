@@ -1,8 +1,8 @@
 ---
 title: Comprendre et utiliser l'attribut StringSyntaxAttribute en .NET
 date: 2026-03-23 19:00:00 -0400
-categories: []
-tags: [dotnet]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, csharp, stringsyntaxattribute, analyseurs-code, intellisense, visual-studio, qualite-code]
 ---
 
 ## Introduction

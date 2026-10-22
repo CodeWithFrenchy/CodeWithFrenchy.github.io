@@ -1,8 +1,8 @@
 ---
 title: Introduction aux Minimal APIs
 date: 2024-10-10 20:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet, aspnet-core]
+categories: [outil-developpement, architecture]
+tags: [dotnet, aspnet-core, minimal-api, api-rest, microservices, aot, tests-unitaires]
 ---
 
 L’utilisation des Minimal APIs est une approche simplifiée pour créer des API HTTP rapides avec ASP.NET Core. Elles permettent de créer des points de terminaison REST entièrement fonctionnels avec un minimum de code et de configuration. Vous pouvez ignorer la génération automatique classique et éviter les contrôleurs en déclarant directement des routes et des actions d’API. 

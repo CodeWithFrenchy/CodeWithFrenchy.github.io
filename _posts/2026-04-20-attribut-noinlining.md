@@ -1,8 +1,8 @@
 ---
 title: Empêcher l’inlining en .NET - l’attribut MethodImplOptions.NoInlining expliqué
 date: 2026-04-20 18:00:00 -0400
-categories: []
-tags: [dotnet]
+categories: [outil-developpement, performance]
+tags: [dotnet, csharp, jit, inlining, no-inlining, optimisation, debugging, profiling]
 ---
 
 ## Introduction

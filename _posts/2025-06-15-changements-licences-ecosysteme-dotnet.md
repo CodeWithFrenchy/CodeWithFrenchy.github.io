@@ -1,8 +1,8 @@
 ---
 title: Changements de licences dans l’écosystème .NET – quelles implications ?
 date: 2025-06-15 19:00:00 -0400
-categories: [outil-developpement]
-tags: []
+categories: [outil-developpement, architecture]
+tags: [dotnet, open-source, licence-commerciale, gouvernance, dependances, nuget, redis, fluentassertions, automapper, mediatr, masstransit]
 ---
 
 ## Introduction : une vague de changements inattendue

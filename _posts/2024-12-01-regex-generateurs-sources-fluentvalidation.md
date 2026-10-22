@@ -1,8 +1,8 @@
 ---
 title: Optimisation des Expressions Régulières avec les Générateurs de Sources dans .NET
 date: 2024-12-01 20:00:00 -0400
-categories: []
-tags: [dotnet, fluentvalidation, source-generator]
+categories: [outil-developpement, performance]
+tags: [dotnet, csharp, regex, source-generator, fluentvalidation, benchmarkdotnet, optimisation]
 ---
 
 Avec .NET, les **générateurs de sources pour les expressions régulières** (*Regex Source Generators*) permettent d'optimiser la création et l'exécution des expressions régulières en générant du code source au moment de la compilation. Ces générateurs, introduits à partir de .NET 7, utilisent l'attribut **[GeneratedRegex]** pour définir des expressions régulières de manière déclarative.  

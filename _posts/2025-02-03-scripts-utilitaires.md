@@ -1,8 +1,8 @@
 ---
 title: Scripts utilitaires
 date: 2025-02-03 20:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet]
+categories: [outil-developpement, automatisation]
+tags: [powershell, windows, git, robocopy, scripts, productivite, maintenance]
 ---
 
 Les scripts suivants sont conçus pour simplifier et automatiser diverses tâches courantes liées à l'administration d'une machine de développement.

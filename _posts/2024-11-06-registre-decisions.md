@@ -1,8 +1,8 @@
 ---
 title: L'importance d'un registre de décisions
 date: 2024-11-06 20:00:00 -0400
-categories: []
-tags: []
+categories: [architecture, bonnes-pratiques]
+tags: [registre-decisions, adr, gouvernance, documentation, prise-de-decision, collaboration]
 ---
 
 ## Préambule

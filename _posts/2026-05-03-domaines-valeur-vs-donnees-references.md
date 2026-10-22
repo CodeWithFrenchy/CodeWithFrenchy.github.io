@@ -1,8 +1,8 @@
 ---
 title: Domaines de valeurs vs Données de référence - Comprendre la différence
 date: 2026-05-03 14:00:00 -0400
-categories: [architecture]
-tags: []
+categories: [architecture, bonnes-pratiques]
+tags: [modelisation-donnees, donnees-reference, domaines-valeurs, gouvernance-donnees, integrite-donnees, systemes-distribues, microservices]
 ---
 
 Comprendre la différence entre un **domaine de valeurs** et des **données de référence** est essentiel lorsqu’on conçoit des systèmes distribués. Ces deux notions touchent à la gestion de la **donnée** et à sa **gouvernance**, et saisir leur rôle respectif aide à bâtir des systèmes plus robustes et cohérents.

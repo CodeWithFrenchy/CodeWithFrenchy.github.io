@@ -1,8 +1,8 @@
 ---
 title: "Introduire GitHub Copilot dans une organisation : du pilote à l’adoption durable"
 date: 2027-12-31 19:00:00 -0400
-categories: [outil-developpement]
-tags: [ia, github-copilot, gouvernance, finops, devex]
+categories: [intelligence-artificielle, bonnes-pratiques]
+tags: [ia, github-copilot, gouvernance, finops, devex, adoption-ia, securite, productivite]
 ---
 
 ## Préambule

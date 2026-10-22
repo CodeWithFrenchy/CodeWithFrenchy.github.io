@@ -1,8 +1,8 @@
 ---
 title: Concevoir et maintenir des applications microservices performantes en .NET
 date: 2025-10-20 19:00:00 -0400
-categories: [architecture]
-tags: [dotnet]
+categories: [architecture, performance]
+tags: [dotnet, microservices, scalabilite, observabilite, resilience, tests-performance, automatisation, cloud-native, azure]
 ---
 
 La performance logicielle ne doit pas être une réflexion après coup : elle se conçoit dès le départ et se cultive tout au long de la vie du système. Dans cet article, nous explorons comment **s’outiller pour identifier les problèmes de performance** et les bonnes pratiques pour bâtir une application **scalable, optimisée et résiliente**. Nous aborderons la conception axée sur la scalabilité, l’amélioration continue des performances et l’automatisation pour la résilience, puis détaillerons les étapes clés à chaque phase (conception, développement, déploiement) afin d'assurer des applications microservices .NET hautement performantes.

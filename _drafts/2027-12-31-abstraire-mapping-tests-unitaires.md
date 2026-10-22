@@ -1,8 +1,8 @@
 ---
 title: Faut-il abstraire les mappings dans les tests unitaires
 date: 2027-12-31 19:00:00 -0400
-categories: [outil-developpement]
-tags: [essais]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, csharp, tests-unitaires, automapper, mapping, mocking, nsubstitute, qualite-code]
 ---
 
 ## Préambule

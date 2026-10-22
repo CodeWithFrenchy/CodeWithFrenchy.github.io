@@ -1,8 +1,8 @@
 ---
 title: Introduction à BenchmarkDotNet
 date: 2024-10-31 19:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet]
+categories: [outil-developpement, performance]
+tags: [dotnet, csharp, benchmarkdotnet, benchmarking, optimisation, allocation-memoire]
 ---
 
 [BenchmarkDotNet](https://benchmarkdotnet.org/) est une bibliothèque populaire pour effectuer des benchmarks en .NET. Elle permet de mesurer précisément les performances de vos applications et d'identifier les points à optimiser.

@@ -1,8 +1,8 @@
 ---
 title: Validation asynchrone avec DataAnnotations dans .NET 11
 date: 2027-12-31 19:00:00 -0400
-categories: [dotnet]
-tags: [dotnet11, aspnet-core]
+categories: [dotnet, outil-developpement]
+tags: [dotnet-11, aspnet-core, dataannotations, validation-asynchrone, validation-donnees, csharp, performance]
 ---
 
 ## Préambule

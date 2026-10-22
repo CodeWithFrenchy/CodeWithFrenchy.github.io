@@ -1,8 +1,8 @@
 ---
 title: GitHub Copilot en milieu organisationnel - un accélérateur de productivité… et un révélateur de maturité
 date: 2026-02-09 18:00:00 -0400
-categories: [outil-developpement]
-tags: [ia]
+categories: [intelligence-artificielle, bonnes-pratiques]
+tags: [github-copilot, ia, devex, productivite, gouvernance, qualite-code, adoption-ia, maturite-organisationnelle]
 ---
 
 Depuis quelques années, les outils d’assistance à la programmation basés sur l’intelligence artificielle se sont imposés dans le paysage du développement logiciel. Parmi eux, **GitHub Copilot** est rapidement devenu une référence. Pour beaucoup de développeurs, il est désormais aussi naturel que l’autocomplétion ou le refactoring automatique.

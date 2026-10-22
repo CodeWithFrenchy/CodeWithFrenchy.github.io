@@ -1,8 +1,8 @@
 ---
 title: NuGets recommandés pour le développement .NET
 date: 2027-11-30 19:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, nuget, xunit, nsubstitute, autofixture, testcontainers, fluentvalidation, mapperly, archunitnet, benchmarkdotnet]
 ---
 
 ## Préambule

@@ -1,8 +1,8 @@
 ---
 title: Introduction aux Testcontainers
 date: 2024-12-12 20:00:00 -0400
-categories: [outil-developpement]
-tags: [essais, testcontainers]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, testcontainers, tests-integration, docker, tests-automatises, ci-cd]
 ---
 
 Les systèmes logiciels modernes s'attaquent à des problèmes complexes en utilisant une multitude de technologies et d'outils. Rarement un système logiciel fonctionne de manière isolée; il interagit généralement avec des bases de données, des systèmes de messagerie, des fournisseurs de cache, et de nombreux autres services tiers. Dans ce marché hautement concurrentiel, le temps de mise en marché est crucial. Les entreprises souhaitent lancer leur produit rapidement, obtenir des retours et itérer en conséquence. Pour atteindre cette agilité, il est essentiel d'avoir un processus solide d'intégration et de déploiement continus (CI/CD). Un élément clé de ce processus sont les tests automatisés, qui garantissent le bon fonctionnement de l'application.

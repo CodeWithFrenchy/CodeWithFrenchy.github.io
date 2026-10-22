@@ -1,8 +1,8 @@
 ---
 title: Polly devient-il payant ? Comprendre l’OSMF et ses impacts pour les équipes .NET
 date: 2026-09-07 19:00:00 -0400
-categories: [outil-developpement]
-tags: []
+categories: [outil-developpement, architecture]
+tags: [dotnet, polly, resilience, open-source, osmf, gouvernance, dependances, licence-commerciale]
 ---
 
 ## Préambule

@@ -1,8 +1,8 @@
 ---
 title: Architecture Vertical Slice dans l’écosystème .NET
 date: 2025-06-29 20:00:00 -0400
-categories: [architecture]
-tags: []
+categories: [architecture, bonnes-pratiques]
+tags: [dotnet, vertical-slice, clean-architecture, cqrs, mediatr, ddd, modularite, maintenabilite]
 ---
 
 L’__architecture Vertical Slice__ (ou _architecture en tranches verticales_) est une approche de conception logicielle qui consiste à organiser le code par fonctionnalités verticales plutôt que par couches techniques. Autrement dit, chaque fonctionnalité de l’application est implémentée __de bout en bout__ dans une tranche (un _slice_) comprenant tous les aspects nécessaires : interface utilisateur, logique métier et accès aux données. Chaque tranche verticale est autonome et correspond à un cas d’utilisation distinct, ce qui favorise un développement modulaire centré sur les fonctionnalités. En .NET, cette approche s’accompagne souvent du patron __CQRS__ (_Command Query Responsibility Segregation_) : on sépare les opérations de lecture (_Query_) de celles d’écriture (_Command_) et on les traite différemment. La bibliothèque __MediatR__ est fréquemment utilisée pour mettre en œuvre ce style – elle agit comme un médiateur qui envoie chaque commande ou requête vers son gestionnaire (handler) dédié, permettant de découpler l’émetteur de la requête de son traitement.

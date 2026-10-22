@@ -1,8 +1,8 @@
 ---
 title: Amélioration des performances en utilisant JsonSerializerOptions en singleton
 date: 2025-03-20 20:00:00 -0400
-categories: []
-tags: [dotnet]
+categories: [outil-developpement, performance]
+tags: [dotnet, csharp, system-text-json, jsonserializeroptions, singleton, benchmarkdotnet, allocation-memoire, optimisation]
 ---
 
 ## Introduction

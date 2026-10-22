@@ -1,8 +1,8 @@
 ---
 title: Redis 8 - Un retour attendu à l’open source avec l’AGPLv3
 date: 2025-05-04 19:00:00 -0400
-categories: [outil-developpement]
-tags: []
+categories: [outil-developpement, architecture]
+tags: [redis, redis-8, open-source, agplv3, valkey, bases-de-donnees, cache, performance]
 ---
 
 Le 1er mai 2025, Redis a fait un virage majeur en revenant à ses racines open source. Redis 8 est désormais disponible sous la licence **AGPLv3**, approuvée par l’Open Source Initiative (OSI). Ce changement intervient après une période de turbulences sur le plan des licences, que j'avais déjà abordée dans un [précédent article](https://codewithfrenchy.com/posts/redis-change-licence/).

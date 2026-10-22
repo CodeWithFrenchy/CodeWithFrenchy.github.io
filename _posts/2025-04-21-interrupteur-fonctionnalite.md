@@ -1,8 +1,8 @@
 ---
 title: Interrupteurs de fonctionnalité
 date: 2025-04-21 18:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, aspnet-core, feature-flags, feature-management, azure-app-configuration, devops, deploiement-continu]
 ---
 
 ## Qu'est-ce qu'un interrupteur de fonctionnalité

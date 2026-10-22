@@ -1,8 +1,8 @@
 ---
 title: Azure DevOps vs GitHub - convergence en cours et perspectives
 date: 2025-12-01 17:00:00 -0400
-categories: []
-tags: []
+categories: [devops, outil-developpement]
+tags: [azure-devops, github, github-actions, azure-pipelines, ci-cd, devsecops, migration, gouvernance]
 ---
 
 ## Préambule

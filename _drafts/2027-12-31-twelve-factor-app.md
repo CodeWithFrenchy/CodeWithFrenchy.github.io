@@ -1,8 +1,8 @@
 ---
 title: Twelve-Factor App - principes, bénéfices et limites pour les applications .NET
 date: 2027-12-31 19:00:00 -0400
-categories: [architecture]
-tags: [dotnet]
+categories: [architecture, bonnes-pratiques]
+tags: [dotnet, azure, twelve-factor-app, cloud-native, devops, configuration, scalabilite, deploiement-continu]
 ---
 
 ## Préambule

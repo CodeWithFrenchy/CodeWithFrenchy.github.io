@@ -1,8 +1,8 @@
 ---
 title: GUID vs ID auto-incrémenté - dilemme et solutions en environnement .NET distribué
 date: 2025-05-19 13:00:00 -0400
-categories: []
-tags: [dotnet]
+categories: [architecture, performance]
+tags: [dotnet, ef-core, guid, uuid-v7, sql-server, bases-de-donnees, systemes-distribues, microservices]
 ---
 
 ## Préambule

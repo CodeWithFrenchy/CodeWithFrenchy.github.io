@@ -1,8 +1,8 @@
 ---
 title: Les design patterns - les bons Legos pour vos applications .NET
 date: 2025-09-22 10:00:00 -0400
-categories: [architecture]
-tags: []
+categories: [architecture, bonnes-pratiques]
+tags: [dotnet, csharp, design-patterns, solid, singleton, decorator, injection-dependances, maintenabilite]
 ---
 
 ## Introduction : Ne réinventez pas la roue, assemblez les Legos

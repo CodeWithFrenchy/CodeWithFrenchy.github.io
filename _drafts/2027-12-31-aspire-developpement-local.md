@@ -1,8 +1,8 @@
 ---
 title: Tirer profit d'Aspire - simplifier le développement local
 date: 2027-12-31 19:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet, aspire]
+categories: [outil-developpement, devops]
+tags: [dotnet, aspire, devex, developpement-local, orchestration, observabilite, conteneurs, cloud-native]
 ---
 
 ## Préambule

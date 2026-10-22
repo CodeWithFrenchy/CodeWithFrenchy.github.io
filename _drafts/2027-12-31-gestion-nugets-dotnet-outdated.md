@@ -1,8 +1,8 @@
 ---
 title: Gestion des dépendances NuGet avec dotnet-outdated
 date: 2027-12-31 19:00:00 -0400
-categories: [outil-developpement]
-tags: [dotnet]
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, nuget, dotnet-outdated, gestion-dependances, mises-a-jour, securite, azure-devops, automatisation]
 ---
 
 ## Préambule

@@ -1,8 +1,8 @@
 ---
 title: Optimiser la performance des logs dans un projet .NET
 date: 2026-01-26 19:00:00 -0400
-categories: []
-tags: [dotnet]
+categories: [outil-developpement, performance]
+tags: [dotnet, csharp, logging, ilogger, loggermessage, source-generator, allocation-memoire, observabilite]
 ---
 
 ## Introduction

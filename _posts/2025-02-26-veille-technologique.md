@@ -1,8 +1,8 @@
 ---
 title: Veille technologique - Pourquoi et comment rester à jour 
 date: 2025-02-26 19:00:00 -0400
-categories: []
-tags: []
+categories: [bonnes-pratiques, carriere]
+tags: [veille-technologique, apprentissage-continu, developpement-logiciel, dotnet, cloud, feedly, partage-connaissances]
 ---
 
 La __veille technologique__ est un processus continu de surveillance et d'analyse des évolutions dans un domaine technologique donné. Elle consiste à collecter, analyser et exploiter des informations sur les nouvelles tendances, les innovations, les évolutions des standards et les meilleures pratiques afin d'anticiper les changements et d'adapter ses stratégies en conséquence.

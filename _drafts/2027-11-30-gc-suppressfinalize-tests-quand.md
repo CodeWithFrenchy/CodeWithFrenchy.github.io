@@ -1,8 +1,8 @@
 ---
 title: "GC.SuppressFinalize dans les tests : quand peut-on l’omettre ?"
 date: 2027-11-30 19:00:00 -0400
-categories: [dotnet]
-tags: [csharp, tests, xunit, sealed, idisposable, bonnes-pratiques]
+categories: [dotnet, bonnes-pratiques]
+tags: [csharp, tests-unitaires, xunit, sealed, idisposable, garbage-collector, gestion-ressources]
 ---
 
 ## Préambule

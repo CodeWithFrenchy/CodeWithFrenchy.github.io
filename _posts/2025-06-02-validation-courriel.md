@@ -1,8 +1,8 @@
 ---
 title: Valider les courriels - pourquoi une regex ne suffit plus
 date: 2025-06-02 19:00:00 -0400
-categories: [outil-developpement]
-tags: []
+categories: [outil-developpement, bonnes-pratiques]
+tags: [dotnet, angular, fluentvalidation, regex, validation-donnees, validation-courriel, deliverabilite]
 ---
 
 ## Préambule

@@ -1,8 +1,8 @@
 ---
 title: Retour d'expérience post-livraison - bonnes pratiques et améliorations
 date: 2026-01-12 19:00:00 -0400
-categories: []
-tags: []
+categories: [bonnes-pratiques, devops]
+tags: [retour-experience, mises-en-production, amelioration-continue, ci-cd, automatisation, qualite-logicielle, observabilite, dette-technique]
 ---
 
 ## Préambule
