@@ -32,6 +32,84 @@ Version Twitter :
 
 ## Annonces
 
+### Titre
+
+Version Linkedin :
+
+---
+
+🪟 Coreutils pour Windows : retrouvez vos commandes Unix directement dans votre terminal !
+(English version available below)
+
+Vous développez avec .NET sous Windows, mais vous travaillez aussi avec des conteneurs Linux ou des pipelines CI/CD ?
+
+Dans mon nouvel article sur CodeWithFrenchy, je présente Coreutils pour Windows, un projet maintenu par Microsoft et basé sur des outils réimplémentés en Rust.
+
+L'objectif : retrouver vos commandes Unix familières sans passer systématiquement par WSL.
+
+Au programme :
+
+• Installation de Coreutils avec WinGet.
+• Gestion des conflits entre les commandes Unix et les alias PowerShell.
+• Consultation des journaux applicatifs avec tail.
+• Recherche dans les journaux avec grep.
+• Vérification de l'intégrité des artefacts avec sha256sum.
+• Comparaison des usages de Coreutils, PowerShell et WSL.
+
+Je partage également quelques précautions pour garder des scripts fiables et reproductibles, particulièrement dans les environnements automatisés.
+
+À mon avis, Coreutils représente un excellent complément à PowerShell pour les développeurs .NET travaillant sur plusieurs systèmes d'exploitation.
+
+📖 Mon nouvel article : https://codewithfrenchy.com/posts/introduction-coreutils/
+
+------------------------------
+
+🪟 Coreutils for Windows: Bring familiar Unix commands directly to your terminal!
+
+Developing .NET applications on Windows while also working with Linux containers or CI/CD pipelines?
+
+In my latest CodeWithFrenchy article, I introduce Coreutils for Windows, a Microsoft-maintained project built on utilities reimplemented in Rust.
+
+The goal: access familiar Unix commands without always relying on WSL.
+
+What you'll learn:
+
+• Install Coreutils using WinGet.
+• Handle conflicts between Unix commands and PowerShell aliases.
+• Inspect application logs with tail.
+• Search logs using grep.
+• Verify artifact integrity with sha256sum.
+• Understand when to choose Coreutils, PowerShell, or WSL.
+
+I also cover practical considerations for keeping scripts reliable and reproducible, especially in automated environments.
+
+I believe Coreutils is an excellent addition to PowerShell for .NET developers working across multiple operating systems.
+
+📖 My latest article : https://codewithfrenchy.com/posts/introduction-coreutils/
+
+#CodeWithFrenchy #DotNet #Windows #Linux #Coreutils #Rust #PowerShell #WSL #DevEx #CLI #DevOps
+
+
+"2026-10-21-introduction-coreutils.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🪟 Coreutils débarque sur Windows !
+
+Retrouvez vos commandes Unix favorites directement dans votre terminal : grep, tail, ls et sha256sum.
+
+Dans mon nouvel article, je présente leur installation et des exemples concrets pour .NET.
+
+📖 https://codewithfrenchy.com/posts/introduction-coreutils/
+
+#CodeWithFrenchy
+
+---
+
 ### .NET 11 : nouveautés, performances et évolution du langage C#
 
 Version Linkedin :
