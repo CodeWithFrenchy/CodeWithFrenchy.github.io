@@ -32,7 +32,88 @@ Version Twitter :
 
 ## Annonces
 
-### Titre
+### MediatR : IMediator ou ISender dans un contrôleur ASP.NET Core ?
+
+Version Linkedin :
+
+---
+
+🧠 MediatR : IMediator ou ISender ? Une petite crampe au cerveau qui mène à une meilleure pratique !
+(English version available below)
+
+En fin de journée, alors que je travaillais sur un contrôleur ASP.NET Core, j'ai eu un doute : quelle interface MediatR devrais-je injecter ?
+
+En consultant un contrôleur existant, je tombe sur IMediator. Pourtant, celui-ci appelle uniquement Send().
+
+Pourquoi ne pas privilégier ISender ?
+
+J'en ai profité pour rédiger un article sur le sujet.
+
+Les points à retenir :
+
+• ISender : pour envoyer des commandes et des requêtes avec Send().
+• IPublisher : pour publier des notifications avec Publish().
+• IMediator : pour accéder aux deux capacités.
+• SOLID : privilégiez une interface qui expose uniquement les responsabilités nécessaires.
+• Pipeline : avec la configuration standard de MediatR, remplacer IMediator par ISender conserve les handlers et les comportements existants.
+
+Le gain n'est pas une amélioration de performance, mais une dépendance plus précise et une intention plus claire.
+
+Et surtout, une leçon qui dépasse MediatR : ne reprenez pas automatiquement le code existant sans vérifier s'il correspond réellement à votre besoin.
+
+Comme quoi, même avec un cerveau à 3 % de batterie, une petite revue de code improvisée réserve parfois de bonnes surprises ! 😅
+
+📖 Mon article : https://codewithfrenchy.com/posts/mediatr-isender-ou-imediator/
+
+------------------------------
+
+🧠 MediatR: IMediator or ISender? A small brain freeze that led to a better practice!
+
+At the end of a long day, while working on an ASP.NET Core controller, I had a moment of doubt: which MediatR interface should I inject?
+
+I checked an existing controller and found IMediator. But it was only calling Send().
+
+Why not use ISender instead?
+
+That small observation inspired my latest blog post.
+
+Key takeaways:
+
+• ISender: send commands and queries through Send().
+• IPublisher: publish notifications through Publish().
+• IMediator: expose both capabilities.
+• SOLID: depend only on the capabilities your class actually needs.
+• Pipeline: with standard MediatR registration, switching from IMediator to ISender preserves existing handlers and pipeline behaviors.
+
+The benefit isn't performance. It's a more precise dependency and clearer intent.
+
+And there's a broader lesson here: don't blindly copy existing code without checking whether it fits your actual requirements.
+
+Apparently, even a brain running at 3% battery can still catch something during an unexpected code review! 😅
+
+📖 Original article : https://codewithfrenchy.com/posts/mediatr-isender-ou-imediator/
+
+#CodeWithFrenchy #DotNet #ASPNetCore #MediatR #CSharp #SOLID #CleanCode #SoftwareArchitecture #CodeReview #DevEx
+
+"2026-10-26-mediatr-isender-ou-imediator.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🧠 MediatR : IMediator ou ISender ?
+
+Une dépendance plus précise, conforme à SOLID, sans changer le pipeline MediatR standard.
+
+📖 Article original : https://codewithfrenchy.com/posts/mediatr-isender-ou-imediator/
+
+#CodeWithFrenchy
+
+---
+
+### Coreutils pour Windows
 
 Version Linkedin :
 
