@@ -32,6 +32,80 @@ Version Twitter :
 
 ## Annonces
 
+### GitHub Universe 2026 : les agents s’installent dans toute la chaîne de livraison
+
+Version Linkedin :
+
+---
+
+🚀 GitHub Universe 2026 : les agents IA prennent une nouvelle dimension !
+(English version available below)
+
+Je viens de publier mon retour sur GitHub Universe 2026, après avoir suivi les deux keynotes et analysé les principales annonces.
+
+Une tendance se confirme : GitHub veut aller bien au-delà de la génération de code. L'objectif est désormais de coordonner plusieurs agents IA à travers toute la chaîne de livraison logicielle.
+
+Voici les annonces qui ont retenu mon attention :
+• Copilot Projects : coordination d'agents sur plusieurs dépôts.
+• Copilot Fusion : sélection et orchestration des modèles selon la tâche.
+• Memory et Dreaming : gestion et amélioration du contexte des agents.
+• Copilot Automations : automatisation des tâches récurrentes avec contrôle des coûts.
+• Code Review Max : révision approfondie des changements par plusieurs agents.
+• Sécurité : nouvelles capacités d'analyse IA et de protection des dépôts.
+• GitHub Enterprise : évolution des licences Copilot et de la facturation à la consommation.
+
+Dans mon article, je reviens également sur les limites, les coûts et les implications pour les équipes de développement.
+
+Mon constat : multiplier les agents ne garantit pas une meilleure productivité. La qualité des tests, la gouvernance et la validation humaine demeurent déterminantes.
+
+📖 Mon article : https://codewithfrenchy.com/posts/github-universe-2026/
+
+---
+
+🚀 GitHub Universe 2026: AI agents are entering a new era!
+
+I've just published my recap of GitHub Universe 2026, covering both keynotes and the major announcements.
+
+One trend is clear: GitHub is moving beyond code generation toward coordinating multiple AI agents across the software delivery lifecycle.
+
+Here are the highlights that caught my attention:
+• Copilot Projects: coordinate agents across multiple repositories.
+• Copilot Fusion: select and orchestrate models based on the task.
+• Memory and Dreaming: maintain and improve agent context.
+• Copilot Automations: automate recurring tasks with cost controls.
+• Code Review Max: deeper code reviews powered by multiple agents.
+• Security: new AI-powered scanning and repository protection capabilities.
+• GitHub Enterprise: changes to Copilot licensing and consumption-based pricing.
+
+My article also covers the limitations, costs, and practical implications for development teams.
+
+My takeaway: more agents don't automatically mean better productivity. Reliable tests, governance, and human oversight remain essential.
+
+📖 My article : https://codewithfrenchy.com/posts/github-universe-2026/
+
+#CodeWithFrenchy #GitHubUniverse #GitHubCopilot #AI #AgenticAI #DevOps #DevSecOps #SoftwareArchitecture #DevEx
+
+"2026-10-30-github-universe-2026.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🚀 GitHub Universe 2026 : les agents IA transforment le développement logiciel !
+
+Copilot Projects, Fusion, Automations, Memory, sécurité et nouveaux modèles de tarification.
+
+Mon analyse des annonces et de leurs impacts sur les équipes :
+https://codewithfrenchy.com/posts/github-universe-2026/
+
+#CodeWithFrenchy
+
+---
+
+## Annonces
+
 ### MediatR : IMediator ou ISender dans un contrôleur ASP.NET Core ?
 
 Version Linkedin :
