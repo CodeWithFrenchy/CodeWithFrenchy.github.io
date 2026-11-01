@@ -7,7 +7,6 @@ tags: []
 
 > 💡 Attention : Ne pas oublier de mettre les publications les plus récentes en premier.
 
-
 ## Template à utiliser
 
 ### Titre
@@ -31,6 +30,80 @@ Version Twitter :
 ---
 
 ## Annonces
+
+### .NET 11 : nouveautés, performances et évolution du langage C#
+
+Version Linkedin :
+
+---
+
+🚀 .NET 11 arrive : voici les nouveautés à surveiller !
+(English version available below)
+
+Je viens de publier mon nouvel article consacré à .NET 11, dont la sortie est prévue le 10 novembre 2026.
+
+Un tour d'horizon des nouveautés, basé sur la Release Candidate 2, avec des exemples C# et une attention particulière aux applications d'entreprise.
+
+Au programme :
+• C# 15 : types union, hiérarchies fermées et nouvelles expressions de collection.
+• Runtime : optimisations du JIT et Runtime Async en préversion.
+• ASP.NET Core : validation asynchrone et OpenAPI 3.2.
+• EF Core 11 : FullJoin, types complexes et optimisation du SQL généré.
+• Blazor : virtualisation, formulaires et gestion des circuits.
+• SDK : améliorations des tests, de NuGet et des pipelines de livraison.
+
+J'aborde également les performances, les changements incompatibles et les étapes pour préparer une migration.
+
+Un point important : .NET 11 est une version STS, avec deux ans de support prévus. 
+
+L'adoption doit répondre à des besoins concrets, et non à la seule disponibilité des nouveautés.
+
+📖 Mon article : https://codewithfrenchy.com/posts/dotnet11/
+
+---
+
+🚀 .NET 11 is coming: here's what developers should know!
+
+I've just published my latest article covering .NET 11, scheduled for release on November 10, 2026.
+
+A detailed overview based on Release Candidate 2, with practical C# examples and a focus on enterprise applications.
+
+Key highlights:
+• C# 15: union types, closed hierarchies, and enhanced collection expressions.
+• Runtime: JIT optimizations and Runtime Async in preview.
+• ASP.NET Core: asynchronous validation and OpenAPI 3.2.
+• EF Core 11: FullJoin, complex types, and SQL generation improvements.
+• Blazor: virtualization, forms, and circuit management.
+• SDK: improvements to testing, NuGet, and delivery pipelines.
+
+I also cover performance, breaking changes, and practical steps for preparing a migration.
+
+One important consideration: .NET 11 is an STS release with two years of planned support. Adoption should be driven by measurable benefits and project requirements.
+
+📖 My article : https://codewithfrenchy.com/posts/dotnet11/
+
+#CodeWithFrenchy #DotNet11 #CSharp15 #ASPNETCore #EFCore #Blazor #DotNet #SoftwareArchitecture #DevOps
+
+"2026-11-01-Nouveautés et performances de .NET 11.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🚀 .NET 11 arrive le 10 novembre !
+
+Mon nouvel article fait le tour des nouveautés :
+• C# 15 : unions et hiérarchies fermées
+• Runtime Async et performances
+• ASP.NET Core, EF Core 11 et Blazor
+
+https://codewithfrenchy.com/posts/dotnet11/
+
+#CodeWithFrenchy
+
+---
 
 ### GitHub Universe 2026 : les agents s’installent dans toute la chaîne de livraison
 
