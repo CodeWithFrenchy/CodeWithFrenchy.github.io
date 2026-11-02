@@ -14,7 +14,7 @@ Certains brandissent l’argument de la scalabilité, d’autres invoquent le Gr
 
 Mais en même temps… on a tous vu (ou vécu) des projets où l’adoption des microservices a amené plus de douleurs que de solutions. Complexité opérationnelle, effet spaghetti distribué, équipe dépassée par les appels réseau qui se perdent  dans la brume. Bref, __la promesse des microservices peut vite se transformer en cauchemar… si on s’est trompé de combat__.
 
-Alors voilà : aujourd’hui, on prend le temps de __vraiment répondre__ à cette question. Sans dogme. Sans _buzzword_. En regardant froidement (mais gentiment 😄) ce que ça implique __de faire — ou pas — du microservice__ dans un projet .NET Core. L’objectif ? Te donner une __méthodologie claire__, des __exemples concrets__, et surtout de quoi __prendre une vraie bonne décision__ pour ton prochain projet.
+Alors voilà : aujourd’hui, on prend le temps de __vraiment répondre__ à cette question. Sans dogme. Sans _buzzword_. En regardant froidement (mais gentiment 😄) ce que ça implique __de faire ou pas du microservice__ dans un projet .NET Core. L’objectif ? Te donner une __méthodologie claire__, des __exemples concrets__, et surtout de quoi __prendre une vraie bonne décision__ pour ton prochain projet.
 
 Allez, on déballe tout ça !
 

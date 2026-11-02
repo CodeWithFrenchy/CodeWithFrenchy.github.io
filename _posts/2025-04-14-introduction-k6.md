@@ -120,7 +120,7 @@ L’indicateur `http_req_failed` permet de voir si certaines requêtes ont écho
 
 Dans un contexte où les performances applicatives sont de plus en plus scrutées, **k6** s’impose comme un outil moderne, léger et puissant pour réaliser des **essais de charge** adaptés aux réalités d’aujourd’hui. Que ce soit pour valider la scalabilité d’une API, détecter des goulets d’étranglement, ou s’assurer que l’expérience utilisateur reste fluide en période de pointe, k6 offre une solution accessible aussi bien aux développeurs qu’aux équipes DevOps.
 
-Grâce à sa syntaxe en JavaScript, son intégration facile dans les pipelines CI/CD, et la richesse des métriques fournies, il devient un excellent allié pour intégrer les tests de performance dès les premières étapes du cycle de développement — un des piliers des pratiques modernes comme le [Shift Left Testing](https://datascientest.com/shift-left-testing-tout-savoir).
+Grâce à sa syntaxe en JavaScript, son intégration facile dans les pipelines CI/CD, et la richesse des métriques fournies, il devient un excellent allié pour intégrer les tests de performance dès les premières étapes du cycle de développement, un des piliers des pratiques modernes comme le [Shift Left Testing](https://datascientest.com/shift-left-testing-tout-savoir).
 
 Il est cependant essentiel de rappeler que **tous les projets ne nécessitent pas le même niveau de rigueur** en matière de tests de performance. Adapter les types d’essais (stress, endurance, montée en charge…) aux enjeux métier, à l’infrastructure cible et aux attentes des utilisateurs permet d’optimiser l’effort tout en maximisant le retour sur investissement.
 
