@@ -52,8 +52,12 @@ Lien qui explique comment utiliser la plateforme <https://jekyllrb.com/docs/usag
 ### Exécuter le site
 
 ``` bash
+-- AVANT
 jekyll serve
 jekyll serve --drafts # avec les drafts
+
+-- MAINTENANT
+bundle exec jekyll serve --drafts
 ```
 
 ### TODO
