@@ -31,6 +31,46 @@ Version Twitter :
 
 ## Annonces
 
+### GitHub Copilot : du premier prompt aux agents dans un projet .NET
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-04-github-copilot-prompt-aux-agents.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
+### GitHub Copilot : comprendre les jetons pour mieux maîtriser ses coûts
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-04-github-copilot-comprendre-jetons.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### .NET 11 : nouveautés, performances et évolution du langage C#
 
 Version Linkedin :

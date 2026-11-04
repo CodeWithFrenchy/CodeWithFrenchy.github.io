@@ -1,6 +1,6 @@
 ---
 title: "GitHub Copilot : du premier prompt aux agents dans un projet .NET"
-date: 2026-11-04 19:00:00 -0500
+date: 2026-11-04 16:00:00 -0500
 categories: [intelligence-artificielle, developpement]
 tags: [github-copilot, github, dotnet, csharp, agents-ia, mcp, bonnes-pratiques]
 ---

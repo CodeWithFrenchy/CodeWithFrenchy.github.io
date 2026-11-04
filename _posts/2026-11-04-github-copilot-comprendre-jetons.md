@@ -1,7 +1,6 @@
 ---
-layout: post
 title: "GitHub Copilot : comprendre les jetons pour mieux maîtriser ses coûts"
-date: 2026-11-04 19:00:00 -0500
+date: 2026-11-04 16:00:00 -0500
 categories: [intelligence-artificielle, bonnes-pratiques]
 tags: [github-copilot, tokens, contexte, finops, dotnet, claude-code, agents-ia]
 ---
