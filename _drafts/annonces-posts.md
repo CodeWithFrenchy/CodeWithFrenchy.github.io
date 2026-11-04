@@ -37,7 +37,52 @@ Version Linkedin :
 
 ---
 
+🤖 GitHub Copilot : passez du simple prompt aux agents IA dans vos projets .NET !
+(English version available below)
 
+Vous travaillez avec GitHub Copilot, mais tirez-vous pleinement profit de ses fonctionnalités ?
+
+Je viens de publier un nouvel article sur CodeWithFrenchy pour vous accompagner, des premières suggestions de code jusqu'aux agents personnalisés et aux intégrations MCP.
+
+Au programme :
+• Prompts : fournir le bon contexte, définir les contraintes et les résultats attendus.
+• Modes Ask, Plan et Agent : choisir le bon niveau d'assistance selon la tâche.
+• Instructions : standardiser les conventions de votre projet avec `copilot-instructions.md`.
+• Prompt files et Skills : structurer vos demandes et procédures réutilisables.
+• Agents personnalisés : définir des rôles spécialisés avec des outils adaptés.
+• MCP : connecter Copilot à des services et ressources externes.
+• Sécurité et validation : encadrer les permissions, protéger les secrets et vérifier les changements.
+
+Le tout avec un exemple concret d'API ASP.NET Core, Entity Framework Core et des tests xUnit.
+
+L'objectif est simple : vous aider à intégrer GitHub Copilot dans votre quotidien avec une méthode reproductible, sans perdre le contrôle sur la qualité du code livré.
+
+📖 Mon article : https://codewithfrenchy.com/posts/github-copilot-prompt-aux-agents/
+
+------------------------------
+
+🤖 GitHub Copilot: Go from simple prompts to AI agents in your .NET projects!
+
+Are you working with GitHub Copilot but not taking full advantage of its capabilities?
+
+I've just published a new article on CodeWithFrenchy covering everything from inline code suggestions to custom agents and MCP integrations.
+
+What you'll learn:
+• Prompts: provide relevant context, constraints, and acceptance criteria.
+• Ask, Plan, and Agent modes: choose the right level of assistance.
+• Instructions: standardize project conventions with `copilot-instructions.md`.
+• Prompt files and Skills: organize reusable requests and procedures.
+• Custom agents: define specialized roles with appropriate tools.
+• MCP: connect Copilot to external services and resources.
+• Security and validation: manage permissions, protect secrets, and verify changes.
+
+The article follows a practical ASP.NET Core example with Entity Framework Core and xUnit tests.
+
+The goal is to help you integrate GitHub Copilot into your development workflow with a repeatable approach while maintaining control over code quality.
+
+📖 My article : https://codewithfrenchy.com/posts/github-copilot-prompt-aux-agents/
+
+#CodeWithFrenchy #GitHubCopilot #DotNet #CSharp #ASPNETCore #EFCore #AI #AIAgents #AgentSkills #MCP #SoftwareEngineering
 
 "2026-11-04-github-copilot-prompt-aux-agents.png"
 
@@ -47,7 +92,13 @@ Version Twitter :
 
 ---
 
+🤖 GitHub Copilot : du prompt aux agents IA !
 
+Apprenez à maîtriser les prompts, instructions, Skills, agents personnalisés et MCP avec des exemples concrets en .NET.
+
+📖 https://codewithfrenchy.com/posts/github-copilot-prompt-aux-agents/
+
+#CodeWithFrenchy #GitHubCopilot
 
 ---
 
@@ -57,6 +108,59 @@ Version Linkedin :
 
 ---
 
+💰 GitHub Copilot : comprenez-vous réellement ce qui consomme vos crédits IA ?
+(English version available below)
+
+Vous envoyez une seule demande à GitHub Copilot. Pourtant, derrière cette interaction, votre agent effectue parfois des dizaines d'opérations.
+
+Et chacune influence votre consommation de jetons !
+
+Je viens de publier un nouvel article sur CodeWithFrenchy pour mieux comprendre les mécanismes derrière cette consommation et apprendre à maîtriser les coûts sans sacrifier la qualité.
+
+Au programme :
+• Jetons, fenêtre de contexte et crédits IA : comprendre leurs différences.
+• Cache : comprendre son fonctionnement et son influence sur les coûts.
+• Prompts : réduire les recherches inutiles avec des instructions précises.
+• Conversations et sous-agents : éviter de transporter du contexte inutile.
+• Modèles : choisir selon la difficulté et le coût réel du travail accompli.
+• Mesures : suivre la consommation et évaluer la qualité des résultats.
+
+J'accompagne ces explications d'exemples concrets en .NET, avec quelques parallèles avec Claude Code.
+
+Mon objectif : vous aider à obtenir des résultats fiables, avec une consommation plus prévisible.
+
+Car le bon indicateur n'est pas le nombre de jetons consommés, mais le coût d'un travail correctement terminé !
+
+📖 Mon article : https://codewithfrenchy.com/posts/github-copilot-comprendre-jetons/
+
+------------------------------
+
+💰 GitHub Copilot: Do you really understand what's consuming your AI credits?
+
+You send a single request to GitHub Copilot. Behind that interaction, your agent may perform dozens of operations.
+
+And each one contributes to token consumption!
+
+I've just published a new article on CodeWithFrenchy explaining how token consumption works and how to manage costs without compromising code quality.
+
+What you'll learn:
+• Tokens, context windows, and AI credits: understand the differences.
+• Caching: understand how it works and affects costs.
+• Prompts: reduce unnecessary exploration with precise instructions.
+• Conversations and subagents: avoid carrying irrelevant context.
+• Models: choose based on task difficulty and total completion cost.
+• Metrics: monitor consumption and evaluate result quality.
+
+The article includes practical .NET examples and comparisons with Claude Code.
+
+My goal is to help you achieve reliable results with more predictable AI spending.
+
+Because the metric that matters isn't how many tokens you consume. It's the cost of 
+completing the task correctly!
+
+📖 My article : https://codewithfrenchy.com/posts/github-copilot-comprendre-jetons/
+
+#CodeWithFrenchy #GitHubCopilot #AI #AIAgents #DotNet #CSharp #ClaudeCode #TokenOptimization #FinOps #SoftwareEngineering
 
 
 "2026-11-04-github-copilot-comprendre-jetons.png"
@@ -67,7 +171,15 @@ Version Twitter :
 
 ---
 
+💰 GitHub Copilot : où passent vos crédits IA ?
 
+Jetons, cache, contexte, prompts et choix du modèle : apprenez à maîtriser vos coûts sans sacrifier la qualité.
+
+Des exemples concrets en .NET !
+
+📖 https://codewithfrenchy.com/posts/github-copilot-comprendre-jetons/
+
+#CodeWithFrenchy
 
 ---
 
