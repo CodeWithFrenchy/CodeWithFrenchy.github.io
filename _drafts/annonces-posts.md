@@ -31,6 +31,26 @@ Version Twitter :
 
 ## Annonces
 
+### dotnetup : simplifier la gestion des SDK et des runtimes .NET
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-15-dotnetup.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### Saga et Transactional Outbox
 
 Version Linkedin :
