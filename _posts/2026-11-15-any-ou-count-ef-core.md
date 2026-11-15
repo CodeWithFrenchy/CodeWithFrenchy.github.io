@@ -1,6 +1,6 @@
 ---
 title: "EF Core : Any() ou Count > 0 pour vérifier l’existence d’éléments ?"
-date: 2027-11-30 19:00:00 -0400
+date: 2026-11-15 15:00:00 -0400
 categories: [outil-developpement, performance]
 tags: [dotnet, csharp, ef-core, linq, performance, bonnes-pratiques, optimisation-requetes]
 ---

@@ -31,6 +31,26 @@ Version Twitter :
 
 ## Annonces
 
+### EF Core : Any() ou Count > 0 pour vérifier l’existence d’éléments ?
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-15-any-ou-count-ef-core.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### dotnetup : simplifier la gestion des SDK et des runtimes .NET
 
 Version Linkedin :
