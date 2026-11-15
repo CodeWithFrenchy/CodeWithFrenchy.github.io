@@ -37,7 +37,52 @@ Version Linkedin :
 
 ---
 
+🧹 .NET : normaliser vos listes de codes sans masquer les erreurs !
+(English version available below)
 
+Je viens de publier un nouvel article sur CodeWithFrenchy !
+
+Dans une API ASP.NET Core, les codes reçus ne respectent pas toujours le format attendu : espaces, minuscules, valeurs nulles ou doublons.
+
+Comment uniformiser ces données sans compromettre leur validation ?
+
+Dans cet article, j'aborde :
+
+• Trim() et ToUpperInvariant() : harmoniser les codes avant leur traitement.
+• Nullabilité : protéger les collections et leurs éléments, même avec IReadOnlyList<string>.
+• FluentValidation : vérifier les valeurs vides, les longueurs et les doublons.
+• Doublons : les détecter après normalisation pour comparer des valeurs cohérentes.
+• Contrat API : éviter de supprimer silencieusement les entrées invalides.
+• Architecture : normaliser lors du passage du DTO à la commande, puis valider avant l'enregistrement.
+
+Ma recommandation : normalisez les différences de représentation acceptées par votre contrat, mais laissez la validation signaler les données invalides.
+
+📖 Mon article : https://codewithfrenchy.com/posts/normaliser-liste-codes-avant-validation/
+
+------------------------------
+
+🧹 .NET: Normalize code lists without hiding validation errors!
+
+I've just published a new article on CodeWithFrenchy!
+
+In ASP.NET Core APIs, incoming codes don't always match the expected format: whitespace, lowercase values, null entries, or duplicates.
+
+How should you normalize these values while preserving validation?
+
+In this article, I cover:
+
+• Trim() and ToUpperInvariant(): standardize codes before processing.
+• Nullability: handle null collections and elements, even with IReadOnlyList<string>.
+• FluentValidation: reject empty values, invalid lengths, and duplicates.
+• Duplicates: detect them after normalization for consistent comparisons.
+• API contracts: avoid silently removing invalid entries.
+• Architecture: normalize when mapping DTOs to commands, then validate before persistence.
+
+My recommendation: normalize representation differences allowed by your contract, while keeping validation responsible for rejecting invalid data.
+
+📖 My article : https://codewithfrenchy.com/posts/normaliser-liste-codes-avant-validation/
+
+#CodeWithFrenchy #DotNet #CSharp #ASPNETCore #FluentValidation #CleanCode #API #SoftwareArchitecture
 
 "2026-11-15-normaliser-liste-codes-avant-validation.png"
 
@@ -47,7 +92,15 @@ Version Twitter :
 
 ---
 
+🧹 .NET : normaliser vos codes sans masquer les erreurs !
 
+Trim(), ToUpperInvariant(), valeurs nulles et doublons.
+
+Dans mon nouvel article, je présente les bonnes pratiques avec ASP.NET Core et FluentValidation.
+
+📖 https://codewithfrenchy.com/posts/normaliser-liste-codes-avant-validation/
+
+#CodeWithFrenchy
 
 ---
 
