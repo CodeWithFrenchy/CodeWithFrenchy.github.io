@@ -31,6 +31,26 @@ Version Twitter :
 
 ## Annonces
 
+### Saga et Transactional Outbox
+
+Version Linkedin :
+
+---
+
+
+
+""
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### GitHub Copilot : du premier prompt aux agents dans un projet .NET
 
 Version Linkedin :
