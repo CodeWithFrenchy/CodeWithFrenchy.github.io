@@ -31,6 +31,26 @@ Version Twitter :
 
 ## Annonces
 
+### GC.SuppressFinalize dans les tests : quand peut-on l’omettre ?
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-15-gc-suppressfinalize-tests-quand.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### EF Core : Any() ou Count > 0 pour vérifier l’existence d’éléments ?
 
 Version Linkedin :
