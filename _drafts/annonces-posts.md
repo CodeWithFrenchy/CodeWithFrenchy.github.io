@@ -37,7 +37,61 @@ Version Linkedin :
 
 ---
 
+🛠️ dotnetup : simplifier la gestion des SDK et runtimes .NET !
 
+(English version available below)
+
+Je viens de publier un nouvel article sur CodeWithFrenchy !
+
+Lorsque vous travaillez sur plusieurs projets .NET, maintenir différentes versions du SDK devient rapidement une tâche récurrente.
+
+Avec dotnetup, Microsoft propose un nouvel outil pour faciliter cette gestion.
+
+Dans cet article, j'aborde :
+
+• Installation : gérer plusieurs SDK et runtimes .NET sur Windows, Linux et macOS.
+• Versionnement : suivre une branche .NET ou conserver une version précise.
+• global.json : installer le SDK attendu par un dépôt et respecter sa politique de version.
+• Maintenance : actualiser les installations et nettoyer les composants inutilisés.
+• Isolation : tester de nouvelles versions sans perturber les installations existantes.
+• DevOps : comprendre les possibilités et les limites actuelles pour les environnements de compilation.
+
+⚠️ dotnetup est encore en préversion publique.
+
+Je recommande de commencer avec un dépôt pilote et le mode d'environnement none afin de préserver les installations .NET existantes.
+
+L'objectif est simple : réduire le temps consacré à la maintenance des environnements de développement et améliorer leur cohérence.
+
+📖 Mon article : https://codewithfrenchy.com/posts/dotnetup/
+
+------------------------------
+
+🛠️ dotnetup: simplifying .NET SDK and runtime management!
+
+I've just published a new article on CodeWithFrenchy!
+
+Working across multiple .NET projects often means maintaining several SDK versions and keeping development environments consistent.
+
+Microsoft introduces dotnetup to simplify this process.
+
+In this article, I cover:
+
+• Installation: manage multiple .NET SDKs and runtimes across Windows, Linux, and macOS.
+• Version management: track a .NET release channel or pin an exact version.
+• global.json: install the SDK required by a repository and respect its version policy.
+• Maintenance: update installations and remove unused components.
+• Isolation: evaluate newer SDKs without disrupting existing installations.
+• DevOps: understand current capabilities and limitations for build environments.
+
+⚠️ dotnetup is still in public preview.
+
+I recommend starting with a pilot repository and the none environment mode to preserve existing .NET installations.
+
+The goal is straightforward: spend less time maintaining development environments and more time improving applications.
+
+📖 My article : https://codewithfrenchy.com/posts/dotnetup/
+
+#CodeWithFrenchy #DotNet #DotNetUp #CSharp #DevOps #DeveloperExperience #SDK #SoftwareModernization
 
 "2026-11-15-dotnetup.png"
 
@@ -47,7 +101,13 @@ Version Twitter :
 
 ---
 
+🛠️ dotnetup : Microsoft simplifie la gestion des SDK et runtimes .NET !
 
+Dans mon nouvel article, je présente cet outil en préversion, son intégration avec global.json et les précautions à prendre avant son adoption.
+
+📖 https://codewithfrenchy.com/posts/dotnetup/
+
+#CodeWithFrenchy
 
 ---
 
