@@ -31,6 +31,26 @@ Version Twitter :
 
 ## Annonces
 
+### ASP.NET Core : normaliser une liste de codes avant de la valider
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-15-normaliser-liste-codes-avant-validation.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### GC.SuppressFinalize dans les tests : quand peut-on l’omettre ?
 
 Version Linkedin :

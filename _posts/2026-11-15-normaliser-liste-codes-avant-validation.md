@@ -1,6 +1,6 @@
 ---
 title: "ASP.NET Core : normaliser une liste de codes avant de la valider"
-date: 2027-11-30 19:00:00 -0400
+date: 2026-11-15 15:00:00 -0400
 categories: [dotnet, bonnes-pratiques]
 tags: [csharp, aspnet-core, normalisation, validation, fluentvalidation, linq]
 ---
