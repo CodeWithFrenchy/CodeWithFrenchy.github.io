@@ -37,9 +37,56 @@ Version Linkedin :
 
 ---
 
+🔄 Saga et Transactional Outbox : comment gérer les échecs dans une architecture distribuée ?
+(English version available below)
 
+Je viens de publier un nouvel article sur CodeWithFrenchy !
 
-""
+Lorsqu'une opération traverse plusieurs services, une transaction SQL locale ne garantit plus la cohérence du processus complet.
+
+Une commande enregistrée sans notification, un paiement confirmé dont la réponse se perd ou un message traité deux fois sont des scénarios à anticiper.
+
+Dans cet article, j'aborde :
+• Transactional Outbox : enregistrer les modifications métier et les messages dans une même transaction locale.
+• Inbox et idempotence : éviter les effets métier répétés lors des redélivraisons.
+• Saga : coordonner les étapes, les attentes et les compensations d'un processus distribué.
+• Orchestration et chorégraphie : comprendre les compromis entre ces deux approches.
+• Résultats incertains : distinguer un timeout d'un échec métier confirmé.
+• Exploitation : surveiller les messages bloqués, gérer les reprises et tester les scénarios de panne.
+
+J'aborde également les implications pour EF Core, Azure Service Bus, MassTransit et NServiceBus.
+
+L'objectif : vous aider à choisir les bons mécanismes selon vos invariants métier, sans ajouter inutilement de la complexité à votre architecture.
+
+📖 Mon article : https://codewithfrenchy.com/posts/saga-transaction-outbox/
+
+------------------------------
+
+🔄 Saga and Transactional Outbox: handling failures in distributed architectures!
+
+I've just published a new article on CodeWithFrenchy!
+
+When an operation spans multiple services, a local SQL transaction no longer guarantees consistency across the entire business process.
+
+A saved order without notification, a successful payment with a lost response, or a message processed twice are all scenarios worth addressing.
+
+In this article, I cover:
+• Transactional Outbox: persist business changes and outgoing messages in the same local transaction.
+• Inbox and idempotency: prevent duplicate business effects during message redelivery.
+• Saga: coordinate distributed steps, pending operations, and compensations.
+• Orchestration vs. choreography: understand the tradeoffs between both approaches.
+• Uncertain outcomes: distinguish timeouts from confirmed business failures.
+• Operations: monitor stuck messages, manage recovery, and test failure scenarios.
+
+I also discuss practical considerations for EF Core, Azure Service Bus, MassTransit, and NServiceBus.
+
+The goal: help you select the right mechanisms based on business invariants without introducing unnecessary architectural complexity.
+
+📖 My article : https://codewithfrenchy.com/posts/saga-transaction-outbox/
+
+#CodeWithFrenchy #DotNet #DistributedSystems #Microservices #SagaPattern #TransactionalOutbox #EventDrivenArchitecture #AzureServiceBus #EFCore
+
+"2026-11-15-Saga et Outbox cohérence distribuée.png"
 
 ---
 
@@ -47,7 +94,13 @@ Version Twitter :
 
 ---
 
+🔄 Saga et Transactional Outbox : comment garantir la cohérence dans une architecture distribuée ?
 
+Dans mon nouvel article, j'aborde les transactions locales, l'idempotence, les compensations et la gestion des pannes avec .NET.
+
+📖 https://codewithfrenchy.com/posts/saga-transaction-outbox/
+
+#CodeWithFrenchy
 
 ---
 
