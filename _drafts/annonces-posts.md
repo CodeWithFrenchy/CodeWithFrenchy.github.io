@@ -37,7 +37,56 @@ Version Linkedin :
 
 ---
 
+⚡ EF Core : Any() ou Count > 0, lequel privilégier ?
+(English version available below)
 
+Je viens de publier un nouvel article sur CodeWithFrenchy !
+
+Dans vos requêtes EF Core, vous avez sûrement déjà rencontré ces deux approches pour vérifier l'existence d'éléments.
+
+Mais est-ce réellement une question de performance ?
+
+Dans cet article, j'aborde :
+
+• Any() : exprimer directement une condition d'existence dans une requête LINQ.
+• Count > 0 : comprendre sa traduction SQL et les optimisations introduites avec EF Core 9.
+• EXISTS vs COUNT : distinguer l'intention du code et le plan d'exécution SQL.
+• AnyAsync() : vérifier une existence sans charger inutilement des entités.
+• Collections en mémoire : privilégier Count, Length ou IsEmpty selon le type.
+• Performance : examiner le SQL avec ToQueryString() et mesurer avant d'affirmer un gain.
+
+Ma recommandation : privilégiez Any() pour les conditions d'existence dans EF Core.
+
+Depuis EF Core 9, certaines expressions Count > 0 sont déjà transformées en EXISTS. Le principal avantage d'Any() demeure alors la lisibilité et la clarté de l'intention.
+
+📖 Mon article : https://codewithfrenchy.com/posts/any-ou-count-ef-core/
+
+------------------------------
+
+⚡ EF Core: Any() or Count > 0, which should you choose?
+
+I've just published a new article on CodeWithFrenchy!
+
+When checking whether related entities exist in EF Core, both approaches are common.
+
+But is one always faster?
+
+In this article, I cover:
+
+• Any(): express existence checks directly in LINQ queries.
+• Count > 0: understand SQL translation and optimizations introduced in EF Core 9.
+• EXISTS vs COUNT: distinguish code intent from SQL execution plans.
+• AnyAsync(): check existence without loading unnecessary entities.
+• In-memory collections: prefer Count, Length, or IsEmpty when appropriate.
+• Performance: inspect generated SQL with ToQueryString() and benchmark before claiming improvements.
+
+My recommendation: prefer Any() for existence checks in EF Core.
+
+Since EF Core 9, certain Count > 0 expressions are already optimized into EXISTS. In those cases, Any() primarily improves readability and communicates intent.
+
+📖 My article : https://codewithfrenchy.com/posts/any-ou-count-ef-core/
+
+#CodeWithFrenchy #DotNet #EFCore #CSharp #LINQ #SQLServer #Performance #CleanCode
 
 "2026-11-15-any-ou-count-ef-core.png"
 
@@ -47,7 +96,13 @@ Version Twitter :
 
 ---
 
+⚡ EF Core : Any() ou Count > 0 ?
 
+Dans mon nouvel article, j'explique pourquoi privilégier Any() pour vérifier l'existence d'éléments, tout en tenant compte des optimisations introduites avec EF Core 9.
+
+📖 https://codewithfrenchy.com/posts/any-ou-count-ef-core/
+
+#CodeWithFrenchy
 
 ---
 
