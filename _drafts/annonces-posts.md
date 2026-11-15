@@ -37,7 +37,60 @@ Version Linkedin :
 
 ---
 
+🧹 GC.SuppressFinalize dans vos tests .NET : est-ce vraiment nécessaire ?
+(English version available below)
 
+Je viens de publier un nouvel article sur CodeWithFrenchy !
+
+Dans les classes de tests qui implémentent IDisposable, on retrouve régulièrement GC.SuppressFinalize(this) à la fin de Dispose().
+
+Mais cet appel est-il toujours pertinent ?
+
+Dans cet article, j'aborde :
+
+• Dispose() : libérer explicitement les ressources détenues par une classe.
+• GC.SuppressFinalize() : comprendre son rôle réel et ses limites.
+• sealed : pourquoi une classe scellée sans finaliseur dans sa hiérarchie n'a pas besoin de cet appel.
+• xUnit : simplifier le nettoyage des ressources dans les classes de tests.
+• Héritage : comprendre les situations où GC.SuppressFinalize() conserve son utilité.
+• Analyseurs .NET : distinguer les recommandations CA1816 et CA1063.
+
+Ma recommandation : privilégiez les classes de tests sealed lorsque l'héritage n'est pas prévu.
+
+Si aucun finaliseur n'existe dans leur hiérarchie, conservez simplement le nettoyage des ressources nécessaires dans Dispose().
+
+L'objectif est d'améliorer la lisibilité du code, sans prétendre obtenir un gain de performance.
+
+📖 Mon article : https://codewithfrenchy.com/posts/gc-suppressfinalize-tests-quand/
+
+------------------------------
+
+🧹 GC.SuppressFinalize in .NET tests: do you really need it?
+
+I've just published a new article on CodeWithFrenchy!
+
+In test classes implementing IDisposable, it's common to find GC.SuppressFinalize(this) at the end of Dispose().
+
+But is this call always necessary?
+
+In this article, I cover:
+
+• Dispose(): explicitly release resources owned by a class.
+• GC.SuppressFinalize(): understand its actual purpose and limitations.
+• sealed: why a sealed class without a finalizer in its inheritance hierarchy doesn't need this call.
+• xUnit: simplify resource cleanup in test classes.
+• Inheritance: identify when GC.SuppressFinalize() remains relevant.
+• .NET analyzers: understand the recommendations behind CA1816 and CA1063.
+
+My recommendation: prefer sealed test classes when inheritance isn't required.
+
+If no finalizer exists in their inheritance hierarchy, keep Dispose() focused on releasing owned resources.
+
+The goal is cleaner, more readable code without claiming unproven performance improvements.
+
+📖 My article : https://codewithfrenchy.com/posts/gc-suppressfinalize-tests-quand/
+
+#CodeWithFrenchy #DotNet #CSharp #UnitTesting #xUnit #GarbageCollection #CleanCode #SoftwareEngineering
 
 "2026-11-15-gc-suppressfinalize-tests-quand.png"
 
@@ -47,7 +100,13 @@ Version Twitter :
 
 ---
 
+🧹 GC.SuppressFinalize(this) est-il nécessaire dans vos tests .NET ?
 
+Dans mon nouvel article, j'explique pourquoi cet appel est superflu dans une classe de tests sealed sans finaliseur dans sa hiérarchie.
+
+📖 https://codewithfrenchy.com/posts/gc-suppressfinalize-tests-quand/
+
+#CodeWithFrenchy
 
 ---
 
