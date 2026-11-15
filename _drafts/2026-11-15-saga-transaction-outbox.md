@@ -1,6 +1,6 @@
 ---
 title: Saga et Transactional Outbox - gérer la cohérence et les échecs dans une architecture distribuée
-date: 2027-12-31 19:00:00 -0400
+date: 2026-11-15 15:00:00 -0400
 categories: [architecture, bonnes-pratiques]
 tags: [dotnet, saga, transactional-outbox, inbox, systemes-distribues, architecture-evenementielle, coherence-eventuelle, idempotence, messagerie]
 ---
