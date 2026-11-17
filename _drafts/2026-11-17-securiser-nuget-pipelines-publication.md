@@ -1,6 +1,6 @@
 ---
 title: "Sécuriser ses dépendances NuGet et ses pipelines de publication"
-date: 2026-11-17 92:00:00 -0400
+date: 2026-11-17 19:00:00 -0400
 categories: [dotnet, securite]
 tags: [dotnet, dotnet11, nuget, securite, devops, github-actions, trusted-publishing]
 ---
