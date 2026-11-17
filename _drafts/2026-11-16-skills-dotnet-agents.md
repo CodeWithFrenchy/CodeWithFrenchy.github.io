@@ -5,7 +5,7 @@ categories: [dotnet, intelligence-artificielle]
 tags: [dotnet, github-copilot, claude-code, agent-skills, mcp, nuget, qualite-code, tests]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION
+>  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
 
 ## Préambule
 
