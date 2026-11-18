@@ -50,8 +50,6 @@ ABC-004,Thé,-2.00
 
 Nous attendons un doublon au deuxième enregistrement, un nom absent au troisième et un prix négatif au quatrième. La virgule dans le nom du premier produit fait partie de sa valeur, grâce aux guillemets.
 
-Le [code complet de l’exemple est disponible dans cette archive]({{ '/assets/downloads/diagnostic-catalogue-filebased-dotnet11.zip' | relative_url }}). Elle contient les sources C#, les fichiers d’entrée, un rapport attendu et un programme de vérification. Les extraits du billet se concentrent sur la configuration et les commandes qui rendent ce format intéressant.
-
 ## Répartir les responsabilités entre plusieurs fichiers
 
 Je conserverais un seul point d’entrée, puis trois fichiers pour les responsabilités qui évoluent indépendamment.
