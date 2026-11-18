@@ -1,6 +1,6 @@
 ---
 title: "Tests générés par l’IA : vérifier ce que les assertions protègent réellement"
-date: 2026-11-17 19:00:00 -0400
+date: 2026-11-17 19:10:00 -0400
 categories: [dotnet, tests]
 tags: [dotnet, tests-unitaires, intelligence-artificielle, github-copilot, xunit, mstest, microsoft-testing-platform, mutation-testing]
 ---
