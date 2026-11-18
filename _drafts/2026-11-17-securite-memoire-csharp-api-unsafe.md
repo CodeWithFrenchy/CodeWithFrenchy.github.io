@@ -5,7 +5,7 @@ categories: [dotnet, securite]
 tags: [dotnet, dotnet11, csharp, csharp15, unsafe, interop, securite-memoire, tests]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

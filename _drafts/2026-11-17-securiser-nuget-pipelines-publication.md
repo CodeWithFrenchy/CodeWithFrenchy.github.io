@@ -5,7 +5,7 @@ categories: [dotnet, securite]
 tags: [dotnet, dotnet11, nuget, securite, devops, github-actions, trusted-publishing]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

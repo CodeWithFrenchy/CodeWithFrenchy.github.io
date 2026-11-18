@@ -5,7 +5,7 @@ categories: [ia, securite]
 tags: [ia, agents, github-copilot, azure, azure-container-apps, docker, dotnet, modernisation]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

@@ -5,7 +5,7 @@ categories: [dotnet, tests]
 tags: [dotnet, tests-unitaires, intelligence-artificielle, github-copilot, xunit, mstest, microsoft-testing-platform, mutation-testing]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

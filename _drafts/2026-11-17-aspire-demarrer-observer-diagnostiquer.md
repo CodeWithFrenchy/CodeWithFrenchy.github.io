@@ -5,7 +5,7 @@ categories: [dotnet, observabilite]
 tags: [dotnet, aspire, opentelemetry, diagnostic, blazor, postgresql, ia, tests]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

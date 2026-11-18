@@ -5,7 +5,7 @@ categories: [dotnet, outillage]
 tags: [dotnet, dotnet11, csharp, file-based-apps, nuget, outils-internes, devops]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

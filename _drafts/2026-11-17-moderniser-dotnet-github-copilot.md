@@ -5,7 +5,7 @@ categories: [dotnet, modernisation]
 tags: [dotnet, dotnet11, github-copilot, modernisation, migration, aspnet-core, tests]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

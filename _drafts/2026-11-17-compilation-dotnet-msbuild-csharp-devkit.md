@@ -5,7 +5,7 @@ categories: [dotnet, outillage]
 tags: [dotnet, dotnet11, msbuild, csharp-dev-kit, vscode, performance, devops, ci-cd]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 

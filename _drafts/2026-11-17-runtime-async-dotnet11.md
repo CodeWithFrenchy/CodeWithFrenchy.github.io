@@ -5,7 +5,7 @@ categories: [dotnet, performance]
 tags: [dotnet, dotnet11, csharp, async-await, runtime-async, benchmarkdotnet, aspnet-core, diagnostic]
 ---
 
->  ⚠️ OUVRIR LE FICHIER AVANT PUBLICATION + IMAGE
+>  ⚠️ IMAGE
 
 ## Préambule
 
