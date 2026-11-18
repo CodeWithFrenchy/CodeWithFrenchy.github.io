@@ -31,6 +31,931 @@ Version Twitter :
 
 ## Annonces
 
+### 🔐 Agents IA : leur donner plus d'autonomie sans compromettre votre sécurité !
+
+Version Linkedin :
+
+---
+
+🔐 Agents IA : leur donner plus d'autonomie sans compromettre votre sécurité !
+(English version available below)
+
+Vous confiez à GitHub Copilot ou à un autre agent IA la modernisation d'une application .NET ?
+
+L'agent analyse votre code, modifie des fichiers, installe des dépendances et exécute des commandes.
+
+Mais à quelles ressources a-t-il réellement accès ?
+
+À la .NET Conf 2026, Microsoft a présenté différentes approches pour isoler les agents de développement.
+
+Dans mon nouvel article, je compare trois solutions :
+
+• GitHub Copilot CLI : restrictions locales sur les commandes et les accès.
+• Docker Sandboxes : isolation dans une microVM locale.
+• Azure Container Apps Sandboxes : exécution isolée dans Azure.
+
+J'aborde également les mesures à prévoir :
+
+• Limiter les accès aux fichiers, aux secrets et au réseau.
+• Contrôler les permissions des outils MCP.
+• Séparer les identités de développement et de publication.
+• Vérifier les changements dans un pipeline CI indépendant.
+• Encadrer la durée de vie et les coûts des environnements.
+
+Un point important : approuver une commande ne signifie pas limiter ce qu'elle est autorisée à faire.
+
+Mon point de vue : l'autonomie des agents doit s'accompagner de véritables contrôles techniques, indépendants des instructions fournies à l'IA.
+
+📖 Mon article : https://codewithfrenchy.com/posts/agents-developpement-isolation-acces/
+
+------------------------------
+
+🔐 AI Coding Agents: More autonomy without compromising security!
+
+Are you using GitHub Copilot or another AI agent to modernize a .NET application?
+
+The agent analyzes code, modifies files, restores dependencies, and executes commands.
+
+But what resources can it actually access?
+
+At .NET Conf 2026, Microsoft presented different approaches to isolating development agents.
+
+In my latest article, I compare three options:
+
+• GitHub Copilot CLI: Local restrictions on commands and access.
+• Docker Sandboxes: Isolation inside a local microVM.
+• Azure Container Apps Sandboxes: Isolated execution in Azure.
+
+I also cover practical security measures:
+
+• Restrict access to files, secrets, and network destinations.
+• Control permissions granted to MCP tools.
+• Separate development and publishing identities.
+• Validate changes through an independent CI pipeline.
+• Manage sandbox lifecycles and costs.
+
+An important distinction: approving a command doesn't restrict what that command is allowed to access.
+
+My takeaway: greater agent autonomy requires enforceable technical boundaries, not simply instructions telling AI what it should or shouldn't do.
+
+📖 My article : https://codewithfrenchy.com/posts/agents-developpement-isolation-acces/
+
+#CodeWithFrenchy #AI #AIAgents #GitHubCopilot #DotNet #Azure #AzureContainerApps #Docker #MCP #DevSecOps #Security
+
+"2026-11-17-agents-developpement-isolation-acces.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🔐 Agents IA : autonomie ne signifie pas sécurité !
+
+GitHub Copilot CLI, Docker Sandboxes et Azure Container Apps : comment isoler vos agents et limiter leurs accès aux fichiers, secrets et réseaux ?
+
+📖 https://codewithfrenchy.com/posts/agents-developpement-isolation-acces/
+
+#CodeWithFrenchy
+
+---
+
+
+### 🚀 Aspire : démarrez, observez et diagnostiquez toute votre application !
+
+Version Linkedin :
+
+---
+
+🚀 .Aspire : démarrez, observez et diagnostiquez toute votre application !
+(English version available below)
+
+Votre application fonctionne avec une API, une interface, une base de données et un worker ?
+
+Vous connaissez alors les défis du démarrage local et du diagnostic lorsqu'un problème touche plusieurs composants.
+
+À la .NET Conf 2026, Microsoft a présenté les évolutions d'Aspire pour simplifier ces opérations.
+
+Dans mon nouvel article, je prends l'exemple d'une application de gestion de commandes avec ASP.NET Core, Blazor, PostgreSQL et un worker .NET.
+
+Les points à retenir :
+
+• Centraliser les dépendances et le démarrage avec AppHost.
+• Gérer les connexions et l'initialisation de la base de données.
+• Observer les journaux, traces et métriques avec OpenTelemetry.
+• Diagnostiquer un traitement asynchrone entre une API et un worker.
+• Donner aux agents IA accès aux observations avec Aspire CLI et MCP.
+• Valider les correctifs avec des tests d'intégration xUnit.
+
+Un exemple concret : votre API retourne HTTP 202, mais la commande reste en attente. Aspire aide à retrouver où le traitement a échoué.
+
+Mon point de vue : un agent IA qui modifie du code doit aussi être capable de vérifier le comportement de l'application complète.
+
+La compilation réussie ne suffit pas. Il faut confirmer le résultat métier.
+
+📖 Mon article : https://codewithfrenchy.com/posts/aspire-demarrer-observer-diagnostiquer/
+
+------------------------------
+
+🚀 Aspire: Start, observe, and diagnose your entire application!
+
+Does your application include an API, a frontend, a database, and a background worker?
+
+Then you know how challenging local setup and troubleshooting can become when issues span multiple components.
+
+At .NET Conf 2026, Microsoft presented Aspire improvements designed to simplify these workflows.
+
+In my latest article, I walk through an order management application built with ASP.NET Core, Blazor, PostgreSQL, and a .NET worker.
+
+Key takeaways:
+
+• Centralize dependencies and startup with AppHost.
+• Manage service connections and database initialization.
+• Observe logs, traces, and metrics with OpenTelemetry.
+• Diagnose asynchronous processing across an API and a worker.
+• Give AI agents access to runtime observations through Aspire CLI and MCP.
+• Validate fixes with xUnit integration tests.
+
+A practical example: your API returns HTTP 202, but the order remains pending. Aspire helps identify where processing failed.
+
+My takeaway: AI agents should verify the behavior of the entire application, not simply modify code.
+
+A successful build isn't enough. The expected business outcome must also be confirmed.
+
+📖 My article : https://codewithfrenchy.com/posts/aspire-demarrer-observer-diagnostiquer/
+
+#CodeWithFrenchy #DotNet #Aspire #AspNetCore #OpenTelemetry #Observability #MCP #AI #DevOps
+
+"2026-11-17-aspire-demarrer-observer-diagnostiquer.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🚀 Aspire : simplifiez le diagnostic de vos applications !
+
+API, worker, PostgreSQL et Blazor : centralisez le démarrage et suivez vos traitements avec OpenTelemetry.
+
+Et donnez aux agents IA les moyens de vérifier leurs correctifs !
+
+📖 https://codewithfrenchy.com/posts/aspire-demarrer-observer-diagnostiquer/
+
+#CodeWithFrenchy
+
+---
+
+### ⚡ .NET 11 : et si vos compilations devenaient beaucoup plus rapides ?
+
+Version Linkedin :
+
+---
+
+⚡ .NET 11 : et si vos compilations devenaient beaucoup plus rapides ?
+(English version available below)
+
+Vous modifiez quelques lignes de C#, lancez un test et attendez plusieurs secondes avant d'obtenir un résultat ?
+
+Le problème ne vient pas toujours du compilateur. MSBuild, les caches, les dépendances et les copies de fichiers contribuent aussi au temps d'attente.
+
+À la .NET Conf 2026, Microsoft a présenté des améliorations intéressantes avec MSBuild multithread et C# Dev Kit 11.
+
+Quelques chiffres publiés sur une solution Aspire de 407 projets :
+
+• Chargement complet : de 84,1 à 3 secondes.
+• Build sans modification : de 34,4 à 0,88 seconde.
+• Build après modification : de 36,1 à 2,1 secondes.
+• Mémoire du serveur Dev Kit : de 2 072 à 316 Mo.
+
+Dans mon nouvel article, je présente :
+
+• Le fonctionnement de MSBuild multithread et son option expérimentale -mt.
+• Les nouveaux mécanismes de cache et de compilation incrémentale.
+• Une méthode de comparaison reproductible avec PowerShell et les journaux MSBuild.
+• Les différences entre les gains sur un poste de développement et dans un pipeline CI/CD.
+
+Ces chiffres proviennent des scénarios mesurés par Microsoft. Vos résultats dépendront de votre solution et de votre environnement.
+
+Mon point de vue : avant d'ajouter des ressources à vos agents de compilation, mesurez où se trouve réellement le temps perdu.
+
+📖 Mon article : https://codewithfrenchy.com/posts/compilation-dotnet-msbuild-csharp-devkit/
+
+------------------------------
+
+⚡ .NET 11: What if your builds could become significantly faster?
+
+You change a few lines of C#, run a test, and wait several seconds before getting a result.
+
+The compiler isn't always the bottleneck. MSBuild, caching, dependencies, and output copying also contribute to build times.
+
+At .NET Conf 2026, Microsoft presented improvements involving multithreaded MSBuild and C# Dev Kit 11.
+
+Some published results on a 407-project Aspire solution:
+
+• Full solution load: 84.1 to 3 seconds.
+• No-change build: 34.4 to 0.88 seconds.
+• Build after a code change: 36.1 to 2.1 seconds.
+• Dev Kit server memory: 2,072 to 316 MB.
+
+In my latest article, I cover:
+
+• How multithreaded MSBuild works and its experimental -mt option.
+• Project caching and incremental build improvements.
+• A reproducible benchmarking approach using PowerShell and MSBuild logs.
+• Why developer workstations and CI/CD pipelines benefit differently.
+
+These results come from Microsoft's benchmarks. Your results will depend on your solution and environment.
+
+My takeaway: before adding more resources to your build agents, measure where the time is actually being spent.
+
+📖 My article : https://codewithfrenchy.com/posts/compilation-dotnet-msbuild-csharp-devkit/
+
+#CodeWithFrenchy #DotNet #DotNet11 #MSBuild #CSharp #CSharpDevKit #BuildPerformance #DevOps #CICD
+
+"2026-11-17-compilation-dotnet-msbuild-csharp-devkit.png"
+
+---
+
+Version Twitter : 
+
+---
+
+⚡ .NET 11 : des compilations beaucoup plus rapides !
+
+MSBuild multithread et C# Dev Kit 11 réduisent les temps d'attente.
+
+Découvrez les gains annoncés et comment les mesurer sur vos projets.
+
+📖 https://codewithfrenchy.com/posts/compilation-dotnet-msbuild-csharp-devkit/
+
+#CodeWithFrenchy
+
+---
+
+### 🚀 EF Core 11 : vos requêtes SQL sont-elles réellement plus performantes ?
+
+Version Linkedin :
+
+---
+
+🚀 EF Core 11 : vos requêtes SQL sont-elles réellement plus performantes ?
+(English version available below)
+
+Une nouvelle version d'Entity Framework Core apporte des optimisations intéressantes. Mais un SQL plus court ne signifie pas nécessairement une requête plus rapide !
+
+À la .NET Conf 2026, Microsoft a présenté plusieurs améliorations d'EF Core 11 concernant les requêtes LINQ, SQL Server et les outils de migration.
+
+Dans mon nouvel article, je présente les points à retenir :
+
+• La suppression de certaines jointures inutiles dans les requêtes fractionnées.
+• Les nouvelles traductions JSON avec JSON_CONTAINS et JSON_PATH_EXISTS.
+• Le support des index sur les propriétés des types complexes.
+• Les nouveautés de dotnet ef, notamment le fichier dotnet-ef.json.
+• Les changements de compatibilité SQL Server à surveiller.
+• Une méthode pour comparer les plans d'exécution, les lectures logiques et le temps CPU.
+
+Je propose également une démarche pour comparer EF Core 10 et EF Core 11 dans des conditions reproductibles.
+
+Mon point de vue : une optimisation ne se confirme pas en regardant uniquement le SQL généré.
+
+Il faut mesurer le travail réellement effectué par SQL Server et vérifier les résultats métier avant de conclure à un gain.
+
+📖 Mon article : https://codewithfrenchy.com/posts/ef-core-11-evaluer-gains-requetes/
+
+------------------------------
+
+🚀 EF Core 11: Are your SQL queries actually faster?
+
+A new Entity Framework Core release brings interesting optimizations. But shorter SQL doesn't necessarily mean faster queries!
+
+At .NET Conf 2026, Microsoft introduced several EF Core 11 improvements targeting LINQ queries, SQL Server, and migration tooling.
+
+In my latest article, I cover:
+
+• Removing unnecessary joins from certain split queries.
+• New JSON translations with JSON_CONTAINS and JSON_PATH_EXISTS.
+• Index support for complex type properties.
+• dotnet ef improvements, including dotnet-ef.json.
+• SQL Server compatibility changes to watch for.
+• Comparing execution plans, logical reads, and CPU time.
+
+I also share a reproducible approach to comparing EF Core 10 and EF Core 11.
+
+My takeaway: generated SQL alone isn't enough to confirm a performance improvement.
+
+Measure the actual work performed by SQL Server and validate business results before claiming a performance gain.
+
+📖 My article : https://codewithfrenchy.com/posts/ef-core-11-evaluer-gains-requetes/
+
+#CodeWithFrenchy #DotNet #DotNet11 #EFCore #EFCore11 #SQLServer #LINQ #Performance #DatabaseOptimization
+
+"2026-11-17-ef-core-11-evaluer-gains-requetes.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🚀 EF Core 11 : vos requêtes sont-elles vraiment plus rapides ?
+
+Jointures optimisées, nouvelles fonctions JSON et index améliorés.
+
+Je vous montre comment mesurer les gains réels avec SQL Server.
+
+📖 https://codewithfrenchy.com/posts/ef-core-11-evaluer-gains-requetes/
+
+#CodeWithFrenchy
+
+---
+
+### 🤖 Moderniser une application .NET avec GitHub Copilot : jusqu'où laisser l'IA intervenir ?
+
+Version Linkedin :
+
+---
+
+🤖 Moderniser une application .NET avec GitHub Copilot : jusqu'où laisser l'IA intervenir ?
+(English version available below)
+
+Migrer une application .NET Framework vers .NET 11 représente bien davantage qu'une mise à jour de packages.
+
+Entre les dépendances historiques, les règles métier, l'authentification et les intégrations, chaque transformation comporte des risques.
+
+À la .NET Conf 2026, Microsoft a présenté les capacités de GitHub Copilot pour accompagner la modernisation des applications .NET.
+
+Dans mon nouvel article, je propose une démarche concrète :
+
+• Évaluer une application existante et ses dépendances avec Copilot.
+• Structurer un plan de migration avant de modifier le code.
+• Migrer progressivement de Web Forms vers ASP.NET Core et Blazor.
+• Conserver temporairement EF6 lorsque les contraintes le justifient.
+• Valider les règles métier avec des tests de caractérisation.
+• Préparer la coexistence, le déploiement et le retour arrière.
+
+Mon point de vue : l'IA accélère les transformations techniques, mais les décisions d'architecture et la validation des comportements demeurent sous la responsabilité de l'équipe.
+
+Une migration réussie ne se limite pas à une compilation sans erreur. L'application doit conserver ses comportements attendus et fonctionner correctement en production.
+
+📖 Mon article : https://codewithfrenchy.com/posts/moderniser-dotnet-github-copilot/
+
+------------------------------
+
+🤖 Modernizing a .NET application with GitHub Copilot: How much should AI handle?
+
+Migrating a .NET Framework application to .NET 11 involves much more than updating packages.
+
+Legacy dependencies, business rules, authentication, and integrations all introduce migration risks.
+
+At .NET Conf 2026, Microsoft demonstrated how GitHub Copilot supports .NET application modernization.
+
+In my latest article, I share a practical approach:
+
+• Assess existing applications and dependencies with Copilot.
+• Build a migration plan before changing code.
+• Gradually migrate Web Forms to ASP.NET Core and Blazor.
+• Keep EF6 temporarily when technical constraints justify it.
+• Protect business behavior through characterization tests.
+• Plan coexistence, deployment, and rollback strategies.
+
+My takeaway: AI accelerates technical transformations, but architecture decisions and behavioral validation remain the team's responsibility.
+
+A successful migration goes beyond a clean build. The application must preserve expected behavior and operate reliably in production.
+
+📖 My article : https://codewithfrenchy.com/posts/moderniser-dotnet-github-copilot/
+
+#CodeWithFrenchy #DotNet #DotNet11 #GitHubCopilot #AppModernization #AspNetCore #Blazor #LegacyModernization #AI
+
+"2026-11-17-moderniser-dotnet-github-copilot.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🤖 Moderniser .NET avec GitHub Copilot !
+
+De Web Forms à ASP.NET Core, l'IA accélère la migration.
+
+Mais les règles métier, les tests et les décisions d'architecture restent essentiels.
+
+📖 https://codewithfrenchy.com/posts/moderniser-dotnet-github-copilot/
+
+#CodeWithFrenchy
+
+---
+
+### ⚡ .NET 11 : Runtime Async promet moins d'allocations et de meilleures performances !
+
+Version Linkedin :
+
+---
+
+⚡ .NET 11 : Runtime Async promet moins d'allocations et de meilleures performances !
+(English version available below)
+
+Avec async et await, nous écrivons du code asynchrone depuis des années. Mais chaque niveau d'une chaîne d'appels entraîne un coût d'exécution.
+
+Runtime Async, une fonctionnalité en préversion de .NET 11, vise à réduire ce coût sans modifier notre façon d'écrire du code C#.
+
+Dans mon nouvel article, je présente les points à retenir :
+
+• Le fonctionnement de Runtime Async et ses différences avec les machines à états classiques.
+• La réduction des allocations et du coût de propagation des exceptions.
+• Les résultats publiés par Microsoft, dont un scénario passant de 144 à 0 octet alloué.
+• L'activation avec Features=runtime-async=on.
+• Une démarche de comparaison avec BenchmarkDotNet, k6 et dotnet-counters.
+• Les effets sur les piles d'exécution et le diagnostic.
+
+Attention aux benchmarks ! Un gain important sur une méthode isolée ne garantit pas une amélioration équivalente sur une API complète.
+
+Mon approche : comparer les deux modes sous .NET 11, mesurer les allocations, le CPU et les latences, puis valider les résultats sur une charge représentative.
+
+📖 Mon article : https://codewithfrenchy.com/posts/runtime-async-dotnet11/
+
+------------------------------
+
+⚡ .NET 11: Runtime Async targets fewer allocations and better performance!
+
+We've been writing asynchronous C# code with async and await for years. But every layer in an asynchronous call chain introduces execution overhead.
+
+Runtime Async, a preview feature in .NET 11, aims to reduce that overhead without changing how we write asynchronous code.
+
+In my latest article, I cover:
+
+• How Runtime Async differs from traditional compiler-generated state machines.
+• Reduced allocations and exception propagation overhead.
+• Microsoft's published benchmarks, including a scenario dropping from 144 to 0 allocated bytes.
+• Enabling the feature with Features=runtime-async=on.
+• Comparing performance with BenchmarkDotNet, k6, and dotnet-counters.
+• Improvements to execution stacks and diagnostics.
+
+One important consideration: impressive microbenchmark results don't automatically translate into equivalent API performance gains.
+
+My approach: compare both compilation modes on .NET 11, measure allocations, CPU, and latency, then validate the results under representative workloads.
+
+📖 My article : https://codewithfrenchy.com/posts/runtime-async-dotnet11/
+
+#CodeWithFrenchy #DotNet #DotNet11 #CSharp #RuntimeAsync #Performance #BenchmarkDotNet #AsyncAwait #K6
+
+"2026-11-17-runtime-async-dotnet11.png"
+
+---
+
+Version Twitter : 
+
+---
+
+⚡ .NET 11 : Runtime Async réduit le coût de async/await !
+
+Moins d'allocations, une propagation des exceptions optimisée et des diagnostics améliorés.
+
+Je présente les gains et comment les mesurer avec BenchmarkDotNet et k6.
+
+📖 https://codewithfrenchy.com/posts/runtime-async-dotnet11/
+
+#CodeWithFrenchy
+
+---
+
+### NuGet : vos dépendances et vos pipelines de publication sont-ils suffisamment sécurisés ?
+
+Version Linkedin :
+
+---
+
+🔐 NuGet : vos dépendances et vos pipelines de publication sont-ils suffisamment sécurisés ?
+(English version available below)
+
+Ajouter une dépendance NuGet est simple. Mais savez-vous ce qu'elle introduit dans votre application et quels risques elle représente pour votre chaîne de livraison ?
+
+Avec l'arrivée des agents IA, les dépendances sont ajoutées et mises à jour plus rapidement. La sécurité de notre chaîne d'approvisionnement logicielle mérite une attention particulière.
+
+Dans mon nouvel article, inspiré de la .NET Conf 2026, je présente plusieurs pratiques concrètes :
+
+• Retarder l'adoption des nouvelles versions avec minPublishAgeHours.
+• Contrôler les sources de paquets avec Package Source Mapping.
+• Détecter les vulnérabilités directes et transitives avec NuGet Audit.
+• Verrouiller les dépendances avec packages.lock.json.
+• Comprendre les risques liés aux scripts et aux tâches MSBuild.
+• Sécuriser la publication avec Trusted Publishing et OpenID Connect (OIDC).
+
+Je présente également une approche pour séparer la validation et la publication dans vos pipelines CI/CD.
+
+Mon constat : sécuriser NuGet ne consiste pas uniquement à analyser les vulnérabilités. Il faut protéger tout le parcours du paquet, de sa sélection jusqu'à sa distribution.
+
+📖 Mon article : https://codewithfrenchy.com/posts/securiser-nuget-pipelines-publication/
+
+------------------------------
+
+🔐 NuGet: Are your dependencies and publishing pipelines secure enough?
+
+Adding a NuGet dependency is easy. But do you know what it introduces into your application and the risks it brings to your software supply chain?
+
+With AI agents accelerating dependency updates, supply chain security deserves more attention.
+
+In my latest article, inspired by .NET Conf 2026, I cover practical measures:
+
+• Delay adoption of newly published packages with minPublishAgeHours.
+• Restrict package sources using Package Source Mapping.
+• Detect direct and transitive vulnerabilities with NuGet Audit.
+• Lock dependency resolution with packages.lock.json.
+• Understand the risks of package scripts and MSBuild tasks.
+• Secure package publishing through Trusted Publishing and OpenID Connect (OIDC).
+
+I also explain how to separate validation and publishing responsibilities in CI/CD pipelines.
+
+My takeaway: NuGet security goes beyond vulnerability scanning. It requires protecting the entire package lifecycle, from dependency selection to distribution.
+
+📖 My article : https://codewithfrenchy.com/posts/securiser-nuget-pipelines-publication/
+
+#CodeWithFrenchy #DotNet #NuGet #DevSecOps #CICD #SupplyChainSecurity #OIDC #GitHubActions #SoftwareSecurity
+
+"2026-11-17-securiser-nuget-pipelines-publication.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🔐 NuGet : vos dépendances sont-elles sécurisées ?
+
+Dans mon article : audit des vulnérabilités, contrôle des sources, délais d'adoption et Trusted Publishing pour protéger vos pipelines CI/CD.
+
+📖 https://codewithfrenchy.com/posts/securiser-nuget-pipelines-publication/
+
+#CodeWithFrenchy
+
+---
+
+### 🔐 C# 15 et .NET 11 : de nouvelles règles pour sécuriser les API unsafe !
+
+Version Linkedin :
+
+---
+
+🔐 C# 15 et .NET 11 : de nouvelles règles pour sécuriser les API unsafe !
+(English version available below)
+
+Une méthode C# reçoit une adresse mémoire avec nint et une longueur avec int. Aucun pointeur dans sa signature, mais les risques de sécurité mémoire sont bien présents.
+
+Avec C# 15 et .NET 11, de nouvelles règles en préversion visent à rendre les obligations de sécurité mémoire explicites pour les appelants.
+
+Dans mon nouvel article, je présente les points à retenir :
+
+• La nouvelle signification du modificateur unsafe sur les API.
+• La distinction entre un contrat unsafe et une opération effectuée dans un contexte unsafe.
+• La documentation des obligations avec la balise XML safety.
+• La protection des consommateurs avec une façade ReadOnlySpan<byte>.
+• Les implications pour l'interopérabilité native et les bibliothèques existantes.
+• La validation des contrats avec des tests de compilation.
+
+Un point important : le compilateur signale les obligations de sécurité, mais ne garantit pas la validité d'une adresse mémoire.
+
+L'objectif est de rendre ces responsabilités visibles, vérifiables et plus faciles à examiner lors des revues de code.
+
+📖 Mon article : https://codewithfrenchy.com/posts/securite-memoire-csharp-api-unsafe/
+
+------------------------------
+
+🔐 C# 15 and .NET 11: New memory safety rules for unsafe APIs!
+
+A C# method accepts a memory address through nint and a length through int. No pointer appears in its signature, yet memory safety risks still exist.
+
+C# 15 and .NET 11 introduce preview rules that make memory safety obligations explicit for API callers.
+
+In my latest article, I cover:
+
+• The updated meaning of unsafe on API declarations.
+• The distinction between unsafe contracts and unsafe operations.
+• Documenting safety requirements with the XML safety tag.
+• Protecting consumers through a ReadOnlySpan<byte> wrapper.
+• Native interoperability and compatibility considerations.
+• Validating API contracts through compilation tests.
+
+An important distinction: the compiler makes safety obligations visible, but it cannot guarantee that a memory address is valid.
+
+The goal is to make these responsibilities explicit, verifiable, and easier to review.
+
+📖 My article : https://codewithfrenchy.com/posts/securite-memoire-csharp-api-unsafe/
+
+#CodeWithFrenchy #DotNet #DotNet11 #CSharp #CSharp15 #MemorySafety #Interop #SoftwareSecurity
+
+"2026-11-17-securite-memoire-csharp-api-unsafe.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🔐 C# 15 et .NET 11 renforcent les contrats des API unsafe !
+
+Au programme : sécurité mémoire, interopérabilité native et validation des obligations à la compilation.
+
+📖 https://codewithfrenchy.com/posts/securite-memoire-csharp-api-unsafe/
+
+#CodeWithFrenchy
+
+---
+
+### 🤖 Skills .NET : vos agents IA connaissent-ils vraiment vos pratiques ?
+
+Version Linkedin :
+
+---
+
+🤖 Skills .NET : vos agents IA connaissent-ils vraiment vos pratiques ?
+(English version available below)
+
+GitHub Copilot et Claude Code connaissent C#, mais leurs recommandations ne respectent pas toujours les conventions de votre projet ou les versions de vos bibliothèques.
+
+Les Agent Skills apportent une réponse intéressante : fournir aux agents des procédures et des connaissances adaptées aux tâches à accomplir.
+
+Dans mon nouvel article, je présente :
+
+• La différence entre les instructions du dépôt, les Agent Skills et les outils MCP.
+• Un exemple de skill pour analyser les performances d'une requête EF Core.
+• Le dépôt dotnet/skills et ses compétences spécialisées pour .NET.
+• La distribution de skills dans les packages NuGet, en lien avec les versions des bibliothèques.
+• Une méthode pour mesurer leur efficacité : qualité des résultats, temps, jetons consommés et effort de révision.
+
+Mon point de vue : ajouter des instructions à un agent ne garantit pas de meilleurs résultats.
+
+Avant d'adopter un skill dans votre équipe, comparez son apport sur des tâches réelles, avec et sans celui-ci.
+
+📖 Mon article : https://codewithfrenchy.com/posts/skills-dotnet-agents/
+
+------------------------------
+
+🤖 .NET Agent Skills: Do your AI agents really understand your development practices?
+
+GitHub Copilot and Claude Code understand C#, but their recommendations don't always align with your project's conventions or library versions.
+
+Agent Skills help provide task-specific procedures and technical knowledge.
+
+In my latest article, I cover:
+
+• The differences between repository instructions, Agent Skills, and MCP tools.
+• A practical EF Core query review skill.
+• The dotnet/skills repository and its specialized .NET capabilities.
+• Distributing version-specific skills through NuGet packages.
+• Evaluating effectiveness through quality, execution time, token consumption, and human review effort.
+
+My takeaway: giving agents more instructions doesn't automatically improve their output.
+
+Measure the actual benefits on representative tasks before adopting a skill across your team.
+
+📖 My article : https://codewithfrenchy.com/posts/skills-dotnet-agents/
+
+#CodeWithFrenchy #DotNet #GitHubCopilot #ClaudeCode #AgentSkills #MCP #NuGet #EFCore #AI
+
+"2026-11-17-skills-dotnet-agents.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🤖 Vos agents IA respectent-ils vos pratiques .NET ?
+
+Les Agent Skills apportent des procédures adaptées à vos projets.
+
+Au programme : EF Core, MCP, NuGet et mesure des gains réels.
+
+📖 https://codewithfrenchy.com/posts/skills-dotnet-agents/
+
+#CodeWithFrenchy
+
+---
+
+### 🧪 Tests générés par l'IA : un pipeline vert ne garantit pas la qualité !
+
+Version Linkedin :
+
+---
+
+🧪 Tests générés par l'IA : un pipeline vert ne garantit pas la qualité !
+(English version available below)
+
+GitHub Copilot et les agents IA accélèrent la rédaction des tests unitaires. Mais est-ce que leurs assertions détectent réellement les régressions métier ?
+
+Un test qui vérifie uniquement qu'un résultat existe ne garantit pas son exactitude.
+
+Dans mon nouvel article, je présente un exemple concret de calcul de commande pour aborder plusieurs pratiques :
+
+• Vérifier des résultats attendus précis, plutôt que des conditions trop permissives.
+• Tester les valeurs limites, notamment les seuils métier.
+• Introduire volontairement des erreurs pour évaluer les assertions avec le mutation testing.
+• Encadrer les agents IA avec des règles métier indépendantes de l'implémentation.
+• Tirer parti de Microsoft.Testing.Platform pour l'exécution et le diagnostic des tests.
+
+Mon constat : la qualité d'une suite de tests ne se mesure pas uniquement au nombre de tests réussis ou au pourcentage de couverture.
+
+Ce qui compte, c'est sa capacité à détecter une erreur avant sa mise en production.
+
+📖 Mon article : https://codewithfrenchy.com/posts/tests-generes-ia-assertions/
+
+------------------------------
+
+🧪 AI-generated tests: a green pipeline doesn't guarantee quality!
+
+GitHub Copilot and AI agents accelerate unit test generation. But do their assertions actually catch business regressions?
+
+A test that only checks whether a result exists doesn't guarantee correctness.
+
+In my latest article, I walk through an order calculation example to highlight several practices:
+
+• Assert precise expected results instead of relying on weak conditions.
+• Test boundary values around business rules.
+• Introduce intentional defects to evaluate assertions through mutation testing.
+• Guide AI agents with business requirements independent of the implementation.
+• Leverage Microsoft.Testing.Platform for test execution and diagnostics.
+
+My takeaway: test quality isn't measured solely by passing test counts or code coverage.
+
+What matters is whether your tests catch defects before production.
+
+📖 My article : https://codewithfrenchy.com/posts/tests-generes-ia-assertions/
+
+#CodeWithFrenchy #DotNet #UnitTesting #GitHubCopilot #AI #MutationTesting #xUnit #SoftwareQuality
+
+"2026-11-17-tests-generes-ia-assertions.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🧪 Tests générés par l'IA : un pipeline vert suffit-il ?
+
+Des assertions trop faibles laissent passer des erreurs métier.
+
+Je parle de tests aux limites, de mutation testing et de qualité des assertions.
+
+📖 https://codewithfrenchy.com/posts/tests-generes-ia-assertions/
+
+#CodeWithFrenchy
+
+---
+
+### C# : des outils internes sans fichier .csproj, même avec plusieurs fichiers !
+
+Version Linkedin :
+
+---
+
+🛠️ C# : des outils internes sans fichier .csproj, même avec plusieurs fichiers !
+(English version available below)
+
+Besoin de valider un CSV, d'analyser un export ou d'automatiser un traitement ponctuel ?
+
+Les applications C# basées sur des fichiers offrent une approche intéressante pour développer des utilitaires internes sans démarrer avec un projet traditionnel.
+
+Dans mon nouvel article, je présente un exemple concret : un validateur CSV qui génère un rapport JSON.
+
+Les points à retenir :
+
+• `#:include` : répartir le code entre plusieurs fichiers C#.
+• `#:package` : déclarer les dépendances NuGet directement dans le code.
+• `dotnet run --file` : exécuter l'outil sans fichier .csproj.
+• `dotnet format` : appliquer les conventions de votre équipe.
+• CI/CD : valider les données avec des codes de sortie et un rapport JSON structuré.
+• `dotnet project convert` : passer à un projet classique lorsque les besoins évoluent.
+
+J'aborde également la gestion des dépendances, les tests, la distribution et les limites de cette approche.
+
+Mon objectif : montrer comment garder un outil simple à démarrer, sans négliger sa maintenabilité.
+
+📖 Mon article : https://codewithfrenchy.com/posts/applications-csharp-fichiers-outils-internes/
+
+------------------------------
+
+🛠️ C#: Build internal tools without a .csproj file, even across multiple files!
+
+Need to validate CSV files, inspect exports, or automate occasional tasks?
+
+C# file-based applications offer a practical approach to building internal utilities without starting with a traditional project.
+
+In my latest article, I walk through a CSV validator that generates a structured JSON report.
+
+Key takeaways:
+
+• `#:include`: organize code across multiple C# files.
+• `#:package`: declare NuGet dependencies directly in source files.
+• `dotnet run --file`: execute tools without a .csproj file.
+• `dotnet format`: enforce team coding conventions.
+• CI/CD: validate data through exit codes and structured JSON reports.
+• `dotnet project convert`: transition to a traditional project as requirements grow.
+
+I also cover dependency management, testing, distribution, and architectural trade-offs.
+
+The goal is simple: keep internal tools easy to start while maintaining a clear path toward long-term maintainability.
+
+📖 My article : https://codewithfrenchy.com/posts/applications-csharp-fichiers-outils-internes/
+
+#CodeWithFrenchy #DotNet #CSharp #DotNet11 #DevOps #CICD #NuGet #DeveloperTools
+
+"2026-11-17-applications-csharp-fichiers-outils-internes.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🛠️ C# sans .csproj !
+
+Avec .NET 11 : plusieurs fichiers, NuGet et CI/CD.
+
+Exemple concret : un validateur CSV.
+
+📖 https://codewithfrenchy.com/posts/applications-csharp-fichiers-outils-internes/
+
+#CodeWithFrenchy
+
+---
+
+### .NET Conf 2026 : ce que je retiens après plusieurs heures de conférences !
+
+Version Linkedin :
+
+---
+
+🚀 .NET Conf 2026 : ce que je retiens après plusieurs heures de conférences !
+(English version available below)
+
+Du 10 au 13 novembre, la .NET Conf 2026 accompagnait le lancement de .NET 11.
+
+Après avoir suivi plusieurs sessions, j'ai regroupé dans un nouvel article les annonces qui me semblent les plus pertinentes pour nos applications et nos équipes de développement.
+
+Quelques sujets à retenir :
+
+• .NET 11 et C# 15 : contrats plus expressifs, Runtime Async et optimisations du runtime.
+• Performance : C# Dev Kit passe de 36,1 à 2,1 secondes pour une compilation incrémentale sur la solution Aspire de 407 projets, selon les mesures de Microsoft.
+• Visual Studio et Copilot : nouveaux outils, choix de modèles et skills adaptés à .NET.
+• EF Core 11 : améliorations LINQ, JSON et nouvelles capacités de recherche vectorielle.
+• ASP.NET Core et Blazor : validation asynchrone, OpenAPI 3.2 et gestion des sessions.
+• Aspire et Azure : observabilité, orchestration et environnements isolés pour les agents.
+• Sécurité : dépendances NuGet, Trusted Publishing et cryptographie post-quantique.
+
+Mon constat : les gains les plus intéressants concernent autant les outils et les processus de développement que les nouvelles fonctionnalités du framework.
+
+Cet article constitue une vue d'ensemble. Je reviendrai sur plusieurs sujets dans de prochaines publications avec des exemples concrets.
+
+📖 Mon article : https://codewithfrenchy.com/posts/dotnet-conf-2026/
+
+------------------------------
+
+🚀 .NET Conf 2026: My key takeaways after hours of technical sessions!
+
+.NET Conf 2026 took place from November 10 to 13, alongside the launch of .NET 11.
+
+After watching several sessions, I published a new article covering the announcements I consider most relevant for development teams and enterprise applications.
+
+Key highlights:
+
+• .NET 11 and C# 15: expressive contracts, Runtime Async, and runtime optimizations.
+• Performance: C# Dev Kit reduced incremental build time from 36.1 to 2.1 seconds on the 407-project Aspire solution in Microsoft's benchmarks.
+• Visual Studio and Copilot: improved tooling, model flexibility, and .NET-specific agent skills.
+• EF Core 11: LINQ and JSON improvements, plus new vector search capabilities.
+• ASP.NET Core and Blazor: asynchronous validation, OpenAPI 3.2, and session management.
+• Aspire and Azure: observability, orchestration, and isolated agent environments.
+• Security: NuGet dependencies, Trusted Publishing, and post-quantum cryptography.
+
+My main takeaway: some of the most meaningful improvements target development workflows and tooling rather than framework features alone.
+
+This article provides an overview. I'll cover several topics in greater detail in upcoming posts, with practical examples.
+
+📖 My article : https://codewithfrenchy.com/posts/dotnet-conf-2026/
+
+#CodeWithFrenchy #DotNet #DotNet11 #CSharp #DotNetConf #VisualStudio #GitHubCopilot #EFCore #Aspire #Azure
+
+"2026-11-17-dotnet-conf-2026.png"
+
+---
+
+Version Twitter : 
+
+---
+
+🗄️ Azure SQL Database en local dans VS Code !
+
+L'extension MSSQL v1.48 arrive avec 3 nouveautés en Preview :
+
+• Conteneur Azure SQL sans abonnement
+• Déploiement local vers Azure
+• Analyse des performances avec Query Store
+
+📖 https://devblogs.microsoft.com/azure-sql/vscode-mssql-november2026/
+
+---
+
 ### ASP.NET Core : normaliser une liste de codes avant de la valider
 
 Version Linkedin :
