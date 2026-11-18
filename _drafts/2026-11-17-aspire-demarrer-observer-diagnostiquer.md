@@ -1,6 +1,6 @@
 ---
 title: "Aspire : démarrer, observer et diagnostiquer une application complète"
-date: 2026-11-17 17:00:00 -0400
+date: 2026-11-17 19:00:00 -0400
 categories: [dotnet, observabilite]
 tags: [dotnet, aspire, opentelemetry, diagnostic, blazor, postgresql, ia, tests]
 ---

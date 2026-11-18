@@ -1,6 +1,6 @@
 ---
 title: "Moderniser une application .NET avec GitHub Copilot : de l’évaluation à la validation"
-date: 2026-11-17 12:00:00 -0400
+date: 2026-11-17 19:00:00 -0400
 categories: [dotnet, modernisation]
 tags: [dotnet, dotnet11, github-copilot, modernisation, migration, aspnet-core, tests]
 ---

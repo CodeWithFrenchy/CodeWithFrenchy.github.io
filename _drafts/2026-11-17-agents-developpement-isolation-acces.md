@@ -1,6 +1,6 @@
 ---
 title: "Agents de développement : isoler l’exécution et maîtriser les accès"
-date: 2026-11-17 17:00:00 -0400
+date: 2026-11-17 19:00:00 -0400
 categories: [ia, securite]
 tags: [ia, agents, github-copilot, azure, azure-container-apps, docker, dotnet, modernisation]
 ---

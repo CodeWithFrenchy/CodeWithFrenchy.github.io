@@ -1,6 +1,6 @@
 ---
 title: "Compilation .NET : où gagner du temps avec MSBuild et C# Dev Kit"
-date: 2026-11-17 07:00:00 -0400
+date: 2026-11-17 19:00:00 -0400
 categories: [dotnet, outillage]
 tags: [dotnet, dotnet11, msbuild, csharp-dev-kit, vscode, performance, devops, ci-cd]
 ---
