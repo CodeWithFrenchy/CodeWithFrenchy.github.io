@@ -1,6 +1,6 @@
 ---
 title: "Skills .NET : donner aux agents les bonnes connaissances au bon moment"
-date: 2026-11-16 19:00:00 -0400
+date: 2026-11-17 19:00:00 -0400
 categories: [dotnet, intelligence-artificielle]
 tags: [dotnet, github-copilot, claude-code, agent-skills, mcp, nuget, qualite-code, tests]
 ---
