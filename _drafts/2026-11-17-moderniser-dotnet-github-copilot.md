@@ -5,8 +5,6 @@ categories: [dotnet, modernisation]
 tags: [dotnet, dotnet11, github-copilot, modernisation, migration, aspnet-core, tests]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Moderniser une application .NET demande de comprendre ce qui la fait fonctionner aujourd’hui. Les projets et les packages racontent une partie de l’histoire. Les règles métier, les intégrations et les particularités de production complètent le portrait.

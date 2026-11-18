@@ -5,8 +5,6 @@ categories: [dotnet, securite]
 tags: [dotnet, dotnet11, csharp, csharp15, unsafe, interop, securite-memoire, tests]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Une méthode reçoit une adresse mémoire et une longueur, puis appelle une bibliothèque native. Sa signature utilise `nint` et `int`. Aucun pointeur n’apparaît dans le code de l’application qui l’appelle.

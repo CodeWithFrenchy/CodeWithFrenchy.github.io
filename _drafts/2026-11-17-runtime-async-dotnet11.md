@@ -5,8 +5,6 @@ categories: [dotnet, performance]
 tags: [dotnet, dotnet11, csharp, async-await, runtime-async, benchmarkdotnet, aspnet-core, diagnostic]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Dans une API .NET, une requête traverse souvent plusieurs méthodes asynchrones avant d’atteindre un service distant ou une base de données. Un point de terminaison appelle un service applicatif, qui appelle un Repository, qui attend lui-même une opération d’entrée-sortie. Cette décomposition rend le code plus facile à comprendre, mais l’exécution de chaque niveau possède aussi un coût.

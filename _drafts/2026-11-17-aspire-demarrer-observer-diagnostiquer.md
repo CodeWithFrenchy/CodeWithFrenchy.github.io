@@ -5,8 +5,6 @@ categories: [dotnet, observabilite]
 tags: [dotnet, aspire, opentelemetry, diagnostic, blazor, postgresql, ia, tests]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Une application métier dépasse souvent le projet qui reçoit les requêtes HTTP. Il faut aussi démarrer une interface, préparer une base de données et lancer un traitement en arrière-plan. Lorsqu’un parcours échoue, le problème peut se trouver dans n’importe lequel de ces composants.

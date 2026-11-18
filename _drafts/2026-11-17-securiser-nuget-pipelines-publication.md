@@ -5,8 +5,6 @@ categories: [dotnet, securite]
 tags: [dotnet, dotnet11, nuget, securite, devops, github-actions, trusted-publishing]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Ajouter un paquet NuGet prend quelques secondes. Comprendre ce qu’il introduit dans une application, ce qu’il peut exécuter pendant la compilation et qui peut publier sa prochaine version demande davantage d’attention.

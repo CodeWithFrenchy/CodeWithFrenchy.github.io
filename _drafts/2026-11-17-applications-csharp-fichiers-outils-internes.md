@@ -5,8 +5,6 @@ categories: [dotnet, outillage]
 tags: [dotnet, dotnet11, csharp, file-based-apps, nuget, outils-internes, devops]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Nous avons souvent besoin d’un petit outil pour vérifier un export, diagnostiquer un fichier d’importation ou transformer des données avant leur traitement. Pour une équipe qui travaille déjà en C#, réutiliser le langage, ses bibliothèques et ses outils réduit le temps nécessaire pour produire quelque chose d’utile.

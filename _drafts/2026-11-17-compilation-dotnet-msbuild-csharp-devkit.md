@@ -5,8 +5,6 @@ categories: [dotnet, outillage]
 tags: [dotnet, dotnet11, msbuild, csharp-dev-kit, vscode, performance, devops, ci-cd]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 On modifie quelques lignes, on lance un test et on attend. Parfois, le test lui-même dure quelques millisecondes, alors que la préparation de son exécution prend plusieurs secondes. Sur une grande solution, ce temps se répète assez souvent pour devenir une friction importante dans la journée.

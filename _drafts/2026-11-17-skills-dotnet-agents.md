@@ -5,8 +5,6 @@ categories: [dotnet, intelligence-artificielle]
 tags: [dotnet, github-copilot, claude-code, agent-skills, mcp, nuget, qualite-code, tests]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Un agent peut connaître C#, reconnaître une architecture et produire du code qui compile, tout en passant à côté d’une convention importante du projet. Il peut aussi proposer une API qui appartient à une autre version d’une bibliothèque ou consacrer plusieurs recherches à retrouver une procédure que l’équipe applique régulièrement.

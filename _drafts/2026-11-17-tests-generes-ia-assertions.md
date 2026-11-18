@@ -5,8 +5,6 @@ categories: [dotnet, tests]
 tags: [dotnet, tests-unitaires, intelligence-artificielle, github-copilot, xunit, mstest, microsoft-testing-platform, mutation-testing]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Un agent modifie une règle métier, génère quelques tests et annonce que tout passe. Le code compile, le pipeline est vert et les nouveaux tests portent des noms rassurants. Pourtant, une question demeure : quelles erreurs ces tests seraient-ils capables de détecter ?

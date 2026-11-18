@@ -5,8 +5,6 @@ categories: [ia, securite]
 tags: [ia, agents, github-copilot, azure, azure-container-apps, docker, dotnet, modernisation]
 ---
 
->  ⚠️ IMAGE
-
 ## Préambule
 
 Un agent de développement peut analyser une solution, modifier des projets, restaurer des dépendances et lancer des tests. Dans un scénario de modernisation, cette autonomie permet d’enchaîner plusieurs tâches qui demanderaient autrement de nombreuses interventions manuelles.
