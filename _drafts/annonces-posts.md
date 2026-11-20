@@ -37,7 +37,66 @@ Version Linkedin :
 
 ---
 
+🚀 Microsoft Ignite 2026 : Copilot et les agents IA prennent une nouvelle dimension !
+(English version available below)
 
+Microsoft Ignite 2026 se termine aujourd'hui avec de nombreuses annonces !
+
+Cette année, Microsoft a insisté sur l'intégration des agents IA dans les entreprises, avec une attention portée aux données, à la sécurité et à la gouvernance.
+
+Je reviens sur les principales annonces dans mon nouvel article.
+
+Les nouveautés à retenir :
+
+• Microsoft Copilot : Workspaces, Autopilot et Copilot Code pour automatiser les tâches.
+• Microsoft IQ : un contexte organisationnel partagé entre Copilot et les agents.
+• Microsoft Foundry : évaluation et surveillance des agents en production.
+• Azure : Agent Grid, Agent Sandbox, Cobalt 200 et Azure Catalyst.
+• Données : Azure HorizonDB et conteneurs Azure SQL Database.
+• Agent 365 : gouvernance, identités, permissions et suivi des coûts.
+• Microsoft Perception : agents spécialisés en cybersécurité.
+
+Certaines fonctionnalités sont disponibles, d'autres restent en aperçu ou réservées au programme Frontier.
+
+Mon point de vue : Microsoft souhaite faire des agents IA des composants des systèmes d'entreprise.
+
+Leur adoption devra reposer sur des besoins concrets, des résultats mesurables et des contrôles adaptés.
+
+L'expertise humaine demeure indispensable.
+
+📖 Mon article : https://codewithfrenchy.com/posts/microsoft-ignite-2026/
+
+------------------------------
+
+🚀 Microsoft Ignite 2026: Copilot and AI agents are entering a new phase!
+
+Microsoft Ignite 2026 wraps up today with plenty of announcements!
+
+Microsoft emphasized integrating AI agents into enterprise workflows, focusing on data, security, and governance.
+
+I review the major announcements in my latest article.
+
+Key highlights:
+
+• Microsoft Copilot: Workspaces, Autopilot, and Copilot Code for task automation.
+• Microsoft IQ: Shared organizational context for Copilot and agents.
+• Microsoft Foundry: Agent evaluation and production monitoring.
+• Azure: Agent Grid, Agent Sandbox, Cobalt 200, and Azure Catalyst.
+• Data: Azure HorizonDB and Azure SQL Database containers.
+• Agent 365: Governance, identities, permissions, and cost management.
+• Microsoft Perception: Specialized cybersecurity agents.
+
+Some capabilities are available, while others remain in preview or limited to Frontier.
+
+My takeaway: Microsoft is positioning AI agents as components of enterprise systems.
+
+Adoption must be driven by concrete needs, measurable outcomes, and appropriate controls.
+
+Human expertise remains essential.
+
+📖 My article : https://codewithfrenchy.com/posts/microsoft-ignite-2026/
+
+#CodeWithFrenchy #MicrosoftIgnite #Ignite2026 #MicrosoftCopilot #AIAgents #Azure #MicrosoftFoundry #Cybersecurity #CloudComputing #AI
 
 "2026-11-20-microsoft-ignite-2026.png"
 
@@ -47,7 +106,15 @@ Version Twitter :
 
 ---
 
+🚀 Microsoft Ignite 2026 : les agents IA au cœur des annonces !
 
+Copilot, Microsoft IQ, Foundry, Azure et Agent 365 : les nouveautés pour intégrer et gouverner l'IA en entreprise.
+
+Je résume les annonces à retenir !
+
+📖 https://codewithfrenchy.com/posts/microsoft-ignite-2026/
+
+#CodeWithFrenchy
 
 ---
 
@@ -57,7 +124,62 @@ Version Linkedin :
 
 ---
 
+🚀 Aspire 17 : un tableau de bord repensé et des changements à anticiper !
+(English version available below)
 
+Aspire 17.0 est disponible depuis le 17 novembre 2026 !
+
+Cette nouvelle version améliore l'expérience de développement, l'observabilité et les outils d'orchestration, tout en apportant plusieurs changements à prévoir avant une mise à niveau.
+
+Dans mon nouvel article, je reviens sur les principales nouveautés :
+
+• Tableau de bord repensé : vue centralisée des ressources, métriques, traces et performances.
+• CLI amélioré : complétion des commandes, gestion des secrets et intégration des agents IA.
+• Go : prise en charge des AppHost Go, toujours en aperçu.
+• Kubernetes : stabilisation des intégrations et améliorations pour AKS.
+• Intégrations Azure : nouveautés pour Microsoft Entra ID, API Management et Microsoft Foundry.
+• Visual Studio Code : nouveaux outils pour faciliter le diagnostic et le débogage.
+
+⚠️ Quelques changements méritent votre attention :
+
+• .NET 10 devient la version minimale pour les AppHost.
+• AddProject et Aspire.AppHost.Sdk sont désormais dépréciés.
+• Certains packages clients sont retirés ou remplacés.
+• AKS adopte de nouvelles identités gérées et le niveau Standard par défaut, avec des coûts associés.
+
+Mon conseil : prenez le temps de vérifier les changements incompatibles avant de mettre à jour vos projets.
+
+📖 Mon article : https://codewithfrenchy.com/posts/aspire-17/
+
+------------------------------
+
+🚀 Aspire 17: A redesigned dashboard and important migration changes!
+
+Aspire 17.0 has been available since November 17, 2026!
+
+This release improves the developer experience, observability, and orchestration tools while introducing changes worth reviewing before upgrading.
+
+In my latest article, I cover the key updates:
+
+• Redesigned dashboard: Centralized resource monitoring, metrics, traces, and performance insights.
+• Improved CLI: Command completion, secret management, and AI coding agent integration.
+• Go: Support for Go AppHosts, still in preview.
+• Kubernetes: Stable integrations and AKS improvements.
+• Azure integrations: Updates for Microsoft Entra ID, API Management, and Microsoft Foundry.
+• Visual Studio Code: New debugging and diagnostic tools.
+
+⚠️ Important migration considerations:
+
+• .NET 10 is now the minimum supported version for AppHosts.
+• AddProject and Aspire.AppHost.Sdk are deprecated.
+• Some client packages have been removed or replaced.
+• AKS introduces new managed identities and defaults to the Standard tier, with associated costs.
+
+My recommendation: review the breaking changes before upgrading your existing projects.
+
+📖 My article : https://codewithfrenchy.com/posts/aspire-17/
+
+#CodeWithFrenchy #Aspire #DotNet #DotNet10 #Azure #AKS #Kubernetes #DevOps #Observability #CloudNative
 
 "2026-11-20-aspire-17.png"
 
@@ -67,7 +189,15 @@ Version Twitter :
 
 ---
 
+🚀 Aspire 17 est disponible !
 
+Tableau de bord repensé, CLI amélioré, AppHost Go et Kubernetes stabilisé.
+
+⚠️ Attention aux changements incompatibles avant la migration, notamment pour .NET et AKS !
+
+📖 https://codewithfrenchy.com/posts/aspire-17/
+
+#CodeWithFrenchy
 
 ---
 
