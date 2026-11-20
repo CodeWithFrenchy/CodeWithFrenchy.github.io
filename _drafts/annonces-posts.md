@@ -31,6 +31,46 @@ Version Twitter :
 
 ## Annonces
 
+### Microsoft Ignite 2026 : de Copilot aux agents d’entreprise
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-20-microsoft-ignite-2026.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
+### Aspire 17 - un tableau de bord repensé et des changements à planifier
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-20-aspire-17.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### 🔐 Agents IA : leur donner plus d'autonomie sans compromettre votre sécurité !
 
 Version Linkedin :
