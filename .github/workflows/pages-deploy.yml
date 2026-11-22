@@ -14,8 +14,8 @@ jobs:
     runs-on: ubuntu-latest
     # Force Node.js 24 for GitHub Actions
     # See: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
-    # Node.js 20 is deprecated and will be removed on September 23rd, 2026
-    # This flag ensures actions run correctly with Node.js 24
+    # Note: GitHub is still migrating actions to Node.js 24, so warnings about actions targeting Node.js 20
+    # are expected and will disappear as actions are updated. Node.js 20 will be removed on September 23rd, 2026.
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
