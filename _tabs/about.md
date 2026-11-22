@@ -91,7 +91,7 @@ Je crois aux pratiques qui facilitent réellement le travail : rendre les décis
 
 La réussite d’une solution tient autant à sa conception qu’à la capacité des personnes à se l’approprier et à la faire vivre.
 
-## En dehors du code
+## 🧢 En dehors du code
 
 En dehors de l’informatique, on me trouve souvent à la **ferme familiale**, à passer du temps avec les vaches, ou avec mes **neveux et nièces**.
 
