@@ -37,7 +37,52 @@ Version Linkedin :
 
 ---
 
+🚀 .NET Conf Community Days 2026 : au-delà des nouveautés de .NET 11 !
+(English version available below)
 
+Après les annonces de .NET Conf, les Community Days des 12 et 13 novembre ont donné la parole aux développeurs pour partager leurs expériences concrètes.
+
+J'ai pris le temps d'analyser plusieurs conférences et de rassembler les principaux enseignements dans un nouvel article sur mon blogue CodeWithFrenchy.
+
+Les sujets à retenir :
+
+• IA et agents : fournir le bon contexte, encadrer les accès et valider les résultats.
+• Modernisation : migrer progressivement de WebForms vers Blazor et éviter la surarchitecture.
+• Infrastructure : comparer Pulumi en C# avec les modules Bicep et Terraform.
+• Observabilité : uniformiser les métriques et les traces avec OpenTelemetry.
+• C# 15 et .NET 11 : améliorer la modélisation avec les types union et les hiérarchies fermées.
+• Tests et architecture : combiner FsCheck, Verify, Clean Architecture et modularité selon les besoins.
+
+Ce qui ressort de ces conférences, c'est l'importance d'adapter les choix techniques aux contraintes réelles des projets.
+
+Les nouveautés sont intéressantes, mais leur valeur dépend de la manière dont elles répondent à vos besoins.
+
+📖 Article original : https://codewithfrenchy.com/posts/dotnet-conf-community-days-2026/
+
+------------------------------
+
+🚀 .NET Conf Community Days 2026: Beyond the .NET 11 announcements!
+
+Following .NET Conf, the November 12-13 Community Days brought developers together to share practical experiences.
+
+I've reviewed several sessions and gathered their main lessons in a new article on my CodeWithFrenchy blog.
+
+Key takeaways:
+
+• AI and agents: Provide relevant context, enforce access boundaries, and validate results.
+• Modernization: Migrate incrementally from WebForms to Blazor and avoid unnecessary architectural complexity.
+• Infrastructure: Compare C# with Pulumi against reusable Bicep and Terraform modules.
+• Observability: Standardize metrics and traces with OpenTelemetry.
+• C# 15 and .NET 11: Improve modeling with union types and closed hierarchies.
+• Testing and architecture: Apply FsCheck, Verify, Clean Architecture, and modularity where appropriate.
+
+The recurring theme is the importance of adapting technical decisions to real project constraints.
+
+New features matter, but their value depends on how well they address your needs.
+
+📖 Original article : https://codewithfrenchy.com/posts/dotnet-conf-community-days-2026/
+
+#CodeWithFrenchy #DotNetConf #DotNet11 #CSharp15 #Azure #AI #OpenTelemetry #IaC #SoftwareArchitecture #DevOps
 
 "2026-11-22-dotnet-conf-community-days-2026.png"
 
@@ -47,7 +92,13 @@ Version Twitter :
 
 ---
 
+🚀 .NET Conf Community Days 2026 : au-delà de .NET 11 !
 
+IA, modernisation, OpenTelemetry, C# 15, IaC et architecture : j'ai rassemblé les enseignements des conférences et leurs applications concrètes.
+
+📖 Mon article : https://codewithfrenchy.com/posts/dotnet-conf-community-days-2026/
+
+#CodeWithFrenchy
 
 ---
 
