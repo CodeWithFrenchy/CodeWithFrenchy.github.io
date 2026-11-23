@@ -31,6 +31,26 @@ Version Twitter :
 
 ## Annonces
 
+### Ce que les .NET Conf Community Days 2026 nous apprennent
+
+Version Linkedin :
+
+---
+
+
+
+"2026-11-22-dotnet-conf-community-days-2026.png"
+
+---
+
+Version Twitter : 
+
+---
+
+
+
+---
+
 ### Microsoft Ignite 2026 : de Copilot aux agents d’entreprise
 
 Version Linkedin :
