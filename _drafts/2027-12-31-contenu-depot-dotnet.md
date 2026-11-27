@@ -5,17 +5,19 @@ categories: [outil-developpement, bonnes-pratiques]
 tags: [dotnet, git, devex, structure-projet, documentation, editorconfig, ci-cd, conventions-codage, maintenabilite]
 ---
 
+> ⚠️ À RELIRE + valider le format du code
+
 ## Préambule
 
 Vous clonez un projet .NET, ouvrez la solution et lancez la compilation. Il manque une version du SDK, une source NuGet privée ou une configuration connue uniquement par un collègue. Une fois ces obstacles franchis, les tests passent localement, mais échouent dans le pipeline.
 
-Ces difficultés finissent souvent par être considérées comme normales. Pourtant, elles révèlent surtout que les conditions nécessaires pour travailler sur le projet ne sont pas suffisamment explicites.
+On finit souvent par considérer ces difficultés comme normales. Elles signalent pourtant que les conditions nécessaires pour travailler sur le projet ne sont pas assez explicites.
 
 Un dépôt bien organisé doit permettre de comprendre rapidement ce que fait l’application, comment la démarrer et comment vérifier une modification. Dans cet article, le terme « dépôt » désigne le référentiel Git qui contient le code et les fichiers nécessaires à son développement et à sa livraison.
 
-Cette organisation relève directement de l’expérience développeur, ou DevEx. Un projet bien outillé réduit le temps passé à chercher une commande, à reconstruire une configuration ou à comprendre une erreur. Il accélère l’intégration des nouveaux membres et facilite aussi le retour sur un produit après plusieurs mois d’absence.
+Cette organisation fait partie de l’expérience développeur, ou DevEx. Un projet bien outillé réduit le temps passé à chercher une commande, reconstruire une configuration ou comprendre une erreur. Il facilite aussi l’intégration des nouveaux membres et la reprise du travail après une longue absence.
 
-L’objectif est de définir un socle utile à la plupart des projets .NET, puis de l’enrichir selon les besoins. Une petite API et une plateforme composée de plusieurs services n’ont pas besoin de la même structure. Elles ont toutefois besoin de conventions compréhensibles et de commandes fiables.
+Je propose un socle adapté à la plupart des projets .NET, à enrichir selon les besoins. Une petite API et une plateforme composée de plusieurs services n’ont pas besoin de la même structure, mais toutes deux gagnent à avoir des conventions compréhensibles et des commandes fiables.
 
 ## Commencer par les questions du prochain développeur
 
@@ -35,11 +37,11 @@ Le reste de la documentation peut être réparti selon sa fonction :
 
 Je recommande de mettre en place un [registre de décisions](https://codewithfrenchy.com/posts/registre-decisions/) pour conserver les raisons des choix structurants. Il peut vivre dans le wiki utilisé par l’équipe, avec un lien direct depuis le `README`. Chaque entrée précise le contexte, les options étudiées, la décision, ses conséquences, sa date et les personnes impliquées. Cela aide les nouveaux membres à comprendre les contraintes du projet et évite de reprendre les mêmes débats sans connaître les arbitrages précédents.
 
-Le `README` joue aussi un rôle de relais. Il peut orienter vers un Wiki Azure DevOps pour l’architecture détaillée, les procédures d’exploitation, les règles de contribution et le registre de décisions. Gardez le démarrage rapide au plus près du code, puis indiquez où se trouve la source de référence pour le reste. Copier la même procédure dans plusieurs outils multiplie les risques de divergence. Vérifiez également que les nouveaux membres disposent des droits nécessaires pour consulter les liens.
+Le `README` peut aussi pointer vers un Wiki Azure DevOps qui contient l’architecture détaillée, les procédures d’exploitation, les règles de contribution et le registre de décisions. Gardez le démarrage rapide près du code et indiquez où trouver la documentation de référence pour le reste. Copier la même procédure dans plusieurs outils multiplie les risques de divergence. Vérifiez également que les nouveaux membres disposent des droits nécessaires pour consulter les liens.
 
-Pour évaluer ce parcours d’intégration, demandez à une personne qui découvre le projet de démarrer l’application et de lancer les tests à partir des seules instructions. Chaque étape qui exige une explication orale signale une amélioration possible du dépôt ou du wiki.
+Pour évaluer le parcours d’intégration, demandez à une personne qui découvre le projet de démarrer l’application et de lancer les tests avec les seules instructions écrites. Si elle a besoin d’explications orales, le dépôt ou le wiki doit être amélioré.
 
-La documentation doit aussi rester proche de la réalité. Lorsqu’une PR change la procédure de démarrage, elle devrait modifier le `README` dans le même mouvement.
+La documentation doit suivre le code. Toute PR qui modifie la procédure de démarrage devrait aussi mettre à jour le `README`.
 
 ## Une structure qui correspond au produit
 
@@ -64,21 +66,21 @@ Le choix entre monorepo et plusieurs dépôts vient ensuite. Je privilégierais 
 
 Pour une application .NET qui combine une API, une interface web et des dépendances comme une base de données ou un cache, je considère désormais [Aspire](https://aspire.dev/get-started/what-is-aspire/) comme un incontournable du développement local. Il apporte un point d’entrée commun pour décrire, démarrer et observer les composants.
 
-L’AppHost décrit les ressources et leurs relations. Le tableau de bord rassemble leur état et la télémétrie disponible. Au lieu de transmettre une série de commandes et de ports à configurer, l’équipe entretient un modèle exécutable dans le dépôt.
+L’AppHost décrit les ressources et leurs relations. Le tableau de bord présente leur état et la télémétrie disponible. L’équipe versionne ainsi dans le dépôt un modèle exécutable de l’environnement, plutôt que de s’appuyer sur une série de commandes et de ports à configurer manuellement.
 
 Dans notre exemple, `src/Product.AppHost/` peut porter cette orchestration. Le `README` indique les prérequis et la commande de démarrage validée. Le dossier `scripts/` accueille les opérations complémentaires, comme l’initialisation des données de démonstration ou la remise à zéro de l’environnement.
 
 ### Un gain concret pour l’intégration des nouveaux membres
 
-Une personne qui arrive doit pouvoir lancer un parcours fonctionnel, retrouver ses journaux et comprendre quelle dépendance est indisponible. Aspire réduit les manipulations de démarrage, mais l’équipe doit encore prévoir les accès, la configuration et les données nécessaires à ce parcours.
+Une nouvelle personne devrait pouvoir lancer un parcours fonctionnel, consulter les journaux et repérer une dépendance indisponible. Aspire réduit les manipulations de démarrage. L’équipe doit tout de même prévoir les accès, la configuration et les données nécessaires.
 
 Ce socle demande de l’entretien. Les conteneurs exigent un moteur compatible et des ressources sur le poste. Les dépendances externes peuvent nécessiter une connectivité particulière. L’environnement local ne reproduit pas toutes les contraintes de production. Pour une bibliothèque isolée, un AppHost apporte moins de valeur et peut être superflu.
 
 ### Un environnement observable pour les agents IA
 
-L’intérêt augmente avec les agents IA. Lire le code ne leur indique pas si un service démarre correctement ni pourquoi une requête échoue. Les [outils Aspire pour les agents de développement](https://aspire.dev/get-started/ai-coding-agents/) donnent accès à l’état des ressources, aux journaux et aux traces. La configuration peut s’appuyer sur les outils en ligne de commande et les skills d’Aspire, avec un serveur MCP optionnel selon l’intégration retenue.
+Un AppHost et la télémétrie peuvent aussi aider les agents IA. Le code seul ne leur indique pas si un service démarre correctement ni pourquoi une requête échoue. Les [outils Aspire pour les agents de développement](https://aspire.dev/get-started/ai-coding-agents/) donnent accès à l’état des ressources, aux journaux et aux traces. La configuration peut s’appuyer sur les outils en ligne de commande et les skills d’Aspire, avec un serveur MCP optionnel selon l’intégration retenue.
 
-Un agent peut ainsi rapprocher une erreur du composant concerné, proposer une correction et examiner une nouvelle exécution. Cela enrichit le diagnostic, sans remplacer les tests ni la revue. Un contrôle de santé réussi ne prouve pas que le parcours métier est corrigé.
+Un agent peut associer une erreur au composant concerné, proposer une correction et examiner une nouvelle exécution. Ces informations appuient le diagnostic, mais ne remplacent ni les tests ni la revue. Un contrôle de santé réussi ne prouve pas que le parcours métier fonctionne.
 
 Documentez les outils autorisés et les étapes de configuration pour éviter que chaque personne improvise sa propre intégration. Les journaux et les données locales accessibles à l’agent doivent respecter les règles de confidentialité du projet. Les conventions générales destinées aux assistants IA seront abordées plus loin, puis approfondies dans un article dédié.
 
@@ -138,7 +140,7 @@ La [configuration des analyseurs .NET](https://learn.microsoft.com/en-us/dotnet/
 
 Pour vérifier la mise en forme sans modifier les fichiers, les exemples de CI utiliseront [`dotnet format whitespace`](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format) avec `--verify-no-changes`. La compilation exécutera les analyseurs configurés.
 
-Une plateforme d’analyse centralisée peut compléter ce socle si l’équipe a besoin de tendances ou de politiques transversales. Elle n’est pas un préalable pour commencer à appliquer des règles utiles dans le dépôt.
+Une plateforme d’analyse centralisée devient utile si l’équipe veut suivre des tendances ou appliquer des politiques transversales. On peut déjà commencer avec les règles intégrées au dépôt.
 
 ## Maîtriser la restauration des dépendances
 
@@ -297,7 +299,7 @@ Dans Azure Repos Git, l’exécution sur les PR se configure au moyen d’une [p
 
 ### Relier les contrôles à la fusion et à la livraison
 
-Versionner un pipeline ne suffit pas à empêcher une fusion qui échoue aux validations. Configurez également les contrôles requis et les revues sur la plateforme Git. Le dépôt documente ces règles. La plateforme les applique.
+Le dépôt devrait documenter les contrôles requis et les revues, puis la plateforme Git doit les appliquer pour bloquer les fusions qui échouent aux validations.
 
 Pour la livraison, je recommande de produire un artefact identifié, associé au commit validé, puis de promouvoir cet artefact entre environnements. Les approbations et les accès de déploiement dépendent du contexte d’exploitation. Une PR devrait pouvoir valider le code sans recevoir des secrets de production.
 
@@ -317,7 +319,7 @@ Les tests fonctionnels ne détectent pas nécessairement une dépendance interdi
 
 Mon article sur les [essais automatisés d’architecture dans un projet .NET](https://codewithfrenchy.com/posts/essais-architecture-automatises-dotnet/) présente cette approche avec ArchUnitNET et xUnit. MSTest et NUnit disposent également d’intégrations. Ces essais peuvent être regroupés sous `tests/` et exécutés dans les validations de PR.
 
-Le bénéfice DevEx est immédiat : une nouvelle personne reçoit un retour explicite sur une règle du projet, sans devoir connaître tout son historique. Le message du test devrait expliquer la contrainte et, lorsque c’est utile, renvoyer à l’entrée correspondante du registre de décisions.
+Ces essais donnent rapidement aux nouveaux membres un retour explicite sur les règles du projet. Le message devrait expliquer la contrainte et, si utile, renvoyer à l’entrée correspondante du registre de décisions.
 
 Il faut toutefois choisir les règles avec discernement. Ces essais vérifient des propriétés de structure, pas la pertinence du découpage métier ni tous les accès effectués à l’exécution. Des contraintes trop liées aux détails d’implémentation rigidifient les refactorisations. Faites évoluer les tests avec les décisions qu’ils protègent.
 
@@ -358,7 +360,7 @@ Je recommande de garder ces instructions courtes et alignées sur la documentati
 
 ## Construire une checklist adaptée au projet
 
-La checklist du dépôt doit refléter le produit, ses risques et son mode de travail. Une bibliothèque NuGet, une API interne et une plateforme distribuée ne demandent pas les mêmes vérifications. Utilisez les points ci-dessous comme point de départ, puis retirez les éléments sans objet et ajoutez les exigences propres au projet.
+La checklist doit refléter le produit, ses risques et son mode de travail. Une bibliothèque NuGet, une API interne et une plateforme distribuée n’exigent pas les mêmes vérifications. Utilisez les points ci-dessous comme point de départ, retirez ceux qui ne s’appliquent pas et ajoutez les exigences propres au projet.
 
 Conservez cette checklist dans le dépôt ou le wiki, avec un lien depuis le `README`. Distinguez ce qui est vérifié une fois à l’arrivée d’un développeur, ce qui doit être contrôlé à chaque PR et ce qui relève d’une livraison. Automatisez les contrôles répétitifs pour réserver la lecture humaine aux questions de conception.
 
@@ -400,8 +402,8 @@ Par exemple, un projet avec SQL Server peut exiger de vérifier le démarrage lo
 
 ## Conclusion
 
-Un dépôt .NET utile améliore l’expérience développeur en rendant les conditions de travail explicites. Il indique comment démarrer, sélectionne l’outillage attendu, organise les dépendances et permet de vérifier une modification avec des commandes connues de tous.
+Un dépôt .NET utile rend les conditions de travail explicites. Il indique comment démarrer, précise l’outillage attendu, organise les dépendances et fournit des commandes connues de l’équipe pour vérifier les modifications.
 
-Je commencerais par ce parcours complet, du clone à la première modification validée. Un `README` qui oriente vers les bonnes sources, un environnement local partagé avec Aspire lorsque le produit s’y prête et des essais d’architecture rendent ce parcours plus accessible aux nouveaux membres. Les templates, l’infrastructure déclarative et les conventions transversales peuvent ensuite être ajoutés là où ils résolvent une difficulté récurrente.
+Je commencerais par vérifier le parcours complet, du clone à la première modification validée. Un `README` clair, un environnement local partagé avec Aspire lorsque le produit s’y prête et des essais d’architecture facilitent l’arrivée des nouveaux membres. Les templates, l’infrastructure déclarative et les conventions transversales peuvent venir ensuite, lorsqu’ils répondent à un besoin récurrent.
 
-La checklist propre au projet permet de maintenir ce parcours au fil des évolutions. La qualité du dépôt se voit dans le quotidien : moins de manipulations à expliquer, moins d’écarts entre les postes et la CI, et moins de dépendance à la mémoire de quelques personnes. C’est cette continuité qui permet à l’équipe de faire évoluer le produit avec confiance.
+La checklist permet de maintenir ce parcours à jour. Un dépôt bien tenu réduit les manipulations à expliquer, les écarts entre les postes et la CI, ainsi que la dépendance à la mémoire de quelques personnes. L’équipe peut alors faire évoluer le produit avec davantage de confiance.

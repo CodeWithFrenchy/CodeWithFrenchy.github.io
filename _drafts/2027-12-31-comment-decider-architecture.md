@@ -5,13 +5,15 @@ categories: [architecture, bonnes-pratiques]
 tags: [dotnet, azure, monolithe-modulaire, microservices, architecture-evenementielle, cloud-native, systemes-distribues, prise-de-decision]
 ---
 
+> ⚠️ À RELIRE + valider le format du code
+
 ## Préambule
 
-Une décision d’architecture engage bien davantage que l’organisation du code. Elle influence la vitesse de livraison, la cohérence des données, la manière de diagnostiquer une panne et les compétences nécessaires pour exploiter le produit. Ses conséquences deviennent souvent visibles plusieurs mois après les premiers développements, lorsque plusieurs équipes interviennent, que le trafic augmente ou que les règles métier évoluent.
+Une décision d’architecture touche à l’organisation du code, mais aussi à la livraison, à la cohérence des données, au diagnostic des pannes et aux compétences nécessaires à l’exploitation. Ses effets peuvent apparaître plusieurs mois après le début du développement, lorsque plusieurs équipes interviennent, que le trafic augmente ou que les règles métier évoluent.
 
 Pourtant, les discussions commencent fréquemment par une préférence technologique : « il nous faut des microservices », « tout doit passer par des événements » ou « nous devons devenir cloud-native ». Ces propositions désignent des moyens. Elles ne précisent ni le problème à résoudre ni le coût que l’organisation accepte de supporter.
 
-Cet article propose une démarche pour les architectes et les responsables techniques qui doivent justifier ces choix. Le principe directeur est simple : **retenir l’architecture la plus simple qui satisfait les contraintes connues, puis ajouter de la complexité lorsqu’un besoin concret la justifie**. Le monolithe modulaire constitue souvent un point de départ pertinent. Il ne représente ni une obligation ni une étape imposée avant les microservices.
+Voici une démarche pour les architectes et les responsables techniques qui doivent justifier ces choix. Je privilégie l’architecture la plus simple qui répond aux contraintes connues, puis j’ajoute de la complexité lorsqu’un besoin concret le justifie. Le monolithe modulaire constitue souvent un point de départ pertinent, sans être une obligation ni une étape imposée avant les microservices.
 
 Un exemple fictif accompagnera la réflexion : une plateforme de gestion de demandes comprenant l’instruction des dossiers, les décisions, la génération de documents et les notifications. Les exemples .NET et Azure servent à rendre les choix concrets. La démarche reste applicable à d’autres environnements.
 
@@ -29,7 +31,7 @@ Un monolithe peut publier des événements et fonctionner sur une plateforme man
 
 Le terme *cloud-native*, tel que présenté dans la [définition de la CNCF](https://github.com/cncf/toc/blob/main/DEFINITION.md), décrit une approche de construction et d’exploitation adaptée aux environnements cloud. Il ne suffit donc pas à déterminer la bonne granularité des services.
 
-Cette distinction évite une erreur coûteuse : adopter simultanément plusieurs transformations alors qu’une seule répond au problème. Un traitement trop lent peut nécessiter une file et un worker, sans justifier le découpage de tout le domaine métier.
+Adopter plusieurs transformations simultanément peut coûter cher lorsqu’une seule répond au problème. Un traitement trop lent peut nécessiter une file et un worker, sans justifier le découpage de tout le domaine métier.
 
 ## 2. Partir des contraintes, puis formuler une hypothèse
 
@@ -48,7 +50,7 @@ Il faut ensuite distinguer une contrainte établie d’une anticipation. « La g
 
 Pour notre plateforme fictive, supposons que les règles d’instruction évoluent encore, que la décision doit être enregistrée de manière cohérente avec le dossier et que les documents peuvent être produits après cette décision. Ces éléments suggèrent de conserver une forte proximité entre dossier et décision, tout en laissant une possibilité de traitement différé pour les documents.
 
-C’est une hypothèse de conception. On doit pouvoir expliquer ce qui la confirmerait et ce qui conduirait à la réviser.
+C’est une hypothèse à confirmer. Il faut pouvoir préciser quels éléments la valideraient et lesquels conduiraient à la réviser.
 
 ## 3. Le monolithe modulaire : conserver la simplicité du déploiement
 
@@ -58,13 +60,13 @@ Dans une solution .NET, les dossiers, les documents et les notifications peuvent
 
 ### Ce qu’il facilite
 
-Les appels internes évitent les délais et les modes de panne d’un réseau. Le diagnostic suit généralement un chemin plus direct. L’environnement de développement, les tests et la livraison comportent moins de pièces à coordonner.
+Les appels internes évitent les délais et les pannes du réseau. Ils simplifient aussi le diagnostic. Le développement, les tests et la livraison comportent moins de pièces à coordonner.
 
-Lorsque plusieurs modifications utilisent la même base de données et le même mécanisme transactionnel, une transaction locale peut préserver une règle métier sans protocole distribué. Cela ne rend pas toutes les transactions entre modules souhaitables : chacune crée une dépendance qu’il faut assumer. Mais imposer une cohérence différée à une opération qui exige une atomicité immédiate peut ajouter un problème au lieu d’en résoudre un.
+Lorsque plusieurs modifications utilisent la même base de données et le même mécanisme transactionnel, une transaction locale peut préserver une règle métier sans protocole distribué. Il faut toutefois éviter de multiplier les transactions entre modules, car chacune crée une dépendance. À l’inverse, imposer une cohérence différée à une opération qui exige une atomicité immédiate complique le système.
 
 Le monolithe facilite aussi l’ajustement des frontières lorsque le domaine reste mal compris. Déplacer une responsabilité entre deux modules demeure un changement significatif, mais implique moins de contrats réseau, de migrations et de coordination opérationnelle.
 
-L’argument de [Martin Fowler en faveur d’un démarrage monolithique](https://martinfowler.com/bliki/MonolithFirst.html) est particulièrement pertinent dans ce contexte d’incertitude. Il s’agit d’un retour d’expérience utile, pas d’une preuve que tous les systèmes doivent commencer ainsi.
+L’argument de [Martin Fowler en faveur d’un démarrage monolithique](https://martinfowler.com/bliki/MonolithFirst.html) est pertinent dans ce contexte d’incertitude. C’est un retour d’expérience, pas une règle applicable à tous les systèmes.
 
 ### Ce qu’il impose
 
@@ -202,15 +204,15 @@ La modernisation d’un système existant vise un résultat : réduire un délai
 
 ### Établir un point de comparaison
 
-Avant de modifier la structure, documenter les difficultés observées : changements fréquemment bloqués, incidents récurrents, temps de traitement, coût d’exploitation et opérations manuelles. Relever aussi les parcours et règles qui fonctionnent correctement.
+Avant de modifier la structure, l’équipe devrait documenter les difficultés observées : changements fréquemment bloqués, incidents récurrents, temps de traitement, coût d’exploitation et opérations manuelles. Elle devrait aussi relever les parcours et les règles qui fonctionnent correctement.
 
-Ce point de comparaison permet d’évaluer le résultat. Sans elle, une migration peut être déclarée réussie parce que le nouveau système existe, même si les équipes livrent moins vite.
+Ce point de comparaison permet d’évaluer le résultat. Sans mesure de départ, on peut déclarer la migration réussie parce que le nouveau système existe, même si les équipes livrent moins vite.
 
 ### Clarifier les frontières dans l’existant
 
 Une première étape consiste souvent à modulariser sur place : regrouper les comportements qui changent ensemble, limiter les accès directs aux données et rendre les dépendances explicites.
 
-Ce travail procure déjà un bénéfice. Il révèle aussi les séparations artificielles avant qu’elles deviennent des contrats réseau difficiles à modifier.
+La modularisation améliore déjà la lisibilité du système et révèle les séparations artificielles avant qu’elles deviennent des contrats réseau difficiles à modifier.
 
 ### Choisir une extraction représentative
 
@@ -244,7 +246,7 @@ La migration peut s’arrêter lorsque le problème initial est résolu. Elle do
 
 ## 9. Construire une décision que l’on peut réévaluer
 
-Une grille utile relie une difficulté à des preuves et à plusieurs réponses possibles. Elle évite d’attribuer une note abstraite à un style d’architecture.
+La grille ci-dessous relie chaque difficulté aux preuves à recueillir et aux réponses possibles. Elle évite de noter abstraitement un style d’architecture.
 
 | Question | Preuves à recueillir | Réponses à comparer |
 |---|---|---|
@@ -272,7 +274,7 @@ Le registre doit rester proportionné aux enjeux. Une fiche concise vaut mieux q
 
 Pour notre exemple, une décision pourrait être : conserver le traitement des dossiers et des décisions dans un monolithe modulaire, puis exécuter la génération documentaire de manière asynchrone. L’extraction d’un service documentaire serait réévaluée si une responsabilité d’équipe distincte, des consommateurs supplémentaires ou des contraintes de livraison indépendantes apparaissaient.
 
-Ce raisonnement ne promet pas une architecture définitive. Il rend le choix compréhensible et sa révision possible.
+Cette démarche rend le choix compréhensible et permet de le réexaminer lorsque le contexte change.
 
 ## Conclusion
 

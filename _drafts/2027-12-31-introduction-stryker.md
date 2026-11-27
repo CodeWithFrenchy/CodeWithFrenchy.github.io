@@ -5,11 +5,13 @@ categories: [outil-developpement, bonnes-pratiques]
 tags: [dotnet, stryker-net, tests-mutation, tests-unitaires, xunit, couverture-code, qualite-code, ci-cd]
 ---
 
+> ⚠️ À RELIRE + valider le format du code
+
 ## Préambule
 
 Une suite de tests passe au vert. La couverture de code atteint l’objectif fixé par l’équipe. Pourtant, une modification mineure à une règle métier peut encore introduire une régression sans faire échouer un seul test.
 
-Ce décalage mérite qu’on s’y attarde. La couverture indique quelles parties du code ont été exécutées. Elle ne dit pas si les scénarios et les assertions permettraient de repérer un comportement incorrect.
+La couverture indique quelles parties du code ont été exécutées, mais pas si les scénarios et les assertions détecteraient un comportement incorrect.
 
 Le *mutation testing*, ou test par mutation, permet d’explorer cette limite : on introduit volontairement de petites modifications dans le code, puis on observe si les tests les détectent. Dans cet article, nous allons utiliser [Stryker.NET](https://stryker-mutator.io/docs/stryker-net/introduction/) pour appliquer cette démarche à une règle métier, améliorer ses tests xUnit et intégrer l’analyse dans Azure DevOps ou GitHub Actions.
 
@@ -60,15 +62,15 @@ public static bool EstAdmissibleLivraisonGratuite(decimal sousTotalEnDollars)
 
 Les deux tests passent toujours. Une commande de **99 dollars** demeure inadmissible. Une commande de **101 dollars** demeure admissible. La régression touche uniquement la commande de **100 dollars**, un cas absent de notre jeu de données.
 
-**Le code est exécuté, mais la frontière de la règle métier n’est pas protégée.**
+La règle est exécutée, mais aucun test ne vérifie sa frontière.
 
 ## Ce que Stryker.NET apporte
 
-[Stryker.NET](https://github.com/stryker-mutator/stryker-net) automatise ce type d’expérience dans les projets .NET. Il produit des variantes du code, appelées *mutants*, puis utilise les tests existants pour vérifier si elles provoquent un échec. Il ne faut donc pas modifier soi-même les opérateurs pour chaque essai.
+[Stryker.NET](https://github.com/stryker-mutator/stryker-net) automatise cette démarche dans les projets .NET. Il produit des variantes du code, appelées *mutants*, puis exécute les tests pour vérifier s’ils détectent les changements.
 
 Dans notre exemple, la mutation de `>=` vers `>` représente une erreur plausible : exclure accidentellement la valeur limite. Si les tests restent verts, cette mutation révèle un scénario à examiner.
 
-L’article utilise exclusivement xUnit pour les exemples. **NUnit et MSTest sont également supportés**, avec les adaptateurs et le moteur d’exécution compatibles avec votre projet.
+Les exemples utilisent xUnit. NUnit et MSTest sont également supportés, avec les adaptateurs et le moteur d’exécution compatibles avec le projet.
 
 Cette démarche complète les autres contrôles qualité. Les tests d’intégration vérifient les échanges entre composants. Les revues examinent les choix d’implémentation. L’analyse statique repère certaines catégories de problèmes. Le test par mutation apporte un regard supplémentaire sur la capacité des tests à détecter des changements de comportement.
 
@@ -90,9 +92,9 @@ Cette organisation reprend le principe du [projet de tests xUnit documenté par 
 
 Remplacez `Class1.cs` par un fichier `PolitiqueLivraison.cs` contenant la règle originale avec `>=`. Remplacez `UnitTest1.cs` par `PolitiqueLivraisonTests.cs` contenant les deux scénarios précédents.
 
-L’installation globale rend `dotnet stryker` accessible depuis les différents dépôts du compte utilisateur. Elle ne rend pas la configuration commune à tous les projets. Pour mettre l’outil à jour, utilisez `dotnet tool update --global dotnet-stryker`.
+L’installation globale rend `dotnet stryker` accessible depuis les différents dépôts du compte utilisateur, mais ne fixe pas une version commune à l’équipe. Pour mettre l’outil à jour, utilisez `dotnet tool update --global dotnet-stryker`.
 
-Pour une exécution reproductible, ajoutez `--version` suivi de la version validée par l’équipe à la commande d’installation, sur les postes et en CI. Les exemples ci-dessous installent la version disponible, à remplacer par cette sélection explicite dans votre pipeline. Sur un agent réutilisé, prévoyez aussi le cas où l’outil est déjà installé.
+Pour rendre les exécutions reproductibles, installez sur les postes et en CI la version validée par l’équipe, en ajoutant `--version` à la commande. Les exemples installent la version disponible. Dans le pipeline, remplacez-la par la version retenue et prévoyez le cas où l’outil est déjà installé sur un agent réutilisé.
 
 Vérifiez les tests, puis lancez Stryker depuis leur répertoire :
 
@@ -117,7 +119,7 @@ Pensez à exclure les rapports générés du dépôt. Ajoutez cette règle au `.
 
 Les rapports utiles seront conservés comme artefacts de CI plutôt que versionnés avec le code.
 
-Les [états des mutants](https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/) se lisent ainsi :
+Les [états des mutants](https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/) indiquent le résultat de chaque mutation :
 
 | État | Signification |
 |---|---|
@@ -223,7 +225,7 @@ Pour ce petit projet, une analyse complète du périmètre configuré à chaque 
 
 Les pipelines ci-dessous installent Stryker globalement, exécutent les tests, lancent l’analyse et conservent les rapports, y compris lorsque l’analyse échoue.
 
-Ils reprennent le pilote avec un seul projet de tests et son fichier de configuration local, tous deux versionnés. Pour adopter la configuration racine, ajustez le répertoire d’exécution, l’argument `--config-file` et le chemin des rapports conformément à l’exemple précédent. Le seuil demeure à zéro pendant le pilote.
+Ils reprennent le pilote avec un seul projet de tests et son fichier de configuration local, tous deux versionnés. Si vous utilisez la configuration à la racine, adaptez le répertoire d’exécution, l’argument `--config-file` et le chemin des rapports comme dans l’exemple précédent. Le seuil reste à zéro pendant le pilote.
 
 ### Azure DevOps
 
@@ -320,7 +322,7 @@ jobs:
 ```
 {% endraw %}
 
-Ces exemples conservent les rapports comme artefacts du pipeline. Ils ne nécessitent aucune clé de Stryker Dashboard. Si l’analyse échoue avant de générer un rapport, les journaux du job restent le point de départ du diagnostic.
+Ces exemples publient les rapports comme artefacts du pipeline et n’exigent aucune clé Stryker Dashboard. Si l’analyse échoue avant d’en générer un, consultez les journaux du job pour commencer le diagnostic.
 
 ### Adapter la fréquence quand le projet grandit
 
@@ -350,8 +352,6 @@ Enfin, une suite renforcée reste dépendante des exigences qu’elle exprime. S
 
 ## Conclusion
 
-Stryker.NET donne une façon concrète de vérifier ce que nos tests protègent réellement. Dans l’exemple de livraison gratuite, deux scénarios semblaient suffisants. La mutation d’un opérateur a révélé l’absence du cas exact de 100 $, et une seule donnée supplémentaire a permis de protéger cette frontière.
+Stryker.NET permet de vérifier si les tests détectent des changements plausibles dans le code. Dans l’exemple, la mutation de l’opérateur a révélé l’absence du cas exact de 100 $. Ajouter cette donnée a protégé la frontière de la règle.
 
-Pour une équipe .NET, je recommande de commencer avec une bibliothèque métier, des tests rapides et un rapport que l’on prend le temps de lire. L’intégration CI et les seuils viennent ensuite, lorsque le bénéfice et le coût sont visibles.
-
-La valeur du mutation testing se mesure surtout aux erreurs plausibles que la suite de tests sait désormais détecter. C’est ce lien avec le comportement attendu qui rend l’outil utile au quotidien.
+Je commencerais avec une bibliothèque métier, des tests rapides et un rapport que l’équipe peut examiner. L’intégration à la CI et les seuils viendront ensuite, une fois le coût et le bénéfice mesurés.

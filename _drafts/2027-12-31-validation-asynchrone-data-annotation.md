@@ -5,13 +5,15 @@ categories: [dotnet, outil-developpement]
 tags: [dotnet-11, aspnet-core, dataannotations, validation-asynchrone, validation-donnees, csharp, performance]
 ---
 
+> ⚠️ À RELIRE + valider le format du code
+
 ## Préambule
 
 Les DataAnnotations permettent d'exprimer simplement des règles de validation sur nos modèles. Une propriété obligatoire, une longueur maximale ou un format de courriel se décrivent avec quelques attributs bien connus.
 
-La situation se complique lorsqu'une règle doit consulter une base de données ou appeler un service externe. Comment vérifier qu'une adresse courriel est disponible lorsque la méthode de validation ne permet pas d'utiliser `await`?
+Ces règles se compliquent lorsqu’elles doivent consulter une base de données ou appeler un service externe. Or la méthode de validation classique ne permet pas d’utiliser `await`. Comment vérifier, par exemple, qu’une adresse courriel est disponible?
 
-.NET 11 apporte une réponse avec la validation asynchrone dans `System.ComponentModel.DataAnnotations`. Cet ajout rend les attributs plus utiles pour les validations qui dépendent de ressources externes. Reste à déterminer où cette approche convient et si elle justifie de revoir nos solutions existantes.
+.NET 11 ajoute la validation asynchrone à `System.ComponentModel.DataAnnotations`. Les attributs peuvent ainsi servir pour des règles qui dépendent de ressources externes. Il faut toutefois déterminer où cette approche convient et si elle justifie de revoir les solutions existantes.
 
 ## Pourquoi cet ajout est intéressant
 
@@ -21,7 +23,7 @@ Pour une requête SQL ou HTTP, certaines implémentations finissent toutefois pa
 
 Il était déjà possible d'effectuer une validation asynchrone dans un service applicatif ou avec une bibliothèque spécialisée. La nouveauté est de pouvoir l'exprimer directement dans les DataAnnotations et de l'exécuter avec des API adaptées.
 
-**Le principal bénéfice est de ne plus immobiliser un thread pendant l'attente d'une opération d'entrée-sortie.** La requête SQL ne devient pas automatiquement plus rapide, mais le serveur peut mieux utiliser ses ressources pendant cette attente.
+Le principal bénéfice est de libérer un thread pendant l’attente d’une opération d’entrée-sortie. La requête SQL ne devient pas plus rapide pour autant, mais le serveur peut mieux utiliser ses ressources.
 
 ## Ce que .NET 11 ajoute
 
@@ -35,9 +37,9 @@ La [documentation des nouveautés des bibliothèques .NET 11](https://learn.micr
 
 Les attributs habituels comme `[Required]` et `[EmailAddress]` continuent de servir. Un même modèle peut combiner des règles synchrones et asynchrones.
 
-Le [contrat intégré au runtime](https://github.com/dotnet/runtime/commit/be1d5629e1a191e84a330f45c49f37890a7da451) impose aussi un choix explicite pour les appels synchrones. Un attribut dérivé de `AsyncValidationAttribute` doit implémenter `IsValidAsync`, mais également la surcharge protégée de `IsValid`. De même, `IAsyncValidatableObject` hérite de `IValidatableObject` et nécessite les deux méthodes de validation.
+Le [contrat intégré au runtime](https://github.com/dotnet/runtime/commit/be1d5629e1a191e84a330f45c49f37890a7da451) définit aussi le comportement des appels synchrones. Un attribut dérivé de `AsyncValidationAttribute` doit implémenter `IsValidAsync` et la surcharge protégée de `IsValid`. `IAsyncValidatableObject` hérite de `IValidatableObject` et demande, lui aussi, les deux méthodes de validation.
 
-Lorsque la règle exige une opération asynchrone, lever une exception depuis son point d'entrée synchrone permet de signaler une mauvaise utilisation. Retourner un succès sans exécuter la règle ferait passer une donnée pour valide sans l'avoir vérifiée.
+Si la règle exige une opération asynchrone, son point d’entrée synchrone doit signaler toute mauvaise utilisation, par exemple en levant une exception. Retourner un succès sans exécuter la règle ferait passer pour valide une donnée qui n’a pas été vérifiée.
 
 ## Un exemple concret avec une adresse courriel
 
@@ -132,11 +134,11 @@ var estValide = await Validator.TryValidateObjectAsync(
 
 Une implémentation de `IRegistreUtilisateur` doit être enregistrée dans le conteneur. Le paramètre `validateAllProperties: true` est également essentiel pour demander l'évaluation de tous les attributs de propriété, au-delà des seuls attributs `[Required]`.
 
-`estValide` indique le résultat et `erreurs` contient les échecs de validation. Une panne du service appelé reste une défaillance technique susceptible de lever une exception, même avec une méthode nommée `TryValidateObjectAsync`.
+`estValide` indique le résultat et `erreurs` contient les échecs de validation. Une panne du service reste une défaillance technique et peut lever une exception, malgré le nom `TryValidateObjectAsync`.
 
 ## Quelle intégration dans ASP.NET Core?
 
-L'ajout des API dans le runtime et leur utilisation automatique par un framework sont deux étapes distinctes.
+La présence de ces API dans le runtime ne signifie pas que chaque framework les utilise automatiquement.
 
 Les [nouveautés d'ASP.NET Core 11](https://learn.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-11?view=aspnetcore-11.0#async-validation-for-minimal-apis) confirment la prise en charge asynchrone dans les Minimal APIs. La documentation décrit également son utilisation dans les formulaires Blazor.
 
@@ -149,7 +151,7 @@ Les [nouveautés d'ASP.NET Core 11](https://learn.microsoft.com/en-us/aspnet/cor
 
 La [documentation de la validation ASP.NET Core](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/validation?view=aspnetcore-11.0) précise cette exclusion de MVC et Razor Pages. La [demande de prise en charge pour MVC](https://github.com/dotnet/aspnetcore/issues/31905) demeure suivie séparément.
 
-**Passer un projet avec contrôleurs à .NET 11 ne suffit donc pas à rendre sa validation automatique asynchrone.** Ajouter l'attribut de notre exemple au modèle d'une action MVC pourrait atteindre son `IsValid` synchrone et déclencher l'exception. Dans ce contexte, je conserverais une validation asynchrone explicitement orchestrée dans la couche applicative.
+La validation automatique des projets avec contrôleurs ne devient pas asynchrone simplement parce qu’ils passent à .NET 11. Ajouter l’attribut de l’exemple au modèle d’une action MVC pourrait appeler son `IsValid` synchrone et déclencher l’exception. Dans ce contexte, je garderais une validation asynchrone orchestrée explicitement dans la couche applicative.
 
 ## Les limites à garder en tête
 
@@ -161,11 +163,9 @@ Dans cet exemple, je conserverais un [index unique dans la base de données](htt
 
 ### Les règles peuvent s'exécuter en parallèle
 
-L'[implémentation asynchrone de `Validator`](https://github.com/dotnet/runtime/pull/128656) prévoit l'exécution concurrente de certaines validations. Il faut donc éviter de supposer que tous les attributs seront exécutés séquentiellement.
+L'[implémentation asynchrone de `Validator`](https://github.com/dotnet/runtime/pull/128656) peut exécuter certaines validations en parallèle. Avec EF Core, il faut donc tenir compte de la [restriction de `DbContext`](https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/#avoiding-dbcontext-threading-issues), qui interdit plusieurs opérations simultanées sur une même instance.
 
-Ce point compte particulièrement avec EF Core. La [documentation de `DbContext`](https://learn.microsoft.com/en-us/ef/core/dbcontext-configuration/#avoiding-dbcontext-threading-issues) interdit plusieurs opérations simultanées sur une même instance.
-
-Si plusieurs règles consultent la base de données, un `DbContext` partagé dans la portée de la requête peut poser problème. Selon le besoin, je regrouperais les vérifications dans un service applicatif ou j'utiliserais des contextes distincts créés avec `IDbContextFactory<TContext>`. Cette seconde approche demande aussi de maîtriser le nombre de requêtes lancées.
+Si plusieurs règles interrogent la base de données, un `DbContext` partagé dans la portée de la requête peut poser problème. Selon le besoin, je regrouperais les vérifications dans un service applicatif ou créerais des contextes distincts avec `IDbContextFactory<TContext>`. Dans ce dernier cas, il faut aussi limiter le nombre de requêtes.
 
 ### Chaque consultation externe a un coût
 
@@ -175,7 +175,7 @@ Je limiterais ces règles à des consultations ciblées, sans effet de bord, ave
 
 ## Faut-il adopter cette fonctionnalité à la sortie de .NET 11?
 
-**Je la considérerais en priorité pour un projet qui utilise déjà DataAnnotations et qui a quelques règles asynchrones simples à ajouter.** Elle peut éviter d'introduire une bibliothèque uniquement pour ce besoin, à condition que le mécanisme qui déclenche la validation prenne en charge l'asynchronisme.
+Cette fonctionnalité convient surtout à un projet qui utilise déjà DataAnnotations et doit ajouter quelques règles asynchrones simples. Elle peut éviter d’introduire une bibliothèque uniquement pour ce besoin, si le mécanisme qui déclenche la validation prend en charge l’asynchronisme.
 
 Pour une application existante, je commencerais par un cas limité. Je vérifierais l'exécution réelle de la règle, la remontée des erreurs, l'annulation et le comportement lorsque la dépendance est indisponible.
 
@@ -185,6 +185,6 @@ Lorsque les règles deviennent nombreuses, dépendent du scénario ou nécessite
 
 ## Conclusion
 
-La validation asynchrone avec DataAnnotations comble une limite concrète de .NET. Elle permet d'attendre une consultation externe tout en conservant une manière familière de déclarer des règles sur les modèles.
+La validation asynchrone avec DataAnnotations permet de déclarer des règles qui attendent une consultation externe, tout en conservant des attributs familiers.
 
-À la sortie de .NET 11, ce sera une option pertinente à évaluer pour les besoins simples et les intégrations compatibles. Mon choix dépendra surtout de la lisibilité des règles, de leurs dépendances et de leur coût d'exécution. Une nouveauté utile mérite d'être adoptée lorsqu'elle simplifie le code et répond à un besoin réel.
+Dans .NET 11, je l’évaluerais pour des règles simples et des intégrations compatibles. Le choix dépendra de la lisibilité des validations, de leurs dépendances et de leur coût d’exécution.

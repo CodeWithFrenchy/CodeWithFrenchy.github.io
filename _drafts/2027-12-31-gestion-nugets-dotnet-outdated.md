@@ -1,311 +1,242 @@
 ---
-title: Gestion des dépendances NuGet avec dotnet-outdated
+title: Stryker.NET - vos tests détectent-ils vraiment les erreurs?
 date: 2027-12-31 19:00:00 -0400
 categories: [outil-developpement, bonnes-pratiques]
-tags: [dotnet, nuget, dotnet-outdated, gestion-dependances, mises-a-jour, securite, azure-devops, automatisation]
+tags: [dotnet, stryker-net, tests-mutation, tests-unitaires, xunit, couverture-code, qualite-code, ci-cd]
 ---
+
+> ⚠️ À RELIRE + valider le format du code
 
 ## Préambule
 
-Ajouter un paquet NuGet à une application prend généralement quelques secondes. Assurer son suivi pendant plusieurs années demande un peu plus d'organisation. Entre les nouvelles fonctionnalités, les correctifs, les changements de comportement et les vulnérabilités découvertes après sa publication, une dépendance continue d'évoluer bien après son installation.
+Une suite de tests passe au vert. La couverture de code atteint l’objectif fixé par l’équipe. Pourtant, une modification mineure à une règle métier peut encore introduire une régression sans faire échouer un seul test.
 
-Lors d'un précédent mandat, j'avais préparé une page pour accompagner l'équipe dans cette gestion. Elle présentait notamment `dotnet-outdated`, les vérifications de vulnérabilités et leur intégration dans Azure DevOps. J'en reprends ici les principes avec des exemples génériques et une approche applicable à d'autres projets .NET.
+La couverture indique quelles parties du code ont été exécutées, mais pas si les scénarios et les assertions détecteraient un comportement incorrect.
 
-L'objectif est de rendre l'entretien des dépendances plus régulier et plus prévisible. Pour y arriver, il faut savoir quelles versions nous utilisons, comprendre les mises à jour disponibles et disposer de validations suffisantes pour les adopter avec confiance.
+Le *mutation testing*, ou test par mutation, permet d’explorer cette limite : on introduit volontairement de petites modifications dans le code, puis on observe si les tests les détectent. Dans cet article, nous allons utiliser [Stryker.NET](https://stryker-mutator.io/docs/stryker-net/introduction/) pour appliquer cette démarche à une règle métier, améliorer ses tests xUnit et intégrer l’analyse dans Azure DevOps ou GitHub Actions.
 
-`dotnet-outdated` constitue un bon point de départ pour ce travail. Son intérêt devient encore plus concret lorsqu'on l'intègre à une pratique d'équipe.
+## Une bonne couverture peut laisser passer une erreur
 
-## Pourquoi entretenir ses dépendances régulièrement?
+Prenons une règle simple : une commande est admissible à la livraison gratuite à partir de 100 $. Les montants sont exprimés en dollars. La règle utilise le type `decimal`, adapté aux montants décimaux. Les données de test utilisent ici des dollars entiers, convertis implicitement en `decimal` lors de l’appel.
 
-Une application peut fonctionner correctement tout en accumulant du retard sur ses dépendances. Ce retard devient visible lorsqu'une vulnérabilité impose une mise à jour rapide ou qu'une migration du framework exige de revoir plusieurs bibliothèques en même temps.
+```csharp
+namespace Livraison.Core;
 
-À ce moment, les changements se cumulent. Il faut parfois adapter des API, modifier de la configuration et valider plusieurs évolutions de comportement dans une seule intervention. La mise à jour devient alors plus difficile à estimer, à tester et à livrer.
-
-Je préfère réserver une petite capacité récurrente à cet entretien. Des changements ciblés donnent généralement des demandes de fusion plus faciles à réviser et facilitent le diagnostic lorsqu'une régression apparaît.
-
-La priorité dépend toutefois du contexte. Un correctif de sécurité, une fin de support prochaine et une nouvelle fonctionnalité facultative ne justifient pas nécessairement la même urgence. Cette réflexion rejoint celle que je présente dans mon article sur la [priorisation de la dette technique](https://codewithfrenchy.com/posts/priorisation-dette-technique/).
-
-## Ce que dotnet-outdated apporte
-
-Le projet communautaire [dotnet-outdated](https://github.com/dotnet-outdated/dotnet-outdated) permet de repérer les paquets NuGet pour lesquels des versions plus récentes sont disponibles. Il propose aussi des filtres pour cibler l'analyse et peut appliquer des mises à jour.
-
-La CLI .NET possède déjà des commandes pour dresser un inventaire et rechercher des versions plus récentes. L'intérêt de `dotnet-outdated` réside surtout dans le travail interactif autour des mises à jour, notamment lorsqu'on veut limiter les changements à une plage de versions ou mettre à jour une famille de paquets.
-
-Il faut néanmoins garder trois questions distinctes.
-
-| Question | Ce qu'il faut vérifier |
-| --- | --- |
-| Une version plus récente existe-t-elle? | Les versions publiées dans les sources NuGet accessibles |
-| La version utilisée présente-t-elle une vulnérabilité connue? | Les avis de sécurité disponibles pour cette version |
-| La mise à jour convient-elle à notre application? | La compatibilité, les changements annoncés et les résultats des essais |
-
-Un outil d'inventaire aide à démarrer l'analyse. La décision de modifier une dépendance reste liée à son utilisation dans l'application.
-
-## Installer l'outil
-
-### Une installation globale pour commencer
-
-Le paquet à installer porte le nom `dotnet-outdated-tool`. La commande utilisée ensuite est `dotnet outdated`.
-
-```powershell
-dotnet tool install --global dotnet-outdated-tool
+public static class PolitiqueLivraison
+{
+    public static bool EstAdmissibleLivraisonGratuite(decimal sousTotalEnDollars)
+        => sousTotalEnDollars >= 100m;
+}
 ```
 
-Pour mettre l'outil à jour et consulter son aide :
+Voici deux scénarios xUnit : une commande sous le seuil et une autre au-dessus.
 
-```powershell
-dotnet tool update --global dotnet-outdated-tool
-dotnet outdated --help
+```csharp
+using Livraison.Core;
+using Xunit;
+
+namespace Livraison.Core.Tests;
+
+public class PolitiqueLivraisonTests
+{
+    [Theory]
+    [InlineData(99, false)]
+    [InlineData(101, true)]
+    public void EstAdmissibleLivraisonGratuite_MontantAutourDuSeuil_RetourneAdmissibiliteAttendue(
+        int sousTotalEnDollars,
+        bool resultatAttendu)
+    {
+        bool resultatObtenu = PolitiqueLivraison.EstAdmissibleLivraisonGratuite(sousTotalEnDollars);
+
+        Assert.Equal(resultatAttendu, resultatObtenu);
+    }
+}
 ```
 
-Prévoyez un SDK .NET capable d'analyser votre solution ainsi que le runtime requis par la version de l'outil. Les prérequis de celle-ci sont indiqués sur sa [page NuGet](https://www.nuget.org/packages/dotnet-outdated-tool). La version du framework ciblé par votre application et celle nécessaire pour exécuter un outil sont deux éléments à vérifier séparément.
+Ces tests exécutent la règle et vérifient les deux résultats possibles. Mais remplaçons maintenant `>=` par `>` :
 
-### Une installation locale pour l'équipe
-
-Pour un usage partagé, je privilégie un [outil local .NET](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-tool-install). Son manifeste permet de conserver la version de l'outil dans le dépôt Git.
-
-À la racine du dépôt, créez le manifeste s'il n'existe pas déjà, puis installez l'outil :
-
-```powershell
-dotnet new tool-manifest
-dotnet tool install --local dotnet-outdated-tool
+```csharp
+public static bool EstAdmissibleLivraisonGratuite(decimal sousTotalEnDollars)
+    => sousTotalEnDollars > 100m;
 ```
 
-Ajoutez le fichier `.config/dotnet-tools.json` au contrôle de source. Les autres membres de l'équipe pourront ensuite restaurer la version déclarée :
+Les deux tests passent toujours. Une commande de **99 dollars** demeure inadmissible. Une commande de **101 dollars** demeure admissible. La régression touche uniquement la commande de **100 dollars**, un cas absent de notre jeu de données.
 
-```powershell
-dotnet tool restore
-```
+La règle est exécutée, mais aucun test ne vérifie sa frontière.
 
-Cette approche rend l'outillage plus prévisible entre les postes et le pipeline. La mise à jour de l'outil devient elle-même un changement visible dans le dépôt.
+## Ce que Stryker.NET apporte
 
-Les installations globale et locale sont deux options. Il suffit de choisir celle qui convient à votre usage.
+[Stryker.NET](https://github.com/stryker-mutator/stryker-net) automatise cette démarche dans les projets .NET. Il produit des variantes du code, appelées *mutants*, puis exécute les tests pour vérifier s’ils détectent les changements.
 
-## Analyser une solution
+Dans notre exemple, la mutation de `>=` vers `>` représente une erreur plausible : exclure accidentellement la valeur limite. Si les tests restent verts, cette mutation révèle un scénario à examiner.
 
-Depuis le répertoire contenant votre solution, lancez simplement :
+Les exemples utilisent xUnit. NUnit et MSTest sont également supportés, avec les adaptateurs et le moteur d’exécution compatibles avec le projet.
 
-```powershell
-dotnet outdated
-```
+Cette démarche complète les autres contrôles qualité. Les tests d’intégration vérifient les échanges entre composants. Les revues examinent les choix d’implémentation. L’analyse statique repère certaines catégories de problèmes. Le test par mutation apporte un regard supplémentaire sur la capacité des tests à détecter des changements de comportement.
 
-Pour éviter les ambiguïtés, notamment lorsqu'un répertoire contient plusieurs solutions, je préfère préciser la cible :
+## Démarrer avec un projet xUnit
 
-```powershell
-dotnet outdated ./GestionDocuments.sln
-```
+Pour reproduire l’exemple, nous allons utiliser le SDK .NET 10. Les [prérequis de Stryker.NET](https://stryker-mutator.io/docs/stryker-net/getting-started/) indiquent actuellement un runtime .NET 10 ou plus récent pour exécuter l’outil. Cette exigence ne force pas votre application existante à cibler .NET 10 : elle doit conserver ses propres SDK et runtimes nécessaires.
 
-On peut également cibler un projet :
-
-```powershell
-dotnet outdated ./src/GestionDocuments.Api/GestionDocuments.Api.csproj
-```
-
-Cette analyse seule ne met pas à jour les versions déclarées. Elle peut toutefois effectuer les opérations de restauration nécessaires à l'évaluation des projets.
-
-### Interpréter les versions proposées
-
-L'outil utilise des couleurs pour distinguer les changements de versions. Le tableau suivant illustre leur lecture avec des paquets et des numéros fictifs.
-
-| Paquet fictif | Version utilisée | Version proposée | Type de changement | Couleur habituelle |
-| --- | --- | --- | --- | --- |
-| `Exemple.Journalisation` | `2.4.1` | `2.4.3` | Correctif | Vert |
-| `Exemple.Validation` | `3.2.0` | `3.5.0` | Mineur | Jaune |
-| `Exemple.ClientApi` | `1.8.2` | `2.0.0` | Majeur | Rouge |
-
-Selon le [versionnage sémantique](https://semver.org/lang/fr/), les correctifs et les versions mineures préservent la compatibilité de l'API publique, alors qu'une version majeure peut introduire des changements incompatibles. Ces indications supposent que l'éditeur respecte cette convention. Les versions `0.x` demandent aussi davantage de prudence, puisque leur API peut encore évoluer librement.
-
-Je considère donc la couleur comme un indicateur de l'effort d'analyse. Même un correctif peut changer un comportement sur lequel notre application s'appuyait, par exemple une validation plus stricte ou le traitement d'une valeur particulière.
-
-La compilation et les essais restent nécessaires, quelle que soit la couleur affichée.
-
-## Cibler les mises à jour
-
-Une première analyse peut produire une longue liste de résultats. Les options de filtrage permettent de réduire le périmètre pour travailler par étapes.
-
-### Rester dans une même version majeure ou mineure
-
-```powershell
-dotnet outdated ./GestionDocuments.sln --version-lock Major
-dotnet outdated ./GestionDocuments.sln --version-lock Minor
-```
-
-Les noms de ces options désignent la partie de la version qui reste verrouillée.
-
-| Option | Avec une version actuelle `4.2.1` |
-| --- | --- |
-| `--version-lock Major` | Recherche dans la branche `4.x` |
-| `--version-lock Minor` | Recherche dans la branche `4.2.x` |
-
-Ces filtres sont utiles pour une intervention de maintenance limitée. Je conserverais aussi une analyse périodique sans verrouillage pour repérer les migrations majeures à préparer.
-
-### Choisir les paquets et les préversions
-
-Pour examiner une famille de paquets internes :
-
-```powershell
-dotnet outdated ./GestionDocuments.sln --include Entreprise.
-```
-
-Pour exclure temporairement cette famille d'une analyse :
-
-```powershell
-dotnet outdated ./GestionDocuments.sln --exclude Entreprise.
-```
-
-Ces filtres recherchent une sous-chaîne dans le nom des paquets. Une exclusion devrait correspondre à une décision suivie, par exemple une migration déjà planifiée, afin d'éviter qu'une dépendance disparaisse durablement de la maintenance.
-
-Pour limiter les propositions aux versions stables :
-
-```powershell
-dotnet outdated ./GestionDocuments.sln --pre-release Never
-```
-
-Ce choix est pratique pour un entretien courant. Les essais de préversions peuvent faire l'objet d'une intervention distincte.
-
-### Examiner les dépendances transitives
-
-Les bibliothèques que nous ajoutons utilisent elles-mêmes d'autres paquets. Ces dépendances transitives font aussi partie de ce que l'application consomme.
-
-```powershell
-dotnet outdated ./GestionDocuments.sln --transitive --transitive-depth 2
-```
-
-La profondeur limite l'exploration demandée à l'outil. Cet exemple ne constitue donc pas un inventaire exhaustif de toutes les dépendances transitives. Sur une grande solution, élargir l'analyse augmente aussi son coût d'exécution.
-
-## Appliquer une mise à jour avec un périmètre maîtrisé
-
-L'option `--upgrade` applique les mises à jour proposées. Le mode `--upgrade:Prompt` demande une confirmation pour les paquets concernés.
-
-Voici un exemple pour réviser les correctifs disponibles dans les branches mineures actuelles :
-
-```powershell
-dotnet outdated ./GestionDocuments.sln --version-lock Minor --pre-release Never --upgrade:Prompt
-```
-
-J'exécuterais cette commande dans une branche dédiée, avec un état de travail propre. Il devient alors facile de voir les fichiers modifiés et de revenir sur une proposition.
-
-Après la mise à jour, une première validation peut comprendre :
-
-```powershell
-dotnet restore ./GestionDocuments.sln
-dotnet build ./GestionDocuments.sln --configuration Release --no-restore
-dotnet test ./GestionDocuments.sln --configuration Release --no-build
-git diff
-```
-
-Ces commandes supposent une solution dont les essais s'exécutent avec `dotnet test`. Elles doivent être complétées par les validations propres au projet, notamment les essais d'intégration et les scénarios fonctionnels critiques.
-
-Avant la fusion, je vérifierais les notes de version, les adaptations requises et le comportement réellement utilisé par l'application. Pour une bibliothèque de sérialisation, les contrats JSON peuvent être plus révélateurs qu'un grand nombre de tests unitaires sans lien avec les échanges externes. Pour un accès à une base de données, les essais d'intégration prennent davantage d'importance.
-
-Si vous utilisez la [gestion centralisée des versions NuGet](https://learn.microsoft.com/en-us/nuget/consume-packages/central-package-management), examinez aussi les modifications dans `Directory.Packages.props`. Une seule version partagée peut concerner plusieurs projets et élargir le périmètre des validations.
-
-L'automatisation peut très bien préparer ces changements. La fusion automatique demande toutefois une politique plus précise, fondée sur la criticité des dépendances et la qualité des validations disponibles.
-
-## Utiliser un dépôt NuGet privé
-
-Dans un environnement organisationnel, une partie des paquets provient souvent d'un dépôt privé, par exemple Azure Artifacts. L'analyse dépend alors de deux éléments distincts : la configuration des sources et l'authentification.
-
-### Déclarer les sources dans le dépôt Git
-
-NuGet combine des [fichiers de configuration à plusieurs niveaux](https://learn.microsoft.com/en-us/nuget/consume-packages/configuring-nuget-behavior), dont ceux de la machine, de l'utilisateur et du dépôt. Il ne faut donc pas supposer qu'une seule configuration personnelle décrit l'environnement de toute l'équipe.
-
-Voici un exemple de fichier `nuget.config` placé à la racine, à côté de la solution :
-
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<configuration>
-  <packageSources>
-    <clear />
-    <add key="nuget.org"
-         value="https://api.nuget.org/v3/index.json" />
-    <add key="nugetPrive"
-         value="https://pkgs.dev.azure.com/mon-organisation/_packaging/nugetPrive/nuget/v3/index.json" />
-  </packageSources>
-</configuration>
-```
-
-Le dépôt `nugetPrive` et l'organisation `mon-organisation` sont fictifs. Remplacez l'adresse par celle fournie par votre dépôt. Un flux Azure Artifacts associé à un projet comporte aussi ce projet dans son URL.
-
-L'élément `<clear />` évite d'hériter d'autres sources de paquets. Il faut donc déclarer ici toutes celles requises par la solution. Le fichier décrit les emplacements et ne doit pas contenir de secret.
-
-Si votre organisation impose un dépôt interne comme point d'entrée unique, adaptez cet exemple à cette règle. Lorsque plusieurs sources sont permises, le [Package Source Mapping](https://learn.microsoft.com/en-us/nuget/consume-packages/package-source-mapping) permet de préciser lesquelles peuvent fournir certains identifiants de paquets. L'ordre des sources ne constitue pas une priorité fiable pour protéger les paquets internes.
-
-### Authentifier le poste de développement
-
-Pour Azure Artifacts, le [Azure Artifacts Credential Provider](https://github.com/microsoft/artifacts-credprovider) prend en charge l'obtention des informations d'authentification. Après son installation selon les instructions adaptées à votre plateforme, amorcez l'authentification depuis la solution :
-
-```powershell
-dotnet restore ./GestionDocuments.sln --interactive
-dotnet outdated ./GestionDocuments.sln
-```
-
-L'authentification pourra être réutilisée tant qu'elle demeure valide. Une analyse qui échoue à joindre une source doit être corrigée avant d'interpréter ses résultats.
-
-Si `dotnet-outdated` signale explicitement l'absence de `DOTNET_HOST_PATH`, indiquez le chemin de l'exécutable `dotnet` pour la session. En PowerShell :
-
-```powershell
-$env:DOTNET_HOST_PATH = (Get-Command dotnet).Source
-```
-
-En Bash :
+Depuis un dossier vide, créez la bibliothèque, le projet de tests et la référence entre les deux :
 
 ```bash
-export DOTNET_HOST_PATH="$(command -v dotnet)"
+dotnet new classlib -n Livraison.Core -o src/Livraison.Core -f net10.0
+dotnet new xunit -n Livraison.Core.Tests -o tests/Livraison.Core.Tests -f net10.0
+dotnet add tests/Livraison.Core.Tests/Livraison.Core.Tests.csproj reference src/Livraison.Core/Livraison.Core.csproj
+
+dotnet tool install --global dotnet-stryker
 ```
 
-Ce réglage aide le fournisseur d'authentification à trouver l'hôte .NET. Il ne remplace ni une connexion valide ni les droits d'accès au dépôt.
+Cette organisation reprend le principe du [projet de tests xUnit documenté par Microsoft](https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-csharp-with-xunit) : les tests référencent la bibliothèque dont ils vérifient le comportement.
 
-## Rechercher les vulnérabilités connues
+Remplacez `Class1.cs` par un fichier `PolitiqueLivraison.cs` contenant la règle originale avec `>=`. Remplacez `UnitTest1.cs` par `PolitiqueLivraisonTests.cs` contenant les deux scénarios précédents.
 
-Une version récente peut contenir une vulnérabilité connue. À l'inverse, une version plus ancienne peut encore convenir à l'application. Il faut donc compléter la recherche de mises à jour par un audit.
+L’installation globale rend `dotnet stryker` accessible depuis les différents dépôts du compte utilisateur, mais ne fixe pas une version commune à l’équipe. Pour mettre l’outil à jour, utilisez `dotnet tool update --global dotnet-stryker`.
 
-Avec le SDK .NET 10, la [commande d'inventaire des paquets](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-package-list) s'utilise ainsi :
+Pour rendre les exécutions reproductibles, installez sur les postes et en CI la version validée par l’équipe, en ajoutant `--version` à la commande. Les exemples installent la version disponible. Dans le pipeline, remplacez-la par la version retenue et prévoyez le cas où l’outil est déjà installé sur un agent réutilisé.
 
-```powershell
-dotnet restore ./GestionDocuments.sln
-dotnet package list --project ./GestionDocuments.sln --vulnerable --include-transitive --no-restore
+Vérifiez les tests, puis lancez Stryker depuis leur répertoire :
+
+```bash
+dotnet test tests/Livraison.Core.Tests/Livraison.Core.Tests.csproj
+
+cd tests/Livraison.Core.Tests
+dotnet stryker
 ```
 
-Avec les SDK .NET 8 et .NET 9, utilisez la syntaxe suivante après la restauration :
+Ce mode d’exécution depuis le projet de tests convient à notre exemple, qui référence une seule bibliothèque métier.
 
-```powershell
-dotnet list ./GestionDocuments.sln package --vulnerable --include-transitive
+## Lire le rapport et améliorer le bon scénario
+
+Commencez par le [rapport HTML de Stryker](https://stryker-mutator.io/docs/stryker-net/reporters/), généré sous `StrykerOutput` dans le répertoire d’exécution. Il permet d’examiner les modifications proposées et leur résultat directement dans le code.
+
+Pensez à exclure les rapports générés du dépôt. Ajoutez cette règle au `.gitignore` à la racine pour couvrir les répertoires de sortie, quel que soit leur emplacement :
+
+```gitignore
+**/StrykerOutput/
 ```
 
-La syntaxe dépend du SDK exécuté. L'option `--include-transitive` inclut les dépendances indirectes dans ce rapport, sans la limite de profondeur de l'exemple précédent avec `dotnet-outdated`.
+Les rapports utiles seront conservés comme artefacts de CI plutôt que versionnés avec le code.
 
-Un résultat sans vulnérabilité signifie qu'aucune correspondance n'a été trouvée dans les données consultées pour les paquets analysés. Il ne prouve pas l'absence de faille. Vérifiez aussi que l'analyse s'est terminée correctement et que les sources d'avis de sécurité étaient accessibles.
+Les [états des mutants](https://stryker-mutator.io/docs/mutation-testing-elements/mutant-states-and-metrics/) indiquent le résultat de chaque mutation :
 
-Lorsqu'un paquet transitif est concerné, commencez par examiner une mise à jour de la dépendance directe qui l'introduit. Ajouter une référence directe pour imposer une version différente peut être nécessaire dans certains cas, mais demande de vérifier les contraintes de compatibilité et d'en suivre la raison.
+| État | Signification |
+|---|---|
+| `Killed` | Au moins un test a échoué avec cette mutation. |
+| `Survived` | Les tests exécutés n’ont pas détecté la mutation. |
+| `No coverage` | Aucun test ne couvre le mutant. |
+| `Timeout` | L’exécution a dépassé le délai. Le mutant est compté comme détecté. |
+| `Compile error` / `Runtime error` | Le mutant n’a pas pu être évalué normalement. Il est exclu du score. |
+| `Ignored` | Le mutant est ignoré et n’entre pas dans le score. |
 
-### Distinguer les sources de paquets des sources d'audit
+Dans notre démonstration, les deux scénarios ne distinguent pas `>=` de `>`. Pour détecter cette mutation, ajoutez le cas exact de 100 $ à la théorie existante :
 
-Le serveur qui distribue un paquet ne fournit pas nécessairement les avis de sécurité associés. Avec un SDK récent, la section [`auditSources` de `nuget.config`](https://learn.microsoft.com/en-us/nuget/reference/nuget-config-file#auditsources) permet de déclarer ces sources séparément.
+```csharp
+[Theory]
+[InlineData(99, false)]
+[InlineData(100, true)]
+[InlineData(101, true)]
+public void EstAdmissibleLivraisonGratuite_MontantAutourDuSeuil_RetourneAdmissibiliteAttendue(
+    int sousTotalEnDollars,
+    bool resultatAttendu)
+{
+    bool resultatObtenu = PolitiqueLivraison.EstAdmissibleLivraisonGratuite(sousTotalEnDollars);
 
-Le bloc suivant peut être ajouté sous `<configuration>`, à côté de `<packageSources>`, dans l'exemple précédent :
-
-```xml
-<auditSources>
-  <clear />
-  <add key="nuget.org"
-       value="https://api.nuget.org/v3/index.json" />
-</auditSources>
+    Assert.Equal(resultatAttendu, resultatObtenu);
+}
 ```
 
-Les [versions prenant en charge les sources d'audit](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages#audit-sources) diffèrent selon l'opération. La restauration les utilise à partir du SDK .NET 9.0.100, et l'inventaire des vulnérabilités à partir du SDK .NET 9.0.300. L'exemple de pipeline ci-dessous utilise le SDK .NET 10.
+Avec la règle originale, ce scénario passe. Avec l’opérateur `>`, il échoue : 100 $ devient inadmissible, contrairement à l’exigence. Relancez Stryker pour observer l’effet de ce nouveau cas.
 
-Cette séparation permet de consulter les avis de nuget.org même si les téléchargements passent par un dépôt interne. Elle suppose que l'accès réseau à la source d'audit est autorisé. Les paquets développés exclusivement à l'interne demandent aussi un suivi de sécurité propre à l'organisation.
+L’amélioration tient à une donnée de test supplémentaire. Il n’a fallu ni multiplier les mocks ni exposer un détail interne de la classe. Le test exprime maintenant une exigence métier qui était implicite.
 
-## Intégrer les vérifications dans Azure DevOps
+### Interpréter le score sans en faire une cible absolue
 
-L'analyse locale est utile pendant une intervention. Le pipeline rend les vérifications visibles pour l'équipe et conserve leurs résultats avec l'exécution.
+Le score correspond à `100 × détectés / valides`, avec `détectés = Killed + Timeout` et `valides = Killed + Timeout + Survived + No coverage`.
 
-Pour un simple rapport, les commandes natives du SDK évitent d'installer un outil supplémentaire sur l'agent. On peut aussi utiliser `dotnet-outdated` dans le pipeline en restaurant son manifeste local si ses filtres ou son rapport répondent mieux au besoin.
+Ce pourcentage aide à suivre une évolution, mais il ne suffit pas pour décider quoi corriger. Un mutant survivant dans un calcul de facturation mérite généralement plus d’attention qu’un changement sans effet utile sur le comportement attendu.
 
-L'exemple suivant utilise les commandes natives, une solution `GestionDocuments.sln` et le fichier `nuget.config` présenté plus haut, complété par `auditSources`. Il suppose que le dépôt Azure Artifacts appartient à la même organisation que le pipeline.
+Il existe aussi des [mutants équivalents](https://stryker-mutator.io/docs/mutation-testing-elements/equivalent-mutants/) : leur code diffère, mais leur comportement reste identique. Aucun test comportemental ne peut alors les distinguer de l’original. Avant d’ajouter un test, identifiez l’exigence que la mutation enfreint réellement.
+
+## Garder une configuration ciblée
+
+Pour notre pilote, je recommande de limiter explicitement l’analyse à la règle étudiée. Placez ce fichier `stryker-config.json` dans `tests/Livraison.Core.Tests` :
+
+```json
+{
+  "stryker-config": {
+    "project": "Livraison.Core.csproj",
+    "mutate": ["**/PolitiqueLivraison.cs"],
+    "reporters": ["progress", "html", "json"],
+    "thresholds": {
+      "high": 80,
+      "low": 60,
+      "break": 0
+    }
+  }
+}
+```
+
+Dans les [options de configuration](https://stryker-mutator.io/docs/stryker-net/configuration/), `project` désigne le nom du fichier projet, sans chemin. `mutate` restreint les fichiers analysés. Les seuils `high` et `low` déterminent la présentation du score. `break` fixe le seuil d’échec. Ici, un score faible ne bloque pas le pipeline, mais une erreur d’exécution peut toujours le faire échouer.
+
+### Centraliser la configuration à la racine du dépôt
+
+Dans cet exemple pédagogique, le fichier reste directement dans le projet de tests. Pour un dépôt comportant plusieurs projets, je préfère une configuration à la racine, versionnée et partagée avec la CI. L’installation globale de Stryker reste indépendante de ce choix.
+
+L’option [`test-projects`](https://stryker-mutator.io/docs/stryker-net/configuration/#test-projects-string) permet de déclarer plusieurs projets de tests couvrant **un même projet applicatif**. Dans ce mode, lancez Stryker depuis le projet applicatif. Voici une configuration racine pour `Livraison.Core`, en supposant qu’un second projet `Livraison.Integration.Tests` existe et référence cette bibliothèque :
+
+```json
+{
+  "stryker-config": {
+    "test-projects": [
+      "../../tests/Livraison.Core.Tests/Livraison.Core.Tests.csproj",
+      "../../tests/Livraison.Integration.Tests/Livraison.Integration.Tests.csproj"
+    ],
+    "mutate": ["**/PolitiqueLivraison.cs"],
+    "reporters": ["progress", "html", "json"],
+    "thresholds": {
+      "high": 80,
+      "low": 60,
+      "break": 0
+    }
+  }
+}
+```
+
+Depuis la racine, exécutez :
+
+```bash
+cd src/Livraison.Core
+dotnet stryker --config-file ../../stryker-config.json
+```
+
+Les chemins des projets de tests sont ici exprimés depuis le répertoire d’exécution. Le dossier `StrykerOutput` s’y trouvera également. Pour plusieurs bibliothèques à muter, prévoyez des exécutions par cible, orchestrées par un script ou une matrice CI, ou évaluez le mode solution. Une liste de projets de tests ne désigne pas automatiquement toutes les bibliothèques à muter.
+
+### Élargir progressivement le périmètre
+
+Après quelques analyses, élargissez le périmètre aux règles voisines : calcul de frais, admissibilité, validations ou transitions d’état. Pour une API ASP.NET Core, je commencerais par ces composants avant d’inclure la configuration de l’application ou les branchements d’injection de dépendances.
+
+Évitez également les exclusions systématiques basées uniquement sur le nom d’une méthode. Une méthode de conversion ou de comparaison peut porter une règle importante. Le périmètre doit refléter le risque métier, et toute exclusion doit pouvoir s’expliquer.
+
+## Intégrer l’analyse dans la CI
+
+Pour ce petit projet, une analyse complète du périmètre configuré à chaque pull request reste un point de départ raisonnable. Le temps d’exécution peut toutefois devenir relativement long selon la taille du projet, le nombre de mutants et la durée des tests. Mesurez ce coût avant de rendre l’analyse complète obligatoire sur toutes les PR. Une analyse ciblée sur les changements et une exécution complète planifiée peuvent mieux préserver la rapidité de rétroaction.
+
+Les pipelines ci-dessous installent Stryker globalement, exécutent les tests, lancent l’analyse et conservent les rapports, y compris lorsque l’analyse échoue.
+
+Ils reprennent le pilote avec un seul projet de tests et son fichier de configuration local, tous deux versionnés. Si vous utilisez la configuration à la racine, adaptez le répertoire d’exécution, l’argument `--config-file` et le chemin des rapports comme dans l’exemple précédent. Le seuil reste à zéro pendant le pilote.
+
+### Azure DevOps
+
+Ajoutez ce fichier `azure-pipelines.yml` à la racine du dépôt. L’exemple vise Azure DevOps et utilise les tâches [UseDotNet](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/use-dotnet-v2?view=azure-pipelines) et [PublishPipelineArtifact](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/publish-pipeline-artifact-v1?view=azure-pipelines).
 
 ```yaml
+trigger:
+  branches:
+    include:
+      - main
+
 pool:
   vmImage: ubuntu-latest
 
@@ -313,83 +244,114 @@ steps:
   - checkout: self
 
   - task: UseDotNet@2
-    displayName: 'Installer le SDK .NET'
+    displayName: Installer le SDK .NET
     inputs:
       packageType: sdk
-      version: '10.0.x'
+      version: 10.0.x
 
-  - task: NuGetAuthenticate@1
-    displayName: 'Authentifier les sources NuGet'
+  - script: dotnet tool install --global dotnet-stryker
+    displayName: Installer Stryker globalement
 
-  - script: >-
-      dotnet restore ./GestionDocuments.sln
-      --configfile ./nuget.config
-      -p:NuGetAudit=true
-      -p:NuGetAuditMode=all
-      -p:NuGetAuditLevel=low
-    displayName: 'Restaurer et auditer les dépendances'
+  - script: dotnet test tests/Livraison.Core.Tests/Livraison.Core.Tests.csproj
+    displayName: Exécuter les tests
 
-  - script: >-
-      dotnet package list --project ./GestionDocuments.sln
-      --outdated --no-restore
-    displayName: 'Afficher les mises à jour disponibles'
+  - bash: mkdir -p StrykerOutput
+    displayName: Préparer le dossier des rapports
+    workingDirectory: tests/Livraison.Core.Tests
 
-  - script: >-
-      dotnet package list --project ./GestionDocuments.sln
-      --vulnerable --include-transitive --no-restore
-    displayName: 'Afficher les vulnérabilités connues'
+  - script: dotnet stryker
+    displayName: Exécuter Stryker
+    workingDirectory: tests/Livraison.Core.Tests
+
+  - task: PublishPipelineArtifact@1
+    displayName: Publier les rapports Stryker
+    condition: succeededOrFailed()
+    inputs:
+      targetPath: tests/Livraison.Core.Tests/StrykerOutput
+      artifact: stryker-report
 ```
 
-La tâche [`NuGetAuthenticate@1`](https://learn.microsoft.com/en-us/azure/devops/pipelines/tasks/reference/nuget-authenticate-v1?view=azure-pipelines) configure l'authentification utilisée par les commandes suivantes. L'identité du pipeline doit disposer des permissions requises sur le dépôt. Pour une source dans une autre organisation, configurez une connexion de service NuGet et référencez-la avec `nuGetServiceConnections`.
+Avec Azure Repos Git, associez ce pipeline à une [politique de validation de build sur la branche cible](https://learn.microsoft.com/en-us/azure/devops/pipelines/repos/azure-repos-git?view=azure-devops#pr-triggers) pour l’exécuter sur les pull requests. Le déclencheur `trigger` ci-dessus couvre les mises à jour de `main`.
 
-Adaptez le SDK aux contraintes de votre solution. Les projets utilisant des charges de travail particulières, par exemple certains projets mobiles, nécessitent également les composants correspondants sur l'agent.
+### GitHub Actions
 
-### Définir ce qui doit réellement bloquer le pipeline
+Ajoutez ce workflow dans `.github/workflows/mutation-testing.yml`. Il utilise les actions officielles [checkout](https://github.com/actions/checkout), [setup-dotnet](https://github.com/actions/setup-dotnet) et [upload-artifact](https://github.com/actions/upload-artifact).
 
-Les rapports précédents donnent de la visibilité. **La présence d'un résultat dans les journaux ne constitue pas, à elle seule, une règle de blocage.** Le [suivi de cette demande dans NuGet](https://github.com/NuGet/Home/issues/11315) illustre notamment cette distinction pour la commande d'inventaire des vulnérabilités.
+{% raw %}
+```yml
+name: Mutation testing
 
-Pour appliquer une règle de sécurité, on peut s'appuyer sur [NuGet Audit pendant la restauration](https://learn.microsoft.com/en-us/nuget/concepts/auditing-packages). Une politique possible consiste à conserver tous les avis et à bloquer les vulnérabilités élevées ou critiques, ainsi que les erreurs empêchant d'obtenir les données d'audit.
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
 
-Dans l'étape de restauration précédente, ajoutez l'option [MSBuild `-warnaserror`](https://learn.microsoft.com/en-us/visualstudio/msbuild/msbuild-command-line-reference) suivante :
+permissions:
+  contents: read
 
-```yaml
-  - script: >-
-      dotnet restore ./GestionDocuments.sln
-      --configfile ./nuget.config
-      -p:NuGetAudit=true
-      -p:NuGetAuditMode=all
-      -p:NuGetAuditLevel=low
-      "-warnaserror:NU1900,NU1903,NU1904,NU1905"
-    displayName: 'Valider la politique de sécurité des dépendances'
+jobs:
+  stryker:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Installer le SDK .NET
+        uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Installer Stryker globalement
+        run: dotnet tool install --global dotnet-stryker
+
+      - name: Exécuter les tests
+        run: dotnet test tests/Livraison.Core.Tests/Livraison.Core.Tests.csproj
+
+      - name: Exécuter Stryker
+        working-directory: tests/Livraison.Core.Tests
+        run: dotnet stryker
+
+      - name: Publier les rapports Stryker
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v7
+        with:
+          name: stryker-report
+          path: tests/Livraison.Core.Tests/StrykerOutput/
+          if-no-files-found: warn
 ```
+{% endraw %}
 
-Cette étape remplace la restauration précédente. Les codes `NU1903` et `NU1904` correspondent aux vulnérabilités élevées et critiques. `NU1900` concerne l'obtention des données d'audit et `NU1905` une source d'audit qui ne fournit pas les informations attendues.
+Ces exemples publient les rapports comme artefacts du pipeline et n’exigent aucune clé Stryker Dashboard. Si l’analyse échoue avant d’en générer un, consultez les journaux du job pour commencer le diagnostic.
 
-Les avis faibles et modérés restent des avertissements, sauf si d'autres règles du dépôt les transforment déjà en erreurs. Les suppressions d'avis ou d'avertissements existantes doivent aussi être examinées, puisqu'elles peuvent retirer des résultats avant l'application de cette règle.
+### Adapter la fréquence quand le projet grandit
 
-Le seuil et le traitement des exceptions doivent être convenus avec l'équipe. Une exception documentée devrait avoir un responsable, une justification et une date de révision.
+La durée mérite d’être mesurée dès le pilote. La [FAQ de Stryker](https://stryker-mutator.io/docs/General/faq/) recommande notamment de commencer par améliorer la rapidité des tests. Une suite qui initialise inutilement une application complète ou dépend de services externes rendra les répétitions plus coûteuses.
 
-Pour la fraîcheur des paquets, `dotnet-outdated` propose aussi `--fail-on-updates`. Je réserverais cette option à une politique assumée de maintenance. Faire échouer toutes les demandes de fusion dès qu'une nouvelle version paraît peut créer du bruit sans tenir compte de son importance pour le projet.
+Je recommande ensuite de choisir la fréquence selon le temps de rétroaction acceptable :
 
-## Faire vivre la pratique dans l'équipe
+| Contexte | Approche proposée |
+|---|---|
+| Petite bibliothèque et tests rapides | Analyse complète du périmètre sur les PR. |
+| Projet plus volumineux | Analyse ciblée sur les PR et analyse complète planifiée. |
+| Code historique peu testé | Pilote sur un module critique, puis extension graduelle. |
 
-Une vérification dans le pipeline de demandes de fusion réagit aux changements du dépôt. Une exécution planifiée couvre un autre besoin : détecter un nouvel avis de sécurité alors que personne n'a modifié le code.
+L’option [`since`](https://stryker-mutator.io/docs/stryker-net/configuration/#since-flag-committish) limite l’analyse aux changements depuis une référence Git et produit un rapport partiel. [`with-baseline`](https://stryker-mutator.io/docs/stryker-net/configuration/#with-baseline-flag-committish) réutilise les résultats antérieurs pour compléter le rapport. Ces modes sont mutuellement exclusifs. La baseline est documentée comme expérimentale.
 
-Pour commencer, je proposerais une organisation simple :
+Si vous introduisez cette optimisation, rendez disponibles l’historique Git et la référence cible sur l’agent. Conservez aussi une analyse complète périodique : comparer un score partiel à un ancien score global donnerait une lecture trompeuse.
 
-- **Une revue régulière des mises à jour** - par exemple chaque semaine, avec une personne responsable de traiter les résultats.
-- **Un audit de sécurité planifié** - dont la fréquence dépend de la criticité de l'application.
-- **Des demandes de fusion ciblées** - regroupant les paquets qui doivent évoluer ensemble et isolant les migrations plus importantes.
-- **Une capacité de maintenance réservée** - pour que les rapports débouchent sur des changements livrés.
+## Adopter l’outil sans transformer le score en objectif
 
-Les notes de version, la compatibilité des frameworks et les conditions d'utilisation font également partie de la décision. `dotnet-outdated` ne vérifie pas toutes ces dimensions. J'aborde d'ailleurs les enjeux de gouvernance des dépendances dans mon article consacré à [Polly et à l'évolution de son modèle de maintenance](https://codewithfrenchy.com/posts/polly-devient-payant/).
+Le premier rapport peut montrer beaucoup de survivants. Je recommande de les examiner avec l’équipe sur un petit module, puis de retenir quelques cas qui correspondent à des risques concrets : une borne oubliée, une exception attendue, une transition interdite ou un résultat insuffisamment vérifié.
 
-Le suivi devrait surtout nous permettre de répondre à des questions concrètes : quelles dépendances demandent une intervention, qui s'en occupe et quand la correction pourra-t-elle être livrée?
+Une fois le périmètre stabilisé, un seuil d’échec peut empêcher certaines régressions du score. Par exemple, `dotnet stryker --break-at 60` fait échouer l’analyse sous 60 %. Ce chiffre est un exemple, à ajuster à partir du pilote.
+
+Pour suivre l’utilité de la démarche, je retiendrais trois éléments : les survivants pertinents corrigés, l’évolution du score à périmètre constant et la durée d’analyse. Un score qui augmente après l’exclusion d’un dossier n’a pas la même signification qu’un score qui augmente après l’ajout de scénarios métier.
+
+Enfin, une suite renforcée reste dépendante des exigences qu’elle exprime. Si l’équipe a mal compris la règle de livraison gratuite, Stryker ne peut pas retrouver l’intention métier à sa place. Les échanges avec le métier et les revues des scénarios conservent toute leur valeur.
 
 ## Conclusion
 
-`dotnet-outdated` facilite une tâche que l'on reporte facilement : regarder l'état des dépendances et préparer leur mise à jour. Ses filtres et son mode interactif permettent d'avancer avec un périmètre adapté à la capacité de l'équipe.
+Stryker.NET permet de vérifier si les tests détectent des changements plausibles dans le code. Dans l’exemple, la mutation de l’opérateur a révélé l’absence du cas exact de 100 $. Ajouter cette donnée a protégé la frontière de la règle.
 
-Pour en tirer pleinement profit, je le combinerais avec un audit des vulnérabilités, une configuration NuGet partagée et des validations adaptées aux comportements de l'application. Les sources privées et les règles du pipeline doivent également être explicites pour que les résultats restent fiables entre les postes et l'intégration continue.
-
-Une pratique régulière aide à garder les changements compréhensibles et à préparer les migrations avant qu'elles deviennent urgentes. C'est cette continuité, avec des résultats pris en charge par l'équipe, qui rend la gestion des dépendances durable.
+Je commencerais avec une bibliothèque métier, des tests rapides et un rapport que l’équipe peut examiner. L’intégration à la CI et les seuils viendront ensuite, une fois le coût et le bénéfice mesurés.
